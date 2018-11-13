@@ -1,0 +1,3 @@
+C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug/CMakeFiles/trapezoidal_rule.dir
+C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug/CMakeFiles/edit_cache.dir

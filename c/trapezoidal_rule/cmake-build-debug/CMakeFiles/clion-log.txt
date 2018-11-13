@@ -1,0 +1,7 @@
+C:\Users\VitalyR\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\182.4892.24\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\VitalyR\Projects\learn\c\trapezoidal_rule
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+OPENMP FOUND
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/main.c
+stdio.h
+-
+stdlib.h
+-
+omp.h
+-
+
