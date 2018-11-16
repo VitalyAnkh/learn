@@ -1,7 +1,12 @@
-C:\Users\VitalyR\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\182.4892.24\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\VitalyR\Projects\learn\c\trapezoidal_rule
--- Found OpenMP_C: -fopenmp (found version "4.5") 
--- Found OpenMP: TRUE (found version "4.5")  
-OPENMP FOUND
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug
+C:\Users\VitalyR\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\182.5107.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\VitalyR\Projects\learn\c\trapezoidal_rule
+CMake Error at C:/Users/VitalyR/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/win/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake:137 (message):
+  Could NOT find OpenMP_C (missing: OpenMP_C_FLAGS OpenMP_C_LIB_NAMES)
+Call Stack (most recent call first):
+  C:/Users/VitalyR/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/win/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake:378 (_FPHSA_FAILURE_MESSAGE)
+  C:/Users/VitalyR/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/win/share/cmake-3.12/Modules/FindOpenMP.cmake:466 (find_package_handle_standard_args)
+  CMakeLists.txt:5 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/cmake-build-debug/CMakeFiles/CMakeError.log".

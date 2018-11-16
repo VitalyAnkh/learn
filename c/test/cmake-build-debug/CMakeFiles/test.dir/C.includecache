@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/VitalyR/Projects/learn/c/trapezoidal_rule/main.c
+C:/Users/VitalyR/Projects/learn/c/test/main.c
 stdio.h
--
-stdlib.h
--
-omp.h
 -
 
