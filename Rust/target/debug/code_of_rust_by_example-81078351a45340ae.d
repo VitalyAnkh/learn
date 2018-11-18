@@ -1,0 +1,1 @@
+/home/vitalyr/projects/rust/code_of_rust_by_example/target/debug/code_of_rust_by_example-81078351a45340ae: /home/vitalyr/projects/rust/code_of_rust_by_example/src/formatted_print.rs /home/vitalyr/projects/rust/code_of_rust_by_example/src/lib.rs /home/vitalyr/projects/rust/code_of_rust_by_example/src/main.rs /home/vitalyr/projects/rust/code_of_rust_by_example/src/primitives.rs
