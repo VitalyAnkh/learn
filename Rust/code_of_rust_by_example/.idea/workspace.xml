@@ -32,14 +32,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02dea318-7548-4f76-ad50-e00b88912129" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/test_example/main.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/test_example/test_example.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/code_of_rust_by_example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/code_of_rust_by_example.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unsafe_rust/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../unsafe_rust/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jz/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../jz/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jz/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../jz/src/main.rs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +47,7 @@
     <session id="569466292">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
@@ -464,16 +460,15 @@
       <workItem from="1542581525347" duration="601000" />
       <workItem from="1542611930708" duration="9000" />
       <workItem from="1542611959021" duration="1815000" />
-      <workItem from="1542726596972" duration="595000" />
+      <workItem from="1542726596972" duration="1106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3020000" />
+    <option name="totallyTimeSpent" value="3531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1018" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19569893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
