@@ -31,12 +31,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02dea318-7548-4f76-ad50-e00b88912129" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jz/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../jz/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jz/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../jz/src/main.rs" afterDir="false" />
-    </list>
+    <list default="true" id="02dea318-7548-4f76-ad50-e00b88912129" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +46,9 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -137,7 +133,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="353" />
     <option name="y" value="45" />
     <option name="width" value="1449" />
@@ -397,6 +393,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -419,7 +416,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,16 +457,17 @@
       <workItem from="1542611930708" duration="9000" />
       <workItem from="1542611959021" duration="1815000" />
       <workItem from="1542726596972" duration="1106000" />
+      <workItem from="1542783887200" duration="304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3531000" />
+    <option name="totallyTimeSpent" value="3835000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1018" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19569893" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1983871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -483,8 +480,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TeamCity" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.7591398" visible="true" weight="0.44693395" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24086021" side_tool="true" visible="true" weight="0.44693395" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75860214" visible="true" weight="0.44835165" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24139784" side_tool="true" visible="true" weight="0.44835165" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
