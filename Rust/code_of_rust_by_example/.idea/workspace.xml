@@ -31,7 +31,53 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02dea318-7548-4f76-ad50-e00b88912129" name="Default Changelist" comment="" />
+    <list default="true" id="02dea318-7548-4f76-ad50-e00b88912129" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/test.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/test.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/test/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conversion/from_and_into.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/conversion/from_and_into.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conversion/to_string.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/conversion/to_string.rs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +92,9 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -84,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/examples/test_example/test_example.rs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding>
                 <element signature="e#11#12#0" expanded="true" />
                 <element signature="e#47#48#0" expanded="true" />
@@ -133,7 +179,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="353" />
     <option name="y" value="45" />
     <option name="width" value="1449" />
@@ -401,17 +447,6 @@
               <item name="code_of_rust_by_example" type="b2602c69:ProjectViewProjectNode" />
               <item name="code_of_rust_by_example" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="code_of_rust_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code_of_rust_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code_of_rust_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code_of_rust_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="test_example" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -428,6 +463,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/examples/" />
       <recent name="$PROJECT_DIR$/examples/test_example" />
     </key>
   </component>
@@ -458,16 +494,18 @@
       <workItem from="1542611959021" duration="1815000" />
       <workItem from="1542726596972" duration="1106000" />
       <workItem from="1542783887200" duration="304000" />
+      <workItem from="1542971224238" duration="698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3835000" />
+    <option name="totallyTimeSpent" value="4533000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="7" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1983871" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20107527" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -480,8 +518,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TeamCity" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75860214" visible="true" weight="0.44835165" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24139784" side_tool="true" visible="true" weight="0.44835165" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.7580645" visible="true" weight="0.2736264" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24193548" side_tool="true" visible="true" weight="0.2736264" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -514,7 +552,7 @@
     <entry file="file://$PROJECT_DIR$/examples/test_example/test_example.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
           <folding>
             <element signature="e#11#12#0" expanded="true" />
             <element signature="e#47#48#0" expanded="true" />
