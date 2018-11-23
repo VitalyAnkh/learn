@@ -32,51 +32,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02dea318-7548-4f76-ad50-e00b88912129" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/main.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/CMakeFiles/test.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/test.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/cmake-build-debug/test.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C/test/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conversion/from_and_into.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/conversion/from_and_into.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conversion/to_string.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/conversion/to_string.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C/test_installation/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C/test_installation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C/test_installation/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C/test_installation/.idea/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C/test_installation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C/test_installation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -447,6 +409,11 @@
               <item name="code_of_rust_by_example" type="b2602c69:ProjectViewProjectNode" />
               <item name="code_of_rust_by_example" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="code_of_rust_by_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code_of_rust_by_example" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -494,12 +461,12 @@
       <workItem from="1542611959021" duration="1815000" />
       <workItem from="1542726596972" duration="1106000" />
       <workItem from="1542783887200" duration="304000" />
-      <workItem from="1542971224238" duration="698000" />
+      <workItem from="1542971224238" duration="1111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4533000" />
+    <option name="totallyTimeSpent" value="4946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
