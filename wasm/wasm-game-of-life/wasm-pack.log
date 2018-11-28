@@ -1,0 +1,42 @@
+Nov 28 22:06:59.719 ERRO Compilation of your program failed. stderr:
+
+   Compiling wasm-game-of-life v0.1.0 (/home/vitalyr/projects/learn/wasm/wasm-game-of-life)
+error[E0369]: binary operation `+` cannot be applied to type `&str`
+  --> src/lib.rs:26:11
+   |
+26 |     alert("Hello, wasm-game-of-life!"+name);
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `+` can't be used to concatenate two `&str` strings
+help: `to_owned()` can be used to create an owned `String` from a string reference. String concatenation appends the string on the right to the string on the left and may require reallocation. This requires ownership of the string on the left
+   |
+26 |     alert("Hello, wasm-game-of-life!".to_owned()+name);
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0369`.
+error: Could not compile `wasm-game-of-life`.
+
+To learn more, run the command again with --verbose.
+
+Nov 28 22:07:51.625 ERRO Compilation of your program failed. stderr:
+
+   Compiling wasm-game-of-life v0.1.0 (/home/vitalyr/projects/learn/wasm/wasm-game-of-life)
+error[E0308]: mismatched types
+  --> src/lib.rs:26:11
+   |
+26 |     alert("Hello, wasm-game-of-life!".to_owned()+name);
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |           |
+   |           expected &str, found struct `std::string::String`
+   |           help: consider borrowing here: `&("Hello, wasm-game-of-life!".to_owned()+name)`
+   |
+   = note: expected type `&str`
+              found type `std::string::String`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `wasm-game-of-life`.
+
+To learn more, run the command again with --verbose.
+
