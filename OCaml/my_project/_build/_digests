@@ -1,0 +1,5 @@
+"Rule: ocaml: cmx* & o* -> native (%=my_prog )": "\145\163\148%<h\251\134\142\157lq\006]\005\251"
+"Resource: /home/vitalyr/projects/learn/OCaml/my_project/my_prog.ml": "\0126\139\005\219\t=\016]|<\185\213\201\214\156"
+"Rule: ocaml dependencies ml (%=my_prog )": "L\229\242Y\188\205\249\026Fb\016\227\028r\127+"
+"Rule: ocaml: ml -> cmo & cmi (%=my_prog )": "/4\159\207_3!\163\191\184\249|\170\1447R"
+"Rule: ocaml: ml & cmi -> cmx & o (%=my_prog )": "\184r\194\246\247h\238\139\181u\166\191\222|\196G"

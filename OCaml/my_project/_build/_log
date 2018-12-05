@@ -1,0 +1,10 @@
+### Starting build.
+# Target: my_prog.ml.depends, tags: { extension:ml, file:my_prog.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules my_prog.ml > my_prog.ml.depends
+# Target: my_prog.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:my_prog.cmo, file:my_prog.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o my_prog.cmo my_prog.ml
+# Target: my_prog.cmx, tags: { compile, extension:cmx, extension:ml, file:my_prog.cmx, file:my_prog.ml, implem, native, ocaml, quiet }
+ocamlopt.opt -c -o my_prog.cmx my_prog.ml
+# Target: my_prog.native, tags: { dont_link_with, extension:native, file:my_prog.native, link, native, ocaml, program, quiet }
+ocamlopt.opt my_prog.cmx -o my_prog.native
+# Compilation successful.

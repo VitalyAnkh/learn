@@ -17,13 +17,9 @@ fn main() {
     unsafe {
         println!("The absolute value of -233 is {}", abs(-233));
     }
-    let v:Vec<u8>=vec![1,2,3,4,5]
-        .into_iter()
-        .filter(|x|x%2==0)
-        .map(|x| x*x)
-        .collect();
-    println!("{:?}",v);
-
+    let v=vec![1,2,3,4,5]
+    .into_iter()
+    .tap(|)
 }
 extern "C" {
     fn abs(input: i32) -> i32;
