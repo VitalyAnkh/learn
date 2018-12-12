@@ -14,3 +14,12 @@ lucky x="Sorry, you are out of luck, pal!"
 factorial' ::(Integral a)=>a->a
 factorial' 0=1
 factorial' n=n*factorial'(n-1)
+
+head' ::[a]->a
+head' xs=case xs of []-> error "Error: empty list!"
+                    x:_->x
+
+describeList ::[a]->String --这里[a]代表任意列表，这里的a是一个type variable
+describeList xs=case xs of []->"Empty!"
+                           [x]->"A singleton list." --这里[x]是一个单元素列表，这里x代表列表xs中的一个元素，如果匹配模式[x]则把这个元素绑定到x
+                           xs->"A longer list."
