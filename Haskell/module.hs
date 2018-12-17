@@ -1,5 +1,6 @@
 import Data.List
 import Data.Char
+import qualified Data.Map as Map
 numUniques :: (Eq a)=>[a]-> Int
 numUniques = length . nub
 
@@ -17,3 +18,22 @@ encode shift str=
 
 decode ::Int->String->String
 decode shift str = encode (negate shift) str
+
+findKey :: (Eq k)=>k->[(k,v)]->v
+findKey key xs=snd . head . filter (\(k,v)->k==key) $ xs
+
+findKey' ::(Eq k)=>k->[(k,v)]->Maybe v
+findKey' key []=Nothing
+findKey' key ((k,v):xs)=if key==k
+    then Just v
+    else findKey' key xs
+
+yetFindKey ::(Eq k)=>k->[(k,v)]->Maybe v
+yetFindKey key = foldr (\(k,v) acc->if key==k then Just v else acc) Nothing 
+
+
+-- let phoneBook =[("betty","555-2938"),("bonnie","452-2928"),("patsy","493-2928")  ,("lucille","205-2928")  ,("wendy","939-8282") ,("penny","853-2492")];  
+fromList' ::(Ord k)=> [(k,v)]->Map.Map k v
+fromList' = foldr (\(k,v) acc -> Map.insert k v acc) Map.empty
+
+data Car = Car {company :: String, model :: String, year :: Int} deriving (Show)
