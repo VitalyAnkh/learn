@@ -1,40 +1,23 @@
 pub fn roman_to_int(s:String)->i32{
     let mut result:i32=0;
-    let str_iter=s.chars();
-    let mut next:i32=0;
-    for char in str_iter{
+    let mut v=Vec::new();
+    for char in s.chars(){
         match char{
-            Some('I')=>{
-                let now=1;
-                let Some(next)=str_iter.next;
-                if now>=next{
-                    result+=now;
-                }
-                else{
-                    result +=next-now;
-                }
-            }
-            Some('V')=>{
-                let now=5;
-                if
-            }
-             Some('X')=>{
-
-            }
-             Some('L')=>{
-
-            }
-             Some('C')=>{
-
-            }
-             Some('D')=>{
-
-            }
-             Some('M')=>{
-
-            }
+            'I'=>v.push(1),
+            'V'=>v.push(5),
+             'X'=>v.push(10),
+             'L'=>v.push(50),
+             'C'=>v.push(100),
+             'D'=>v.push(500),
+             'M'=>v.push(1000),
+             _=>()
+    }}
+    for i in 0..v.len(){
+        if i==v.len()-1 || v[i]>=v[i+1] {
+            result+=v[i];
+        }else{
+            result-=v[i];
         }
-        
     }
     result
 }
@@ -46,5 +29,6 @@ pub fn roman_to_int(s:String)->i32{
 /// D 500
 /// M 1000
 fn main(){
-    roman_to_int(String::from("IV"));
+    println!("{}",roman_to_int(String::from("XIV")));
+
 }
