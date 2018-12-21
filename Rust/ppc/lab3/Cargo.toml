@@ -3,6 +3,7 @@ name = "lab3"
 version = "0.1.0"
 authors = ["VitalyR <vitalyankh@gmail.com>"]
 edition = "2018"
+about="A boring BJTU homework"
 
 [dependencies]
 structopt=""
