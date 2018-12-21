@@ -6,5 +6,4 @@ fn main() {
     if let Some(i)=number{
         println!("{Matched {:?}}",i );
     }
-    
 }
