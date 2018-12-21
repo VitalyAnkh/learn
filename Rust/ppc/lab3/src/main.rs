@@ -6,7 +6,7 @@ use std::path::PathBuf;
 use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
-#[structopt(name = "Boring Work", about = "A boring work for BJTU homework.")]
+#[structopt(name = "boring", about = "A boring BJTU homework.")]
 /// Help message for test
 struct Opt {
     ///Activate debug mode
@@ -39,34 +39,6 @@ struct Opt {
 //    cmd: Do,
 }
 
-//#[derive(StructOpt, Debug)]
-//#[structopt(name = "git", about = "the stupid content tracker")]
-//enum Do {
-//    #[structopt(name = "add")]
-//    Add {
-//        #[structopt(short = "i")]
-//        interactive: bool,
-//        #[structopt(short = "p")]
-//        patch: bool,
-//        #[structopt(parse(from_os_str))]
-//        files: Vec<PathBuf>,
-//    },
-//    #[structopt(name = "fetch")]
-//    Fetch {
-//        #[structopt(long = "dry-run")]
-//        dry_run: bool,
-//        #[structopt(long = "all")]
-//        all: bool,
-//        repository: Option<String>,
-//    },
-//    #[structopt(name = "commit")]
-//    Commit {
-//        #[structopt(short = "m")]
-//        message: Option<String>,
-//        #[structopt(short = "a")]
-//        all: bool,
-//    },
-//}
 
 fn main() {
     let opt = Opt::from_args();
@@ -74,15 +46,3 @@ fn main() {
     println!("{:?}",opt);
 }
 
-// opt是配置命令行程序用到的数据，config是使用该程序时用到的数据
-//#[derive(Debug)]
-//struct Config {
-//    filesavepath: std::path::PathBuf,
-//    filename: String,
-//    maxvalue1: i32,
-//    maxvalue2: i32,
-//    minvalue1: i32,
-//    minvalue2: i32,
-//    recordcount1: i32,
-//    recordcount2: i32,
-//}

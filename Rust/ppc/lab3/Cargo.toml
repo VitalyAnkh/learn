@@ -8,3 +8,4 @@ about="A boring BJTU homework"
 [dependencies]
 structopt=""
 clap=""
+rand="0.6"
