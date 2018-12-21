@@ -5,22 +5,22 @@ use std::path::PathBuf;
 
 use structopt::StructOpt;
 
-#[derive(StructOpt)]
-#[structopt(name = "example", about = "A example of StructOpt usage.")]
+#[derive(StructOpt, Debug)]
+#[structopt(name = "Boring Work", about = "A boring work for BJTU homework.")]
 /// Help message for test
 struct Opt {
     ///Activate debug mode
     #[structopt(short = "d", long = "debug")]
     debug: bool,
     /// Set speed
-    speed:f64,
+    speed: f64,
     /// Input file
-    input:PathBuf,
+    input: PathBuf,
     /// Output file, stdout if not present
     #[structopt(parse(from_os_str))]
-    output:Option<PathBuf>,
+    output: Option<PathBuf>,
     #[structopt(subcommand)]
-    cmd:Git,
+    cmd: Do,
 }
 //#[derive(Debug, StructOpt)]
 //#[structopt(name = "example", about = "A example of StructOpt usage.")]
@@ -37,9 +37,9 @@ struct Opt {
 //    recordcount2: i32,
 //}
 
-#[derive(StructOpt)]
+#[derive(StructOpt, Debug)]
 #[structopt(name = "git", about = "the stupid content tracker")]
-enum Git {
+enum Do {
     #[structopt(name = "add")]
     Add {
         #[structopt(short = "i")]
@@ -47,7 +47,7 @@ enum Git {
         #[structopt(short = "p")]
         patch: bool,
         #[structopt(parse(from_os_str))]
-        files: Vec<PathBuf>
+        files: Vec<PathBuf>,
     },
     #[structopt(name = "fetch")]
     Fetch {
@@ -55,17 +55,19 @@ enum Git {
         dry_run: bool,
         #[structopt(long = "all")]
         all: bool,
-        repository: Option<String>
+        repository: Option<String>,
     },
     #[structopt(name = "commit")]
     Commit {
         #[structopt(short = "m")]
         message: Option<String>,
         #[structopt(short = "a")]
-        all: bool
-    }
+        all: bool,
+    },
 }
 
 fn main() {
-    let opt=Opt::from_args();
+    let opt = Opt::from_args();
+    println!("________::::::::::::::::::::::::_______");
+    println!("{:?}", opt);
 }
