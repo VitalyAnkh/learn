@@ -5,6 +5,8 @@ use std::path::PathBuf;
 
 use structopt::StructOpt;
 
+use rand::Rng;
+
 #[derive(StructOpt, Debug)]
 #[structopt(name = "boring", about = "A boring BJTU homework.")]
 /// Help message for test
@@ -44,5 +46,9 @@ fn main() {
     let opt = Opt::from_args();
     println!("________::::::::::::::::::::::::_______");
     println!("{:?}",opt);
+
+    let mut rng=Rng::thread_rng();
+
+
 }
 
