@@ -47,7 +47,11 @@ fn main() {
     println!("________::::::::::::::::::::::::_______");
     println!("{:?}",opt);
 
-    let mut rng=Rng::thread_rng();
+    let mut rng=rand::thread_rng();
+    let n1:u8=rng.gen();
+    let n2:u16=rng.gen();
+    println!("{}",n1);
+    println!("{}",rng.gen::<i32>());
 
 
 }
