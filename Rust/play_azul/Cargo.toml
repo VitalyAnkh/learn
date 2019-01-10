@@ -1,11 +1,8 @@
 [package]
-name = "lab3"
+name = "play_azul"
 version = "0.1.0"
 authors = ["VitalyR <vitalyankh@gmail.com>"]
 edition = "2018"
-about="A boring BJTU homework"
 
 [dependencies]
-structopt=""
-clap=""
-rand="0.6"
+azul = { git = "https://github.com/maps4print/azul" }
