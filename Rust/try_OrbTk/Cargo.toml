@@ -1,0 +1,8 @@
+[package]
+name = "try_OrbTk"
+version = "0.1.0"
+authors = ["VitalyR <vitalyankh@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+orbtk = { git="https://gitlab.redox-os.org/redox-os/orbtk.git"}
