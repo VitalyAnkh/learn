@@ -1,0 +1,524 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19248,        516]
+NotebookOptionsPosition[     16245,        456]
+NotebookOutlinePosition[     16577,        471]
+CellTagsIndexPosition[     16534,        468]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData["\"\<This is a string\>\""], "Input",
+ CellChangeTimes->{{3.75692610437739*^9, 3.7569261098506823`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"aef814e2-0a1f-4b77-a47b-86a6013eee84"],
+
+Cell[BoxData["\<\"This is a string\"\>"], "Output",
+ CellChangeTimes->{3.756926111168305*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"35a76116-dfb6-4ccc-b4d2-9c70de557383"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringLength", "[", "\"\<hello\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.756926124081184*^9, 3.756926144721876*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"007a170d-b382-4cb1-a155-90b0ba5018df"],
+
+Cell[BoxData["5"], "Output",
+ CellChangeTimes->{3.756926145497424*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"2e867c50-4f81-4642-85ec-5cd489f0348d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringReverse", "[", "\"\<hello\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.756926149758833*^9, 3.756926165009742*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"e7e71a21-ca5c-42f1-b04c-525ef89a6ddf"],
+
+Cell[BoxData["\<\"olleh\"\>"], "Output",
+ CellChangeTimes->{3.756926165729774*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"17fc8d4f-5d89-4388-a295-868af5a86c6e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["Hue"], "Input",
+ CellChangeTimes->{{3.756926193788908*^9, 3.756926195303543*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"ac206f67-9329-4a31-a3ab-46ee6c46efba"],
+
+Cell[BoxData["Hue"], "Output",
+ CellChangeTimes->{3.756926198993042*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"377231cd-6e60-436e-a3e7-9f145997db21"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hue", "[", 
+  RowBox[{"0.55", ",", "0.63", ",", "0.5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.756926200635599*^9, 3.756926213655059*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"3d6b2699-4f1b-4473-81a2-2bc707fe0473"],
+
+Cell[BoxData[
+ InterpretationBox[
+  ButtonBox[
+   TooltipBox[
+    GraphicsBox[{
+      {GrayLevel[0], RectangleBox[{0, 0}]}, 
+      {GrayLevel[0], RectangleBox[{1, -1}]}, 
+      {Hue[0.55, 0.63, 0.5], RectangleBox[{0, -1}, {2, 1}]}},
+     AspectRatio->1,
+     DefaultBaseStyle->"ColorSwatchGraphics",
+     Frame->True,
+     FrameStyle->Hue[0.55, 0.63, 0.33333333333333337`],
+     FrameTicks->None,
+     ImageSize->
+      Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
+        AbsoluteCurrentValue[Magnification]}],
+     PlotRangePadding->None],
+    StyleBox[
+     RowBox[{"Hue", "[", 
+       RowBox[{"0.55`", ",", "0.63`", ",", "0.5`"}], "]"}], NumberMarks -> 
+     False]],
+   Appearance->None,
+   BaseStyle->{},
+   BaselinePosition->Baseline,
+   ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+     If[
+      Not[
+       AbsoluteCurrentValue["Deployed"]], 
+      SelectionMove[Typeset`box$, All, Expression]; 
+      FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+      FrontEnd`Private`$ColorSelectorInitialColor = Hue[0.55, 0.63, 0.5]; 
+      FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+      MathLink`CallFrontEnd[
+        FrontEnd`AttachCell[Typeset`box$, 
+         FrontEndResource["HueColorValueSelector"], {0, {Left, Bottom}}, {
+         Left, Top}, 
+         "ClosingActions" -> {
+          "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+   DefaultBaseStyle->{},
+   Evaluator->Automatic,
+   Method->"Preemptive"],
+  Hue[0.55, 0.63, 0.5],
+  Editable->False,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.756926216084045*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"f8cfc3e8-8025-4cbc-a352-91e01bfb6c88"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RGBColor", "[", 
+  RowBox[{"255", ",", "3", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.756926218658547*^9, 3.756926232822522*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"6cb8db92-51d7-4c11-a090-02b334954c05"],
+
+Cell[BoxData[
+ InterpretationBox[
+  ButtonBox[
+   TooltipBox[
+    GraphicsBox[{
+      {GrayLevel[0], RectangleBox[{0, 0}]}, 
+      {GrayLevel[0], RectangleBox[{1, -1}]}, 
+      {RGBColor[255, 3, 1], RectangleBox[{0, -1}, {2, 1}]}},
+     AspectRatio->1,
+     DefaultBaseStyle->"ColorSwatchGraphics",
+     Frame->True,
+     FrameStyle->RGBColor[
+      0.6666666666666666, 0.6666666666666666, 0.6666666666666666],
+     FrameTicks->None,
+     ImageSize->
+      Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
+        AbsoluteCurrentValue[Magnification]}],
+     PlotRangePadding->None],
+    StyleBox[
+     RowBox[{"RGBColor", "[", 
+       RowBox[{"255", ",", "3", ",", "1"}], "]"}], NumberMarks -> False]],
+   Appearance->None,
+   BaseStyle->{},
+   BaselinePosition->Baseline,
+   ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+     If[
+      Not[
+       AbsoluteCurrentValue["Deployed"]], 
+      SelectionMove[Typeset`box$, All, Expression]; 
+      FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+      FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[1, 1, 1]; 
+      FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+      MathLink`CallFrontEnd[
+        FrontEnd`AttachCell[Typeset`box$, 
+         FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+         Left, Top}, 
+         "ClosingActions" -> {
+          "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+   DefaultBaseStyle->{},
+   Evaluator->Automatic,
+   Method->"Preemptive"],
+  RGBColor[255, 3, 1],
+  Editable->False,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.756926234260627*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"811f90d5-cd2a-4ece-8d6b-d9655fe0e617"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sort", "[", 
+  RowBox[{"Characters", "[", "\"\<a string of characters\>\"", "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.756926359785555*^9, 3.7569263853492327`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"d142f6f1-ae2b-4eec-9d94-6b89975f27ce"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\" \"\>", ",", "\<\" \"\>", ",", "\<\" \"\>", ",", "\<\"a\"\>", 
+   ",", "\<\"a\"\>", ",", "\<\"a\"\>", ",", "\<\"c\"\>", ",", "\<\"c\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\"f\"\>", ",", "\<\"g\"\>", ",", "\<\"h\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"n\"\>", ",", "\<\"o\"\>", ",", "\<\"r\"\>", 
+   ",", "\<\"r\"\>", ",", "\<\"r\"\>", ",", "\<\"s\"\>", ",", "\<\"s\"\>", 
+   ",", "\<\"t\"\>", ",", "\<\"t\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.756926386476667*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"132cd22b-1e2c-4edd-8ef1-ca73ba198b20"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InputForm", "[", 
+  RowBox[{"Sort", "[", 
+   RowBox[{"Characters", "[", "\"\<slafdjs   \>\"", "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.756926417402516*^9, 3.75692644392629*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"53fcc660-1acb-4c78-bb43-75fb9729a12d"],
+
+Cell["{\" \", \" \", \" \", \"a\", \"d\", \"f\", \"j\", \"l\", \"s\", \
+\"s\"}", "Output",
+ CellChangeTimes->{3.756926444700694*^9},
+ CellLabel->
+  "Out[8]//InputForm=",ExpressionUUID->"61d7cc87-a006-4e49-b0a9-559e1b9e402d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"WikipediaData", "[", "\"\<computers\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7569264546038923`*^9, 3.756926475186859*^9}, {
+  3.7569265428508453`*^9, 3.7569265444928503`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"3b3d2bc8-01d4-46c9-b636-496c9440a7cc"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "URLFetch","invhttp",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Encountered end of \
+file\\\\\\\"\\\"}]\\).\"",2,12,7,15709624416363552383,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7569264814306993`*^9, {3.7569270814390182`*^9, 3.756927082423833*^9}},
+ CellLabel->
+  "During evaluation of \
+In[12]:=",ExpressionUUID->"118cc245-0a5c-4146-823f-e5c060be8257"],
+
+Cell[BoxData[
+ GraphicsBox[InsetBox[
+   StyleBox["Null",
+    StripOnInput->False,
+    FontSize->Scaled[
+      Rational[35, 64]],
+    FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+   Automatic],
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-64., 64.}, {-27.5, 31.5}}]], "Output",
+ CellChangeTimes->{{3.756927080423347*^9, 3.756927082528963*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"e1538bf3-809d-4431-ba42-543c59b489cb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"WikipediaData", "[", "\"\<girls\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.756926557228477*^9, 3.75692656073827*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"9d297894-e1ea-40da-8791-842270071ce4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "URLFetch","invhttp",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Encountered end of \
+file\\\\\\\"\\\"}]\\).\"",2,14,9,15709624416363552383,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.756927082974903*^9, 3.7569270835433598`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"b6bc57c2-06ac-40db-8161-7d637b9f73f2"],
+
+Cell[BoxData[
+ GraphicsBox[InsetBox[
+   StyleBox["Null",
+    StripOnInput->False,
+    FontSize->Scaled[
+      Rational[35, 64]],
+    FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+   Automatic],
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-64., 64.}, {-27.5, 31.5}}]], "Output",
+ CellChangeTimes->{{3.7569270830696907`*^9, 3.756927083624*^9}},
+ CellLabel->"Out[14]=",ExpressionUUID->"fab30f95-97ad-4d04-ba0e-eb5d2cd6861a"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Take", "[", 
+  RowBox[{
+   RowBox[{"WordList", "[", "]"}], ",", "20"}], "]"}]], "Input",
+ CellChangeTimes->{{3.756926599710492*^9, 3.756926616338963*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"58d08a3a-60c2-490a-987d-35a00e44cffc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<a\>\"", ",", "\"\<aah\>\"", ",", "\"\<aardvark\>\"", ",", 
+    "\"\<aback\>\"", ",", "\"\<abacus\>\"", ",", "\"\<abaft\>\"", ",", 
+    "\"\<abalone\>\"", ",", "\"\<abandon\>\"", ",", "\"\<abandoned\>\"", ",", 
+    "\"\<abandonment\>\"", ",", "\"\<abase\>\"", ",", "\"\<abasement\>\"", 
+    ",", "\"\<abash\>\"", ",", "\"\<abashed\>\"", ",", "\"\<abashment\>\"", 
+    ",", "\"\<abate\>\"", ",", "\"\<abatement\>\"", ",", "\"\<abattoir\>\"", 
+    ",", "\"\<abbe\>\"", ",", "\"\<abbess\>\""}], "}"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.756927123922227*^9, 
+  3.756927123930626*^9}},ExpressionUUID->"83750d22-6b6b-4342-9693-\
+7afc15fdb066"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"Take", "[", 
+   RowBox[{
+    RowBox[{"WordList", "[", "]"}], ",", "20"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.756927129663178*^9, 3.7569271402961473`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"c0bed6a4-c04f-46aa-81bf-32577c3f4aff"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"abandonment\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {0, 0}, Center, Automatic],
+    InsetBox[
+    StyleBox["\<\"abashment\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {-7., -56.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"abasement\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {0., 58.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"abandoned\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {-6., -113.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"abatement\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {0., 115.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"aardvark\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {-41., -157.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"abandon\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[1, 0.75, 0]], {16., 166.5}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"abashed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {97., -202.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"abattoir\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {17., 223.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"abalone\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {-179., -242.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"abacus\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {82., -260.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"abbess\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {-200., 267.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"aback\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {-240., 189.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"abash\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {228., 267.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"abase\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {258., 208.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"abate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {23., 281.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"abaft\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {276., -136.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"abbe\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {278., -56.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"aah\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {-258., 57.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"a\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[
+       Rational[5, 51]],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {149., -156.5}, 
+    Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-344.5, 369.5}, {-288., 313.}}]], "Output",
+ CellChangeTimes->{3.756927143226152*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"6f869159-0a6a-429b-8f65-e3327176baef"]
+}, Open  ]]
+},
+WindowSize->{768, 789},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 195, 2, 31, "Input",ExpressionUUID->"aef814e2-0a1f-4b77-a47b-86a6013eee84"],
+Cell[778, 26, 171, 2, 35, "Output",ExpressionUUID->"35a76116-dfb6-4ccc-b4d2-9c70de557383"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[986, 33, 221, 3, 31, "Input",ExpressionUUID->"007a170d-b382-4cb1-a155-90b0ba5018df"],
+Cell[1210, 38, 148, 2, 35, "Output",ExpressionUUID->"2e867c50-4f81-4642-85ec-5cd489f0348d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1395, 45, 222, 3, 31, "Input",ExpressionUUID->"e7e71a21-ca5c-42f1-b04c-525ef89a6ddf"],
+Cell[1620, 50, 160, 2, 35, "Output",ExpressionUUID->"17fc8d4f-5d89-4388-a295-868af5a86c6e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1817, 57, 173, 2, 31, "Input",ExpressionUUID->"ac206f67-9329-4a31-a3ab-46ee6c46efba"],
+Cell[1993, 61, 150, 2, 35, "Output",ExpressionUUID->"377231cd-6e60-436e-a3e7-9f145997db21"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2180, 68, 241, 4, 31, "Input",ExpressionUUID->"3d6b2699-4f1b-4473-81a2-2bc707fe0473"],
+Cell[2424, 74, 1660, 45, 35, "Output",ExpressionUUID->"f8cfc3e8-8025-4cbc-a352-91e01bfb6c88"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4121, 124, 240, 4, 31, "Input",ExpressionUUID->"6cb8db92-51d7-4c11-a090-02b334954c05"],
+Cell[4364, 130, 1683, 45, 35, "Output",ExpressionUUID->"811f90d5-cd2a-4ece-8d6b-d9655fe0e617"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6084, 180, 272, 5, 31, "Input",ExpressionUUID->"d142f6f1-ae2b-4eec-9d94-6b89975f27ce"],
+Cell[6359, 187, 589, 9, 35, "Output",ExpressionUUID->"132cd22b-1e2c-4edd-8ef1-ca73ba198b20"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6985, 201, 294, 6, 31, "Input",ExpressionUUID->"53fcc660-1acb-4c78-bb43-75fb9729a12d"],
+Cell[7282, 209, 224, 4, 50, "Output",ExpressionUUID->"61d7cc87-a006-4e49-b0a9-559e1b9e402d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7543, 218, 318, 5, 31, "Input",ExpressionUUID->"3b3d2bc8-01d4-46c9-b636-496c9440a7cc"],
+Cell[7864, 225, 413, 10, 25, "Message",ExpressionUUID->"118cc245-0a5c-4146-823f-e5c060be8257"],
+Cell[8280, 237, 563, 13, 183, "Output",ExpressionUUID->"e1538bf3-809d-4431-ba42-543c59b489cb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8880, 255, 258, 4, 31, "Input",ExpressionUUID->"9d297894-e1ea-40da-8791-842270071ce4"],
+Cell[9141, 261, 386, 9, 25, "Message",ExpressionUUID->"b6bc57c2-06ac-40db-8161-7d637b9f73f2"],
+Cell[9530, 272, 562, 13, 183, "Output",ExpressionUUID->"fab30f95-97ad-4d04-ba0e-eb5d2cd6861a"]
+}, Open  ]],
+Cell[10107, 288, 257, 5, 31, "Input",ExpressionUUID->"58d08a3a-60c2-490a-987d-35a00e44cffc"],
+Cell[10367, 295, 721, 14, 101, InheritFromParent,ExpressionUUID->"83750d22-6b6b-4342-9693-7afc15fdb066"],
+Cell[CellGroupData[{
+Cell[11113, 313, 297, 6, 31, "Input",ExpressionUUID->"c0bed6a4-c04f-46aa-81bf-32577c3f4aff"],
+Cell[11413, 321, 4816, 132, 352, "Output",ExpressionUUID->"6f869159-0a6a-429b-8f65-e3327176baef"]
+}, Open  ]]
+}
+]
+*)
+
