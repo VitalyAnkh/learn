@@ -1,3 +1,4 @@
+import qualified Data.Map as Map
 data Vector  a = V3d a a a deriving (Show)
 
 vplus :: (Num t)=>Vector t->Vector t->Vector t
@@ -26,6 +27,13 @@ phoneBook =[("betty","555-2938"),("bonnie","452-2928"),("patsy","493-2928")  ,("
 type PhoneNumber=String
 type Name=String
 type PhoneBook = [(Name,PhoneNumber)]
+inPhoneBook :: Name -> PhoneNumber -> PhoneBook -> Bool
+inPhoneBook name pnumber pbook = (name,pnumber) `elem` pbook
+
+type AssocList k v=[(k,v)]
+
+type IntMap v=Map.Map Int v
+
 
 isSquare :: Integral n => n -> Bool
 isSquare n = not . null . filter (\i->i*i==n) $ [1..n]
@@ -33,3 +41,8 @@ isSquare n = not . null . filter (\i->i*i==n) $ [1..n]
 
 highAndLow :: String -> String
 highAndLow input = let xs=read input:: [Int] in (show . maximum $ xs) ++ " " ++ (show . minimum $ xs)
+
+data LockerState = Taken | Free deriving (Show,Eq) 
+type Code = String
+type LockerMap = Map.Map Int (LockerState, Code)
+
