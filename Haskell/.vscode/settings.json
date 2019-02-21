@@ -1,0 +1,4 @@
+{
+    "io-run.showErrorOutputOnFails": true,
+    "io-run.outputExtension": ".out, .hi, .o"
+}
