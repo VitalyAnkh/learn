@@ -18,9 +18,9 @@ fn main() {
             }
         }
     };
-    let p = Pin::new(&mut g);
+    // let p = Pin::new(&mut g);
     loop {
-        match p.resume() {
+        match Pin::new(&mut g).resume() {
             GeneratorState::Yielded(v) => println!("{}", v),
             GeneratorState::Complete(_) => return,
         }
