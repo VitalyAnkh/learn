@@ -1,10 +1,8 @@
 [package]
-name = "PlayBig"
+name = "with_commit_hash"
 version = "0.1.0"
 authors = ["VitalyR <vitalyankh@gmail.com>"]
 edition = "2018"
+build="build.rs"
 
 [dependencies]
-threadpool="1.7.1"
-crossbeam="*"
-scoped_threadpool="*"
