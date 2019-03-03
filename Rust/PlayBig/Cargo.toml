@@ -1,0 +1,9 @@
+[package]
+name = "PlayBig"
+version = "0.1.0"
+authors = ["VitalyR <vitalyankh@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+threadpool="1.7.1"
+crossbeam="*"
