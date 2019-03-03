@@ -6,8 +6,8 @@ use std::process::Command;
 
 fn main(){
     let out_dir=env::var("OUT_DIR").unwrap();
-    let dest_path=Pathe::new(&out_dir).join("commit_id_.rs");
-    let mut f=File::create(&dest_path).unwrap();
+    let dest_path=Path::new(&out_dir).join("commit_id.rs");
+    let mut f=File::create(&dest_path).expect("counld create file");
 
     let commit =Command::new("git")
         .arg("rev-parse")
