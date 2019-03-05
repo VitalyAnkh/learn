@@ -1,4 +1,4 @@
-fn reverse_string(s: &String) -> String {
+fn reverse_string(s: &mut String) -> String {
     let mut result = String::new();
     for i in s.chars() {
         result.insert(0, i);
@@ -6,15 +6,17 @@ fn reverse_string(s: &String) -> String {
     result
 }
 
-fn reverse_i32(a: String) -> i32 {
-    if let first = a.chars().next {}
+fn reverse_i32(s: &mut String) -> i32 {
+    let mut sign = 1_i32;
+    if '-' == s.chars().next().unwrap() {
+        sign = -1;
+        s.remove(0);
+    }
+    reverse_string(s).parse::<i32>().unwrap() * sign
 }
 
 fn main() {
-    let a = String::from("12334200000000");
+    let mut a = String::from("-12334200000000");
     let x = 100.to_string();
-    println!(
-        "{}",
-        reverse_string(&a).parse::<i32>().ok_or(|arg| -1 * arg)
-    );
+    println!("{}", reverse_i32(&mut a));
 }
