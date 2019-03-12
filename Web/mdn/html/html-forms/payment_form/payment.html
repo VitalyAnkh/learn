@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link href="payment_form.css" rel="stylesheet">
+</head>
+
+<body>
+    <p>This is my page</p>
+    <form>
+        <h1>Payment Form</h1>
+        <p> Required fields are followed by<strong><abbr title="required">*</abbr></strong>.</p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="M.">
+                            Mister
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" "name=title" value="Ms.">
+                            Miss
+                        </label>
+                    </li>
+                </ul>
+
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>E-mail:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="pwd" name="password">
+            </p>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mc">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Card number:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="number" id="number" name="cardnumber">
+            </p>
+            <p>
+                <label for="date">
+                    <span>Expiration date:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                    <em>formatted as yyyy/mm/dd</em>
+                </label>
+                <input type="date" id="date" name="expirationdate">
+            </p>
+        </section>
+        <p><button type="submit">Validate the payment</button></p>
+        <p>
+            <label for="search">
+                <span>Search:</span>
+                <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="search" id="search" name="search">
+        </p>
+        <p>
+            <label for="tel">Phone:</label>
+            <input type="tel" id="tel" name="tel">
+        </p>
+        <p>
+            <label for="url">
+                Website:
+            </label>
+            <input type="url" id="url" name="url">
+        </p>
+        <p>
+            <textarea cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <select id="multi" name="multi" multiple>
+                <option>Banana</option>
+                <option selected>Cherry</option>
+                <option selected>Lemon</option>
+            </select>
+        </p>
+        <p>
+            <label for="myFruit">What's your favorite fruit?</label>
+            <input type="text" id="myFruit" name="myFruit" list="mySuggestion">
+            <datalist id="mySuggestion">
+                <option>Apple</option>
+                <option>Blackberry</option>
+                <option>Blueberry</option>
+                <option>Lemon</option>
+            </datalist>
+        </p>
+        <p>
+            <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+        </p>
+        <section>
+            <fieldset>
+                <legend>What's your favorite meal?</legend>
+                <ul>
+                    <li>
+                        <label for="soup">Soup</label>
+                        <input type="radio" checked id="soup" name="meal" value="soup">
+                    </li>
+                    <li><label for="curry">Curry</label>
+                        <input type="radio" id="curry" name="meal" value="curry">
+                    </li>
+                    <li>
+                        <label for="pizza">Pizza</label>
+                        <input type="radio" id="pizza" name="meal" value="pizza">
+                    </li>
+                </ul>
+            </fieldset>
+        </section>
+        <button type="submit">
+            This is a <br><strong>submit button</strong>
+        </button>
+        <input type="submit" value="This is a submit button">
+        <button type="reset">
+            This is a<br> <strong>reset button</strong>
+        </button>
+        <input type="reset" value="This is a reset button">
+        <button type="button">This is a <br><strong>anonymous button</strong></button>
+        <input type="button" value="This is a anonymous button">
+
+    </form>
+
+</body>
+
+</html>
