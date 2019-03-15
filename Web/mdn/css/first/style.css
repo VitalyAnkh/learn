@@ -1,0 +1,11 @@
+h1 {
+    color: blue;
+    background-color: yellow;
+    border: 5px solid rgb(207, 65, 65);
+    padding: 2px solid green;
+    margin: 3px solid purple;
+}
+
+p {
+    color: red;
+}
