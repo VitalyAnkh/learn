@@ -15,9 +15,9 @@ fn main() {
     let array = ['y', 'i', 'x'];
     // print_u8(array);
 }
-struct ThreeCharArray<'a>(&'a [char; 3]);
-impl<'a, 'b> AsRef<[u8]> for ThreeCharArray<'a> {
-    fn as_ref(&self) -> &[u8] {
-        &[self.0[0] as u8, self.0[1] as u8, self.0[2] as u8]
-    }
-}
+// struct ThreeCharArray<'a>(&'a [char; 3]);
+// impl<'a, 'b> AsRef<[u8]> for ThreeCharArray<'a> {
+//     fn as_ref(&self) -> &[u8] {
+//         &[self.0[0] as u8, self.0[1] as u8, self.0[2] as u8]
+//     }
+// }
