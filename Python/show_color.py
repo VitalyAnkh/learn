@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# This program print all the colot in terminal.
+# This program print all the colors in terminal.
 import sys
 terse = "-t" in sys.argv[1:] or "--terse" in sys.argv[1:]
 write = sys.stdout.write

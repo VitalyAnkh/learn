@@ -7,23 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4b0799-46ef-4a82-b6c2-2b487ca161bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java/cflat/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/cr.mpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/generator/template/main@generator.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/models/behavior.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/models/constraints.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/models/editor.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/models/structure.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/models/typesystem.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/runtime/cr.runtime.msd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/runtime/models/cr.runtime.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/sandbox/cr.sandbox.msd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cr/sandbox/models/cr.sandbox.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/StuMng/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C++/StuMng/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/StuMng/student.h" beforeDir="false" afterPath="$PROJECT_DIR$/../C++/StuMng/student.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mps/migration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/migration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/cr/cr.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/cr/cr.mpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Notebook/python-for-data-analysis/pydata-book" beforeDir="false" afterPath="$PROJECT_DIR$/../Notebook/python-for-data-analysis/pydata-book" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Rust/redox" beforeDir="false" afterPath="$PROJECT_DIR$/../Rust/redox" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/show_color.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/show_color.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rust/rustlings" beforeDir="false" afterPath="$PROJECT_DIR$/../Rust/rustlings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ferris-says" beforeDir="false" afterPath="$PROJECT_DIR$/../ferris-says" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wasm/wasm-game-of-life/www" beforeDir="false" afterPath="$PROJECT_DIR$/../wasm/wasm-game-of-life/www" afterDir="false" />
@@ -40,7 +28,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="419f65c3-19ea-4541-a645-f2963ae67e66/r:a0054dd1-b3d0-4021-8aea-ec55e11d5398(TempModule419f65c3-19ea-4541-a645-f2963ae67e66/TempModel_10741872390761)">
+            <model ref="5f59ee9c-513c-400c-a1e4-b5287eb33cfe/r:e7e741f9-1818-4827-b9ca-6725e29d3f04(TempModule5f59ee9c-513c-400c-a1e4-b5287eb33cfe/TempModel_6992252609991)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -60,11 +48,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="76xaeK3S_wl">
-                <node concept="3balQm" id="76xaeK3S_wm" role="aymYE" />
-                <node concept="2Clz$F" id="76xaeK3S_wn" role="aymYO" />
-                <node concept="2_V_lH" id="76xaeK3S_wo" role="1PhJh3">
-                  <ref role="2_V_lI" node="76xaeK3S_wn" resolve="CommandHolder" />
+              <node concept="aymSD" id="foLz0hVxMS">
+                <node concept="3balQm" id="foLz0hVxMT" role="aymYE" />
+                <node concept="2Clz$F" id="foLz0hVxMU" role="aymYO" />
+                <node concept="2_V_lH" id="foLz0hVxMV" role="1PhJh3">
+                  <ref role="2_V_lI" node="foLz0hVxMU" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -87,7 +75,7 @@
     </search_options>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="true">
         <entry file="mps://node://cr/cr.structure/&lt;no name&gt;[ConceptDeclaration]">
           <provider selected="true" editor-type-id="MPSFileEditor">
@@ -145,6 +133,15 @@
         <BookmarkInfo />
         <BookmarkInfo />
       </array>
+    </option>
+  </component>
+  <component name="MessagesViewTool">
+    <option name="defaultListState">
+      <MessageListState>
+        <option name="autoscrollToSource" value="true" />
+        <option name="info" value="true" />
+        <option name="warnings" value="true" />
+      </MessageListState>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -212,13 +209,14 @@
       </option>
     </option>
   </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="FileSystem" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,6 +247,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="r:5f34915a-4712-4d33-80d5-f057af0061fc(cr.behavior) in IdeaFile[file:///home/vitalyr/projects/learn/MPS/languages/cr/models/behavior.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a9809fd2-d99b-4c8f-bde5-0b21e29e2298(cr)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="r:5e8bc910-c678-4b4c-9eb4-a166b6c7280e(cr.editor) in IdeaFile[file:///home/vitalyr/projects/learn/MPS/languages/cr/models/editor.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -259,16 +271,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bc64b143-52ee-4a65-a61e-b911e52435ff" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="a9809fd2-d99b-4c8f-bde5-0b21e29e2298(cr)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -276,34 +278,6 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="a9809fd2-d99b-4c8f-bde5-0b21e29e2298(cr)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:5f34915a-4712-4d33-80d5-f057af0061fc(cr.behavior) in IdeaFile[file:///home/vitalyr/projects/learn/MPS/languages/cr/models/behavior.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bc64b143-52ee-4a65-a61e-b911e52435ff" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cr" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,6 +288,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="3dea903e-6cc8-4ebc-a9f3-31b0982b3bf9" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cr" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,6 +333,30 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="3dea903e-6cc8-4ebc-a9f3-31b0982b3bf9" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bc64b143-52ee-4a65-a61e-b911e52435ff" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cr" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="a9809fd2-d99b-4c8f-bde5-0b21e29e2298(cr)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -369,11 +371,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="a9809fd2-d99b-4c8f-bde5-0b21e29e2298(cr)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e0636dc9-69bb-4304-bfc8-28612b1b3de9(cr.typesystem) in IdeaFile[file:///home/vitalyr/projects/learn/MPS/languages/cr/models/typesystem.mps]" />
+              <option name="myItemId" value="bc64b143-52ee-4a65-a61e-b911e52435ff" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,11 +381,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3dea903e-6cc8-4ebc-a9f3-31b0982b3bf9" />
+              <option name="myItemId" value="a9809fd2-d99b-4c8f-bde5-0b21e29e2298(cr)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cr" />
+              <option name="myItemId" value="r:e0636dc9-69bb-4304-bfc8-28612b1b3de9(cr.typesystem) in IdeaFile[file:///home/vitalyr/projects/learn/MPS/languages/cr/models/typesystem.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,9 +409,12 @@
           </SELECTED>
         </subPane>
       </pane>
+      <pane id="FileSystem" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
@@ -421,9 +422,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="21" width="3840" height="2139" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2672737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -437,7 +437,7 @@
       <window_info anchor="bottom" id="Migration" order="9" />
       <window_info anchor="bottom" id="Menu Trace" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.33208355" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.34065345" />
       <window_info anchor="bottom" id="Classpath Explorer" order="13" />
       <window_info anchor="bottom" id="Usages" order="14" />
       <window_info anchor="bottom" id="Node Explorer" order="15" />
