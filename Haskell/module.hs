@@ -37,3 +37,8 @@ fromList' ::(Ord k)=> [(k,v)]->Map.Map k v
 fromList' = foldr (\(k,v) acc -> Map.insert k v acc) Map.empty
 
 data Car = Car {company :: String, model :: String, year :: Int} deriving (Show)
+
+data Expr a where
+    ILit::Int->Expr Int
+    BLit::Bool->Expr Bool
+    Add::Expr Int->Expr Int ->Expr Int
