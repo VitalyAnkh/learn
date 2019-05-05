@@ -42,3 +42,8 @@ data Expr a where
     ILit::Int->Expr Int
     BLit::Bool->Expr Bool
     Add::Expr Int->Expr Int ->Expr Int
+
+primes = filterPrime [2..]
+    where filterPrime (p:xs)=
+        p:filterPrime [x|x<-xs,x`mod`p/=0]
+
