@@ -1,3 +1,4 @@
+-- import           Data.Functor
 class YesNo a where
     yesno :: a -> Bool
 
@@ -59,5 +60,19 @@ class Tofu t where
 
 data Frank a b=Frank { frankField:: b a}deriving (Show)
 
+-- type Lens b a=(Functor f) =>(a -> f a)-> b -> f b
 
+--data Position=Position {positionX :: Double, positionY ::Double}
 
+-- xLens :: Functor f => (Double -> f Double)->Position -> f Position
+-- p=Position 1 2
+--p2=p {positionY=3}
+
+--p3=Position{positionX = positionX p,
+ --           positionY=3
+  --         }
+
+myLast ::a=>[a]->a
+myLast []=error "No end for empty lists!"
+myLast [x]=x
+myLast (_:xs)=myLast xs

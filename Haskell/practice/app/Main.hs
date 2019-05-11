@@ -7,4 +7,3 @@ main = do
   l<-fmap length getLine
   print l
 
-

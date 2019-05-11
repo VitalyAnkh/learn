@@ -44,6 +44,7 @@ data Expr a where
     Add::Expr Int->Expr Int ->Expr Int
 
 primes = filterPrime [2..]
-    where filterPrime (p:xs)=
-        p:filterPrime [x|x<-xs,x`mod`p/=0]
+    where filterPrime (p:xs)=p:filterPrime [x|x<-xs,x`mod`p/=0]
+
+type Lens b a=Functor f=>(a->f a)->f ->b
 
