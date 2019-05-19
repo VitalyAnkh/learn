@@ -102,3 +102,5 @@ areCars =map isCar
 getManu::Vehicle->Manufacturer
 getManu (Car m _) =m
 getManu _         = undefined
+
+data MyType = MyVal Integer deriving (Eq,Show)
