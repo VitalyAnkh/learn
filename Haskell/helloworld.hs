@@ -1,4 +1,5 @@
 import           Data.List
+import qualified Data.Vector
 main :: IO ()
 main = print "Hello, world!"
 data PugType=PugData
@@ -39,3 +40,18 @@ addMul = ((+) . f)
 
 solution' ::Integer->Integer
 solution' number =foldl addMul 0 [0..number]
+
+highAndLow :: String -> String
+highAndLow input = (show . maximum $ xs) ++ " " ++ (show . minimum $ xs) where
+  ys='[':map (\x->if x==' ' then ',' else x) input ++"]"
+  xs=read ys::[Int]
+
+repeatStr :: Int -> String -> String
+repeatStr n str = ( foldl (++) "") $ replicate n str
+
+longestPalindrome::Eq a=>[a] -> Int
+longestPalindrome []=0
+longestPalindrome xs= maximum $ map length $ filter (\x->reverse x ==x) $  concatMap (tail . inits) $ tails xs
+
+isAnagramOf :: String -> String -> Bool
+isAnagramOf test original = original `elem` ( permutations test)
