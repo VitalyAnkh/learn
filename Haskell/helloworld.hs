@@ -1,4 +1,6 @@
+import           Data.Char
 import           Data.List
+import qualified Data.Vector (fromList)
 import qualified Data.Vector
 main :: IO ()
 main = print "Hello, world!"
@@ -55,3 +57,17 @@ longestPalindrome xs= maximum $ map length $ filter (\x->reverse x ==x) $  conca
 
 isAnagramOf :: String -> String -> Bool
 isAnagramOf test original = original `elem` ( permutations test)
+
+rowSumOddNumbers :: Integer -> Integer
+rowSumOddNumbers n=Data.Vector.sum $ Data.Vector.slice (m*(m+1) `div` 2) m $ Data.Vector.fromList [2*x-1|x<-[1..]] where
+  m=fromIntegral n
+
+getCount :: String -> Int
+getCount =length. filter (`elem` "aeiou")
+
+abbreviate :: String -> String
+abbreviate xs=removeBlanks $map (\x->if x>='A'&&x<='Z' then x else ' ')  $ map head $ words xs where
+  removeBlanks str=[c|c<-str,c/=' ']
+
+upperFirstLetter ::String->String
+upperFirstLetter =unwords . map (\ys->(toUpper $ head ys ):tail ys). words

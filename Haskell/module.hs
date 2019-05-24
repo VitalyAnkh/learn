@@ -104,3 +104,5 @@ getManu (Car m _) =m
 getManu _         = undefined
 
 data MyType = MyVal Integer deriving (Eq,Show)
+getCount :: String -> Int
+getCount xs=foldl (\(acc,x)->if x==True then acc+1) 0 $ filter (`elem` "aeiou") xs
