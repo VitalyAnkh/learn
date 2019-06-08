@@ -9,12 +9,14 @@
 #include <string>
 
 class SalesData {
+    std::string bookNo;
     std::string isbn() const {return bookNo;}
     SalesData& combine (const SalesData&);
     double avg_price() const ;
     std::string BookNo;
     unsigned units_sold =0;
     double revenue=0.0;
+
 
 };
 SalesData add (const SalesData&, const SalesData&);
