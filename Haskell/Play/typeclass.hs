@@ -1,4 +1,5 @@
 -- import           Data.Functor
+import           Test.QuickCheck
 class YesNo a where
     yesno :: a -> Bool
 
@@ -72,7 +73,19 @@ data Frank a b=Frank { frankField:: b a}deriving (Show)
  --           positionY=3
   --         }
 
-myLast ::a=>[a]->a
-myLast []=error "No end for empty lists!"
-myLast [x]=x
-myLast (_:xs)=myLast xs
+--myLast ::a=>[a]->a
+--myLast []=error "No end for empty lists!"
+--myLast [x]=x
+--myLast (_:xs)=myLast xs
+
+
+functorIdentity::(Functor f,Eq (f a))=> f a->Bool
+functorIdentity f=fmap id f == f
+
+functorCompose ::(Eq (f c),Functor f)=>(a->b)->(b->c)->f a->Bool
+functorCompose f g x=(fmap g (fmap f x))==(fmap (g . f) x)
+
+f::[Int]->Bool
+f x=functorIdentity x
+
+-- c=functorCompose (+1) (*2)
