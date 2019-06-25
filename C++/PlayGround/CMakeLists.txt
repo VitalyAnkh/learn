@@ -3,4 +3,4 @@ project(PlayGround)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(PlayGround main.cpp SalesData.cpp SalesData.h Stack.cpp Stack.h)
+add_executable(PlayGround main.cpp SalesData.cpp SalesData.h Stack.cpp Stack.h Stock.cpp Stock.h)
