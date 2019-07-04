@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mysite.views import hello, my_homepage_view, current_datetime
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', hello),
+    path('', my_homepage_view),
+    path('current_time', current_datetime),
+    path('time', current_datetime),
+    path(r'^time/plus/\d+/$', hours_ahead),
 ]
