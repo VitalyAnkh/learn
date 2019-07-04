@@ -1,5 +1,7 @@
 import java.sql.*;
+import java.sql.Connection;
 import java.sql.ResultSet;
+
 public class DatabaseManager {
     String url = null;// eg. "jdbc:postgresql://localhost:5432/bjtu";
     String user = null; // eg. "vitalyr";
@@ -8,8 +10,7 @@ public class DatabaseManager {
     Statement stmt = null;
     ResultSet rs = null;
 
-    public DatabaseManager() {
-    }
+    public DatabaseManager() {}
 
     private void openSpecificConnection(String url, String user, String password) {
         try {

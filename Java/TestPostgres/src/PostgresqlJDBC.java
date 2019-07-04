@@ -1,6 +1,3 @@
-import DatabaseManager.*;
-
-
 
 public class PostgresqlJDBC {
 
