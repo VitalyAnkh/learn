@@ -1,5 +1,5 @@
 [package]
-name = "actix_demo"
+name = "hews"
 version = "0.1.0"
 authors = ["VitalyR <vitalyankh@gmail.com>"]
 edition = "2018"
@@ -7,5 +7,11 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "1.0.3"
-actix-rt = "0.2.3"
+gtk = { git = "https://github.com/gtk-rs/gtk.git" }
+
+reqwest = "0.9.18"
+
+serde = { version = "1.0.94", features = ["derive"] }
+
+serde_derive= "1.0.94"
+serde_json = "1.0.40"
