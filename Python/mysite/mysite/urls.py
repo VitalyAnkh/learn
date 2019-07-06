@@ -14,14 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from mysite.views import hello, my_homepage_view, current_datetime
-
+from django.urls import path, include
+from mysite.views import hello, my_homepage_view, current_datetime, hours_ahead
+from polls import urls as polls_urls
 urlpatterns = [
+    path('polls/', include(polls_urls)),
     path('admin/', admin.site.urls),
     path('hello/', hello),
     path('', my_homepage_view),
     path('current_time', current_datetime),
     path('time', current_datetime),
-    path(r'^time/plus/\d+/$', hours_ahead),
+    path(r'time/plus/(\d{1,2})/', hours_ahead),
 ]

@@ -32,8 +32,8 @@ impl App {
             process::exit(1);
         }
         let (tx, rx) = channel();
-        let window = gtk::Window::new(gtk::WindowType::Toplevel);
-        let sw:ScrolledWindow = ScrolledWindow::new::<Option<&gtk::Box>,Option<&gtk::Box>>(None, None);
+        let window=gtk::Window::new(gtk::WindowType::Toplevel);
+        let sw:ScrolledWindow = ScrolledWindow::new::<gtk::Adjustment,gtk::Adjustment>(None, None);
         let stories = gtk::Box::new(gtk::Orientation::Vertical, 20);
         let spinner = gtk::Spinner::new();
         let header = Header::new(stories.clone(), tx.clone());
@@ -66,7 +66,7 @@ impl App {
 
     fn fetch_posts(&self, client: Arc<Client>) {
         self.spinner.start();
-        self.tx.into_inner().unwrap().send(Msg::Loading).unwrap();
+        (&self.tx).into_inner().unwrap().send(Msg::Loading).unwrap();
         let tx_clone = self.tx.clone();
         top_stories(client, 10, tx_clone);
     }
