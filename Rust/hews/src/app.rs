@@ -66,9 +66,10 @@ impl App {
 
     fn fetch_posts(&self, client: Arc<Client>) {
         self.spinner.start();
-        (&self.tx).into_inner().unwrap().send(Msg::Loading).unwrap();
-        let tx_clone = self.tx.clone();
-        top_stories(client, 10, tx_clone);
+        let tx_clone1 = self.tx.clone();
+        tx_clone1.into_inner().unwrap().send(Msg::Loading).unwrap();
+        let tx_clone2 = self.tx.clone();
+        top_stories(client, 10, tx_clone2);
     }
 
     fn run_event_loop(&self, rx: Receiver<Msg>, client: Arc<Client>) {
