@@ -25,13 +25,13 @@ impl Drop for JoJo {
 
 struct GenericType<T>(T) where T: Display + Drop;
 
-default impl<T: Drop + Display> Drop for GenericType<T> {
+impl<T: Drop + Display> Drop for GenericType<T> {
     fn drop(&mut self) {
         println!("Dropping S({})", self.0);
     }
 }
 
-impl Drop for SJ {
+/* add `default` to use trait specilization but it has bugs default impl ...*/ impl Drop for SJ {
     fn drop(&mut self) {
         println!("SJ!");
     }
