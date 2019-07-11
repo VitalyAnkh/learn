@@ -11,7 +11,7 @@ pub fn main() {
         let sys = actix_rt::System::new("http-server");
         let addr = HttpServer::new(||
             App::new().route("/", web::get().to(|| HttpResponse::Ok())))
-            .bind("127.0.0.1::9003")
+            .bind("127.0.0.1:9003")
             .unwrap()
             .shutdown_timeout(60)
             .start();
