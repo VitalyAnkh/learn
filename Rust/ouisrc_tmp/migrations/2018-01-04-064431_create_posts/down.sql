@@ -1,0 +1,9 @@
+DROP TABLE users;
+DROP TABLE themes;
+DROP TABLE comments;
+DROP TABLE messages;
+DROP TABLE communitys;
+DROP TABLE community_tags;
+DROP TABLE jonis;
+DROP TABLE roles;
+DROP TABLE saves;
