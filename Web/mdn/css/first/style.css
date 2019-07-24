@@ -1,11 +1,113 @@
 h1 {
     color: purple;
-    background-color: yellow;
+    text-shadow: 1px 1px 1px black;
+    background: yellow linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
     border: 5px solid rgb(207, 65, 65);
     padding: 2px solid green;
     margin: 3px solid purple;
+    text-align: center;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+
+.editor-note {
+    background-color: #9999ff;
+    border-left: 6px solid #333399;
+}
+
+#polite {
+    font-family: cursive;
+}
+
+#rude {
+    font-family: monospace;
+    text-transform: uppercase;
 }
 
 p {
-    color: red;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+#first {
+    background-color: goldenrod;
+}
+
+#second {
+    background-color: silver;
+}
+
+#third {
+    background-color: #CD7F32;
+}
+
+li[lang|="en"] {
+    background: url("http://mdn.github.io/learning-area/css/introduction-to-css/css-selectors/en-GB.png") 5px center no-repeat;
+}
+
+li[lang|="de"] {
+    background: url("http://mdn.github.io/learning-area/css/introduction-to-css/css-selectors/de.png") 5px center no-repeat;
+}
+
+li[lang|="es"] {
+    background: url("http://mdn.github.io/learning-area/css/introduction-to-css/css-selectors/es.png") 5px center no-repeat;
+}
+
+li[data-perf^="inc"] {
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
+li[data-perf^="same"] {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+li[data-perf^="dec"] {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+li[data-perf$="pro"] {
+    font-weight: bold;
+}
+
+li[data-perf$="rel"] {
+    font-style: italic;
+    color: #666;
+}
+
+ol {
+    padding: 0;
+}
+
+li {
+    padding: 3px 3px 3px 34px;
+    margin-bottom: 5px;
+    list-style-position: inside;
+}
+
+/* These styles will style our link
+   in all states */
+a {
+    color: blue;
+    font-weight: bold;
+}
+
+/* We want visited links to be the same color
+   as non visited links */
+a:visited {
+    color: blue;
+}
+
+/* We highlight the link when it is
+   hovered over (mouse over), activated (mouse down)
+   or focused (keyboard) */
+a:hover,
+a:active,
+a:focus {
+    color: darkred;
+    text-decoration: none;
+}
+
+[href^=http]::after {
+    content: '⤴';
+    color:rgba(123,32,44,1);
 }
