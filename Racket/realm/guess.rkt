@@ -22,3 +22,21 @@
   (* n n))
 (define (sin-sub-cos x)
   (- (sin x) (cos x)))
+
+
+(struct student (name id# dorm) #:transparent)
+(define snack '(hulatang hvmm yh))
+(struct transparent-struct (good bad racket?) #:transparent)
+(define jane (student 23 321 532))
+(define bob (student "Bob" 1234 'Jix))
+(define (tell-odd n) (if (odd? n)
+                         'odd-number
+                         'even-number))
+(define (fuck-odd n) (if (odd? n)
+                         (/ 1 0)
+                         'even-number))
+
+(define (my-length a-list)
+  (if (empty? a-list)
+      0
+      (add1 (my-length (rest a-list)))))

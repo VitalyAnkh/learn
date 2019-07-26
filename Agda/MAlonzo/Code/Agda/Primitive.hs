@@ -1,5 +1,5 @@
 {-# LANGUAGE EmptyDataDecls, EmptyCase, ExistentialQuantification,
-             ScopedTypeVariables, NoMonomorphismRestriction, RankNTypes,
+             ScopedTypeVariables, NoMonomorphismRestriction, Rank2Types,
              PatternSynonyms #-}
 module MAlonzo.Code.Agda.Primitive where
 
