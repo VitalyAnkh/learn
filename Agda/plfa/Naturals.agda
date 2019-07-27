@@ -17,9 +17,7 @@ suc n + m = suc (n + m)
 
 _*_ : ℕ → ℕ → ℕ
 zero * n = zero
-n * zero = zero
-suc zero * n = n
-suc n * m = m + (n * m)
+(suc m) * n = n + (m * n)
 
 _ : 2 + 3 ≡ 5
 _ =
@@ -61,5 +59,40 @@ _ =
     suc (suc (suc 4))
   ≡⟨⟩
     7
+
+  ∎
+
+_ : 3 * 4 ≡ 12
+_ =
+  begin
+    3 * 4
+  ≡⟨⟩
+    4 + (2 * 4)
+  ≡⟨⟩
+    4 + (4 + (1 * 4))
+  ≡⟨⟩
+    4 + (4 + (4 + (0 * 4)))
+  ≡⟨⟩
+    4 + (4 + (4 + 0 ))
+  ≡⟨⟩
+    12
+
+  ∎
+
+_^_ : ℕ → ℕ → ℕ
+n ^ 0 = suc zero
+n ^ (suc m) = n * (n ^ m)
+
+_∸_ : ℕ → ℕ → ℕ
+m ∸ zero = m
+zero ∸ suc n = zero
+suc m ∸ suc n = m ∸ n
+
+_ : 1 + 1 ≡ 2
+_ =
+  begin
+    1 + 1
+  ≡⟨⟩
+    2
 
   ∎
