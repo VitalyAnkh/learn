@@ -12,6 +12,7 @@
 .. Unix/Linux实践教程
 .. Linux/UNIX系统编程手册
 .. 操作系统真相还原 郑钢
+.. Operating System: Three Easy Pieces
 
 . 编译原理
 .. 编译器设计 
@@ -41,7 +42,13 @@
 .. A Mathematical Introduction to Logic || Enderton
 .. 数理逻辑：证明及其限度
 
+..
+- 范畴论
+.. Category Theory || Steve Awodey
+
 - 集合论
+.. Set Theory || Thomas Jech
+.. 公理集合论导引 || 张锦文
 .. Elements of Set Theory || Enderton
 .. 集合论：对无穷概念的探索
 
@@ -51,6 +58,7 @@
 
 - 范畴论
 .. Category Theory || Steve Awodey
+.. 
 
 - 计算机组成
 .. CPU自制入门
@@ -59,3 +67,9 @@
 .. TCP/IP网络编程 || 尹圣雨
 .. 计算机网络 || 谢希仁
 .. 计算机网络：自顶向下方法
+
+- 算法
+.. 算法导论
+.. Algorithms || Sedgiwick
+.. 数据结构 || 严蔚敏
+.. Algorithms || Jeff Erickson
