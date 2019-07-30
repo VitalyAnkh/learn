@@ -19,5 +19,18 @@ public class CalculateBMI {
         } else {
             System.out.println("非常肥胖！");
         }
+
+        int number_of_people = 10;
+        switch (number_of_people) {
+        case 1:
+            System.out.println("Too few!");
+            break;
+        case 2:
+            System.out.println("Not bad");
+            break;
+        default:
+            System.out.println("No matter how many");
+
+        }
     }
 }

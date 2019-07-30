@@ -1,0 +1,43 @@
+= 面向对象
+
+* 多态
+
+```java
+public class Test{
+    public static void main(String[] args) {
+        Father p =  new Son();
+        System.out.println(p.getName());//Son  这个可以理解
+        System.out.println(p.name);//Father  这是为什么？？
+
+    }
+
+}
+
+class Father {
+
+    public String name = "Father";
+
+    public String getName() {
+
+        return name;
+
+    }
+
+}
+class Son extends Father {
+
+    public String name = "Son";
+
+    public String getName() {
+
+        return name;
+
+    }
+
+}
+
+```
+
+
+多态只适用于方法，对字段不起作用。
+另外，写代码的时候，打开编译器警告“Field declaration hides another field or variable”，严禁子类声明与父类重名的变量。
