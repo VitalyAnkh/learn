@@ -60,11 +60,6 @@ class Student extends Person {
     }
 
     @Override
-    public void hello() {
-        System.out.println("Hello, good student!");
-    }
-
-    @Override
     public void run() {
         System.out.println("I'm a student, I can't run!呜呜呜");
     }

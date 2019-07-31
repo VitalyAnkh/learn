@@ -41,3 +41,21 @@ class Son extends Father {
 
 多态只适用于方法，对字段不起作用。
 另外，写代码的时候，打开编译器警告“Field declaration hides another field or variable”，严禁子类声明与父类重名的变量。
+
+interface的字段只能是public static final类型
+
+* Java编译器最终编译出的.class文件只使用完整类名，因此，在代码中，当编译器遇到一个class名称时：
+** 如果是完整类名，就直接根据完整类名查找这个class；
+** 如果是简单类名，按下面的顺序依次查找：
+*** 查找当前package是否存在这个class；
+*** 查找import的包是否包含这个class；
+*** 查找java.lang包是否包含这个class。
+
+* 如果按照上面的规则还无法确定类名，则编译报错。
+* 编写class的时候，编译器会自动帮我们做两个import动作：
+** 默认自动import当前package的其他class；
+** 默认自动import java.lang.*。
+
+* 把方法定义为package权限有助于测试，因为测试类和被测试类只要位于同一个package，测试代码就可以访问被测试类的package权限方法。
+
+* 一个.java文件只能包含一个public类，但可以包含多个非public类。如果有public类，文件名必须和public类的名字相同。
