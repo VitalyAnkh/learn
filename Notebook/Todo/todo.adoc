@@ -1,0 +1,3 @@
+= Todo
+
+* 删除Visual Paradigm，在~/VisualParadigm和usr/bin/visualparadigm

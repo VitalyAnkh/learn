@@ -14,28 +14,17 @@ public class Test{
 }
 
 class Father {
-
     public String name = "Father";
-
     public String getName() {
-
         return name;
-
     }
-
 }
 class Son extends Father {
-
     public String name = "Son";
-
     public String getName() {
-
         return name;
-
     }
-
 }
-
 ```
 
 
@@ -59,3 +48,17 @@ interface的字段只能是public static final类型
 * 把方法定义为package权限有助于测试，因为测试类和被测试类只要位于同一个package，测试代码就可以访问被测试类的package权限方法。
 
 * 一个.java文件只能包含一个public类，但可以包含多个非public类。如果有public类，文件名必须和public类的名字相同。
+
+* 创建类的原因：
+** 对现实世界的对象建模：学生，老师
+** 对抽象对象建模：形状，事件，事务
+** 隐藏实现细节：XX营销策略
+** 创建中心控制点：控制器（controller)
+** 让参数传递更顺畅：把持久化对象(persistent object)做成一个类
+** 隔离一些特殊的复杂度：工厂模式
+
+* 较旧版本的JDK中，字符串在Java内部是用一个char[]数组来表示的。而新版本中String用byte[]存储
+** `String s=new String(new char[]{'H','e','l','l','o'})`
+
+** `UTF-8` 编码的另一个好处是容错能力强。如果传输过程中某些字符出错，不会影响后续字符，因为 `UTF-8`编码依靠高位字节来确定一个字符究竟是几个字节，它经常用做传输过程中的编码。
+* 
