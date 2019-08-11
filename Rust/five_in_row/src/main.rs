@@ -4,6 +4,9 @@ mod game;
 mod board;
 // chess module contains Chess enum, which represent chess
 mod chess;
+
 fn main() {
     println!("Hello, world!");
+    let b=board::Board::new(12,13);
+    dbg!(b);
 }
