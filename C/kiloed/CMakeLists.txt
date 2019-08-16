@@ -3,4 +3,4 @@ project(kiloed C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(kiloed main.c)
+add_executable(kiloed kiloed.c)
