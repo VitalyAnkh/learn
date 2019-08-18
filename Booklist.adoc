@@ -73,3 +73,4 @@
 .. Algorithms || Sedgiwick
 .. 数据结构 || 严蔚敏
 .. Algorithms || Jeff Erickson
+.. 数据结构 邓俊辉

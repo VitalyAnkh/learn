@@ -1,0 +1,12 @@
+=== 如何使用Dos的debug
+
+=== 问题
+. 1 CPU 的引脚是什么 
+. CPU加电后CS初始化为0xF000，IP初始化为0xFFF0，为什么有人说CS初始化为0xFFFF，IP初始化为0x0000？
+. 为什么Play/start_nasm.asm的大小是34Byte？不应该是40Byte吗？难道空格不算数么
+
+
+=== 笔记
+. Floppy Disk 软盘
+
+
