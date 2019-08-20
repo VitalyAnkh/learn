@@ -1,0 +1,2 @@
+module BadIce where
+import Data.Monad
