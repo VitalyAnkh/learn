@@ -1,0 +1,4 @@
+module CH17 where
+import Test.QuickCheck
+import Test.QuickCheck.Classes
+import Test.QuickCheck.Checkers
