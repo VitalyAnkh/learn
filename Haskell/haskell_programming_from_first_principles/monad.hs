@@ -78,3 +78,22 @@ data Nat=Zero | Suc Nat
 data Nat' :: * where
   Zero'::Nat'
   Suc':: Nat' -> Nat'
+
+newtype Identity a = Identity a deriving (Eq, Ord, Show)
+instance Functor Identity where
+  fmap f (Identity a) = Identity $ f a
+instance Applicative Identity where
+  pure = Identity
+  (Identity f) <*> (Identity a) = Identity $ f a
+instance Monad Identity where
+  return = pure
+  (Identity a) >>= f = f a
+
+data List a = Nil | Cons a (List a)
+
+instance Functor List where
+  fmap f Nil = Nil
+  fmap f (Cons a l) = Cons (f a) (fmap f l)
+instance Applicative List where
+  pure a =Cons a Nil
+  Cons f ()
