@@ -11,10 +11,8 @@ data ℕ : Set where
 {-# BUILTIN NATURAL ℕ #-}
 
 _+_ : ℕ → ℕ → ℕ
-n + zero = n
 zero + n = n
 suc n + m = suc (n + m)
-
 _*_ : ℕ → ℕ → ℕ
 zero * n = zero
 (suc m) * n = n + (m * n)

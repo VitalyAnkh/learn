@@ -2,7 +2,7 @@
 int main()
 {
     long long a, b;
-    scanf("%lld%lld", &a, &b);
-    printf("%lld\n", a + b);
+    std::scanf("%lld%lld", &a, &b);
+    std::printf("%lld\n", a + b);
     return 0;
 }
