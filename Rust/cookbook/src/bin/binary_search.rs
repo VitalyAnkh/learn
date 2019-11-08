@@ -20,3 +20,5 @@ fn test_search() {
     let v = vec![-1, 0, 3, 5, 9, 12];
     assert_eq!(4, search(v, 9));
 }
+
+fn main(){}

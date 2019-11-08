@@ -1,10 +1,11 @@
 fn last<T: Clone>(slice: &[T]) -> T {
-    if let Some(x)=slice.iter().rev().next(){
+    if let Some(x) = slice.iter().rev().next() {
         x.to_owned()
-    }else{
+    } else {
         panic!();
     }
 }
+fn main(){}
 
 #[test]
 fn should_work_for_non_empty_list_of_integers() {

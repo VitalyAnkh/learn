@@ -6,3 +6,5 @@ fn update_light(current: &str) -> String {
         _=>String::from("Error!")
     }
 }
+
+fn main(){}

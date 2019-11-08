@@ -7,7 +7,8 @@ fn main() {
                 .title("OrbTk - minimal example")
                 .position((100.0, 100.0))
                 .size(420.0, 730.0)
-                .child(TextBlock::create().text("OrbTk").build(ctx))
+                .child(TextBlock::create().text("OrbTk the font is too small").build(ctx))
+                .child(TextBlock::create().text("Hello, OrbTk").build(ctx))
                 .build(ctx)
         })
         .run();

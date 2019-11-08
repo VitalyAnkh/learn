@@ -1,4 +1,5 @@
 #![feature(async_await)]
+#![feature(async_closure)]
 extern crate futures;
 
 fn main() {
@@ -8,5 +9,5 @@ fn main() {
     println!("Hello from main");
     let future = closure();
     println!("Hello from main again");
-    futures::block_on(future);
+//    futures::block_on(future);
 }
