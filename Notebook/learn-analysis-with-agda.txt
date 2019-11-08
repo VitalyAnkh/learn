@@ -1,0 +1,24 @@
+题目： 使用Agda 形式化经典分析学
+
+研究内容： 使用Agda，使用类似前人使用Coq作出的工作，首先定义自然数，然后定义有理数和实数，然后以这些为工具，逐步考察分析学的构造，做到形式化经典分析学的理论体系。
+这里的经典分析学，是指不涉及非标准分析等内容。（Agda和Coq都是辅助定理证明器，也都是纯函数式编程语言）。
+
+意义： 使用Agda这样的辅助定理证明工具，根据Curry-Howard 同构，可以保证所有的预设的公理，自己下的定义，证明出的定理都是一致的（除非，Agda的编译器实现有问题）。由此获得的经验，
+也可用在形式化证明软件系统、芯片设计的正确性。
+
+研究背景：Coq的标准库已有对实数的形式化，Carsten Hornung (参考资料2) 和 CatherineLelay(参考资料3)都给出了用Coq构建实数的实现。Agda也有使用Dedekind cut构造
+实数的实现（在github上有很多），但进一步的实现很少。有了同伦类型论 （HoTT，参考资料6），我们有了更强大的工具来形式化分析学。
+
+研究计划：
+1. 学习 plfa这本书。
+2. 用Agda定义实数以获得经验;
+3. 学习HoTT和Cubical HoTT;
+4. 使用以上两样工具，用Agda形式化分析学。
+
+参考资料：
+1. 一本用Agda讲逻辑学和程序设计语言理论的在线书 https://plfa.github.io
+2. www.ps.uni-saarland.de/~hornung/BachelorThesis/finalTalk.pdf
+3. https://video.ias.edu/sites/video/files/lelay.pdf
+4. Coq官网 https://coq.inria.fr/
+5. Agda官网 https://wiki.portal.chalmers.se/agda/pmwiki.php
+6. HoTT https://homotopytypetheory.org/book/
