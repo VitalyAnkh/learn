@@ -1,2 +1,4 @@
 #![feature(async_closure)]
-#![feature(async_await)]
+#[macro_use]
+extern crate nom;
+pub mod parser;

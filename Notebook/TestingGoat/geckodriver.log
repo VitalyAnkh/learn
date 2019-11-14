@@ -1,0 +1,15 @@
+1573717108628	mozrunner::runner	INFO	Running command: "/usr/bin/firefox-developer-edition" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.hlvchFSNlaqN"
+1573717109550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1573717109550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1573717109550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1573717109550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1573717121376	Marionette	INFO	Listening on port 39461
+1573717121434	Marionette	WARN	TLS certificate errors will be ignored for this session
+1573717466751	Marionette	INFO	Stopped listening on port 39461
+1573717662823	mozrunner::runner	INFO	Running command: "/usr/bin/firefox-developer-edition" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JrtTnTtOu1Qs"
+1573717663775	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1573717663776	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1573717663776	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1573717663776	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1573717675356	Marionette	INFO	Listening on port 43049
+1573717675456	Marionette	WARN	TLS certificate errors will be ignored for this session

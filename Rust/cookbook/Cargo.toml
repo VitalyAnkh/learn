@@ -33,6 +33,7 @@ serde_json = "1.0.40"
 structopt = "0.3.3"
 async-std = "0.99.9"
 gnuplot = "0.0.32"
+nom = "5.0.1"
 
 [dev-dependencies]
 criterion = "0.3"
