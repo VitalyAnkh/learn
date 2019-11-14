@@ -1,8 +1,0 @@
-1573717463237	mozrunner::runner	INFO	Running command: "/usr/bin/firefox-developer-edition" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NTge8oxtR1lD"
-1573717464120	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1573717464120	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1573717464121	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1573717464121	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1573717475432	Marionette	INFO	Listening on port 37921
-1573717475485	Marionette	WARN	TLS certificate errors will be ignored for this session
-1573717495947	Marionette	INFO	Stopped listening on port 37921
