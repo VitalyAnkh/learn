@@ -3,3 +3,5 @@ pub mod basic_algorithms;
 pub mod codewars;
 pub mod leetcode;
 pub mod luogu;
+pub mod coursera;
+mod cpp;
