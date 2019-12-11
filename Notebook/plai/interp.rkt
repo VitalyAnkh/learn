@@ -25,7 +25,7 @@
   [plusC (l : ArithC) (r : ArithC)]
   
   [multC (l : ArithC ) (r : ArithC)]
-  [subC (l : ArithC) (r: ArithC)]
+  [subC (l : ArithC) (r : ArithC)]
   )
 
 (define (parse [s : s-expression]) : ArithC
@@ -36,6 +36,7 @@
        (case (s-exp->symbol (first sl))
          [(+) (plusC (parse (second sl)) (parse (third sl)))]
          [(*) (multC (parse (second sl)) (parse (third sl)))]
+         [(-) (subC (parse (second sl)) (parse (third sl)))]
          [else (error 'parse "invalid list input")]))]
     [else (error 'parse "invalid input")]))
 
@@ -44,8 +45,10 @@
     [numC (n) n]
     [plusC (l r) (+ (interp l) (interp r))]
     [multC (l r) (* (interp l) (interp r))]
+    [subC (l r ) (+ (interp l) (* -1 (interp r)))]
     ))
 
 (define input '(+ 1 3))
 
 (test (interp (parse input)) 4)
+(test (interp (parse '(- 1 3))) -2)
