@@ -11,8 +11,7 @@ fn main() {
         Colour::Green.paint("绿")
     );
     println!(
-        "{} and this not.",
-        Style::new().bold().paint("This is bold")
+        "{} and this not.", Style::new().bold().paint("This is bold")
     );
     println!(
         "{}",

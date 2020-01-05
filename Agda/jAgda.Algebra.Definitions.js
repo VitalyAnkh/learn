@@ -1,0 +1,34 @@
+var agdaRTS = require("agda-rts");
+
+exports["Congruent₁"] = agdaRTS.primIntegerFromString("0");
+exports["Congruent₂"] = agdaRTS.primIntegerFromString("0");
+exports["LeftCongruent"] = agdaRTS.primIntegerFromString("0");
+exports["RightCongruent"] = agdaRTS.primIntegerFromString("0");
+exports["Associative"] = agdaRTS.primIntegerFromString("0");
+exports["Commutative"] = agdaRTS.primIntegerFromString("0");
+exports["LeftIdentity"] = agdaRTS.primIntegerFromString("0");
+exports["RightIdentity"] = agdaRTS.primIntegerFromString("0");
+exports["Identity"] = agdaRTS.primIntegerFromString("0");
+exports["LeftZero"] = agdaRTS.primIntegerFromString("0");
+exports["RightZero"] = agdaRTS.primIntegerFromString("0");
+exports["Zero"] = agdaRTS.primIntegerFromString("0");
+exports["LeftInverse"] = agdaRTS.primIntegerFromString("0");
+exports["RightInverse"] = agdaRTS.primIntegerFromString("0");
+exports["Inverse"] = agdaRTS.primIntegerFromString("0");
+exports["LeftConical"] = agdaRTS.primIntegerFromString("0");
+exports["RightConical"] = agdaRTS.primIntegerFromString("0");
+exports["Conical"] = agdaRTS.primIntegerFromString("0");
+exports["_DistributesOverˡ_"] = agdaRTS.primIntegerFromString("0");
+exports["_DistributesOverʳ_"] = agdaRTS.primIntegerFromString("0");
+exports["_DistributesOver_"] = agdaRTS.primIntegerFromString("0");
+exports["_IdempotentOn_"] = agdaRTS.primIntegerFromString("0");
+exports["Idempotent"] = agdaRTS.primIntegerFromString("0");
+exports["IdempotentFun"] = agdaRTS.primIntegerFromString("0");
+exports["Selective"] = agdaRTS.primIntegerFromString("0");
+exports["_Absorbs_"] = agdaRTS.primIntegerFromString("0");
+exports["Absorptive"] = agdaRTS.primIntegerFromString("0");
+exports["Involutive"] = agdaRTS.primIntegerFromString("0");
+exports["LeftCancellative"] = agdaRTS.primIntegerFromString("0");
+exports["RightCancellative"] = agdaRTS.primIntegerFromString("0");
+exports["Cancellative"] = agdaRTS.primIntegerFromString("0");
+
