@@ -41,4 +41,3 @@ data _||_ : ℕ → ℕ → Set where
 ≤-refl : ∀ {n : ℕ}
   → n ≤ n
 ≤-refl {zero} = z≤n
-≤-refl {suc n} = s≤s ≤-refl

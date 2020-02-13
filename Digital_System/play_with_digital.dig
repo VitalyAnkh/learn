@@ -113,6 +113,26 @@
       </elementAttributes>
       <pos x="100" y="380"/>
     </visualElement>
+    <visualElement>
+      <elementName>NAnd</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="840" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes/>
+      <pos x="680" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes/>
+      <pos x="1240" y="200"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -122,6 +142,10 @@
     <wire>
       <p1 x="160" y="320"/>
       <p2 x="280" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="800" y="320"/>
+      <p2 x="1060" y="320"/>
     </wire>
     <wire>
       <p1 x="280" y="320"/>
@@ -142,6 +166,14 @@
     <wire>
       <p1 x="260" y="360"/>
       <p2 x="300" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="940" y="200"/>
+      <p2 x="1060" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="200"/>
+      <p2 x="1240" y="200"/>
     </wire>
     <wire>
       <p1 x="500" y="620"/>
@@ -168,6 +200,10 @@
       <p2 x="560" y="340"/>
     </wire>
     <wire>
+      <p1 x="680" y="180"/>
+      <p2 x="840" y="180"/>
+    </wire>
+    <wire>
       <p1 x="280" y="760"/>
       <p2 x="420" y="760"/>
     </wire>
@@ -176,8 +212,16 @@
       <p2 x="300" y="440"/>
     </wire>
     <wire>
+      <p1 x="800" y="220"/>
+      <p2 x="840" y="220"/>
+    </wire>
+    <wire>
       <p1 x="240" y="360"/>
       <p2 x="240" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="800" y="220"/>
+      <p2 x="800" y="320"/>
     </wire>
     <wire>
       <p1 x="420" y="560"/>
@@ -186,6 +230,10 @@
     <wire>
       <p1 x="260" y="360"/>
       <p2 x="260" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="200"/>
+      <p2 x="1060" y="320"/>
     </wire>
     <wire>
       <p1 x="280" y="320"/>

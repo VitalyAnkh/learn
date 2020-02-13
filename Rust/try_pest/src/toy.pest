@@ -1,0 +1,6 @@
+alpha = {'a'..'z'| 'A'..'Z'}
+digit = {'0'..'9'}
+ident = {(alpha | digit)+}
+ident_list = {!digit~ident~(" "~ident)*}
+enclosed = { "(.. "~ ident_list ~ " ..)"}
+sum = {ident_list ~ "+" ~ ident_list}
