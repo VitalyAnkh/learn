@@ -1,0 +1,301 @@
+   0  $accept : %entry% $end
+
+   1  toplevel : EOF
+   2           | Command SEMI toplevel
+
+   3  Command : Term
+
+   4  Term : AppTerm
+   5       | IF Term THEN Term ELSE Term
+
+   6  AppTerm : ATerm
+   7          | SUCC ATerm
+   8          | PRED ATerm
+   9          | ISZERO ATerm
+
+  10  ATerm : LPAREN Term RPAREN
+  11        | TRUE
+  12        | FALSE
+  13        | INTV
+
+  14  %entry% : '\001' toplevel
+
+state 0
+	$accept : . %entry% $end  (0)
+
+	'\001'  shift 1
+	.  error
+
+	%entry%  goto 2
+
+
+state 1
+	%entry% : '\001' . toplevel  (14)
+
+	IF  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	SUCC  shift 6
+	PRED  shift 7
+	ISZERO  shift 8
+	INTV  shift 9
+	EOF  shift 10
+	LPAREN  shift 11
+	.  error
+
+	toplevel  goto 12
+	Command  goto 13
+	Term  goto 14
+	AppTerm  goto 15
+	ATerm  goto 16
+
+
+state 2
+	$accept : %entry% . $end  (0)
+
+	$end  accept
+
+
+state 3
+	Term : IF . Term THEN Term ELSE Term  (5)
+
+	IF  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	SUCC  shift 6
+	PRED  shift 7
+	ISZERO  shift 8
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	Term  goto 17
+	AppTerm  goto 15
+	ATerm  goto 16
+
+
+state 4
+	ATerm : TRUE .  (11)
+
+	.  reduce 11
+
+
+state 5
+	ATerm : FALSE .  (12)
+
+	.  reduce 12
+
+
+state 6
+	AppTerm : SUCC . ATerm  (7)
+
+	TRUE  shift 4
+	FALSE  shift 5
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	ATerm  goto 18
+
+
+state 7
+	AppTerm : PRED . ATerm  (8)
+
+	TRUE  shift 4
+	FALSE  shift 5
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	ATerm  goto 19
+
+
+state 8
+	AppTerm : ISZERO . ATerm  (9)
+
+	TRUE  shift 4
+	FALSE  shift 5
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	ATerm  goto 20
+
+
+state 9
+	ATerm : INTV .  (13)
+
+	.  reduce 13
+
+
+state 10
+	toplevel : EOF .  (1)
+
+	.  reduce 1
+
+
+state 11
+	ATerm : LPAREN . Term RPAREN  (10)
+
+	IF  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	SUCC  shift 6
+	PRED  shift 7
+	ISZERO  shift 8
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	Term  goto 21
+	AppTerm  goto 15
+	ATerm  goto 16
+
+
+state 12
+	%entry% : '\001' toplevel .  (14)
+
+	.  reduce 14
+
+
+state 13
+	toplevel : Command . SEMI toplevel  (2)
+
+	SEMI  shift 22
+	.  error
+
+
+state 14
+	Command : Term .  (3)
+
+	.  reduce 3
+
+
+state 15
+	Term : AppTerm .  (4)
+
+	.  reduce 4
+
+
+state 16
+	AppTerm : ATerm .  (6)
+
+	.  reduce 6
+
+
+state 17
+	Term : IF Term . THEN Term ELSE Term  (5)
+
+	THEN  shift 23
+	.  error
+
+
+state 18
+	AppTerm : SUCC ATerm .  (7)
+
+	.  reduce 7
+
+
+state 19
+	AppTerm : PRED ATerm .  (8)
+
+	.  reduce 8
+
+
+state 20
+	AppTerm : ISZERO ATerm .  (9)
+
+	.  reduce 9
+
+
+state 21
+	ATerm : LPAREN Term . RPAREN  (10)
+
+	RPAREN  shift 24
+	.  error
+
+
+state 22
+	toplevel : Command SEMI . toplevel  (2)
+
+	IF  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	SUCC  shift 6
+	PRED  shift 7
+	ISZERO  shift 8
+	INTV  shift 9
+	EOF  shift 10
+	LPAREN  shift 11
+	.  error
+
+	toplevel  goto 25
+	Command  goto 13
+	Term  goto 14
+	AppTerm  goto 15
+	ATerm  goto 16
+
+
+state 23
+	Term : IF Term THEN . Term ELSE Term  (5)
+
+	IF  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	SUCC  shift 6
+	PRED  shift 7
+	ISZERO  shift 8
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	Term  goto 26
+	AppTerm  goto 15
+	ATerm  goto 16
+
+
+state 24
+	ATerm : LPAREN Term RPAREN .  (10)
+
+	.  reduce 10
+
+
+state 25
+	toplevel : Command SEMI toplevel .  (2)
+
+	.  reduce 2
+
+
+state 26
+	Term : IF Term THEN Term . ELSE Term  (5)
+
+	ELSE  shift 27
+	.  error
+
+
+state 27
+	Term : IF Term THEN Term ELSE . Term  (5)
+
+	IF  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	SUCC  shift 6
+	PRED  shift 7
+	ISZERO  shift 8
+	INTV  shift 9
+	LPAREN  shift 11
+	.  error
+
+	Term  goto 28
+	AppTerm  goto 15
+	ATerm  goto 16
+
+
+state 28
+	Term : IF Term THEN Term ELSE Term .  (5)
+
+	.  reduce 5
+
+
+53 terminals, 7 nonterminals
+15 grammar rules, 29 states
