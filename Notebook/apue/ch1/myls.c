@@ -1,5 +1,6 @@
 #include <apue.h>
 #include <dirent.h>
+#include <error.c>
 int main(int argc, char *argv[])
 {
     DIR *dp;
