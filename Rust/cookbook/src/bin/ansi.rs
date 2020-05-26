@@ -7,6 +7,7 @@ fn main() {
     println!(
         "This is {} in color, {} in color and {} in color",
         Colour::Red.paint("红"),
+
         Colour::Blue.paint("蓝"),
         Colour::Green.paint("绿")
     );

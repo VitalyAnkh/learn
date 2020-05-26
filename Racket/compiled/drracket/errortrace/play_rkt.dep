@@ -1,1 +1,1 @@
-("7.3" racket ("29511996fa3e151605eb379d5fa0b7aaeda7e285" . "5fc235e00809d2d26fd1709806a8a64bf7864300") (collects #"errortrace" #"errortrace-key.rkt") (collects #"pict" #"flash.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"slideshow" #"main.rkt"))
+("7.5" racket ("29511996fa3e151605eb379d5fa0b7aaeda7e285" . "5fc235e00809d2d26fd1709806a8a64bf7864300") (collects #"errortrace" #"errortrace-key.rkt") (collects #"pict" #"flash.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"slideshow" #"main.rkt"))
