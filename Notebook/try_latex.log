@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.5.18)  27 MAY 2020 00:18
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.5.18)  27 MAY 2020 00:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -513,20 +513,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
+
+Overfull \hbox (6.56155pt too wide) in paragraph at lines 56--72
+\TU/lmr/m/n/10.53937 t) (setq-default TeX-engine ’xetex TeX-PDF-mode t)(setq-de
+fault TeX-engine
+ []
+
+
+Overfull \hbox (4.2218pt too wide) in paragraph at lines 56--72
+\TU/lmr/m/n/10.53937 t)(setq-default TeX-engine ’xetex TeX-PDF-mode t)(setq-def
+ault TeX-engine
+ []
+
+
+Overfull \hbox (4.2218pt too wide) in paragraph at lines 56--72
+\TU/lmr/m/n/10.53937 t)(setq-default TeX-engine ’xetex TeX-PDF-mode t)(setq-def
+ault TeX-engine
+ []
+
+
+Overfull \hbox (4.2218pt too wide) in paragraph at lines 56--72
+\TU/lmr/m/n/10.53937 t)(setq-default TeX-engine ’xetex TeX-PDF-mode t)(setq-def
+ault TeX-engine
+ []
+
 LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.5393
 7> not available
 (Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on
- input line 56.
+ input line 72.
 [1
 
-] (./try_latex.aux) ) 
+] [2] (./try_latex.aux) ) 
 Here is how much of TeX's memory you used:
- 16355 strings out of 492483
- 386127 string characters out of 6134979
- 483379 words of memory out of 5000000
- 20784 multiletter control sequences out of 15000+600000
+ 16356 strings out of 492483
+ 386133 string characters out of 6134979
+ 485379 words of memory out of 5000000
+ 20785 multiletter control sequences out of 15000+600000
  533480 words of font info for 43 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,4n,76p,349b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on try_latex.pdf (1 page).
+Output written on try_latex.pdf (2 pages).

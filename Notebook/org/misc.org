@@ -1,0 +1,19 @@
+#+TITLE: Misc
+
+
+* dictionary should be roam-like
+((double link)) is more human mental friendly.
+
+#+BEGIN_QUOTE
+good, better, best
+#+END_QUOTE
+
+* what's the good parts of roam?
+#+BEGIN_SRC rust
+use std;
+fn main()->i32{
+    return 0;
+
+}
+
+#+END_SRC
