@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.5.18)  26 MAY 2020 14:12
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.5.18)  16 JUN 2020 05:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,11 +387,11 @@ Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
 File: ctex.cfg 2019/05/29 v2.4.16 Configuration file (CTEX)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.53937> on input line 3.
+(Font)              <10.53937> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
+(Font)              <5> on input line 7.
 
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
@@ -430,9 +430,9 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 
  )
 Beginning to dump on file prv_try_latex.fmt
- (preloaded format=prv_try_latex 2020.5.26)
+ (preloaded format=prv_try_latex 2020.6.16)
 89394 strings of total length 500459
-480295 memory locations dumped; current usage is 1592&438934
+480295 memory locations dumped; current usage is 1592&438942
 20757 multiletter control sequences
 \font\nullfont=nullfont
 \font\OMX/cmex/m/n/5=cmex10

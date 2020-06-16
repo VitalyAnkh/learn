@@ -1,0 +1,20 @@
+# Fdb version 3
+["pdflatex"] 1592073249 "/home/vitalyr/projects/learn/Notebook/test_tex_en.tex" "/home/vitalyr/projects/learn/Notebook/test_tex_en.pdf" "test_tex_en" 1592073249
+  "/home/vitalyr/projects/learn/Notebook/test_tex_en.aux" 1592073249 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/vitalyr/projects/learn/Notebook/test_tex_en.tex" 1592073249 183 945525f8043322cff17452419bd35a7a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1572595918 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1572595918 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1572595918 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1572595918 19931 9ab70b303cca263e0120c205e98dee99 ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1572595918 8405 41d2bb848d0640ceaee96d90b89378b7 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1589783793 4647576 e8ec99b55960222ddcf17b0f71814489 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1589783787 8044939 9a7fb21e32f68299ae5a431ea6f8edc3 ""
+  "test_tex_en.aux" 1592073249 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "test_tex_en.tex" 1592073249 183 945525f8043322cff17452419bd35a7a ""
+  (generated)
+  "/home/vitalyr/projects/learn/Notebook/test_tex_en.pdf"
+  "test_tex_en.log"
+  "test_tex_en.aux"
+  "test_tex_en.pdf"
+  "/home/vitalyr/projects/learn/Notebook/test_tex_en.log"

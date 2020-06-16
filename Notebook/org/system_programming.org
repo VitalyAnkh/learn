@@ -1,0 +1,18 @@
+#+TITLE: system-programming
+* begin to use org mode
+It's really amazing?
+No! I haven't realize what is novel in org roam.
+
+[[try bidirection link]]
+kkkkkkk
+just a try
+
+[[why not be stupid]]
+The Chinese input method is broken. I hate it. I'm going to solve this problem.
+The [[try bidirection link]] is amazing.
+"C-c C-c" doesn't work in [[nxml]]. That's totally insane. Material from the Web said that [[SVG]] support has been built into [[emacs]].
+* why not be stupid
+ds
+Am I a INTJ?
+[[good]]
+* good

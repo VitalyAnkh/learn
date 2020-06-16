@@ -1,0 +1,57 @@
+* Inbox
+** TODO 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+** TODO 备份 gnome 的设置，使用 dconf (just google it)
+** TODO 申请毕设服务接单系统，挣钱
+*** WAIT 等待对方审核
+** TODO 快去学习 org capture
+** TODO 如何让 org capture 捕获的 todo 添加上时间
+** TODO 如何打开 emacs 内置的 reference manual ？
+
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 10:50\]][[2020-06-15 一 10:50]​]]
+** TODO 配置 emacs 的 upload 插件，做图床用
+** TODO 找到 gnome 壁纸的存放位置，设置同步
+** TODO 把 org-capture 中的 personal todo 模板创建的 todo 事项中的 status indicator 改为默认为 TODO ，而不是[ ]
+** TODO 同步和备份 rime 词库
+** TODO 如何使用 emacs-rime 输入英文人名中的小圆点？
+
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 09:26\]][[2020-06-15 一 09:26]​]]
+** TODO 如何同步 emacs-rime 的词库？
+
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-14 日 00:20\]][[2020-06-14 日 00:20]​]]
+** WAIT learn from this config for org mode
+#+begin_src emacs-lisp :tangle yes
+(use-package! org
+  :init
+  (setq
+   org-directory "~/Dropbox/org"
+   diary-file (concat org-directory "/diary")))
+
+(use-package! org-agenda
+  :init
+  (setq
+    org-agenda-include-diary              nil
+    org-agenda-file-regexp                "\\`[^.].*\\.org'\\|[0-9]+\\.org$"
+    org-agenda-timegrid-use-ampm          t
+    org-journal-dir                       (concat org-directory "/journal")
+    org-journal-enable-agenda-integration t
+    org-journal-file-format               "%Y%m%d.org"
+    org-journal-time-format               "%l:%M%p")
+  (appendq! org-agenda-files (list org-journal-dir)))
+#+end_src
+** HOLD Read the **plain text guide**, then fill the table below
+
+[[file:~/projects/learn/Notebook/org/tools.org::*Emacs Tips][Emacs Tips]]
+** TODO 修正使用 org-capture 时自动链接到当前 buffer 这个特性
+应该给出是否链接的选项？
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-12 五 19:29\]][[2020-06-12 五 19:29]​]]
+** DONE 学习如何用 org-mode 做 gtd
+
+** TODO 制定考研计划
+** TODO 所以，如何正确使用 org-mode 写日记呢？
+** TODO 要学习使用 org capture
+** TODO 学习使用 org template
+** DONE 学习 org-mode 的用法：这个<SPC + X> 的 org capture 的功能会默认链接当前打开的文档的嘛？
+是的，会默认链接当前文档。
+** WAIT to learn and practise PaperWM
+不用了，太过辣鸡。等以后有闲心再来试试吧。
+最好到学习了 gnome 插件开发，可以修改 PaperWM 源代码后。
