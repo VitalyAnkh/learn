@@ -10,9 +10,5 @@ Fuck you, Annie.
 * learn org mode
 [[file:misc.org][Misc]]
 * TODO To read: http://noelwelsh.com/posts/2019-01-10-doom-emacs.html
-  键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标 META 键（有时候用 EDIT 或 ALT 来标示）。为了避免每次都要写出全名，我
-  wifdsafds 我 fdsf 金色五段五十弦，一弦一柱思华年。dfsafdsafdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-  wo
+  键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标 META 键（有时候用 EDIT 或 ALT 来标示）。
 * PROJ 学习数理逻辑
-wwufm
-庄生晓梦迷蝴蝶，望帝春心托杜鹃。

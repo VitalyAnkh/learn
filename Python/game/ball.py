@@ -5,7 +5,8 @@ pygame.init()
 pygame.display.list_modes()
 
 screen = pygame.display.set_mode((600,400))
-pygame.display.set_caption("Pygame 游戏")
+pygame.display.set_caption("Pygame 游戏womf我们太好了我们中")
+
 
 while True:
     for event in pygame.event.get():

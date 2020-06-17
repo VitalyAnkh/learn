@@ -54,11 +54,11 @@ setq-default preview-document-pt x
 When x === 5 the effect is best (tested).
 
 [[file:~/projects/learn/Notebook/try_latex.tex::TeX-PDF-mode t)(setq-default TeX-engine 'xetex]]
+**** [2020-06-14 日 23:23]
+良好的表述和沟通在数学上如同在人文科学中一样重要。
 **** [2020-06-14 日 19:39]
 慕强的人注定走向庸俗吗？
 
-**** [2020-06-14 日 23:23]
-良好的表述和沟通在数学上如同在人文科学中一样重要。
 *** 2020-06-15 星期一
 **** [2020-06-15 一 23:31]
 今天的 linux 知识：
@@ -68,7 +68,7 @@ ln -sf <dir1> <dir2>
 #+END_SRC
 这样的命令，当 dir2 已经存在时，会在 dir2 中创建一个软链接，指向 dir1 ；当 dir2 不存在时，会创建名为 dir2 的软链接，指向 dir1 。
 **** [2020-06-15 一 20:47]
-一个高中同学更新了朋友圈和 QQ 空间动态，是自己的书桌和书柜。看到有两本书是我高中时借给过他的：《宇宙的琴弦》和南伊利诺伊思大学的《微积分》翻译版第九版。想起了我跟他做同桌的时光。原来我也可以影响别人啊。
+一个高中同学更新了朋友圈和 QQ 空间动态，是自己的书桌和书柜。看到有两本书是我高中时借给过他的：《宇宙的琴弦》和南伊利诺伊思大学的《微积分》翻译版第九版。想起了我跟他做同桌的时光。原来我也可以如此深远地影响别人啊。
 
 **** [2020-06-15 一 10:50]
 manateelazycat 的 emacs 学习经验分享：
@@ -98,12 +98,20 @@ manateelazycat 的 emacs 学习经验分享：
 上面就是我学习 Emacs 十多年的经验分享, 希望可以给同学们一点参考.
 #+END_QUOTE
 
-[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 10:03\]][[2020-06-15 一 10:03]​]]
 **** [2020-06-15 一 10:03]
 有一次，希尔伯特对哈拉德 波尔(Harald Bohr) 说道：“我之所以能够取得一些数学成就，实在是因为我觉得数学是如此之难。我在阅读或在谈论数学的时候，总觉得它太难，几乎无法理解它；于是，我情不自禁地想，它不能变得简单些吗？结果呢，”，希尔伯特脸上露出孩子般的笑容，继续说道，“有几次，我终于发现它确实比较简单！”
 **** [2020-06-15 一 09:26]
 emacs-rime 用起来不错啊，即使没有跟随式的候选框。因为大部分时间不需要候选框，需要时再去看 minibuffer 也不错，可以降低干扰。
 *** 2020-06-16 星期二
 **** [2020-06-16 二 04:27]
-***** TODO 需要给源代码作者报告 iced 的 counter 例子在 wayland 下便宜失败
-***** TODO For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode). 
+***** DONE 需要给源代码作者报告 iced 的 counter 例子在 wayland 下编译失败
+不是 iced 或者 wayland-client 这两个 crate 的代码的原因，而是奇妙的配置问题
+***** TODO For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).
+$$\LaTeX$$
+*** 2020-06-17 星期三
+**** [2020-06-17 三 17:54]
+我们所使用的工具可以反过来塑造我们的大脑。
+\[e^{i\pi}=-1\]
+#+BEGIN_LaTeX
+\int_0^\infty e^{-x^2}dx=\frac{\sqrt{\pi}}{2}
+#+END_LaTeX

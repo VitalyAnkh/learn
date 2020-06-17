@@ -35,6 +35,7 @@ async-std = "*"
 gnuplot = "0.0.32"
 nom = "*"
 actix-web = "2.0"
+iced = "0.1.1"
 
 [dev-dependencies]
 criterion = "0.3"

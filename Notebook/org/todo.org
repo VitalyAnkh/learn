@@ -1,4 +1,12 @@
 * Inbox
+** [ ] 配置 org-mode 下，LaTeX 公式的即时预览和手动预览
+
+[[file:~/projects/learn/Notebook/org/journal.org::*For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).][For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).]]
+** TODO 在电脑上配置 zotero ，在 git 仓库中备份配置
+** [ ] 配置 emacs-rime 输入特殊符号的功能（emoji, unicode character 等）
+
+[[file:~/projects/learn/Notebook/org/todo.org::*如何使用 emacs-rime 输入英文人名中的小圆点？][如何使用 emacs-rime 输入英文人名中的小圆点？]]
+** TODO 找回 gnome extension 网站上的帐号
 ** TODO 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
 ** TODO 备份 gnome 的设置，使用 dconf (just google it)
 ** TODO 申请毕设服务接单系统，挣钱
@@ -12,7 +20,9 @@
 ** TODO 找到 gnome 壁纸的存放位置，设置同步
 ** TODO 把 org-capture 中的 personal todo 模板创建的 todo 事项中的 status indicator 改为默认为 TODO ，而不是[ ]
 ** TODO 同步和备份 rime 词库
-** TODO 如何使用 emacs-rime 输入英文人名中的小圆点？
+** DONE 如何使用 emacs-rime 输入英文人名中的小圆点？
+使用 emacs-rime 输入星号，然后在候选框中选择·
+更好的方法应该是配置 rime 输入特殊符号的功能，这列入下一个 todo 里
 
 [[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 09:26\]][[2020-06-15 一 09:26]​]]
 ** TODO 如何同步 emacs-rime 的词库？
