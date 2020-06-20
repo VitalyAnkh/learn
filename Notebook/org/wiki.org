@@ -28,3 +28,8 @@
 |              |                        |                                |
 | 爱喵喵喵喵喵 |                        |                                |
 |              |                        |                                |
+|              |                        |                                |
+|              |                        |                                |
+** Emacs Tips
+*** TODO 虽然 elisp 中变量是全局的，但还会出现使用某个变量时提示无效(void) （todo: 搞明白为什么）
+这时需要(require '<package-name>) ，其中<package-name> 是对应的包名。

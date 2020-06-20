@@ -1,9 +1,26 @@
 * Inbox
-** [ ] 配置 org-mode 下，LaTeX 公式的即时预览和手动预览
+** TODO 写 Annie 可爱的地方：在夏日的午夜打电话，第一句话是“Baby~ ”
+** TODO 阅读《经济学原理》 曼昆
+** TODO 阅读《爱的艺术》 弗洛姆
+** TODO 设置定时任务，每小时备份 config 文件。使用 ansible 或者 crontab ？
+** TODO 阅读《用 Python 进行数据分析》
+** TODO 完成 ansible 对个人桌面的配置，要求：可以使用 github 上的配置来配置好想要的所有编程环境
+** TODO 在 iPad 上配置 org-mode 查看环境，使用 beorg
+** TODO 学习如何用 org-mode 计时
+** PROJ 读《Python 网络爬虫》崔庆才
+** PROJ 读《如何阅读一本书》艾德勒
+** PROJ 读《人生的智慧》叔本华
+** TODO 学习如何使用 emacs 浏览网页
+** TODO 学习如何使用 Wanderlust 管理邮件
+** DONE 解决回车键无法新建一行的问题，详情见下
+https://github.com/hlissner/doom-emacs/issues/3172
+按照这个 issue 中说法，rm -rf .emacs.d/.local/build/org-* ，然后 doom sync ，解决了
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-19 五 08:55\] 终于修复了 Emacs][[2020-06-19 五 08:55] 终于修复了 Emacs]]
+** DONE 配置 org-mode 下，LaTeX 公式的即时预览和手动预览
 
 [[file:~/projects/learn/Notebook/org/journal.org::*For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).][For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).]]
 ** TODO 在电脑上配置 zotero ，在 git 仓库中备份配置
-** [ ] 配置 emacs-rime 输入特殊符号的功能（emoji, unicode character 等）
+** TODO 配置 emacs-rime 输入特殊符号的功能（emoji, unicode character 等）
 
 [[file:~/projects/learn/Notebook/org/todo.org::*如何使用 emacs-rime 输入英文人名中的小圆点？][如何使用 emacs-rime 输入英文人名中的小圆点？]]
 ** TODO 找回 gnome extension 网站上的帐号

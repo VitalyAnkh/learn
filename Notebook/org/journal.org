@@ -40,9 +40,9 @@
 **** [2020-06-13 六 07:08]
 
 ***** TODO org-agenda 该怎么用？
-***** WAIT pyim 太慢了，如何优化？
+***** DONE pyim 太慢了，如何优化？
 使用 emacs-rime 代替 pyim ，效果很不错。
-***** WAIT 尝试使用 emacs-rime 替代 pyim 以提升速度
+***** DONE 尝试使用 emacs-rime 替代 pyim 以提升速度
 *** 2020-06-14 星期日
 **** [2020-06-14 日 00:20]
 真是一个奇怪的特性啊。
@@ -115,3 +115,38 @@ $$\LaTeX$$
 #+BEGIN_LaTeX
 \int_0^\infty e^{-x^2}dx=\frac{\sqrt{\pi}}{2}
 #+END_LaTeX
+*** 2020-06-19 星期五
+**** [2020-06-19 五 08:55] 终于修复了 Emacs
+hlissner 修好了 lisp exceeds max length ，我修好了 org mode:
+#+BEGIN_SRC lisp
+(require 'org)
+(setq org-latex-preview-options (plist-put org-latex-preview-options :scale 3.0))
+#+END_SRC
+
+而不是
+#+BEGIN_SRC elisp
+(setq org-latex-preview-options 3.0)
+
+#+END_SRC
+
+\[\prod_{i=1}^{n}\frac{1}{i}\]
+$$ x-x_{0}=u_{1}t$$
+$$\frac{d\beta}{d(-s)}=-\frac{d\alpha}{ds}(s)$$   \[\Sigma_{k=1}^{\infty}a_{k}^{2}\]
+$$\int_{i}^{\infty} $$
+
+3.141592654
+\left (
+\begin{array}{ccc}
+v1 & v2 \
+
+\end{array}
+\right )
+咕咕咕
+**** [2020-06-19 五 10:03]
+昨天没写日记的原因是，因为我配置写错导致 org mode 无法使用了。现在还没有完全解决
+org mode 的问题，详情见 https://github.com/hlissner/doom-emacs/issues/3172
+**** [2020-06-19 五 11:40] 又一次建立起对 emacs 的信心
+解决了几个问题，给 org-mode 添加了自动打开 org-roam-server-mode 的 hook （在 config.el
+）里，意识到 elisp 是门虽然有历史包袱但依然可用的语言。打算看 How to Design Programs 。
+
+我想参加 org-mode 和 org-roam 的开发。我爱这两个工具。我要试试自己能不能把它们打磨得更好。
