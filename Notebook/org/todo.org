@@ -1,4 +1,6 @@
 * Inbox
+** TODO 半月板是什么？
+** TODO 出现使用回车键却无法换行的问题在于，org-roam 比 org-mode 先编译（貌似），所以要加上一个 unpin! org-roam
 ** TODO 写 Annie 可爱的地方：在夏日的午夜打电话，第一句话是“Baby~ ”
 ** TODO 阅读《经济学原理》 曼昆
 ** TODO 阅读《爱的艺术》 弗洛姆
@@ -24,7 +26,8 @@ https://github.com/hlissner/doom-emacs/issues/3172
 
 [[file:~/projects/learn/Notebook/org/todo.org::*如何使用 emacs-rime 输入英文人名中的小圆点？][如何使用 emacs-rime 输入英文人名中的小圆点？]]
 ** TODO 找回 gnome extension 网站上的帐号
-** TODO 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+** WAIT 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+尝试了，privoxy 好像没起作用？还是我没配置好？还是本该如此？
 ** TODO 备份 gnome 的设置，使用 dconf (just google it)
 ** TODO 申请毕设服务接单系统，挣钱
 *** WAIT 等待对方审核

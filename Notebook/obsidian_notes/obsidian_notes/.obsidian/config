@@ -16,25 +16,78 @@
   "workspaceLayout": {
     "id": "4c15c722071f0531",
     "type": "split",
-    "dimension": null,
-    "direction": "vertical",
     "children": [
       {
         "id": "48555e02827d4395",
         "type": "leaf",
-        "dimension": null,
         "active": true,
-        "master": "",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Test Obsidian.md",
+            "mode": "source"
+          }
         }
       }
-    ]
+    ],
+    "direction": "vertical"
   },
   "lastOpenFiles": [
-    "Annie.md",
     "Test Obsidian.md",
+    "Annie.md",
     "Untitled.md"
-  ]
+  ],
+  "leftSidedock": {
+    "id": "8a5609bfba1d7abd",
+    "type": "split",
+    "children": [
+      {
+        "id": "67186632f1e6acfe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "278573d6f2210e26",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f8b6c9ac2bad93a0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "rightSidedock": {
+    "id": "c50d561b1ed772fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "c733e1f54d608bf0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "42dd3048beb03cef",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  }
 }
