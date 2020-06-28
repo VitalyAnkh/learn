@@ -2,7 +2,7 @@
 int main()
 {
     int a = -1, b = 1;
-    std::cout << "signed multiply signed is" << a * b << std::endl;
+    std::cout << "signed multiply signed is " << a * b << std::endl;
     int a1 = -1;
     unsigned int b1 = 1;
     // Watch out! When unsigned multiply signed, unsigned int will be
