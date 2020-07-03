@@ -38,6 +38,6 @@ data _||_ : ℕ → ℕ → Set where
   one||n : ∀ {n : ℕ}
     → 1 || n
 
-≤-refl : ∀ {n : ℕ}
-  → n ≤ n
-≤-refl {zero} = z≤n
+-- ≤-refl : ∀ {n : ℕ}
+--   → n ≤ n
+-- ≤-refl {zero} = z≤n

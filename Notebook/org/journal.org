@@ -208,3 +208,24 @@ MarginNote 说 OCR Pro 增加手写识别支持了，可是再尝试用 MarginNo
 **** [2020-06-29 一 00:35]
 我失去骄傲和信念了吗？
 没有。
+*** 2020-06-30 星期二
+**** [2020-06-30 二 02:42]
+把字体从 Fantasque 换为 JetBrains Mono 后，Emacs 性能大幅度提高了。棒！可是为什么？
+** 2020-07 七月
+*** 2020-07-01 星期三
+**** [2020-07-01 三 04:24]
+:LOGBOOK:
+CLOCK: [2020-07-01 三 04:31]--[2020-07-01 三 04:31] =>  0:00
+:END:
+7 月的第一天了！
+希望尽快把 iPad 修好，好好学习，好好生活，好好恋爱。
+[[file:///home/vitalyr/%E5%9B%BE%E7%89%87/Ksenia%20Varapaeva_JIzBNpyBGvM.jpeg
+][image]]
+*** 2020-07-02 星期四
+**** [2020-07-02 四 15:46]
+我还是太闲了吧。
+又在 smart-input-source 的鼓动下，又打算换回 fcitx5 ，但是 emacs  中依旧无法使用 fcitx5 。最大的原因是<Ctrl-Shift-f8> 被 emacs 捕获，显示 <C-f8> is not defined>
+*** 2020-07-03 星期五
+**** [2020-07-03 五 00:43]
+emacs 中无法使用 fcitx5 的根本原因是：emacs 中 fcitx5 的状态永远是 close ，即便使用 fcitx5-remote -o 开启 fcitx 也无法改变 fcitx5 的状态。
+见此帖：https://emacs-china.org/t/emacs-fcitx5-wayland/13650/8

@@ -1,19 +1,67 @@
 * Inbox
-** TODO 半月板是什么？
-** TODO 出现使用回车键却无法换行的问题在于，org-roam 比 org-mode 先编译（貌似），所以要加上一个 unpin! org-roam
-** TODO 写 Annie 可爱的地方：在夏日的午夜打电话，第一句话是“Baby~ ”
-** TODO 阅读《经济学原理》 曼昆
-** TODO 阅读《爱的艺术》 弗洛姆
-** TODO 设置定时任务，每小时备份 config 文件。使用 ansible 或者 crontab ？
-** TODO 阅读《用 Python 进行数据分析》
-** TODO 完成 ansible 对个人桌面的配置，要求：可以使用 github 上的配置来配置好想要的所有编程环境
-** TODO 在 iPad 上配置 org-mode 查看环境，使用 beorg
-** TODO 学习如何用 org-mode 计时
-** PROJ 读《Python 网络爬虫》崔庆才
-** PROJ 读《如何阅读一本书》艾德勒
-** PROJ 读《人生的智慧》叔本华
-** TODO 学习如何使用 emacs 浏览网页
-** TODO 学习如何使用 Wanderlust 管理邮件
+** [ ] 禁用 nox 中的 rust-mode ，安装 rust-analyzer 的 emacs 扩展
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::']]
+** [ ] [#C] 安装，配置并学习使用 emacs 的 telegram 客户端 telega
+** [ ] 学习使用 magit
+** TODO 有人说 racket-mode 比 drracket 功能更强大，尝试
+** PROJ [#A] 学习 R 语言
+:LOGBOOK:
+CLOCK: [2020-07-03 五 01:13]--[2020-07-03 五 02:58] =>  1:45
+:END:
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2020-07-03 五 01:12]
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+*** TODO 看《R 语言实战》
+*** TODO 看《数据科学实战》
+*** TODO 看《R 数据科学》
+
+** TODO [#C] Book: Physics from Symmetry
+** TODO [#C] 下一步让 fcitx5 在 emacs 中工作的实施计划：
+*** TODO [#C] 更改四个配置文件中的变量，从 wayland 切换到 x11<2020-07-03 五 15:00>
+**** 若试试成功，可再试试使用 i3 窗口管理器<2020-07-03 五>
+*** TODO [#C] 安装 fcitx4 ，试试能否在 emacs 中使用
+
+** TODO [#C] 让 emacs 选择候选的快捷键是 Tab 而不是 Enter
+[[file:~/projects/learn/Notebook/org/wiki.org::*fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy][fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy]]
+** TODO 在 emacs 中无法使用 fcitx5 的关键在于，无论如何，fcitx5 在 emacs 中是 close 的，运行 fcitx5-remote 后可得知
+** TODO [#C] 改 emacs 中代码列宽度
+** TODO Why I don't like emacs-rime anymore: emacs-rime 在文件很大时（比如日记）性能不好，还有我使用 Agda，Agda 会把默认输入法设置为 Agda，再使用 emacs-rime 的话要重新设置变量
+** TODO 改环境变量信息来让 emacs 使用外部输入法，例如改/etc/profile ，~/.profile
+** TODO try this: https://github.com/abo-abo/org-download
+** TODO 上报 emacs-rime 中使用 posframe 时，第九个候选不显示的问题
+** DONE 给 smart-os-input-method 添加 fcitx5 支持。 fcitx 的下一代 fcitx5 已经可用，在很多方面超越旧版，能否给一个配置变量让用户设置使用的是 fcitx5 还是 fcitx，并添加代码，以支持 fcitx5 。fcitx5 跟旧版的命令格式都基本一致，容易参照旧代码
+这个插件本来就支持 fcitx5
+** TODO 回复 bjtu 邮件中的 good day
+** TODO 看https://plfa.github.io 上的指导，把 plfa 加到 Agda 使用的库中，这样来做 plfa 的习题
+** TODO 学习在 doom-emacs 中使用 manateelazycat 的 EAF
+** DONE 解决 emacs-rime 使用 posframe 却无候选框的问题
+正确的语句应该是：(setq rime-candidate 'posframe) 而不是(setq rime-candidate "posframe")
+** TODO 解决这个问题：编辑 agda 文件后，agda-mode 会把 default-input-method 这个变量设置为"Agda" ，导致 rime 输入法无法使用
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::shell-command-to-string "agda-mode locate"))]]
+** PROJ [#C] 看《西部世界》
+** DONE 半月板是什么？
+** DONE 出现使用回车键却无法换行的问题在于，org-roam 比 org-mode 先编译（貌似），所以要加上一个 unpin! org-roam
+在 packages.el 中添加了(unpin! org-roam) ，问题解决
+** DONE 写 Annie 可爱的地方：在夏日的午夜打电话，第一句话是“Baby~ ”
+** PROJ [#A] 阅读《经济学原理》 曼昆
+** PROJ [#A] 阅读《爱的艺术》 弗洛姆
+** TODO [#A] 设置定时任务，每小时备份 config 文件。使用 ansible 或者 crontab ？
+** PROJ [#A] 阅读《用 Python 进行数据分析》
+** TODO [#A] 完成 ansible 对个人桌面的配置，要求：可以使用 github 上的配置来配置好想要的所有编程环境
+** TODO [#C] 在 iPad 上配置 org-mode 查看环境，使用 beorg
+** DONE 学习如何用 org-mode 计时
+<SPC m c i> org-clock-in
+** PROJ [#A] 读《Python 网络爬虫》崔庆才
+** PROJ [#A] 读《如何阅读一本书》艾德勒
+** PROJ [#A] 读《人生的智慧》叔本华
+** DONE 学习如何使用 emacs 浏览网页
+ewm 等软件都不堪大用，尝试使用 mateenalazycat 的 EAF
+** TODO [#C] 学习如何使用 Wanderlust 管理邮件
 ** DONE 解决回车键无法新建一行的问题，详情见下
 https://github.com/hlissner/doom-emacs/issues/3172
 按照这个 issue 中说法，rm -rf .emacs.d/.local/build/org-* ，然后 doom sync ，解决了
@@ -21,25 +69,26 @@ https://github.com/hlissner/doom-emacs/issues/3172
 ** DONE 配置 org-mode 下，LaTeX 公式的即时预览和手动预览
 
 [[file:~/projects/learn/Notebook/org/journal.org::*For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).][For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).]]
-** TODO 在电脑上配置 zotero ，在 git 仓库中备份配置
-** TODO 配置 emacs-rime 输入特殊符号的功能（emoji, unicode character 等）
+** TODO [#A] 在电脑上配置 zotero ，在 git 仓库中备份配置
+** TODO [#C] 配置 emacs-rime 输入特殊符号的功能（emoji, unicode character 等）
 
 [[file:~/projects/learn/Notebook/org/todo.org::*如何使用 emacs-rime 输入英文人名中的小圆点？][如何使用 emacs-rime 输入英文人名中的小圆点？]]
-** TODO 找回 gnome extension 网站上的帐号
-** WAIT 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+** TODO [#C] 找回 gnome extension 网站上的帐号
+** WAIT [#C] 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
 尝试了，privoxy 好像没起作用？还是我没配置好？还是本该如此？
-** TODO 备份 gnome 的设置，使用 dconf (just google it)
-** TODO 申请毕设服务接单系统，挣钱
-*** WAIT 等待对方审核
-** TODO 快去学习 org capture
-** TODO 如何让 org capture 捕获的 todo 添加上时间
-** TODO 如何打开 emacs 内置的 reference manual ？
+** TODO [#A] 备份 gnome 的设置，使用 dconf (just google it)
+** DONE 申请毕设服务接单系统，挣钱
+*** DONE 等待对方审核
+审核通过，可以去http:://bishefuwu.com 登录
+** TODO [#A] 快去学习 org capture
+** TODO [#A] 如何让 org capture 捕获的 todo 添加上时间
+** TODO [#A] 如何打开 emacs 内置的 reference manual ？
 
 [[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 10:50\]][[2020-06-15 一 10:50]​]]
-** TODO 配置 emacs 的 upload 插件，做图床用
+** TODO 配置 emacs 的 upload 插件 org-download ，做图床用
 ** TODO 找到 gnome 壁纸的存放位置，设置同步
 ** TODO 把 org-capture 中的 personal todo 模板创建的 todo 事项中的 status indicator 改为默认为 TODO ，而不是[ ]
-** TODO 同步和备份 rime 词库
+** TODO [#A] 同步和备份 rime 词库
 ** DONE 如何使用 emacs-rime 输入英文人名中的小圆点？
 使用 emacs-rime 输入星号，然后在候选框中选择·
 更好的方法应该是配置 rime 输入特殊符号的功能，这列入下一个 todo 里
@@ -77,7 +126,8 @@ https://github.com/hlissner/doom-emacs/issues/3172
 ** DONE 学习如何用 org-mode 做 gtd
 
 ** TODO 制定考研计划
-** TODO 所以，如何正确使用 org-mode 写日记呢？
+** DONE 所以，如何正确使用 org-mode 写日记呢？
+使用 org capture ，选择 journal ，完事。默认链接当前文档是一个特性，还挺好用，配合 org-roam 很棒。
 ** TODO 要学习使用 org capture
 ** TODO 学习使用 org template
 ** DONE 学习 org-mode 的用法：这个<SPC + X> 的 org capture 的功能会默认链接当前打开的文档的嘛？

@@ -1,5 +1,5 @@
 {-# LANGUAGE EmptyDataDecls, EmptyCase, ExistentialQuantification,
-             ScopedTypeVariables, NoMonomorphismRestriction, Rank2Types,
+             ScopedTypeVariables, NoMonomorphismRestriction, RankNTypes,
              PatternSynonyms #-}
 module MAlonzo.Code.Qplfa.Qpart1.Relations where
 
@@ -27,10 +27,3 @@ d32 = erased
 name34 = "plfa.part1.Relations._||_"
 d34 a0 a1 = ()
 data T34 = C38
-name42 = "plfa.part1.Relations.≤-refl"
-d42 :: Integer -> T6
-d42 v0
-  = case coe v0 of
-      0 -> coe (\ v1 -> C10) erased
-      _ -> let v1 = subInt (coe v0) (coe (1 :: Integer)) in
-           coe (\ v2 v3 v4 -> C16 v4) erased erased (d42 (coe v1))

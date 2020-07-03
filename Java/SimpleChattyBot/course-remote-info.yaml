@@ -1,0 +1,5 @@
+hyperskill_project:
+  id: 31
+  ide_files: https://stepik.org/media/attachments/lesson/198194/additional_files.json
+  is_template_based: true
+  use_ide: true

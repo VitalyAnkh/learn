@@ -1,185 +1,39 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2020.5.18)  16 JUN 2020 22:07
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2020.6.18)  1 JUL 2020 01:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input \detokenize{ try_latex.tex }
-(./try_latex.tex (/usr/share/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-10-28 L3 programming layer (loader) 
- (/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-10-28 L3 programming layer (code)
-\c_max_int=\count80
-\l_tmpa_int=\count81
-\l_tmpb_int=\count82
-\g_tmpa_int=\count83
-\g_tmpb_int=\count84
-\l__seq_internal_a_int=\count85
-\l__seq_internal_b_int=\count86
-\g__kernel_prg_map_int=\count87
-\c__ior_term_noprompt_ior=\count88
-\c_log_iow=\count89
-\l_iow_line_count_int=\count90
-\l__iow_line_target_int=\count91
-\l__iow_one_indent_int=\count92
-\l__iow_indent_int=\count93
-\c_zero_dim=\dimen102
-\c_max_dim=\dimen103
-\l_tmpa_dim=\dimen104
-\l_tmpb_dim=\dimen105
-\g_tmpa_dim=\dimen106
-\g_tmpb_dim=\dimen107
-\c_zero_skip=\skip41
-\c_max_skip=\skip42
-\l_tmpa_skip=\skip43
-\l_tmpb_skip=\skip44
-\g_tmpa_skip=\skip45
-\g_tmpb_skip=\skip46
-\c_zero_muskip=\muskip10
-\c_max_muskip=\muskip11
-\l_tmpa_muskip=\muskip12
-\l_tmpb_muskip=\muskip13
-\g_tmpa_muskip=\muskip14
-\g_tmpb_muskip=\muskip15
-\l_keys_choice_int=\count94
-\l__intarray_loop_int=\count95
-\c__intarray_sp_dim=\dimen108
-\g__intarray_font_int=\count96
-\c__fp_leading_shift_int=\count97
-\c__fp_middle_shift_int=\count98
-\c__fp_trailing_shift_int=\count99
-\c__fp_big_leading_shift_int=\count100
-\c__fp_big_middle_shift_int=\count101
-\c__fp_big_trailing_shift_int=\count102
-\c__fp_Bigg_leading_shift_int=\count103
-\c__fp_Bigg_middle_shift_int=\count104
-\c__fp_Bigg_trailing_shift_int=\count105
-\g__fp_array_int=\count106
-\l__fp_array_loop_int=\count107
-\l__sort_length_int=\count108
-\l__sort_min_int=\count109
-\l__sort_top_int=\count110
-\l__sort_max_int=\count111
-\l__sort_true_max_int=\count112
-\l__sort_block_int=\count113
-\l__sort_begin_int=\count114
-\l__sort_end_int=\count115
-\l__sort_A_int=\count116
-\l__sort_B_int=\count117
-\l__sort_C_int=\count118
-\l__str_internal_int=\count119
-\l__tl_analysis_normal_int=\count120
-\l__tl_analysis_index_int=\count121
-\l__tl_analysis_nesting_int=\count122
-\l__tl_analysis_type_int=\count123
-\l__regex_internal_a_int=\count124
-\l__regex_internal_b_int=\count125
-\l__regex_internal_c_int=\count126
-\l__regex_balance_int=\count127
-\l__regex_group_level_int=\count128
-\l__regex_mode_int=\count129
-\c__regex_cs_in_class_mode_int=\count130
-\c__regex_cs_mode_int=\count131
-\l__regex_catcodes_int=\count132
-\l__regex_default_catcodes_int=\count133
-\c__regex_catcode_L_int=\count134
-\c__regex_catcode_O_int=\count135
-\c__regex_catcode_A_int=\count136
-\c__regex_all_catcodes_int=\count137
-\l__regex_show_lines_int=\count138
-\l__regex_min_state_int=\count139
-\l__regex_max_state_int=\count140
-\l__regex_left_state_int=\count141
-\l__regex_right_state_int=\count142
-\l__regex_capturing_group_int=\count143
-\l__regex_min_pos_int=\count144
-\l__regex_max_pos_int=\count145
-\l__regex_curr_pos_int=\count146
-\l__regex_start_pos_int=\count147
-\l__regex_success_pos_int=\count148
-\l__regex_curr_char_int=\count149
-\l__regex_curr_catcode_int=\count150
-\l__regex_last_char_int=\count151
-\l__regex_case_changed_char_int=\count152
-\l__regex_curr_state_int=\count153
-\l__regex_step_int=\count154
-\l__regex_min_active_int=\count155
-\l__regex_max_active_int=\count156
-\l__regex_replacement_csnames_int=\count157
-\l__regex_match_count_int=\count158
-\l__regex_min_submatch_int=\count159
-\l__regex_submatch_int=\count160
-\l__regex_zeroth_submatch_int=\count161
-\g__regex_trace_regex_int=\count162
-\c_empty_box=\box27
-\l_tmpa_box=\box28
-\l_tmpb_box=\box29
-\g_tmpa_box=\box30
-\g_tmpb_box=\box31
-\l__box_top_dim=\dimen109
-\l__box_bottom_dim=\dimen110
-\l__box_left_dim=\dimen111
-\l__box_right_dim=\dimen112
-\l__box_top_new_dim=\dimen113
-\l__box_bottom_new_dim=\dimen114
-\l__box_left_new_dim=\dimen115
-\l__box_right_new_dim=\dimen116
-\l__box_internal_box=\box32
-\l__coffin_internal_box=\box33
-\l__coffin_internal_dim=\dimen117
-\l__coffin_offset_x_dim=\dimen118
-\l__coffin_offset_y_dim=\dimen119
-\l__coffin_x_dim=\dimen120
-\l__coffin_y_dim=\dimen121
-\l__coffin_x_prime_dim=\dimen122
-\l__coffin_y_prime_dim=\dimen123
-\c_empty_coffin=\box34
-\l__coffin_aligned_coffin=\box35
-\l__coffin_aligned_internal_coffin=\box36
-\l_tmpa_coffin=\box37
-\l_tmpb_coffin=\box38
-\g_tmpa_coffin=\box39
-\g_tmpb_coffin=\box40
-\l__coffin_bounding_shift_dim=\dimen124
-\l__coffin_left_corner_dim=\dimen125
-\l__coffin_right_corner_dim=\dimen126
-\l__coffin_bottom_corner_dim=\dimen127
-\l__coffin_top_corner_dim=\dimen128
-\l__coffin_scaled_total_height_dim=\dimen129
-\l__coffin_scaled_width_dim=\dimen130
-\c__coffin_empty_coffin=\box41
-\l__coffin_display_coffin=\box42
-\l__coffin_display_coord_coffin=\box43
-\l__coffin_display_pole_coffin=\box44
-\l__coffin_display_offset_dim=\dimen131
-\l__coffin_display_x_dim=\dimen132
-\l__coffin_display_y_dim=\dimen133
-\g__char_data_ior=\read1
- (/usr/share/texmf-dist/tex/latex/l3kernel/l3deprecation.def
-File: l3deprecation.def 2019-04-06 v L3 Deprecated functions
-)) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
-File: l3backend-xdvipdfmx.def 2019-04-06 L3 backend support: xdvipdfmx
+(./try_latex.tex (/usr/share/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/share/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+File: ctexbackend.cfg 2020/05/16 v2.5.2 Backend configuration file (CTEX)
+) (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-06-03 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-06-03 L3 backend support: xdvipdfmx
 \g__graphics_track_int=\count163
 \l__pdf_internal_box=\box45
 \g__pdf_backend_object_int=\count164
 \g__pdf_backend_annotation_int=\count165
 ))
-Document Class: ctexart 2019/05/29 v2.4.16 Chinese adapter for class article (CTEX)
+Document Class: ctexart 2020/05/16 v2.5.2 Chinese adapter for class article (CTEX)
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2019-10-11 L3 Experimental document command parser
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
 \l__xparse_current_arg_int=\count166
 \g__xparse_grabber_int=\count167
 \l__xparse_m_args_int=\count168
 \l__xparse_v_nesting_int=\count169
-) (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2019-10-11 LaTeX2e option processing using LaTeX3 keys
+)) (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/share/texmf-dist/tex/latex/ctex/ctexhook.sty
-Package: ctexhook 2019/05/29 v2.4.16 Document and package hooks (CTEX)
+Package: ctexhook 2020/05/16 v2.5.2 Document and package hooks (CTEX)
 ) (/usr/share/texmf-dist/tex/latex/ctex/ctexpatch.sty
-Package: ctexpatch 2019/05/29 v2.4.16 Patching commands (CTEX)
+Package: ctexpatch 2020/05/16 v2.5.2 Patching commands (CTEX)
 ) (/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
  (/usr/share/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 )) (/usr/share/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
@@ -189,11 +43,11 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \g__ctex_section_depth_int=\count171
 \g__ctex_font_size_int=\count172
  (/usr/share/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
-File: ctexopts.cfg 2019/05/29 v2.4.16 Option configuration file (CTEX)
+File: ctexopts.cfg 2020/05/16 v2.5.2 Option configuration file (CTEX)
 ) (/usr/share/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count173
 \c@section=\count174
@@ -207,11 +61,11 @@ File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen135
 ) (/usr/share/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
-File: ctex-engine-xetex.def 2019/05/29 v2.4.16 XeLaTeX adapter (CTEX)
+File: ctex-engine-xetex.def 2020/05/16 v2.5.2 XeLaTeX adapter (CTEX)
  (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
-Package: xeCJK 2019/06/02 v3.7.4 Typesetting CJK scripts with XeLaTeX
+Package: xeCJK 2020/05/01 v3.8.3 Typesetting CJK scripts with XeLaTeX
  (/usr/share/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
-Package: xtemplate 2019-10-11 L3 Experimental prototype document functions
+Package: xtemplate 2020-05-15 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen136
 \l__xtemplate_tmp_int=\count181
 \l__xtemplate_tmp_muskip=\muskip16
@@ -249,7 +103,7 @@ Package: xtemplate 2019-10-11 L3 Experimental prototype document functions
 \l__xeCJK_widow_penalty_int=\count188
 
 Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
-(xtemplate)             argument(s) on line 2323.
+(xtemplate)             argument(s) on line 2302.
 
 \l__xeCJK_fixed_punct_width_dim=\dimen146
 \l__xeCJK_mixed_punct_width_dim=\dimen147
@@ -276,9 +130,9 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \l__xeCJK_verb_case_int=\count192
 \l__xeCJK_verb_exspace_skip=\skip55
  (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
-Package: fontspec 2019/10/19 v2.7d Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
  (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2019/10/19 v2.7d Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count193
 \l__fontspec_language_int=\count194
 \l__fontspec_strnum_int=\count195
@@ -294,68 +148,29 @@ Package: fontspec-xetex 2019/10/19 v2.7d Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpb_dim=\dimen166
 \l__fontspec_tmpc_dim=\dimen167
  (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- (/usr/share/texmf-dist/tex/latex/base/tuenc.def
-File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
-)) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 4047.
-LaTeX Info: Redefining \slshape on input line 4052.
-LaTeX Info: Redefining \scshape on input line 4057.
-LaTeX Info: Redefining \upshape on input line 4062.
-LaTeX Info: Redefining \em on input line 4092.
-LaTeX Info: Redefining \emph on input line 4117.
-)) (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
-File: xeCJK.cfg 2019/06/02 v3.7.4 Configuration file for xeCJK package
-)) (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
-Package: xeCJKfntef 2019/06/02 v3.7.4 xeCJK font effect
- (/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box48
-\UL@hyphenbox=\box49
-\UL@skip=\skip56
-\UL@hook=\toks14
-\UL@height=\dimen168
-\UL@pe=\count270
-\UL@pixel=\dimen169
-\ULC@box=\box50
-Package: ulem 2012/05/18
-\ULdepth=\dimen170
-) (/usr/share/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
-Package: CJKfntef 2015/04/18 4.8.4
-\CJK@fntefSkip=\skip57
-\CJK@nest=\count271
-\CJK@fntefDimen=\dimen171
-\CJK@underdotBox=\box51
-\CJK@ULbox=\box52
-\CJK@underanyskip=\dimen172
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2020/05/01 v3.8.3 Configuration file for xeCJK package
+))
+\ccwd=\dimen168
+\l__ctex_ccglue_skip=\skip56
 )
-\l__xeCJK_space_skip=\skip58
-\c__xeCJK_ulem-begin_node_dim=\dimen173
-\c__xeCJK_null_box=\box53
-\l__xeCJK_fntef_box=\box54
-\l__xeCJK_under_symbol_box=\box55
-\c__xeCJK_filll_skip=\skip59
-)
-\ccwd=\dimen174
-\l__ctex_ccglue_skip=\skip60
-)
-\l__ctex_ziju_dim=\dimen175
+\l__ctex_ziju_dim=\dimen169
  (/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber.sty
-Package: zhnumber 2019/04/07 v2.7 Typesetting numbers with Chinese glyphs
-\l__zhnum_scale_int=\count272
+Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count270
  (/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
-File: zhnumber-utf8.cfg 2019/04/07 v2.7 Chinese numerals with UTF8 encoding
+File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
 ))
-\l__ctex_heading_skip=\skip61
+\l__ctex_heading_skip=\skip57
  (/usr/share/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
-File: ctex-scheme-chinese-article.def 2019/05/29 v2.4.16 Chinese scheme for article (CTEX)
+File: ctex-scheme-chinese-article.def 2020/05/16 v2.5.2 Chinese scheme for article (CTEX)
  (/usr/share/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
-File: ctex-name-utf8.cfg 2019/05/29 v2.4.16 Caption with encoding UTF8 (CTEX)
-))
-(/usr/share/texmf-dist/tex/latex/ctex/ctex-c5size.clo
-File: ctex-c5size.clo 2019/05/29 v2.4.16 c5size option (CTEX)
+File: ctex-name-utf8.cfg 2020/05/16 v2.5.2 Caption with encoding UTF-8 (CTEX)
+)) (/usr/share/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+File: ctex-c5size.clo 2020/05/16 v2.5.2 c5size option (CTEX)
 ) (/usr/share/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
-File: ctex-fontset-fandol.def 2019/05/29 v2.4.16 Fandol fonts definition (CTEX)
+File: ctex-fontset-fandol.def 2020/05/16 v2.5.2 Fandol fonts definition (CTEX)
 
 
 Package fontspec Warning: Font "FandolSong-Regular" does not contain requested
@@ -370,25 +185,27 @@ Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Regular.otf]/OT"
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (bx/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Bold.otf]/OT"
-(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT"
-(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.: 
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
 )) (/usr/share/texmf-dist/tex/latex/ctex/config/ctex.cfg
-File: ctex.cfg 2019/05/29 v2.4.16 Configuration file (CTEX)
+File: ctex.cfg 2020/05/16 v2.5.2 Configuration file (CTEX)
 ) (./try_latex.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -396,23 +213,21 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
  (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/preview.sty
 Package: preview 2017/04/24 12.2 (AUCTeX/preview-latex)
  (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
 ) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prtightpage.def
-\PreviewBorder=\dimen176
+\PreviewBorder=\dimen170
 ) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prauctex.def
 No auxiliary output files.
 
 
-\hbadness=\count273
-\hfuzz=\dimen177
+\hbadness=\count271
+\hfuzz=\dimen171
 (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prauctex.cfg)) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prfootnotes.def)
-\pr@snippet=\count274
-\pr@box=\box56
+\pr@snippet=\count272
+\pr@box=\box48
 \pr@output=\toks15
 
 Preview: Fontsize 10.53937pt
@@ -463,19 +278,19 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 7.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 7.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 7.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 7.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 7.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12.045> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -621,12 +436,12 @@ Not a real error.
 
 ] ) 
 Here is how much of TeX's memory you used:
- 16578 strings out of 492483
- 389839 string characters out of 6134979
- 485379 words of memory out of 5000000
- 20970 multiletter control sequences out of 15000+600000
- 537180 words of font info for 61 fonts, out of 8000000 for 9000
+ 6757 strings out of 479284
+ 198996 string characters out of 5886220
+ 486389 words of memory out of 5000000
+ 24340 multiletter control sequences out of 15000+600000
+ 537090 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,10n,76p,605b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,10n,83p,605b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on try_latex.pdf (8 pages).
