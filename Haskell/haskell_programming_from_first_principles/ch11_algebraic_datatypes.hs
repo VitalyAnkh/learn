@@ -1,4 +1,3 @@
-import           Data.Monoid
 data Weekday=Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday
 
 data Lowercasetype=Lowercasetype

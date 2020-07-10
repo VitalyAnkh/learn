@@ -80,10 +80,12 @@ CLOCK: [2020-07-03 五 01:13]--[2020-07-03 五 02:58] =>  1:45
 | *Total time* | *0:00* |
 #+END:
 *** TODO [#A] 看《R 语言实战》
+SCHEDULED: <2020-07-11 六>
 :LOGBOOK:
 CLOCK: [2020-07-04 六 02:46]
 :END:
 *** TODO [#A] 看《数据科学实战》
+SCHEDULED: <2020-07-12 日>
 *** TODO [#A] 看《R 数据科学》
 
 ** TODO [#C] Book: Physics from Symmetry
