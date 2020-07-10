@@ -4,18 +4,20 @@ use ansi_term::Colour;
 use ansi_term::Style;
 
 fn main() {
+    let i = 2;
     println!(
         "This is {} in color, {} in color and {} in color",
         Colour::Red.paint("红"),
-
         Colour::Blue.paint("蓝"),
-        Colour::Green.paint("绿")
+        Colour::Green.bold().paint("绿")
     );
     println!(
-        "{} and this not.", Style::new().bold().paint("This is bold")
+        "{} and this not.",
+        Style::new().bold().paint("This is bold")
     );
     println!(
         "{}",
         Colour::Yellow.bold().paint("This is yellow and is bolded.")
     );
+    println!("{}", Colour::Purple.blink().paint("I'm purple"));
 }

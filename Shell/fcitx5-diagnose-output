@@ -1,0 +1,321 @@
+# System Info:
+1.  `uname -a`:
+
+        Linux rex 5.7.7-arch1-1 #1 SMP PREEMPT Wed, 01 Jul 2020 14:53:16 +0000 x86_64 GNU/Linux
+
+2.  `lsb_release`:
+
+    `lsb_release` not found.
+
+3.  `/etc/lsb-release`:
+
+    `/etc/lsb-release` not found.
+
+4.  `/etc/os-release`:
+
+        NAME="Arch Linux"
+        PRETTY_NAME="Arch Linux"
+        ID=arch
+        BUILD_ID=rolling
+        ANSI_COLOR="38;2;23;147;209"
+        HOME_URL="https://www.archlinux.org/"
+        DOCUMENTATION_URL="https://wiki.archlinux.org/"
+        SUPPORT_URL="https://bbs.archlinux.org/"
+        BUG_REPORT_URL="https://bugs.archlinux.org/"
+        LOGO=archlinux
+
+5.  Desktop Environment:
+
+    Desktop environment is `gnome3`.
+
+6.  Bash Version:
+
+        BASH_VERSION='5.0.17(1)-release'
+
+# Environment:
+1.  DISPLAY:
+
+        DISPLAY=':0'
+
+2.  Keyboard Layout:
+
+    1.  `setxkbmap`:
+
+            xkb_keymap {
+            	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+            	xkb_types     { include "complete"	};
+            	xkb_compat    { include "complete"	};
+            	xkb_symbols   { include "pc+us+inet(evdev)"	};
+            	xkb_geometry  { include "pc(pc105)"	};
+            };
+
+    2.  `xprop`:
+
+            _XKB_RULES_NAMES(STRING) = "evdev", "pc105", "us", "", ""
+
+3.  Locale:
+
+    1.  All locale:
+
+            C
+            en_US.utf8
+            POSIX
+            zh_CN.utf8
+
+    2.  Current locale:
+
+            LANG=zh_CN.UTF-8
+            LC_CTYPE="zh_CN.UTF-8"
+            LC_NUMERIC="zh_CN.UTF-8"
+            LC_TIME="zh_CN.UTF-8"
+            LC_COLLATE="zh_CN.UTF-8"
+            LC_MONETARY="zh_CN.UTF-8"
+            LC_MESSAGES="zh_CN.UTF-8"
+            LC_PAPER="zh_CN.UTF-8"
+            LC_NAME="zh_CN.UTF-8"
+            LC_ADDRESS="zh_CN.UTF-8"
+            LC_TELEPHONE="zh_CN.UTF-8"
+            LC_MEASUREMENT="zh_CN.UTF-8"
+            LC_IDENTIFICATION="zh_CN.UTF-8"
+            LC_ALL=
+
+4.  Directories:
+
+    1.  Home:
+
+            /home/vitalyr
+
+    2.  `${XDG_CONFIG_HOME}`:
+
+        Environment variable `XDG_CONFIG_HOME` is not set.
+
+        Current value of `XDG_CONFIG_HOME` is `~/.config` (`/home/vitalyr/.config`).
+
+    3.  Fcitx Settings Directory:
+
+        Current fcitx settings directory is `~/.config/fcitx5` (`/home/vitalyr/.config/fcitx5`).
+
+5.  Current user:
+
+    The script is run as vitalyr (1000).
+
+# Fcitx State:
+1.  executable:
+
+    Found fcitx5 at `/usr/bin/fcitx5`.
+
+2.  version:
+
+    Fcitx version: `4.99.0`
+
+3.  process:
+
+    Found 1 fcitx process:
+
+           1370 fcitx5
+
+4.  `fcitx5-remote`:
+
+    `fcitx5-remote` works properly.
+
+5.  DBus interface:
+
+    Using `dbus-send` to check dbus.
+
+    Owner of DBus name `org.fcitx.Fcitx5` is `:1.78`.
+
+    PID of DBus name `org.fcitx.Fcitx5` owner is `1370`.
+
+# Fcitx Configure UI:
+1.  Config Tool Wrapper:
+
+    Found fcitx5-configtool at `/usr/bin/fcitx5-configtool`.
+
+2.  Config GUI for gtk2:
+
+    **Config GUI for gtk2 not found.**
+
+3.  Config GUI for gtk3:
+
+    **Config GUI for gtk3 not found.**
+
+4.  Config GUI for kde:
+
+    **Cannot find a GUI config tool, please install one of `kcm-fcitx`, `fcitx-config-gtk2`, or `fcitx-config-gtk3`.**
+
+# Frontends setup:
+## Xim:
+1.  `${XMODIFIERS}`:
+
+    Environment variable XMODIFIERS is set to "@im=fcitx" correctly.
+    Xim Server Name from Environment variable is fcitx.
+
+2.  XIM_SERVERS on root window:
+
+    Xim server name is the same with that set in the environment variable.
+
+## Qt:
+1.  qt4 - `${QT4_IM_MODULE}`:
+
+    Environment variable QT_IM_MODULE is set to "fcitx" correctly.
+
+2.  qt5 - `${QT_IM_MODULE}`:
+
+    Environment variable QT_IM_MODULE is set to "fcitx" correctly.
+
+3.  Qt IM module files:
+
+    Found unknown fcitx5 qt module: `/usr/lib/fcitx5/qt5/libfcitx5-unikey-macro-editor.so`.
+    Found unknown fcitx5 qt module: `/usr/lib/fcitx5/qt5/libfcitx-quickphrase-editor5.so`.
+    Found unknown fcitx5 qt module: `/usr/lib/qt/plugins/kcms/kcm_fcitx5.so`.
+    Found fcitx5 im module for Qt5: `/usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so`.
+    **Cannot find fcitx input method module for Qt4.**
+
+## Gtk:
+1.  gtk - `${GTK_IM_MODULE}`:
+
+    Environment variable GTK_IM_MODULE is set to "fcitx" correctly.
+
+2.  `gtk-query-immodules`:
+
+    1.  gtk 2:
+
+        Found `gtk-query-immodules` for gtk `2.24.32` at `/usr/bin/gtk-query-immodules-2.0`.
+        Version Line:
+
+            # Created by /usr/bin/gtk-query-immodules-2.0 from gtk+-2.24.32
+
+        Found fcitx im modules for gtk `2.24.32`.
+
+            "/usr/lib/gtk-2.0/2.10.0/immodules/im-fcitx5.so" 
+            "fcitx" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+            "fcitx5" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+
+    2.  gtk 3:
+
+        Found `gtk-query-immodules` for gtk `3.24.21` at `/usr/bin/gtk-query-immodules-3.0`.
+        Version Line:
+
+            # Created by /usr/bin/gtk-query-immodules-3.0 from gtk+-3.24.21
+
+        Found fcitx im modules for gtk `3.24.21`.
+
+            "/usr/lib/gtk-3.0/3.0.0/immodules/im-fcitx5.so" 
+            "fcitx" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+            "fcitx5" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+
+3.  Gtk IM module cache:
+
+    1.  gtk 2:
+
+        Found immodules cache for gtk `2.24.32` at `/usr/lib/gtk-2.0/2.10.0/immodules.cache`.
+        Version Line:
+
+            # Created by /usr/bin/gtk-query-immodules-2.0 from gtk+-2.24.32
+
+        Found fcitx im modules for gtk `2.24.32`.
+
+            "/usr/lib/gtk-2.0/2.10.0/immodules/im-fcitx5.so" 
+            "fcitx" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+            "fcitx5" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+
+    2.  gtk 3:
+
+        Found immodules cache for gtk `3.24.21` at `/usr/lib/gtk-3.0/3.0.0/immodules.cache`.
+        Version Line:
+
+            # Created by /usr/bin/gtk-query-immodules-3.0 from gtk+-3.24.21
+
+        Found fcitx im modules for gtk `3.24.21`.
+
+            "/usr/lib/gtk-3.0/3.0.0/immodules/im-fcitx5.so" 
+            "fcitx" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+            "fcitx5" "Fcitx5 (Flexible Input Method Framework5)" "fcitx5" "/usr/locale" "ja:ko:zh:*" 
+
+4.  Gtk IM module files:
+
+    1.  gtk 2:
+
+        All found Gtk 2 immodule files exist.
+
+    2.  gtk 3:
+
+        All found Gtk 3 immodule files exist.
+
+# Configuration:
+## Fcitx Addons:
+1.  Addon Config Dir:
+
+    Found fcitx addon config directory: `/usr/share/fcitx5/addon`.
+
+2.  Addon List:
+
+    1.  Found 29 enabled addons:
+
+            Anthy
+            Simplified and Traditional Chinese Translation
+            Classic User Inteface
+            Clipboard
+            Cloud Pinyin
+            DBus
+            DBus Frontend
+            Emoji
+            Full width character
+            IBus Frontend
+            Lua IME API
+            Keyboard
+            KDE Input Method Panel
+            Lua Addon Loader
+            Status Notifier
+            Notification
+            Pinyin
+            Extra Pinyin functionality
+            Punctuation
+            Quick Phrase
+            Rime
+            Spell
+            Table
+            Unicode
+            Unikey Wrapper For Fcitx
+            Wayland
+            Wayland Input method frontend
+            XCB
+            X Input Method Frontend
+
+    2.  Found 0 disabled addons:
+
+3.  Addon Libraries:
+
+    **Cannot find file `export:rime` of addon `Rime`.**
+
+4.  User Interface:
+
+    Found 2 enabled user interface addons:
+
+        Classic User Inteface
+        KDE Input Method Panel
+
+## Input Methods:
+1.  Found 8 enabled input methods:
+
+        Languages
+        keyboard-ru
+        keyboard-fr
+        keyboard-jp
+        Default
+        keyboard-us
+        keyboard-us-scn
+        shuangpin
+
+2.  Default input methods:
+
+    **Your first (default) input method is Languages instead of a keyboard input method. You may have trouble deactivate fcitx.**
+
+# Log:
+1.  `date`:
+
+        2020年 07月 04日 星期六 13:17:36 CST
+
+2.  `~/.config/fcitx5/log/`:
+
+    `~/.config/fcitx5/log/` not found.

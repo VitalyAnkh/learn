@@ -1,4 +1,68 @@
 * Inbox
+** [ ] [#A] 读葫芦笔记的 org-roam 教程
+** [ ] [#A] 阅读 An Introduction to Mathematical Cryptography
+** [ ] [#A] 阅读《图解密码技术》
+** [ ] [#A] 学习 Prolog
+** [ ] 效用函数是什么
+** PROJ [#C] 看《完全音乐理论教程》
+** [ ] learn how to swim
+** [ ] 重构自己的 doom emacs 配置，分成模块。学习 google 可以搜到的不错的配置
+** [ ] [#A] 给 emacs 写个类似 vscode 上 code runner 的扩展
+** [ ] 学习 C 语言的可变参数表功能
+** [ ] 学习使用 iedit
+** [ ] 使用 ansible 安装各个语言的 language server
+** [ ] [#A] 解决 emacs 在打开.rkt （racket 源文件）后，使用 scheme mode 而不是 racket-mode 的问题
+** [ ] [#C] 学习 google 搜到的他人的 doom emacs 配置
+** [ ] 解决 treemacs 的图标不使用 treemacs 自己的默认图标的问题
+** [ ] 如何使用 ctags
+** PROJ 好想成为一个电气工程师，日常鼓捣各种电器
+** [ ] 阅读 ice1000 写的 java 包管理的文章
+** [ ] 解决 Emacs 中标题和 treemacs 中的英文字体与编程区的英文字体不一致的问题（具体来说，编程区中是 mononoki  ，另一个是 Noto Sans CJK Light 。或许，这不是问题，但应该找出导致这一现象的原因）
+** PROJ [#C] 读《春夜十话：数学与情绪》
+** [ ] [#C] 整理语雀《21 世纪恋爱指南》
+** [ ] [#C] 当设置的字体中没有 nerd fonts 中的那些图标时（例如文件的图标，在 lsd -la 时会显示），系统会寻找其他字体中的图标，例如 sarasa nerd font ，但图标会显示得偏小。
+解决方法是把默认字体换成有 nerd font 字符的字体
+** [ ] [#C] 记录解决 firefox 中字形错误的问题的方法
+
+[[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
+** WAIT 在 emacs-china 论坛上求助 emacs 中“中”字和“言”字异形的问题
+
+[[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
+** [ ] [#C] 解决 emacs 中指定更纱黑体、细字形但实际却使用宋体的问题，应该与/etc/fonts/conf.avail/64-language-selector-prefer.conf 有关
+
+[[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
+** [X] 不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：
+1. https://tieba.baidu.com/p/4879946717?red_tag=2813770546&traceid=
+   添加了/etc/fonts/conf.avail/64-...
+2. 安装 noto-fonts-cjk ，然后 fc-cache -fv
+
+查明真相，然后解决上面那问题。
+Solution: 是第 2 个方法解决的。需要把那个方法记录一下。
+
+[[file:~/projects/learn/Notebook/org/todo.org::*解决 emacs 中使用 valign 来对齐 org mode 中的表格，但使每一列宽度过宽的问题][解决 emacs 中使用 valign 来对齐 org mode 中的表格，但使每一列宽度过宽的问题]]
+** [ ] rstudio 是否指定 lib 这个变量就可以指定包的安装位置？
+
+[[file:~/projects/learn/Notebook/org/todo.org::*看《R 语言实战》][看《R 语言实战》]]
+** PROJ [#C] 读《女士品茶》
+** [ ] [#C] 计量心理学是什么？
+** [ ] 解决 emacs 中使用 valign 来对齐 org mode 中的表格，但使每一列宽度过宽的问题
+
+[[file:~/projects/learn/Notebook/org/wiki.org::*doom-emacs shortcut:][doom-emacs shortcut:]]
+** [ ] 𝚅𝚒𝚝𝚊𝚕𝚢𝚁: In lsp-mode's rust-analyzer, bind commands like lsp-rust-analyzer-join-lines, lsp-extend-selection and lsp-rust-analyzer-expand-macro to keys.
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::setq lsp-rust-server 'rust-analyzer]]
+** [ ] 解决 visual 模式下，无法使用 h l 进行左右移动的问题
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::(rss +org) ; emacs as an RSS reader]]
+** [ ] [#C] 在 emacs 中配置 twitter 客户端，见下面链接
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::twitter ; twitter client https://twitter.com/vnought]]
+** [ ] [#C] 学习使用 projectile
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::(latex +latexmk +cdlatex +fold) ; writing papers in Emacs has never been so fun]]
+** [ ] [#C] doom emacs 中 tools 节的 editorconfig 扩展是做什么用的呢？
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::editorconfig ; let someone else argue about tabs vs spaces]]
 ** [ ] 禁用 nox 中的 rust-mode ，安装 rust-analyzer 的 emacs 扩展
 
 [[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::']]
@@ -15,9 +79,12 @@ CLOCK: [2020-07-03 五 01:13]--[2020-07-03 五 02:58] =>  1:45
 |--------------+--------|
 | *Total time* | *0:00* |
 #+END:
-*** TODO 看《R 语言实战》
-*** TODO 看《数据科学实战》
-*** TODO 看《R 数据科学》
+*** TODO [#A] 看《R 语言实战》
+:LOGBOOK:
+CLOCK: [2020-07-04 六 02:46]
+:END:
+*** TODO [#A] 看《数据科学实战》
+*** TODO [#A] 看《R 数据科学》
 
 ** TODO [#C] Book: Physics from Symmetry
 ** TODO [#C] 下一步让 fcitx5 在 emacs 中工作的实施计划：
@@ -27,12 +94,13 @@ CLOCK: [2020-07-03 五 01:13]--[2020-07-03 五 02:58] =>  1:45
 
 ** TODO [#C] 让 emacs 选择候选的快捷键是 Tab 而不是 Enter
 [[file:~/projects/learn/Notebook/org/wiki.org::*fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy][fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy]]
-** TODO 在 emacs 中无法使用 fcitx5 的关键在于，无论如何，fcitx5 在 emacs 中是 close 的，运行 fcitx5-remote 后可得知
+** TODO [#B] 在 emacs 中无法使用 fcitx5 的关键在于，无论如何，fcitx5 在 emacs 中是 close 的，运行 fcitx5-remote 后可得知
 ** TODO [#C] 改 emacs 中代码列宽度
 ** TODO Why I don't like emacs-rime anymore: emacs-rime 在文件很大时（比如日记）性能不好，还有我使用 Agda，Agda 会把默认输入法设置为 Agda，再使用 emacs-rime 的话要重新设置变量
 ** TODO 改环境变量信息来让 emacs 使用外部输入法，例如改/etc/profile ，~/.profile
 ** TODO try this: https://github.com/abo-abo/org-download
-** TODO 上报 emacs-rime 中使用 posframe 时，第九个候选不显示的问题
+** DONE 上报 emacs-rime 中使用 posframe 时，第九个候选不显示的问题
+已上报
 ** DONE 给 smart-os-input-method 添加 fcitx5 支持。 fcitx 的下一代 fcitx5 已经可用，在很多方面超越旧版，能否给一个配置变量让用户设置使用的是 fcitx5 还是 fcitx，并添加代码，以支持 fcitx5 。fcitx5 跟旧版的命令格式都基本一致，容易参照旧代码
 这个插件本来就支持 fcitx5
 ** TODO 回复 bjtu 邮件中的 good day
@@ -85,7 +153,7 @@ https://github.com/hlissner/doom-emacs/issues/3172
 ** TODO [#A] 如何打开 emacs 内置的 reference manual ？
 
 [[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 10:50\]][[2020-06-15 一 10:50]​]]
-** TODO 配置 emacs 的 upload 插件 org-download ，做图床用
+** TODO 配置 emacs 的 upload 插件 org-upload ，做图床用
 ** TODO 找到 gnome 壁纸的存放位置，设置同步
 ** TODO 把 org-capture 中的 personal todo 模板创建的 todo 事项中的 status indicator 改为默认为 TODO ，而不是[ ]
 ** TODO [#A] 同步和备份 rime 词库
