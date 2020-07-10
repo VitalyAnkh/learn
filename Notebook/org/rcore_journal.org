@@ -1,0 +1,7 @@
+#+title: rCore Journal
+* 2020 年 7 月 10 日
+加入 rCore Summer of Code 的第一天。
+完成：
+1. 写了简历的初稿；
+2. 复习了 Rust 语言；
+3. 用 Rust 写了 leetcode 题目。

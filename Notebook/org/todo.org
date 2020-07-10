@@ -1,4 +1,5 @@
 * Inbox
+** PROJ 看《隐秘的角落》
 ** [ ] [#A] 读葫芦笔记的 org-roam 教程
 ** [ ] [#A] 阅读 An Introduction to Mathematical Cryptography
 ** [ ] [#A] 阅读《图解密码技术》
@@ -28,7 +29,7 @@
 ** WAIT 在 emacs-china 论坛上求助 emacs 中“中”字和“言”字异形的问题
 
 [[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
-** [ ] [#C] 解决 emacs 中指定更纱黑体、细字形但实际却使用宋体的问题，应该与/etc/fonts/conf.avail/64-language-selector-prefer.conf 有关
+** [X] [#C] 解决 emacs 中指定更纱黑体、细字形但实际却使用宋体的问题，应该与/etc/fonts/conf.avail/64-language-selector-prefer.conf 有关
 
 [[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
 ** [X] 不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：
