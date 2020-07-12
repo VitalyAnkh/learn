@@ -33,6 +33,5 @@ fn main() {
         .button("Quit", |s| s.quit())
         .h_align(HAlign::Center),
     );
-
     siv.run();
 }

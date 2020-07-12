@@ -18,9 +18,9 @@ fn main() -> std::io::Result<()> {
         let num = read_number();
         println!("the sum is {}", sum_series(num));
     }
+    let a = 3;
     Ok(())
 }
-
 
 fn read_number() -> u128 {
     let stdin = io::stdin();

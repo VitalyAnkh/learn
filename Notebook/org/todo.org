@@ -1,4 +1,6 @@
 * Inbox
+** [ ] [#C] 如何删掉一条 fish_history
+** TODO 写有 wayland 支持的 emacs-anywhere
 ** PROJ 看《隐秘的角落》
 ** [ ] [#A] 读葫芦笔记的 org-roam 教程
 ** [ ] [#A] 阅读 An Introduction to Mathematical Cryptography

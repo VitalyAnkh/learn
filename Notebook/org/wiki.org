@@ -81,6 +81,7 @@ sudo systemctl enbale system76-power.service
 *** [[file:20200708225833-王佳.org][王佳]]
 *** [[file:20200708234015-annie.org][Annie]]
 *** [[file:20200708235355-a_hard_decision.org][a hard decision]]
+*** [[file:20200712002820-gitignore_规则.org][gitignore 规则]]
 
 ** Setup New Desktop Tips
 *** 运行 ln -sf ~/sdk/config/private-data/zlua ~/.zlua ，把 zlua 的配置文件~/.zlua 软链接到 ~/sdk/config/private-data/zlua 上
