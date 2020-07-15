@@ -1,7 +1,33 @@
 * Inbox
+** [X] 解决 Emacs 中“音乐”显示为“音为”的问题
+解决了：安装字体后还是要重启啊！
+** [ ] 遇到了奇怪的错误：把 os.phip 的 post-02 中的 target-triple 命名为 x86_64-blog_os-vitalyr.json 而不是 x86_64-blog_os.json ，就会出现预期之外的错误：
+#+BEGIN_SRC ❰vitalyr❙~/projects/learn/OS/blog_os_vitalyr(git:master)❱✘≻ cargo build --target x86_64-blog_os.json
+   Compiling blog_os_vitalyr v0.1.0 (/home/vitalyr/projects/learn/OS/blog_os_vitalyr)
+error[E0463]: can't find crate for `core`
+  |
+  = note: the `x86_64-blog_os-2070387654581237862` target may not be installed
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+error: could not compile `blog_os_vitalyr`.
+
+To learn more, run the command again with --verbose.
+#+END_SRC
+** [ ] 解决由于 Emacs 自动将一个 tab 转换成四个空格，导致 Makefile 格式不对的问题
+** [ ] 阅读《春夜十话：数学与性情》
+** [ ] 合理的配置备份与升级策略是：使用 mackup 进行备份，使用 ansible 进行升级
+** [ ] 学习使用 smart-input-source 挂载 emacs-rime
+** [ ] MetaPost 是什么？
+** [ ] 学习使用 inkscape
+** [ ] [#A] 使用 markup https://github.com/lra/mackup https://sspai.com/post/32933 或 homemanager https://github.com/rycee/home-manager 备份软件配置
+** [ ] 如何使用 org-poromado
+** [ ] org-roam 如何设置任务提醒？
+** [ ] org-roam 如何设置循环任务？
 ** [ ] [#C] 如何删掉一条 fish_history
 ** TODO 写有 wayland 支持的 emacs-anywhere
-** PROJ 看《隐秘的角落》
+** DONE 看《隐秘的角落》
 ** [ ] [#A] 读葫芦笔记的 org-roam 教程
 ** [ ] [#A] 阅读 An Introduction to Mathematical Cryptography
 ** [ ] [#A] 阅读《图解密码技术》
@@ -11,6 +37,7 @@
 ** [ ] learn how to swim
 ** [ ] 重构自己的 doom emacs 配置，分成模块。学习 google 可以搜到的不错的配置
 ** [ ] [#A] 给 emacs 写个类似 vscode 上 code runner 的扩展
+好像已经有了， quick-run
 ** [ ] 学习 C 语言的可变参数表功能
 ** [ ] 学习使用 iedit
 ** [ ] 使用 ansible 安装各个语言的 language server

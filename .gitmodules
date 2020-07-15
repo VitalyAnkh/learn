@@ -1,3 +1,9 @@
 [submodule "Python/helloflask"]
 	path = Python/helloflask
 	url = git@github.com:greyli/helloflask.git
+[submodule "OS/rCore-Tutorial"]
+	path = OS/rCore-Tutorial
+	url = git@github.com:rcore-os/rCore-Tutorial.git
+[submodule "OS/blog_os"]
+	path = OS/blog_os
+	url = git@github.com:phil-opp/blog_os.git

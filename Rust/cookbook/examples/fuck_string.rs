@@ -4,6 +4,7 @@ fn print_type_of<T>(_: &T) {
 }
 fn main() {
     let a = String::from("Hello");
+    let c = "fdsaf".to_string();
     let b = &a;
     print_type_of(&&a);
     print_type_of(&b);

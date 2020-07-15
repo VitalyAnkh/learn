@@ -12,4 +12,12 @@
 ** Rust 语言的作用域是静态作用域，即词法作用域（Lexical Scope ）。由一对花括号开辟作用域，其作用域在词法分析阶段已经确定了。
    问题：
 *** TODO 相比静态作用域，动态作用域是什么样的？
-**
+** Rust 的编译时函数执行（CTFE ）是由 miri 执行的，miri 是一个 MIR 解释器。Rust 的 CTFE 特性仍有待扩展。
+** 读 Computer Architecture: a Quantitative Approach 的第一章
+** 发现对于计算机组成的很多概念忘记了，复习 Computer Organization and Design: the Hardware/Software Interface
+* 2020 年 7 月 13 日
+** 用 Rust 做 Leetcode 题目
+** 继续读 Computer Architecture: a Quantitative Approach
+* 2020 年 7 月 14 日
+** Rust 程序运行时，首先启动 C 运行时(crt0) ，再由 crt0 启动 Rust 运行时的入口点。
+*** TODO 既然有crt0 ，那么存在crt1 吗？
