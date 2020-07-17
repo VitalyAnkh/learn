@@ -1,4 +1,19 @@
 * Inbox
+** [ ] 学习使用 unicode-font 这个包
+** [ ] 为什么在 Emacs 中开的终端下，无法搜索 AUR 软件包？
+** [ ] 在 MarginNote 官方论坛上指出 MarginNote 在搜索方面的问题，请他们改善
+** [ ] 因为 MarginNote 增加了在笔记中的手写识别支持，尝试使用 MarginNote 作笔记
+** [ ] [#A] 学习搜索引擎技巧
+** [ ] ielm 是 emacs 的什么工具？
+** [ ] 学习使用 org-mode 的 tag 机制
+** [ ] 解决 visual 模式下，光标无法左右移动的问题
+** [ ] magit 怎么用
+** [ ] cask 是怎么用的
+** [ ] Emacs 中的 face 是什么？
+** [ ] 配置 smart-input-source 挂载 emacs-rime 和 fcitx5
+** [ ] 解决 emacs 编辑 org 文件时 minibuffer 显示一堆 eldoc 的错误的问题
+** [ ] 把 emacs 的中文字体让自己指定后（设置 doom-unicode-font 变量），编辑含有许多中文的文件后快了许多。为什么？
+** [ ] 用 Rust 语言写一个 cmatrix
 ** [X] 解决 Emacs 中“音乐”显示为“音为”的问题
 解决了：安装字体后还是要重启啊！
 ** [ ] 遇到了奇怪的错误：把 os.phip 的 post-02 中的 target-triple 命名为 x86_64-blog_os-vitalyr.json 而不是 x86_64-blog_os.json ，就会出现预期之外的错误：
@@ -16,7 +31,6 @@ error: could not compile `blog_os_vitalyr`.
 To learn more, run the command again with --verbose.
 #+END_SRC
 ** [ ] 解决由于 Emacs 自动将一个 tab 转换成四个空格，导致 Makefile 格式不对的问题
-** [ ] 阅读《春夜十话：数学与性情》
 ** [ ] 合理的配置备份与升级策略是：使用 mackup 进行备份，使用 ansible 进行升级
 ** [ ] 学习使用 smart-input-source 挂载 emacs-rime
 ** [ ] MetaPost 是什么？
@@ -37,7 +51,7 @@ To learn more, run the command again with --verbose.
 ** [ ] learn how to swim
 ** [ ] 重构自己的 doom emacs 配置，分成模块。学习 google 可以搜到的不错的配置
 ** [ ] [#A] 给 emacs 写个类似 vscode 上 code runner 的扩展
-好像已经有了， quick-run
+好像已经有了， quick-run, maple-run
 ** [ ] 学习 C 语言的可变参数表功能
 ** [ ] 学习使用 iedit
 ** [ ] 使用 ansible 安装各个语言的 language server
@@ -52,10 +66,11 @@ To learn more, run the command again with --verbose.
 ** [ ] [#C] 整理语雀《21 世纪恋爱指南》
 ** [ ] [#C] 当设置的字体中没有 nerd fonts 中的那些图标时（例如文件的图标，在 lsd -la 时会显示），系统会寻找其他字体中的图标，例如 sarasa nerd font ，但图标会显示得偏小。
 解决方法是把默认字体换成有 nerd font 字符的字体
-** [ ] [#C] 记录解决 firefox 中字形错误的问题的方法
+** [X] [#C] 记录解决 firefox 中字形错误的问题的方法
 
 [[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
-** WAIT 在 emacs-china 论坛上求助 emacs 中“中”字和“言”字异形的问题
+** DONE 在 emacs-china 论坛上求助 emacs 中“中”字和“言”字异形的问题
+解决了，设置了 doom-unicode-font
 
 [[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
 ** [X] [#C] 解决 emacs 中指定更纱黑体、细字形但实际却使用宋体的问题，应该与/etc/fonts/conf.avail/64-language-selector-prefer.conf 有关
@@ -134,7 +149,7 @@ SCHEDULED: <2020-07-12 日>
 ** DONE 上报 emacs-rime 中使用 posframe 时，第九个候选不显示的问题
 已上报
 ** DONE 给 smart-os-input-method 添加 fcitx5 支持。 fcitx 的下一代 fcitx5 已经可用，在很多方面超越旧版，能否给一个配置变量让用户设置使用的是 fcitx5 还是 fcitx，并添加代码，以支持 fcitx5 。fcitx5 跟旧版的命令格式都基本一致，容易参照旧代码
-这个插件本来就支持 fcitx5
+smart-input-source 本来就支持 fcitx5
 ** TODO 回复 bjtu 邮件中的 good day
 ** TODO 看https://plfa.github.io 上的指导，把 plfa 加到 Agda 使用的库中，这样来做 plfa 的习题
 ** TODO 学习在 doom-emacs 中使用 manateelazycat 的 EAF
@@ -222,6 +237,7 @@ https://github.com/hlissner/doom-emacs/issues/3172
 [[file:~/projects/learn/Notebook/org/tools.org::*Emacs Tips][Emacs Tips]]
 ** TODO 修正使用 org-capture 时自动链接到当前 buffer 这个特性
 应该给出是否链接的选项？
+不知道何时，org-capture 不会自动链接到当前 buffer 了。但我开始怀念这个特性。如何才能开启这个特性呢？如何控制这个特性呢？快去学习 ELisp 吧！
 [[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-12 五 19:29\]][[2020-06-12 五 19:29]​]]
 ** DONE 学习如何用 org-mode 做 gtd
 

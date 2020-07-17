@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2020.6.18)  1 JUL 2020 01:23
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2020.7.6)  16 JUL 2020 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -371,64 +371,64 @@ Not a real error.
 [4
 
 ]
-./try_latex.tex:49: Preview: Snippet 5 started.
+./try_latex.tex:51: Preview: Snippet 5 started.
 <-><->
       
-l.49 \begin{equation}
+l.51 \begin{equation}
                      
 Not a real error.
 
-./try_latex.tex:51: Preview: Snippet 5 ended.(1921029+0x22609920).
+./try_latex.tex:53: Preview: Snippet 5 ended.(1921029+0x22609920).
 <-><->
       
-l.51   \end{equation}
+l.53   \end{equation}
                      
 Not a real error.
 
 [5]
-./try_latex.tex:55: Preview: Snippet 6 started.
+./try_latex.tex:57: Preview: Snippet 6 started.
 <-><->
       
-l.55 \[
-       a^{2}+b^{2}=c^{2}\] is a diufantu equation.
+l.57 \[
+       a^{2}+b^{2}=c^{2}\] is a 丢番图 equation.
 Not a real error.
 
-./try_latex.tex:55: Preview: Snippet 6 ended.(638387+0x13108750).
+./try_latex.tex:57: Preview: Snippet 6 ended.(638387+0x13108750).
 <-><->
       
-l.55 \[a^{2}+b^{2}=c^{2}\]
-                           is a diufantu equation.
+l.57 \[a^{2}+b^{2}=c^{2}\]
+                           is a 丢番图 equation.
 Not a real error.
 
 [6]
-./try_latex.tex:63: Preview: Snippet 7 started.
+./try_latex.tex:65: Preview: Snippet 7 started.
 <-><->
       
-l.63 \section
+l.65 \section
              {我爱你}
 Not a real error.
 
-./try_latex.tex:63: Preview: Snippet 7 ended.(751885+160835x22609920).
+./try_latex.tex:65: Preview: Snippet 7 ended.(751885+160835x22609920).
 <-><->
       
-l.63 \section{我爱你}
+l.65 \section{我爱你}
                   
 Not a real error.
 
 [7
 
 ]
-./try_latex.tex:83: Preview: Snippet 8 started.
+./try_latex.tex:85: Preview: Snippet 8 started.
 <-><->
       
-l.83 \begin{equation}
+l.85 \begin{equation}
                      
 Not a real error.
 
-./try_latex.tex:86: Preview: Snippet 8 ended.(753504+0x22609920).
+./try_latex.tex:88: Preview: Snippet 8 ended.(753504+0x22609920).
 <-><->
       
-l.86 \end{equation}
+l.88 \end{equation}
                    
 Not a real error.
 
@@ -437,8 +437,8 @@ Not a real error.
 ] ) 
 Here is how much of TeX's memory you used:
  6757 strings out of 479284
- 198996 string characters out of 5886220
- 486389 words of memory out of 5000000
+ 198996 string characters out of 5886221
+ 487389 words of memory out of 5000000
  24340 multiletter control sequences out of 15000+600000
  537090 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

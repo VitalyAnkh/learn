@@ -36,6 +36,7 @@ gnuplot = "0.0.32"
 nom = "*"
 actix-web = "2.0"
 iced = "0.1.1"
+log = "0.4.8"
 
 [dev-dependencies]
 criterion = "0.3"
