@@ -1,4 +1,25 @@
 * Inbox
+** [ ] 阅读《vim 实用技巧》
+** [ ] 解决 Emacs 中 kana 无法使用的问题
+** [ ] 有没有在 FPGA 上运行的操作系统，可以动态配置硬件的各种特性
+** [ ] 给 rust-search-extension 提 pr ，让它可以搜索本地 doc 文档，即 rustup 安装的 std book nomicon 等文档
+** [ ] 了解 Rust 语言的内存布局，读博客 and google it
+** [ ] 了解 C 语言中数据结构的内存布局（例如，一个 struct 的各个 field 是如何排列的，二维数组的元素是如何排列的）
+** [ ] 领域设计模型 DCI 是什么
+** [ ] Emacs 的 awesome 插件是干嘛的
+** [ ] 阅读《普林斯顿数学分析读本》 the real analysis  lifesaver :read:
+** [ ] 看《猪猪侠》
+** [ ] 《洛洛历险记》有配套玩具吗
+** [ ] 查看 org-mode 的 Rust 源代码模式使用的是否是 rustic ，如果不是，改过来
+** [ ] 如何使用 doom emacs 的 bookmark 功能？
+** [ ] 如何让 doom emacs 有固定 10 个 workspace ，并且每个 workspace 的内容可以持久话存储，意即，重启 Emacs 后相应 workspace 的内容依旧和上次会话一样
+而且不需要新建 workspace （通过 SPC TAB n ），而是用 SPC TAB <N> 可以直接打开第 N 个 workspace
+** [ ] 配置 wanderlust
+** [ ] eshell 是干嘛用的？
+** [ ] [#A] 学习 Elisp
+** [ ] 配置 org-mode 里写 LaTeX 代码时的 snippet （这些都要有一定 ELisp 知识啊，快去学 ELisp ！）
+** [ ] 如何让 Emacs 里的 flycheck 不检查中文（zh_CN) ?
+** [ ] 看 SICP
 ** [ ] 学习使用 unicode-font 这个包
 ** [ ] 为什么在 Emacs 中开的终端下，无法搜索 AUR 软件包？
 ** [ ] 在 MarginNote 官方论坛上指出 MarginNote 在搜索方面的问题，请他们改善

@@ -7,3 +7,6 @@
 [submodule "OS/blog_os"]
 	path = OS/blog_os
 	url = git@github.com:phil-opp/blog_os.git
+[submodule "Rust/rustlings"]
+	path = Rust/rustlings
+	url = git@github.com:rust-lang/rustlings.git

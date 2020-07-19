@@ -20,4 +20,38 @@
 ** 继续读 Computer Architecture: a Quantitative Approach
 * 2020 年 7 月 14 日
 ** Rust 程序运行时，首先启动 C 运行时(crt0) ，再由 crt0 启动 Rust 运行时的入口点。
-*** TODO 既然有crt0 ，那么存在crt1 吗？
+*** TODO 既然有 crt0 ，那么存在 crt1 吗？
+* 2020 年 7 月 15 日
+* 2020 年 7 月 16 日
+* 2020 年 7 月 17 日
+** Rust 闭包
+Rust 中闭包是由一个匿名结构体和 trait 来组合实现的。
+** Rust 中字符表示
+字符可以用 ASCII 码和 Unicode 码定义，'2A' 为 ASCII 码表中表示符号 '*' 的十六进制数，格式为 '\xHH' 。'151' 是 Unicode 十六进制码，格式为 '\u{HHH}' 。
+#+BEGIN_SRC rust
+// 在Emacs 中按 C-c C-c 查看运行结果
+fn main() {
+    println! {"\u{151}"};
+    println! {"\x2A"};
+    println! {"\u{CA0}"};
+}
+#+END_SRC
+
+#+RESULTS:
+: ő
+: *
+: ಠ
+
+** Emacs
+C-c C-q 给 Headline 添加标签
+** OS
+一般（x86 ）操作系统的启动过程：
+1. BIOS
+   1. BIOS 自检，检查内存、显卡等外设信息
+   2. 初始化硬件
+   3. 在内存中 0x000~0x3FF 处建立数据结构，中断向量表 （IVT ）并填写中断例程
+2. BIOS 加载 MBR 到 0x7c00
+3. MBR 加载 bootloader
+4. bootloader 加载操作系统
+* 2020 年 7 月 19 日
+**
