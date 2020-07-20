@@ -54,4 +54,9 @@ C-c C-q 给 Headline 添加标签
 3. MBR 加载 bootloader
 4. bootloader 加载操作系统
 * 2020 年 7 月 19 日
-**
+** 能够接受的清晰而且读起来舒服的伪代码语言：
+1. 类型的命名使用驼峰命名法，单词首字母使用大写字母，缩写词用惯用的形态，例如 HTMLAttribute ，UTF8Code ，TLBEntry
+2. 变量全部使用小写字母，单词之间用下划线分隔，缩写词一律转成小写，例如 offset ， tlb_entry
+3. 用 Sum Type 表示可能出错的结果，像 Haskell 中的 Maybe 或 Either ，或者 Rust 中的 Option 或 Result
+4. 使用 Rust 中的 match 语法
+5. 函数的命名习惯跟变量一致

@@ -10,3 +10,6 @@
 [submodule "Rust/rustlings"]
 	path = Rust/rustlings
 	url = git@github.com:rust-lang/rustlings.git
+[submodule "OS/ostep-homework"]
+	path = OS/ostep-homework
+	url = git@github.com:remzi-arpacidusseau/ostep-homework.git

@@ -2,7 +2,6 @@
 #|
    This file uses the GRacket editor format.
    Open this file in DrRacket version 7.5 or later to read it.
-
    Most likely, it was created by saving a program in DrRacket,
    and it probably contains a program with non-text elements
    (such as images or comment boxes).
