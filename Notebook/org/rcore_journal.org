@@ -34,6 +34,7 @@ fn main() {
     println! {"\u{151}"};
     println! {"\x2A"};
     println! {"\u{CA0}"};
+    println! {"咕咕咕"};
 }
 #+END_SRC
 
@@ -41,6 +42,7 @@ fn main() {
 : ő
 : *
 : ಠ
+: 咕咕咕
 
 ** Emacs
 C-c C-q 给 Headline 添加标签
@@ -60,3 +62,9 @@ C-c C-q 给 Headline 添加标签
 3. 用 Sum Type 表示可能出错的结果，像 Haskell 中的 Maybe 或 Either ，或者 Rust 中的 Option 或 Result
 4. 使用 Rust 中的 match 语法
 5. 函数的命名习惯跟变量一致
+** Rust
+*** 指针
+在 Safe Rust 中，Rust 编译器会对引用进行借用检查，以保证内存安全和类型安全。
+Rust 支持两种原生指针：不可变原生指针 *const T 和可变原生指针 *mut T 。
+* 2020 年 7 月 23 日
+** lab 1
