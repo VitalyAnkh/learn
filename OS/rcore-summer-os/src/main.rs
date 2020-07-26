@@ -22,6 +22,9 @@ pub extern "C" fn rust_main() -> ! {
     console_putchar(b'O');
     console_putchar(b'K');
     console_putchar(b'\n');
+    console_putchar(b'V');
+    console_putchar(b'R');
+    console_putchar(b'\n');
     loop {}
 }
 /// 在屏幕上输出一个字符，目前我们先不用了解其实现原理

@@ -1,0 +1,3 @@
+#+title: Rust EVAL 工具 evcxr
+* 安装
+cargo install evcxr
