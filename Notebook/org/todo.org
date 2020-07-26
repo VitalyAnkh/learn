@@ -1,4 +1,5 @@
 * Inbox
+** [ ] 阅读 99 bottles of OOP
 ** [ ] 解决一些 Java 的图形软件包，点开下拉菜单后，菜单立即消失的问题（例如 Digital ，类似 logisim 的数字逻辑仿真软件）
 ** [ ] 写一个方便 Emacs 的 org-roam 用户分享笔记的网络平台
 ** [ ] 阅读《vim 实用技巧》
