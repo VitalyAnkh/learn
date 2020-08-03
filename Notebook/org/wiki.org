@@ -86,6 +86,9 @@ sudo systemctl enbale system76-power.service
 ** Setup New Desktop Tips
 
 *** 运行 ln -sf ~/sdk/config/private-data/zlua ~/.zlua ，把 zlua 的配置文件~/.zlua 软链接到 ~/sdk/config/private-data/zlua 上
+\begin{math}
+a^{2}+b^{2}=c^{2}
+\end{math}
 ** Journal
 *** [[file:rcore_journal.org][rCore Journal]]
 *** [[file:journal.org][journal]]

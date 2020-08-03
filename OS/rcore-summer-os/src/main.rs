@@ -6,9 +6,9 @@
 #[macro_use]
 mod console;
 mod interrupt;
+mod memory;
 mod panic;
 mod sbi;
-
 // - `#![feature(global_asm)]`
 //   内嵌整个汇编文件
 // 汇编编写的程序入口，具体见该文件

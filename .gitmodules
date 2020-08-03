@@ -13,3 +13,6 @@
 [submodule "OS/ostep-homework"]
 	path = OS/ostep-homework
 	url = git@github.com:remzi-arpacidusseau/ostep-homework.git
+[submodule "OS/zCore-VitalyR"]
+	path = OS/zCore-VitalyR
+	url = git@github.com:VitalyAnkh/zCore.git

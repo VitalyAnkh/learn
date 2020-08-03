@@ -1,4 +1,21 @@
 * Inbox
+** [ ] 写一个 concat 函数，能把任意层的[T]压平
+** [ ] screen 和 tmux 这类终端复用器有什么用？该怎么用？
+** [ ] 让 fcitx5 支持 systemd，给它提交 pr
+** [ ] mlocate 是什么软件
+** [ ] 写一个 Windows 上 everything 的复刻：
+1. 使用 rust 语言，写成 systemd 服务，使用 iced 库写 gui
+2. 学习数据库 crud ，使用 sqlite
+3. 参考这个教程作为原型：https://mp.weixin.qq.com/s/kky4IO9gWOpN2yNQBv9E_A
+
+** [ ] 学习 rust 写的 find-fd 的用法
+** [ ] 写一个自动升级所有从 git 安装的 aur 软件包的程序
+** [ ] 阅读《记忆宫殿》
+** [ ]  尝试自动化博客：“我原先的博客在 WordPress 上，但是后来嫌麻烦需要管理服务器，保证服务器一直在线，所以转到了 Blogger，当然 Blogger 还一直在更新，只是从我 15 年开始，大部分的内容都属于转载了，原因归咎于我发现了 IFTTT 的神奇妙用，所以我以 Blogger 为中心，InoReader 中转播的内容自动转发到 Blogger 存档，而 Blogger 发布内容之后分享到各大社交网站，Twitter，Weibo，所以也挺好玩的，我看 RSS，然后整个服务就自动在背后执行了。”
+** [ ] 配置 rime emoji ，让它可以提示 emoji
+** [ ] 维数更高的世界里的人，智力会更高吗
+** [ ] 读 manage personal life in org-mode
+** [ ] 解决一堆 Qt 5 应用无法在 Wayland 下运行的问题。都是说有 Wayland 插件但无法加载。是构建选项有问题，还是系统的问题，还是 Qt 5 的问题？
 ** [ ] 阅读 99 bottles of OOP
 ** [ ] 解决一些 Java 的图形软件包，点开下拉菜单后，菜单立即消失的问题（例如 Digital ，类似 logisim 的数字逻辑仿真软件）
 ** [ ] 写一个方便 Emacs 的 org-roam 用户分享笔记的网络平台
@@ -59,7 +76,7 @@ To learn more, run the command again with --verbose.
 ** [ ] 学习使用 smart-input-source 挂载 emacs-rime
 ** [ ] MetaPost 是什么？
 ** [ ] 学习使用 inkscape
-** [ ] [#A] 使用 markup https://github.com/lra/mackup https://sspai.com/post/32933 或 homemanager https://github.com/rycee/home-manager 备份软件配置
+** [ ] [#A] 使用 mackup https://github.com/lra/mackup https://sspai.com/post/32933 或 homemanager https://github.com/rycee/home-manager 备份软件配置
 ** [ ] 如何使用 org-poromado
 ** [ ] org-roam 如何设置任务提醒？
 ** [ ] org-roam 如何设置循环任务？
