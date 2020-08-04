@@ -1,0 +1,4 @@
+(difference '(patience you must have) '(my young padawan))
+(difference '(1 2 3 4) '(3 4 5 6))
+(difference '(a b c d) '(b d e))
+(difference '(b d e) '(a b c d))

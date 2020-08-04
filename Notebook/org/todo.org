@@ -1,4 +1,12 @@
 * Inbox
+** [ ] 询问“一生一心”和 zCore 项目介绍的 slides
+** [ ] 用 org-mode 设置每周升级 emacs 定时任务
+** [ ] 给 zCore 的 Makefile 添加 clean 选项，清理编译生成的文件
+** [ ] 给 zCore 添加必要文档：
+1. 在# See template in zircon-user
+cd zircon-user && make zbi mode=release 之前要 rustup target add x86_64-fuchsia
+** [ ] xcb-imdkit 这个 aur 包是从 git 安装的，注意及时更新
+** [ ] 试用 python 包 lsp-pyright
 ** [ ] 写一个 concat 函数，能把任意层的[T]压平
 ** [ ] screen 和 tmux 这类终端复用器有什么用？该怎么用？
 ** [ ] 让 fcitx5 支持 systemd，给它提交 pr

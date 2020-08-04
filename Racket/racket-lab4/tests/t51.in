@@ -1,0 +1,8 @@
+(intersect '(to be) (union '(or not to be) '(that is the question)))
+(union '(to be) (difference '(or not to be) '(that is the question)))
+(difference '(to be) (intersect '(or not to be) '(that is the question)))
+(union '(to be) (intersect '(or not to be) (union '(that is the question) '())))
+(difference '(to be) (difference '(or not to be) '(that is the question)))
+(intersect '(to be) (difference '(or not to be) (union '(union '(that) '()) '(is the question))))
+(union '(to be) (union (union '(or not) '(to be)) (union (difference '(that) '(is)) '(the question))))
+(intersect '(to be) (union '(or not to be) (difference '(that is) '(the question))))

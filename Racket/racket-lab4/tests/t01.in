@@ -1,0 +1,5 @@
+(member? 'a '(a b c))
+(member? 'b '(a b c))
+(member? 'c '(a b c))
+(member? 'd '(a b c))
+(member? 'x '())

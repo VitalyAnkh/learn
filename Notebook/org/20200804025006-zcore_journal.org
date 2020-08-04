@@ -1,0 +1,7 @@
+#+title: zCore Journal
+* 2020 年 8 月 3 日
+今天是 zCore 实习的第一天。上午听报告，听到 rCore/zCore 的历史。下午老师和助教相信介绍了各项目。我选择了
+* 2020 年 8 月 4 日
+zircon 的内核对象有一定的通用性，在上面再包一层，就可以成为 linux 内核看到的样子。
+zircon 强制所有的系统调用都走 vdso。
+async/await ：无栈协程，协作式调度

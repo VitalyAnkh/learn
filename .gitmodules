@@ -16,3 +16,6 @@
 [submodule "OS/zCore-VitalyR"]
 	path = OS/zCore-VitalyR
 	url = git@github.com:VitalyAnkh/zCore.git
+[submodule "OS/zCore-Tutorial-VitalyR"]
+	path = OS/zCore-Tutorial-VitalyR
+	url = git@github.com:VitalyAnkh/zCore-Tutorial.git

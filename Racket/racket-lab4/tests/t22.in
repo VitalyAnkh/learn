@@ -1,0 +1,4 @@
+(union '(2 7 1 8) '(3 1 4))
+(union '(left right) '(right wrong))
+(union '(green) (union '(eggs) '(and ham)))
+(union '(how much wood) (union '(would a woodchuck chuck) (union'(if a woodchuck) '(could chuck wood))))

@@ -1,0 +1,4 @@
+(union '(a b c) '(x y z))
+(union '(a b c) '(a b c))
+(union '(a b c) '(1 2 3 a))
+(union '(to be) '(or not to be))

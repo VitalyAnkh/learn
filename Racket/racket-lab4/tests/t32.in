@@ -1,0 +1,4 @@
+(intersect '(2 7 1 8) '(3 1 4))
+(intersect '(to be) '(or not to be))
+(intersect '(left right) '(right wrong))
+(intersect '(2 7 1 8) (intersect '(2 8 1) (intersect '(3 1 4) '(1 5 9 2 6))))

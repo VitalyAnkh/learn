@@ -1,0 +1,5 @@
+(set? '())
+(set? '(x))
+(set? '(x y z))
+(set? '(x x x))
+(set? '(x y z x))

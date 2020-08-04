@@ -92,3 +92,7 @@ a^{2}+b^{2}=c^{2}
 ** Journal
 *** [[file:rcore_journal.org][rCore Journal]]
 *** [[file:journal.org][journal]]
+*** [[file:20200804025006-zcore_journal.org][zCore Journal]]
+:PROPERTIES:
+:ID:       4b58b03c-1d15-40ca-9137-76ad734d1159
+:END:
