@@ -75,7 +75,7 @@ sudo systemctl enbale system76-power.service
 ~/.pam_environment
 #+END_SRC
 涉及到 locale 变量，修改/etc/locale.conf 然后运行 locale-gen
-*** fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy
+*** fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy xcbd-ime
 *** [[file:20200708222555-wiremock_rs.org][wiremock-rs]]
 *** [[file:20200708224724-bastion_rs.org][bastion-rs]]
 *** [[file:20200708225833-王佳.org][王佳]]
@@ -89,10 +89,11 @@ sudo systemctl enbale system76-power.service
 \begin{math}
 a^{2}+b^{2}=c^{2}
 \end{math}
+*** [[file:20200806153436-fish把prompt的背景色设置为透明.org][fish把prompt的背景色设置为透明]]
+:PROPERTIES:
+:ID:       d345900e-470e-4cae-b641-865b9e199ab2
+:END:
 ** Journal
 *** [[file:rcore_journal.org][rCore Journal]]
 *** [[file:journal.org][journal]]
 *** [[file:20200804025006-zcore_journal.org][zCore Journal]]
-:PROPERTIES:
-:ID:       4b58b03c-1d15-40ca-9137-76ad734d1159
-:END:

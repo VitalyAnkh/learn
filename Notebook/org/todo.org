@@ -1,4 +1,23 @@
 * Inbox
+** [ ] 写一个自动更新所有 aur git 包的软件（rust 来写？）。
+思路：
+1. 使用 pacman -Q | rg git 找到所有 git 软件包，使用一些方法分割出软件包名字
+2. 使用 proxychains -q rua i 开逐个更新
+** [ ] Rust 的 drop-flag 是什么
+** [ ] 学习 condvar ，条件变量是什么
+** [ ] 写类似 alfred 的起动器，使用 Rust iced 写
+** [ ] 验证《Rust 编程之道》书上介绍的字节对齐的例子时，解释是错误的
+** [ ] 通过预编译的方式，使 zCore 支持 rustc（在 zircon 中而不是 linux 中）：
+1. 下载 fuchsia 源码，编译，然后按照 fuchsia 文档，编译出 fuchsia 魔改过的可以运行在 fuchsia 的 rustc
+2. 把编译好的 rustc zbi 文件拷贝到 bootfs 的可执行文件所在的位置，尝试运行
+** [ ] 用过程宏重写 zCore 中为某个 struct 实现 KernelObject 的代码
+** [ ] zCore 中到处使用了内部可变性，把可变的数据部分抽出来做成一个独立的数据结构，然后用 Mutex 等包起来。问题是这样有些繁琐，可否用过程宏简化这些代码？
+** [ ] 5 日上午：
+1. green thread in 200 lines of rust
+2. 文章：动手实现一个 zCore 系统调用
+3. Book: ostep 1 chapter
+4. rCore tutorial
+
 ** [ ] 询问“一生一心”和 zCore 项目介绍的 slides
 ** [ ] 用 org-mode 设置每周升级 emacs 定时任务
 ** [ ] 给 zCore 的 Makefile 添加 clean 选项，清理编译生成的文件
