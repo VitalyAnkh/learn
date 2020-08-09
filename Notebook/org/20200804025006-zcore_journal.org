@@ -23,3 +23,9 @@ MaixPy 是什么？
 Futex： 用户态同步互斥机制， Fast User Mutex
 由 thread.start(.., spawn_fn) 开始运行线程
 spawn_fn 函数创建一个内核协程,用来执行此用户线程
+
+syscall ：什么都不管，从 ring 3 蹦到 ring 0
+现在的操作系统都使用 MMIO, x86 使用 PIO
+MMIO 是什么？
+* 2020 年 8 月 7 日
+** rust 中，对一个类型 T 使用 as *const T 或 as *mut T ，与调用 T 的 as_ptr 方法，得到的结果是不一样的。前者得到的是指向整个类型的指针，后者得到的是指向内部数据的指针。可对 String 和Vec<T> 验证。

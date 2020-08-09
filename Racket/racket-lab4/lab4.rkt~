@@ -54,19 +54,20 @@
 ;;         ((pred (car ls)) (cons (car ls) (my-filter pred (cdr ls))))
 ;;         (else (my-filter pred (cdr ls)))))
 
-(define (union lst1 lst2)
+(define (union1 lst1 lst2)
   ;; We don't need to check if the lists are null.
   ;; Just append the two lists and deduplicate the result
-  (if (null? lst1)
-      lst2
-      (if (member? (car lst1) lst2)
-          (union (cdr lst1) lst2)
-          (union (cdr lst1) (cons (car lst1) lst2)))))
+  (if (null? lst2)
+      lst1
+      (if (member? (car lst2) lst1)
+          (union1 lst1 (cdr lst2))
+          (flatten (cons (union1 lst1 (cdr lst2)) (car lst2))))
+  ))
 
-(define (union1 s1 s2) 
+(define (union s1 s2) 
 (cond ((null? s1) s2)
-((member? (car s1) s2)(union1 (cdr s1) s2))
-(else (cons (car s1)(union1 (cdr s1) s2)))))
+((member? (car s1) s2)(union (cdr s1) s2))
+(else (cons (car s1)(union (cdr s1) s2)))))
 
 (define (intersect s1 s2)
     (cond ((null? s1) '())
@@ -74,19 +75,15 @@
     (else (intersect (cdr s1) s2))))
 
 (define (difference lst1 lst2)
-    (cond
-      ((null? lst1) '())
-      ((member? (car lst1) lst2) (difference (cdr lst1) lst2))
-      (else (cons (car lst1) (difference (cdr lst1) lst2)))
-          ))
+    (cond))
 
-(define (difference2 lst1 lst2)
+(define (difference lst1 lst2)
   ;; This function is similar to function deduplicate
   (if (null? lst1)
       '()
       (if (member? (car lst2) lst1)
-          (difference2 lst1 (cdr lst2))
-          (flatten (cons (difference2 lst1 (cdr lst2)) (car lst2)))
+          (difference lst1 (cdr lst2))
+          (flatten (cons (difference lst1 (cdr lst2)) (car lst2)))
   )))
 
 (define (flatten lst)
@@ -100,11 +97,3 @@
     [(pair? lst) (append (flatten (car lst)) (flatten (cdr lst)))]
     ;; If the list only has one element, return it
     [else (list lst)]))
-
-(define-namespace-anchor anc)
-(define ns (namespace-anchor->namespace anc))
-(let loop ()
-(define line (read-line (current-input-port) 'any))
-(if (eof-object? line)
-(display "")
-(begin (print (eval (read (open-input-string line)) ns)) (newline) (loop))))

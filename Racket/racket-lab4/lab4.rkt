@@ -10,56 +10,72 @@
   ))
 
 (define (member? e lst)
+  ;; If the list is null
   (if (null? lst)
+      ;; False
       #f
+      ;; If the first element is equal to `e`
       (if (eq? e (car lst))
+          ;; True
           #t
+          ;; else go to recursion
           (member? e (cdr lst)))))
 
 (define (set? lst)
+  ;; If the list is null
   (if (null? lst)
+      ;; True
       #t
+      ;; If the first element is a member of the rest of the list
       (if (member? (car lst) (cdr lst))
+          ;; false
           #f
-          (set? (cdr lst))))
-  )
+          ;; else go into iteration
+          (set? (cdr lst)))))
 
-(define (deduplicate lst)
-  ;; A helper function for union.
-  ;; To remove duplicate elements of a list
-  (if (set? lst)
-      lst
-      (if (member? (car lst) (cdr lst))
-          (deduplicate (cdr lst))
-          (cons (car lst) (deduplicate (cdr lst))))))
 
 (define (union lst1 lst2)
-  ;; We don't need to check if the lists are null.
-  ;; Just append the two lists and deduplicate the result
-  (deduplicate (append lst1 lst2))
-  )
+  ;; If the first lst1 is null
+  ;; just return the second one
+  (if (null? lst1)
+      lst2
+      ;; If the first element is also a member of the second,
+      (if (member? (car lst1) lst2)
+          ;; discard the first element, and go into recursion
+          (union (cdr lst1) lst2)
+          ;; else cons and go into recursion
+          (union (cdr lst1) (cons (car lst1) lst2)))))
+
 
 (define (intersect lst1 lst2)
-  ;; null test
-  (if (null? lst1)
-      '()
-  ;; go through every element of lst1, check if it is a member of lst2
-  ;; if not, don't cons it to (cdr lst1)
-      (if (member? (car lst1) lst2)
-          ;; assume all the lists are proper sets
-          ;; so we don't need to use our deduplicate function
-          (cons (car lst1) (intersect (cdr lst1) lst2))
-          ( intersect (cdr lst1) lst2)
-      )))
+  (cond
+    ;; If the first list is null,
+    ;; return null list
+    ((null? lst1) '())
+    ;; if the first element of the first list is also a member of the second
+    ;; cons the first element of the first list and the result of recursion
+    ((member? (car lst1) lst2)(cons (car lst1)(intersect (cdr lst1) lst2)))
+    ;; else go into recursion
+    (else (intersect (cdr lst1) lst2))))
 
 (define (difference lst1 lst2)
-  ;; This function is similar to function deduplicate
-  (if (null? lst1)
-      '()
-      (if (member? (car lst1) lst2)
-          (difference (cdr lst1) lst2)
-          (cons (car lst1) (difference (cdr lst1) lst2))))
-  )
+    (cond
+      ((null? lst1) '())
+      ((member? (car lst1) lst2) (difference (cdr lst1) lst2))
+      (else (cons (car lst1) (difference (cdr lst1) lst2)))))
+
+
+(define (flatten lst)
+  ;; three situations
+  (cond
+    ;; When the list is null return empty list
+    [(null? lst) '()]
+    ;; If the list is a pair, that's to say,
+    ;; a list with two element and maybe one of the two
+    ;; is also a list, we flatten them perpectively
+    [(pair? lst) (append (flatten (car lst)) (flatten (cdr lst)))]
+    ;; If the list only has one element, return it
+    [else (list lst)]))
 
 (define-namespace-anchor anc)
 (define ns (namespace-anchor->namespace anc))

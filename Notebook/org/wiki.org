@@ -54,6 +54,11 @@ C++ 程序员经常把“对 const 的引用”简称为“常量引用”，这
 java 程序中的 public static void main(String[] args) 中，main 不是 keyword ，只是一个 name/identifier 。
 ** Rust
 *** [[file:20200726035220-rust_eval_工具_evcxr.org][Rust EVAL 工具 evcxr]]
+** Android
+*** [[file:20200809215624-好用的android_app.org][好用的Android app]]
+:PROPERTIES:
+:ID:       15427620-c596-44d6-80ff-34a320814b42
+:END:
 
 ** Linux Tips
 
