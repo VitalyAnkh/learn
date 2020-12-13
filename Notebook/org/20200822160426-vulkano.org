@@ -1,0 +1,4 @@
+#+title: vulkano
+类似 gfx-rs 的图形 API 抽象库，unlike  gfx-rs  ，只把 vulkan 作为后端。gfx-rs 提供 vulkan ， metal ， DX12 和 openGL 后端。
+
+但从项目活跃程度上看，已经死亡了，主要开发者只有一人，而且从 2018 年起就不再参与开发（ tomaka ，在 parity 任职）。

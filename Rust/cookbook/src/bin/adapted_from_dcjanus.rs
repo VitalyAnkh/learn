@@ -1,5 +1,3 @@
-#![feature(todo_macro)]
-#![feature(result_map_or_else)]
 use std::collections::HashMap;
 
 use failure;

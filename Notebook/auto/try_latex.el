@@ -6,6 +6,8 @@
    (TeX-run-style-hooks
     "latex2e"
     "ctexart"
-    "ctexart10"))
+    "ctexart10")
+   (LaTeX-add-labels
+    "eq:2"))
  :latex)
 

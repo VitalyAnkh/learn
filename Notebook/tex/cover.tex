@@ -1,0 +1,116 @@
+
+
+
+\documentclass{ctexart}
+\usepackage{tikz}
+\usepackage{ean13isbn}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\zw@eansetup@params}
+  {\usefont{OT1}{phv}{mc}{n}}
+  {\fontspec{Arial Narrow}}
+  {}{}
+\makeatother
+
+\usepackage[hidelinks]{hyperref}
+\definecolor{top}{RGB}{254,211,92}
+\setmainfont{Times New Roman}
+\begin{document}
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill (current page.south east)rectangle (current page.north west);
+
+      \fill[top] ([yshift=-0.5cm]current page.east) coordinate(A)
+        rectangle (current page.north west);
+
+      \fill[white] ([yshift=2.7cm]current page.south west)coordinate(E) --++(\paperwidth,0) -- ++(0,0.15)--++(-\paperwidth,0)--cycle;
+
+      \node[scale=2.2,anchor=north east] (C) at ([shift={(5cm,3cm)}]current page.west)
+        { \color{red}\bfseries 第五卷 };
+
+      \draw[line width=8pt]([yshift=-0.2cm]C.north east)--++(0,-2.6) coordinate(D);
+
+      \node[anchor=south west,align=left,scale=1.44,font=\bfseries] at ([xshift=0.3cm]D)  { 数学\\ 奥林匹克 \\ 系列 };
+
+      \node[text width=0.8\paperwidth,anchor=south,
+      font=\Large\bfseries] at ([shift={(0.5,4)}]current page.center)
+      {\parindent=2em
+
+        从 1962 年开始，越南就一直积极举办国家数学竞赛，即越南数学奥林匹克（VMO）. 在全球舞台上，越南也从 1974 年开始参加国际数学竞赛（IMO），并且长期出现在排行榜前十.
+
+        为了激发和进一步挑战读者，我们在本书中收集了从 1962 到 2009 年中不同难度的 VMO 问题.
+
+        本书对于准备数学奥林匹克的高中学生，老师，教练以及大学讲师大有裨益，以及对只是想在数学竞赛中占据优势的非专业人士也很有帮助.
+      };
+
+      \fill[gray!50] (A)--++(-\paperwidth,0)
+      --([yshift=2.85cm]current page.south west)
+      --++(\paperwidth,0)--cycle;
+
+      \node[anchor=north east,align=left,font=\bfseries,scale=3] at
+      ([shift={(-1.5,-0.7)}]A) {越南数学奥林匹克题选\\（1962-2009）};
+
+       \node at ([shift={(-3cm,-8cm)}]current page.center) { \includegraphics[width=0.4\paperwidth]{ring1.pdf}
+      };
+
+      \node[anchor=north west,align=left,text=white,
+      scale=1.2,
+      font=\fontspec{Adobe Gothic Std B}] at ([shift={(1.5,-0.1)}]E){
+        World Scientific\\
+        \href{www.worldscientific.com}
+            {www.worldscientific.com}\\
+        7514sc\quad ISSN:1793-8570
+      };
+      \node[anchor=north east,fill=white,scale=0.75] at ([shift={(-2,2.85)}]current page.south east)
+      {\EANisbn[SC5b,ISBN=978-981-4289-59-7]};
+    \end{tikzpicture}
+    \newpage
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill (current page.south east)rectangle (current page.north west);
+
+      \fill[top] ([yshift=-0.5cm]current page.west) coordinate(A)
+        rectangle (current page.north east);
+
+      \fill[white] ([yshift=2.7cm]current page.south west) [bend right=6] to ([yshift=5.4cm]current page.south east) -- ++(0,0.8cm)coordinate(E) [bend left=7]
+      to ([yshift=2.85cm]current page.south west) coordinate(B) --cycle;
+
+      \node at ([shift={(1cm,7cm)}]current page.center) { \includegraphics[width=0.7\paperwidth]{ring1.pdf}
+      };
+
+      \node[align=left,scale=2.2,font=\bfseries] at ([shift={(-3,-2)}]current page.north east) {黎海洲\\[-1mm]黎海启};
+
+      \node[scale=2.5,anchor=north east] (C) at ([shift={(5cm,4cm)}]A)
+        { \color{red}\bfseries 第五卷 };
+
+      \draw[line width=8pt]([yshift=-0.2cm]C.north east)--++(0,-2.6) coordinate(D);
+
+      \node[anchor=south west,align=left,scale=1.5,font=\bfseries] at ([xshift=0.3cm]D)  { 数学\\ 奥林匹克 \\ 系列 };
+
+      \fill[gray!50] (A)--++(\paperwidth,0)
+      [bend right=7] -- (E) [bend left=7.3] to (B)
+      -- cycle;
+
+      \node[anchor=north west,align=left,font=\bfseries,scale=3] at ([shift={(1.5,-0.7)}]A) {越南数学奥林匹克题选\\（1962-2009）};
+
+      \node[anchor=east] at ([shift={(-1.3,2.4)}]current page.south east)
+      {
+        \begin{tikzpicture}
+          \fill[white] (0,0)--(0.23,0)--++(105:1.5)
+          coordinate(F) [bend right=50] to ([xshift=-0.23cm]F)--cycle;
+          \begin{scope}
+          \clip(-1,0)--(0.27,0)--(0.27,2)--(-1,2);
+          \fill[white](0.25,0)--(0.48,0)--++(105:1.5)
+          coordinate(G) [bend right=50] to ([xshift=-0.23cm]G)--cycle;
+          \end{scope}
+          \fill[white](0.29,0)--(0.52,0)--++(0,{1.5*sin(75)})
+          coordinate(H) [bend right=50] to ([xshift=-0.23cm]H)--cycle;
+          \fill (0.7,0.73) circle (0.43);
+          \fill[white] (0.7,0.73) circle (0.4);
+          \draw (0.29,0.71)--++(0.5,0);
+          \draw (1.11,0.75)--++(-0.5,0);
+          \fill (0.7,0.73) circle (0.15);
+          \draw[white,line width=0.75pt](0.4,0.73)--++(0.6,0);
+          \node[anchor =west,text=white,scale=2] at(1.2,0.73){\fontspec{Adobe Gothic Std B} World Scientfic};
+        \end{tikzpicture}
+      };
+    \end{tikzpicture}
+\end{document}

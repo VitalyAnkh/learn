@@ -1,30 +1,109 @@
 * Inbox
-** [ ] actor 编程模型是什么样的
+** [ ] 学习 wireshark ，看 Linux 上的 microsoft-edge-dev 是如何不需要手动设置代理就可以访问墙外网站
+** [ ] 把 AUR 上的 uno-calculator 改写成 uno-calculator-git
+** [ ] blender 编译错误
+[0/0] Generating filter_sm_30.cubin
+FAILED: intern/cycles/kernel/filter_sm_30.cubin
+cd /home/vitalyr/.cache/yay/blender-git/src/build/intern/cycles/kernel && /opt/cuda/bin/nvcc -arch=sm_30 --cubin /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/kernels/cuda/filter.cu --ptxas-options="-v" -D CCL_NAMESPACE_BEGIN= -D CCL_NAMESPACE_END= -D NVCC -m 64 -I /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/.. -I /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/kernels/cuda --use_fast_math -o /home/vitalyr/.cache/yay/blender-git/src/build/intern/cycles/kernel/filter_sm_30.cubin
+nvcc fatal   : Value 'sm_30' is not defined for option 'gpu-architecture'
+[0/0] Generating filter_sm_50.cubin
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+** [ ] 读 rust std doc 中关于迭代器的章节
+** [ ] 在 Arch Linux 启用 nvidia proprietary driver 和 wayland
+2020 年 10 月 7 日，电脑合上后关机，然后开机无法进入桌面，发现它自动启用了 nvidia proprietary driver ，原因未知，可能是装了什么软件，自动重启导致软件设置的一些内容生效。无法进入桌面的原因是，/etc/gdm/custom.conf 中设置了一句：
+WaylandEnabled=false ，而我的 Arch 只能从 Wayland 启动，所以无法进入。我从另一个 tty 中进入 sway ，发现 sway 也感知到 nvidia proprietary driver 的存在，要如此启动：
+sway --my-next-gpu-wont-be-nvidia
+进入 sway 后，再进入另一个 tty ，发现可以启动 gnome-shell 。
+问题是：启用 nvidia proprietary driver 就会破坏 wayland ，但这次经历显示用一些手段可以使这两者共存，探索之。
+应注意的文件：/etc/gdm/* , /etc/mkinitramfs* , /etc/modprobe.d/*
+** [ ] resolve this:
+Running darling-setup=ld-so
+/tmp/alpm_sxAdMv/.INSTALL:行 6: /usr/bin/darling-setup-ld-so: 没有那个文件或目录
+错误：命令未能被正确执行
+** [ ] 为什么 emacs-pgtk-native-comp 中使用 pdf-tools 渲染 pdf 文件，这么模糊
+** [ ] 写一个浏览器插件，给 nLab wikipedia 这样的 wiki 网站添加一个 backlink 和 roam 式的链接图
+** [ ] 为什么 nvidia 这个内核模块没开？
+==> dkms remove --no-depmod -m nvidia -v 455.23.04 -k 5.8.10-arch1-1
+rmdir: 删除 '' 失败: 没有那个文件或目录
+rmdir: 删除 '' 失败: 没有那个文件或目录
+rmdir: 删除 '' 失败: 没有那个文件或目录
+解决这个问题
+
+使用 dkms 安装 nvidia 内核模块时的记录：
+==> dkms install --no-depmod -m nvidia -v 455.23.04 -k 5.8.12-arch1-1
+
+Good news! Module version 455.23.04 for nvidia.ko.xz
+exactly matches what is already found in kernel 5.8.12-arch1-1.
+DKMS will not replace this module.
+You may override by specifying --force.
+
+Good news! Module version 455.23.04 for nvidia-modeset.ko.xz
+exactly matches what is already found in kernel 5.8.12-arch1-1.
+DKMS will not replace this module.
+You may override by specifying --force.
+
+Good news! Module version 455.23.04 for nvidia-drm.ko.xz
+exactly matches what is already found in kernel 5.8.12-arch1-1.
+DKMS will not replace this module.
+You may override by specifying --force.
+** [ ] 学习英语单词的重音规律
+** [ ] 学习德语单词的重音规律
+** [X] 了解《爱斯维尔科学哲学手册》这套书
+** [ ] 读 pretty print 的论文
+** [ ] 学习 parser combinator
+** [ ] Rust 中变量是否可变的信息，是不是已经包含在类型里了？
+** [ ] 把 termius 设置为 tty 字体
+** [ ] 写替代 toby 的用于书签/标签页管理的浏览器插件
+** [ ] 使用 ansible 编写自动化任务：拉取~/projects/contribute 目录下的所有 git 仓库
+** [ ] 解决密钥导入失败的问题
+** [ ] 写一个类似鸟群模拟的游戏：牧羊犬模拟器
+玩法：扮演牧羊犬，把羊群（牛群）赶进畜栏
+核心算法在于羊群（牛群）的模拟，可以参考 bevy 游戏引擎的一个 demo ，实现了鸟群的模拟
+** [ ] 更新 emacs-native-git-enhanced 和 doom emacs
+SCHEDULED: <2020-08-23 日 +1w>
+** [ ] 解决 android studio 中无法进行 flutter 的问题，主要原因在于无法正常使用代理，于是无法下载 android sdk
+** [X] 设置全局的 cargo 编译 target
+** [ ] cargo install the-way
+彩蛋：用 ansible 安装？
+** [X] 学习 bevy engine
+** [ ] 解决 man -k man 返回“没有合适结果”的问题
+man-pages 的数据库没有生成？需要重启？
+** [ ] Rust 中的 Mutex 和 RwLock 有什么区别
+** [ ] 了解 doom emacs 的 custom.el 和 config.org 如何使用
+** [X] [#B] 给 iPad Pro 贴钢化膜
+不贴了
+** [ ] 解决使用 emacs-rime 后，切回 evil normal mode 再切回来，会进入英文而不是 emacs-rime 的中文的问题
+** [ ] 搞清楚阶数在 20 以内的群的结构
+** [ ] 针对 emacs 开新 window 会卡顿的问题，使用 chemacs ，安装 spacemacs，然后看是否有这问题。来确定是 doom emacs 的问题，还是 emacs 本身的问题，还是 gnome 桌面的问题
+** [ ] actor 编程模型是什么样的 :programming:
 ** [ ] 超线程 i.e. 处理器运行多于处理器核数的线程 的技术是如何实现的
-** [ ] evil-mode 如何把光标置于屏幕中央
+** [X] evil-mode 如何把光标置于屏幕中央
+z z
+类似的还有 z t, z b
 ** [ ] racket-mode 如何 format 代码
 ** [ ] 备份手机数据，包括微信聊天记录、图片、下载的歌曲，记录好用的 APP ，然后恢复出厂设置
-** [ ] 写一个自动更新所有 aur git 包的软件（rust 来写？）。
+** [ ] 写一个自动更新所有 aur git 包的软件（rust 来写？）
 思路：
 1. 使用 pacman -Q | rg git 找到所有 git 软件包，使用一些方法分割出软件包名字
 2. 使用 proxychains -q rua i 开逐个更新
 ** [ ] Rust 的 drop-flag 是什么
 ** [ ] 学习 condvar ，条件变量是什么
-** [ ] 写类似 alfred 的起动器，使用 Rust iced 写
+** [ ] 写类似 alfred 的启动器，使用 Rust iced 写
 ** [ ] 验证《Rust 编程之道》书上介绍的字节对齐的例子时，解释是错误的
 ** [ ] 通过预编译的方式，使 zCore 支持 rustc（在 zircon 中而不是 linux 中）：
 1. 下载 fuchsia 源码，编译，然后按照 fuchsia 文档，编译出 fuchsia 魔改过的可以运行在 fuchsia 的 rustc
 2. 把编译好的 rustc zbi 文件拷贝到 bootfs 的可执行文件所在的位置，尝试运行
 ** [ ] 用过程宏重写 zCore 中为某个 struct 实现 KernelObject 的代码
 ** [ ] zCore 中到处使用了内部可变性，把可变的数据部分抽出来做成一个独立的数据结构，然后用 Mutex 等包起来。问题是这样有些繁琐，可否用过程宏简化这些代码？
-** [ ] 5 日上午：
+** [X] 5 日上午：
 1. green thread in 200 lines of rust
 2. 文章：动手实现一个 zCore 系统调用
 3. Book: ostep 1 chapter
 4. rCore tutorial
 
-** [ ] 询问“一生一心”和 zCore 项目介绍的 slides
-** [ ] 用 org-mode 设置每周升级 emacs 定时任务
+** [X] 询问“一生一心”和 zCore 项目介绍的 slides
+** [X] 用 org-mode 设置每周升级 emacs 定时任务
 ** [ ] 给 zCore 的 Makefile 添加 clean 选项，清理编译生成的文件
 ** [ ] 给 zCore 添加必要文档：
 1. 在# See template in zircon-user
@@ -47,12 +126,13 @@ cd zircon-user && make zbi mode=release 之前要 rustup target add x86_64-fuchs
 ** [ ] 配置 rime emoji ，让它可以提示 emoji
 ** [ ] 维数更高的世界里的人，智力会更高吗
 ** [ ] 读 manage personal life in org-mode
-** [ ] 解决一堆 Qt 5 应用无法在 Wayland 下运行的问题。都是说有 Wayland 插件但无法加载。是构建选项有问题，还是系统的问题，还是 Qt 5 的问题？
+** [ ] [#A] 解决一堆 Qt 5 应用无法在 Wayland 下运行的问题。都是说有 Wayland 插件但无法加载。是构建选项有问题，还是系统的问题，还是 Qt 5 的问题？
 ** [ ] 阅读 99 bottles of OOP
-** [ ] 解决一些 Java 的图形软件包，点开下拉菜单后，菜单立即消失的问题（例如 Digital ，类似 logisim 的数字逻辑仿真软件）
+** [ ] [#A] 解决一些 Java 的图形软件包，点开下拉菜单后，菜单立即消失的问题（例如 Digital ，类似 logisim 的数字逻辑仿真软件）
 ** [ ] 写一个方便 Emacs 的 org-roam 用户分享笔记的网络平台
 ** [ ] 阅读《vim 实用技巧》
-** [ ] 解决 Emacs 中 kana 无法使用的问题
+** [X] 解决 Emacs 中 kana 无法使用的问题
+不知道为什么就可以使用了。。。
 ** [ ] 有没有在 FPGA 上运行的操作系统，可以动态配置硬件的各种特性
 ** [ ] 给 rust-search-extension 提 pr ，让它可以搜索本地 doc 文档，即 rustup 安装的 std book nomicon 等文档
 ** [ ] 了解 Rust 语言的内存布局，读博客 and google it
@@ -128,7 +208,7 @@ To learn more, run the command again with --verbose.
 ** [ ] 学习 C 语言的可变参数表功能
 ** [ ] 学习使用 iedit
 ** [ ] 使用 ansible 安装各个语言的 language server
-** [ ] [#A] 解决 emacs 在打开.rkt （racket 源文件）后，使用 scheme mode 而不是 racket-mode 的问题
+** [X] [#A] 解决 emacs 在打开.rkt （racket 源文件）后，使用 scheme mode 而不是 racket-mode 的问题
 ** [ ] [#C] 学习 google 搜到的他人的 doom emacs 配置
 ** [ ] 解决 treemacs 的图标不使用 treemacs 自己的默认图标的问题
 ** [ ] 如何使用 ctags
@@ -167,12 +247,14 @@ Solution: 是第 2 个方法解决的。需要把那个方法记录一下。
 
 [[file:~/projects/learn/Notebook/org/wiki.org::*doom-emacs shortcut:][doom-emacs shortcut:]]
 ** [ ] 𝚅𝚒𝚝𝚊𝚕𝚢𝚁: In lsp-mode's rust-analyzer, bind commands like lsp-rust-analyzer-join-lines, lsp-extend-selection and lsp-rust-analyzer-expand-macro to keys.
+𝐌
 
 [[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::setq lsp-rust-server 'rust-analyzer]]
 ** [ ] 解决 visual 模式下，无法使用 h l 进行左右移动的问题
 
 [[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::(rss +org) ; emacs as an RSS reader]]
-** [ ] [#C] 在 emacs 中配置 twitter 客户端，见下面链接
+** [X] [#C] 在 emacs 中配置 twitter 客户端，见下面链接
+没用，不干
 
 [[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::twitter ; twitter client https://twitter.com/vnought]]
 ** [ ] [#C] 学习使用 projectile
@@ -207,10 +289,11 @@ SCHEDULED: <2020-07-12 日>
 *** TODO [#A] 看《R 数据科学》
 
 ** TODO [#C] Book: Physics from Symmetry
-** TODO [#C] 下一步让 fcitx5 在 emacs 中工作的实施计划：
-*** TODO [#C] 更改四个配置文件中的变量，从 wayland 切换到 x11<2020-07-03 五 15:00>
+** DONE [#C] 下一步让 fcitx5 在 emacs 中工作的实施计划：
+*** DONE [#C] 更改四个配置文件中的变量，从 wayland 切换到 x11<2020-07-06 一 15:00>
 **** 若试试成功，可再试试使用 i3 窗口管理器<2020-07-03 五>
-*** TODO [#C] 安装 fcitx4 ，试试能否在 emacs 中使用
+*** DONE [#C] 安装 fcitx4 ，试试能否在 emacs 中使用
+不装了。fcitx5 可以在 emacs 中使用了。还是要学好基本功。以后学了 C++ 后参与开发 fcitx5 吧。
 
 ** TODO [#C] 让 emacs 选择候选的快捷键是 Tab 而不是 Enter
 [[file:~/projects/learn/Notebook/org/wiki.org::*fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy][fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy]]
@@ -223,7 +306,8 @@ SCHEDULED: <2020-07-12 日>
 已上报
 ** DONE 给 smart-os-input-method 添加 fcitx5 支持。 fcitx 的下一代 fcitx5 已经可用，在很多方面超越旧版，能否给一个配置变量让用户设置使用的是 fcitx5 还是 fcitx，并添加代码，以支持 fcitx5 。fcitx5 跟旧版的命令格式都基本一致，容易参照旧代码
 smart-input-source 本来就支持 fcitx5
-** TODO 回复 bjtu 邮件中的 good day
+** DONE 回复 bjtu 邮件中的 good day
+不回
 ** TODO 看https://plfa.github.io 上的指导，把 plfa 加到 Agda 使用的库中，这样来做 plfa 的习题
 ** TODO 学习在 doom-emacs 中使用 manateelazycat 的 EAF
 ** DONE 解决 emacs-rime 使用 posframe 却无候选框的问题
@@ -240,7 +324,7 @@ smart-input-source 本来就支持 fcitx5
 ** PROJ [#A] 阅读《爱的艺术》 弗洛姆
 ** TODO [#A] 设置定时任务，每小时备份 config 文件。使用 ansible 或者 crontab ？
 ** PROJ [#A] 阅读《用 Python 进行数据分析》
-** TODO [#A] 完成 ansible 对个人桌面的配置，要求：可以使用 github 上的配置来配置好想要的所有编程环境
+** TODO [#A] 完成 ansible 对个人桌面的配置，要求：可以使用 github 上的配置（spark ansible)来配置好想要的所有编程环境
 ** TODO [#C] 在 iPad 上配置 org-mode 查看环境，使用 beorg
 ** DONE 学习如何用 org-mode 计时
 <SPC m c i> org-clock-in
@@ -270,7 +354,8 @@ https://github.com/hlissner/doom-emacs/issues/3172
 审核通过，可以去http:://bishefuwu.com 登录
 ** TODO [#A] 快去学习 org capture
 ** TODO [#A] 如何让 org capture 捕获的 todo 添加上时间
-** TODO [#A] 如何打开 emacs 内置的 reference manual ？
+** DONE [#A] 如何打开 emacs 内置的 reference manual ？
+C-h i
 
 [[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 10:50\]][[2020-06-15 一 10:50]​]]
 ** TODO 配置 emacs 的 upload 插件 org-upload ，做图床用

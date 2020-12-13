@@ -7,3 +7,9 @@
 !.SRCINFO
    #+END_SRC
 表示排除仓库中所有文件，除了 PKGBUILD 和.SRCINFO 。这在写 AUR 包时很有用。
+*  排除一切目录中的 eln 文件，这样写：
+#+BEGIN_SRC
+*/**/*.eln
+#+END_SRC
+
+也就是 ** 匹配了任意目录结果。

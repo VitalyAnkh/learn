@@ -1,0 +1,7 @@
+#+title: 电路设计工具digital
+[[https://github.com/hneemann/Digital][digital]] 是与 logisim 类似的电路设计工具，可以用来辅助学习数字电路，甚至用来设置芯片。
+但是 digital 在 java 高版本下运行时，菜单栏点开后会消失。用 java 8 来运行它可以解决这个问题。
+可以改默认 jdk 版本：
+#+BEGIN_SRC bash
+sudo archlinux-java set java-8-openjdk
+#+END_SRC

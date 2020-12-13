@@ -196,5 +196,7 @@ fn main() {
         }
         println!("THREAD 2 FINISHED");
     });
+    let x = std::sync::Arc::new("hello".to_owned());
+    let x_ptr = x.as_ptr();
     runtime.run();
 }

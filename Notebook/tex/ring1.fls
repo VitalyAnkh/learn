@@ -1,0 +1,5 @@
+PWD /home/vitalyr/projects/learn/Notebook/tex
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/xetex/xelatex.fmt
+INPUT ring1.tex
+OUTPUT ring1.log

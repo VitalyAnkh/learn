@@ -1,0 +1,9 @@
+#+title: tokei
+#+BEGIN_SRC rust
+cargo install tokei
+#+END_SRC
+用于描述项目的代码量。
+例如，当前文件夹下有 nom 这个文件夹，
+#+BEGIN_SRC rust
+tokei
+#+END_SRC

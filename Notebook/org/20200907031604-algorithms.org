@@ -1,0 +1,3 @@
+#+title: Algorithms
+* [[file:20200907031624-union_find.org][Union-Find]]
+* [[file:20201104110446-面向对象的思想.org][面向对象的思想]] 

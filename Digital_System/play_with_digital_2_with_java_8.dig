@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes/>
+      <pos x="340" y="500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes/>
+      <pos x="340" y="700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>XOr</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="600" y="580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes/>
+      <pos x="860" y="600"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="340" y="500"/>
+      <p2 x="560" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="560" y="580"/>
+      <p2 x="600" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="600"/>
+      <p2 x="860" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="700"/>
+      <p2 x="560" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="560" y="620"/>
+      <p2 x="600" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="560" y="500"/>
+      <p2 x="560" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="560" y="620"/>
+      <p2 x="560" y="700"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

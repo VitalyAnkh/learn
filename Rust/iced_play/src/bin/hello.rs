@@ -18,7 +18,7 @@ impl Sandbox for Hello {
     }
 
     fn title(&self) -> String {
-        String::from("Hello World from VitalyR")
+        String::from("Hello World from VitalyR!")
     }
 
     fn update(&mut self, message: Message) {
@@ -45,5 +45,5 @@ impl Sandbox for Hello {
 }
 
 fn main() {
-    Hello::run(Settings::default())
+    Hello::run(Settings::default());
 }

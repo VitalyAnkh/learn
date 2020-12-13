@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2020.7.6)  17 JUL 2020 16:34
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2020.10.7)  3 NOV 2020 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -213,19 +213,19 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
- (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/preview.sty
+ (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/preview.sty
 Package: preview 2017/04/24 12.2 (AUCTeX/preview-latex)
  (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
-) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prtightpage.def
+) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prtightpage.def
 \PreviewBorder=\dimen170
-) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prauctex.def
+) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prauctex.def
 No auxiliary output files.
 
 
 \hbadness=\count271
 \hfuzz=\dimen171
-(/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prauctex.cfg)) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build/auctex/latex/prfootnotes.def)
+(/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prauctex.cfg)) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prfootnotes.def)
 \pr@snippet=\count272
 \pr@box=\box48
 \pr@output=\toks15
@@ -334,8 +334,8 @@ Not a real error.
 ./try_latex.tex:16: Preview: Snippet 3 started.
 <-><->
       
-l.16 ou ji li de\footnote
-                         {ou ji li de, B.C. 330--275}
+l.16 欧几里得\footnote
+                  {, B.C. 330--275}
 Not a real error.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -349,8 +349,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ./try_latex.tex:16: Preview: Snippet 3 ended.(555263+0x293798).
 <-><->
       
-l.16 ...li de\footnote{ou ji li de, B.C. 330--275}
-                                                  
+l.16 欧几里得\footnote{, B.C. 330--275}
+                                   
 Not a real error.
 
 [3]
@@ -371,77 +371,167 @@ Not a real error.
 [4
 
 ]
-./try_latex.tex:51: Preview: Snippet 5 started.
+./try_latex.tex:50: Preview: Snippet 5 started.
 <-><->
       
-l.51 \begin{equation}
+l.50 \begin{equation}
                      
 Not a real error.
 
-./try_latex.tex:53: Preview: Snippet 5 ended.(1921029+0x22609920).
+./try_latex.tex:52: Preview: Snippet 5 ended.(1921029+0x22609920).
 <-><->
       
-l.53   \end{equation}
-                     
+l.52 \end{equation}
+                   
 Not a real error.
 
 [5]
-./try_latex.tex:57: Preview: Snippet 6 started.
+./try_latex.tex:55: Preview: Snippet 6 started.
 <-><->
       
-l.57 \[
+l.55 \[
        a^{2}+b^{2}=c^{2}\] is a 丢番图 equation.
 Not a real error.
 
-./try_latex.tex:57: Preview: Snippet 6 ended.(638387+0x13108750).
+./try_latex.tex:55: Preview: Snippet 6 ended.(638387+0x13108750).
 <-><->
       
-l.57 \[a^{2}+b^{2}=c^{2}\]
+l.55 \[a^{2}+b^{2}=c^{2}\]
                            is a 丢番图 equation.
 Not a real error.
 
 [6]
-./try_latex.tex:65: Preview: Snippet 7 started.
+./try_latex.tex:64: Preview: Snippet 7 started.
 <-><->
       
-l.65 \section
+l.64 \section
              {我爱你}
 Not a real error.
 
-./try_latex.tex:65: Preview: Snippet 7 ended.(751885+160835x22609920).
+./try_latex.tex:64: Preview: Snippet 7 ended.(751885+160835x22609920).
 <-><->
       
-l.65 \section{我爱你}
+l.64 \section{我爱你}
                   
 Not a real error.
 
 [7
 
 ]
-./try_latex.tex:85: Preview: Snippet 8 started.
+./try_latex.tex:71: Preview: Snippet 8 started.
 <-><->
       
-l.85 \begin{equation}
+l.71 \begin{equation}
                      
 Not a real error.
 
-./try_latex.tex:88: Preview: Snippet 8 ended.(753504+0x22609920).
+./try_latex.tex:74: Preview: Snippet 8 ended.(753504+0x22609920).
 <-><->
       
-l.88 \end{equation}
+l.74 \end{equation}
                    
 Not a real error.
 
 [8
 
-] ) 
+]
+./try_latex.tex:79: Preview: Snippet 9 started.
+<-><->
+      
+l.79 \[
+       a^{2}+b^{2}=c^{2}\]
+Not a real error.
+
+./try_latex.tex:79: Preview: Snippet 9 ended.(638387+0x13108750).
+<-><->
+      
+l.79 \[a^{2}+b^{2}=c^{2}\]
+                          
+Not a real error.
+
+[9]
+./try_latex.tex:81: Preview: Snippet 10 started.
+<-><->
+      
+l.81 \[
+       a^{2}+b^{2}=c^{2}\] \(\oint_{Z}f(x)dx = \) Yes.
+Not a real error.
+
+./try_latex.tex:81: Preview: Snippet 10 ended.(638387+0x13108750).
+<-><->
+      
+l.81 \[a^{2}+b^{2}=c^{2}\]
+                           \(\oint_{Z}f(x)dx = \) Yes.
+Not a real error.
+
+[10]
+./try_latex.tex:81: Preview: Snippet 11 started.
+<-><->
+      
+l.81 \[a^{2}+b^{2}=c^{2}\] \(
+                             \oint_{Z}f(x)dx = \) Yes.
+Not a real error.
+
+./try_latex.tex:81: Preview: Snippet 11 ended.(536769+224183x3674398).
+<-><->
+      
+l.81 \[a^{2}+b^{2}=c^{2}\] \(\oint_{Z}f(x)dx = \)
+                                                  Yes.
+Not a real error.
+
+[11]
+./try_latex.tex:85: Preview: Snippet 12 started.
+<-><->
+      
+l.85 \(
+       \oint_{Z}f(x)dx\)
+Not a real error.
+
+./try_latex.tex:85: Preview: Snippet 12 ended.(536769+224183x2945319).
+<-><->
+      
+l.85 \(\oint_{Z}f(x)dx\)
+                        
+Not a real error.
+
+[12]
+./try_latex.tex:87: Preview: Snippet 13 started.
+<-><->
+      
+l.87 \(
+       fr\)
+Not a real error.
+
+./try_latex.tex:87: Preview: Snippet 13 ended.(479658+134304x743312).
+<-><->
+      
+l.87 \(fr\)
+           
+Not a real error.
+
+[13]
+./try_latex.tex:88: Preview: Snippet 14 started.
+<-><->
+      
+l.88 \[
+       \]
+Not a real error.
+
+./try_latex.tex:88: Preview: Snippet 14 ended.(0+0x11304960).
+<-><->
+      
+l.88 \[\]
+         
+Not a real error.
+
+[14] ) 
 Here is how much of TeX's memory you used:
- 6757 strings out of 479284
- 198996 string characters out of 5886221
- 487389 words of memory out of 5000000
- 24340 multiletter control sequences out of 15000+600000
+ 6768 strings out of 479284
+ 199951 string characters out of 5886220
+ 485389 words of memory out of 5000000
+ 24351 multiletter control sequences out of 15000+600000
  537090 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,10n,83p,605b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on try_latex.pdf (8 pages).
+Output written on try_latex.pdf (14 pages).

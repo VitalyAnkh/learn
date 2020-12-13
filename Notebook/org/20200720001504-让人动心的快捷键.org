@@ -5,3 +5,7 @@
 | C-[    | 模拟了 vim 中的 ESC | 其实是[[file:20200720003955-escape_的ansi_code.org][ESCAPE 的ANSI code]] |   |   |
 |        |                     |                          |   |   |
 |        |                     |                          |   |   |
+* [[file:20200822161946-vim_快捷键.org][Vim 快捷键]]
+:PROPERTIES:
+:ID:       81f6b8b2-7570-406d-96db-43e090360503
+:END:
