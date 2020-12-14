@@ -10,14 +10,12 @@ good, better, best
 
 * what's the good parts of roam?
 #+BEGIN_SRC rust
-use std;
-fn main()->i32{
-    return 0;
-
+fn main() {
+    println!("Hallo org-mode");
 }
-
 #+END_SRC
+
+#+RESULTS:
+: Hallo org-mode
+
 But whatever, **you** are still my _son_.
-Why I love you:
-1. you are beautiful
-2. you are kind

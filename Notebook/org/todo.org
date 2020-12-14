@@ -1,7 +1,8 @@
 * Inbox
+** [ ] 写替代 tabs-outlier 的浏览器插件
 ** [ ] 学习 wireshark ，看 Linux 上的 microsoft-edge-dev 是如何不需要手动设置代理就可以访问墙外网站
 ** [ ] 把 AUR 上的 uno-calculator 改写成 uno-calculator-git
-** [ ] blender 编译错误
+** [X] blender 编译错误
 [0/0] Generating filter_sm_30.cubin
 FAILED: intern/cycles/kernel/filter_sm_30.cubin
 cd /home/vitalyr/.cache/yay/blender-git/src/build/intern/cycles/kernel && /opt/cuda/bin/nvcc -arch=sm_30 --cubin /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/kernels/cuda/filter.cu --ptxas-options="-v" -D CCL_NAMESPACE_BEGIN= -D CCL_NAMESPACE_END= -D NVCC -m 64 -I /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/.. -I /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/kernels/cuda --use_fast_math -o /home/vitalyr/.cache/yay/blender-git/src/build/intern/cycles/kernel/filter_sm_30.cubin
@@ -9,6 +10,7 @@ nvcc fatal   : Value 'sm_30' is not defined for option 'gpu-architecture'
 [0/0] Generating filter_sm_50.cubin
 nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
 
+update in 2020-12: 这个我没必要管
 ** [ ] 读 rust std doc 中关于迭代器的章节
 ** [ ] 在 Arch Linux 启用 nvidia proprietary driver 和 wayland
 2020 年 10 月 7 日，电脑合上后关机，然后开机无法进入桌面，发现它自动启用了 nvidia proprietary driver ，原因未知，可能是装了什么软件，自动重启导致软件设置的一些内容生效。无法进入桌面的原因是，/etc/gdm/custom.conf 中设置了一句：
@@ -53,7 +55,8 @@ You may override by specifying --force.
 ** [ ] 读 pretty print 的论文
 ** [ ] 学习 parser combinator
 ** [ ] Rust 中变量是否可变的信息，是不是已经包含在类型里了？
-** [ ] 把 termius 设置为 tty 字体
+** [X] 把 termius 设置为 tty 字体
+update in 2020-12: 已设置。其实这个任务下达之前就已经设置了
 ** [ ] 写替代 toby 的用于书签/标签页管理的浏览器插件
 ** [ ] 使用 ansible 编写自动化任务：拉取~/projects/contribute 目录下的所有 git 仓库
 ** [ ] 解决密钥导入失败的问题
@@ -64,11 +67,15 @@ You may override by specifying --force.
 SCHEDULED: <2020-08-23 日 +1w>
 ** [ ] 解决 android studio 中无法进行 flutter 的问题，主要原因在于无法正常使用代理，于是无法下载 android sdk
 ** [X] 设置全局的 cargo 编译 target
-** [ ] cargo install the-way
+update in 2020-12: 设置了，但是妨碍开发，多个项目同时进行时，编译缓存总是被互相覆盖，总要重新编译，放弃设置
+** [X] cargo install the-way
+update in 2020-12: 没啥用
 彩蛋：用 ansible 安装？
 ** [X] 学习 bevy engine
-** [ ] 解决 man -k man 返回“没有合适结果”的问题
-man-pages 的数据库没有生成？需要重启？
+** [X] 解决 man -k man 返回“没有合适结果”的问题
+update in 2020-12-15: -k 是正则表达式，所以没有何时结果了，运行
+"man man" 就会有结果的
++man-pages 的数据库没有生成？需要重启？+
 ** [ ] Rust 中的 Mutex 和 RwLock 有什么区别
 ** [ ] 了解 doom emacs 的 custom.el 和 config.org 如何使用
 ** [X] [#B] 给 iPad Pro 贴钢化膜

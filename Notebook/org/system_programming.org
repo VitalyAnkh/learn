@@ -16,3 +16,4 @@ ds
 Am I a INTJ?
 [[good]]
 * good
+* try bidirection link
