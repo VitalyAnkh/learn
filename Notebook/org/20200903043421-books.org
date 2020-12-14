@@ -2,6 +2,4 @@
 * [[file:20200903043450-understanding_complexity.org][Understanding Complexity]]
 * [[file:20200903053519-罗马人的故事.org][《罗马人的故事》]]
 * [[file:20200903220245-systems_performance_enterprise_and_the_cloud_2nd_edition.org][Systems Performance: Enterprise and the Cloud, 2nd Edition]]
-:PROPERTIES:
-:ID:       c410d9eb-3521-4031-aef7-e2ddbadb2758
-:END:
+* [[file:20201213193646-精力管理.org][精力管理]] 

@@ -6,5 +6,4 @@ cargo 的配置文件在 $CARGO_HOME/.config ，最近 cargo 偏向使用带 tom
 [build]
 target-dir = "sdk/build/cache"
 #+END_SRC
-
-这不利于使用 build cache，同时进行几个项目时要不断重新编译，很不方便，关掉了。
+*  Update in 2020-12: 这不利于使用 build cache，同时进行几个项目时要不断重新编译，很不方便，关掉了。几个 G 十几个 G 的存储空间还是有的。

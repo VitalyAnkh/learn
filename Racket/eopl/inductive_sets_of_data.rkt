@@ -20,3 +20,24 @@
         (if (eqv? sym (car los))
             (remove sym (cdr los))
             (cons (car los) (remove sym (cdr los)))))))
+
+(reverse '(1 23 4))
+
+
+;; occurs-free? : Sym -> LcExp -> Bool
+;; determine whether a symbol occurs free in a lambda expression
+(define occurs-free?
+  (lambda (var exp)
+    (cond
+      ((symbol? exp) (eqv? var exp))
+      ((eqv? (car exp) 'lambda)
+       (and
+        (not (eqv? var (car (cadr exp))))
+        (occurs-free? var (car (cddr exp)))))
+      (else
+       (or
+       (occurs-free? var (car exp))
+       (occurs-free? var (cadr exp))))
+      )))
+
+;; subst :: 
