@@ -268,7 +268,8 @@ Solution: 是第 2 个方法解决的。需要把那个方法记录一下。
 [[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::']]
 ** [ ] [#C] 安装，配置并学习使用 emacs 的 telegram 客户端 telega
 ** [ ] 学习使用 magit
-** TODO 有人说 racket-mode 比 drracket 功能更强大，尝试
+** DONE 有人说 racket-mode 比 drracket 功能更强大，尝试
+已尝试
 ** PROJ [#A] 学习 R 语言
 :LOGBOOK:
 CLOCK: [2020-07-03 五 01:13]--[2020-07-03 五 02:58] =>  1:45
@@ -300,7 +301,8 @@ SCHEDULED: <2020-07-12 日>
 ** TODO [#B] 在 emacs 中无法使用 fcitx5 的关键在于，无论如何，fcitx5 在 emacs 中是 close 的，运行 fcitx5-remote 后可得知
 ** TODO [#C] 改 emacs 中代码列宽度
 ** TODO Why I don't like emacs-rime anymore: emacs-rime 在文件很大时（比如日记）性能不好，还有我使用 Agda，Agda 会把默认输入法设置为 Agda，再使用 emacs-rime 的话要重新设置变量
-** TODO 改环境变量信息来让 emacs 使用外部输入法，例如改/etc/profile ，~/.profile
+** DONE 改环境变量信息来让 emacs 使用外部输入法，例如改/etc/profile ，~/.profile
+现在 Emacs 已经可以使用外部输入法，但我现在更喜欢使用 emacs-rime ，它与 emacs 集成度更高，使用起来更加方便。
 ** TODO try this: https://github.com/abo-abo/org-download
 ** DONE 上报 emacs-rime 中使用 posframe 时，第九个候选不显示的问题
 已上报

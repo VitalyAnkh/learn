@@ -109,37 +109,21 @@ sudo systemctl enbale system76-power.service
 a^{2}+b^{2}=c^{2}
 \end{equation}
 *** [[file:20200806153436-fish把prompt的背景色设置为透明.org][fish把prompt的背景色设置为透明]]
-:PROPERTIES:
-:ID:       d345900e-470e-4cae-b641-865b9e199ab2
-:END:
 ** Journal
 *** [[file:rcore_journal.org][rCore Journal]]
 *** [[file:journal.org][journal]]
 *** [[file:20200804025006-zcore_journal.org][zCore Journal]]
 *** [[file:20201019031146-每日杂记.org][每日杂记]]
 * [[file:20200811022419-学习方法.org][学习方法]]
-:PROPERTIES:
-:ID:       c4b00683-926b-422f-af68-c3b4baed99d3
-:END:
 * [[file:20200821185230-我喜欢的音乐.org][我喜欢的音乐]]
-:PROPERTIES:
-:ID:       49b69249-117e-41b1-8a23-6d380e25fa65
-:END:
 * [[file:20201008062543-问题.org][问题]]
 * [[file:20200823064803-量子计算.org][量子计算]]
-:PROPERTIES:
-:ID:       d51454af-298b-4662-bd33-4cceb0306e13
-:END:
 * [[file:20200903043421-books.org][Books]]
-:PROPERTIES:
-:ID:       05a99436-bcd9-4951-aabf-488b66432be0
-:END:
 ** [[file:20201007034345-a_course_in_point_set_topology_john_conway.org][A Course in Point Set Topology - John Conway]]
 ** [[file:20201009070441-关于向量叉积的_jacobi_等式.org][关于向量叉积的 Jacobi 等式]]
 ** [[file:20201102213924-单核工作法.org][单核工作法]] 
 * [[file:20200907031604-algorithms.org][Algorithms]]
-:PROPERTIES:
-:ID:       92247dc4-8fff-4846-8223-477e9178e5a3
 \(\mathbb R \backslash A\)
 \(\int_a^bf(x)dx\)
 * [[file:20201026142850-寻找德意志.org][寻找德意志]] 
+* [[file:20201215004851-编译原理.org][编译原理]] 

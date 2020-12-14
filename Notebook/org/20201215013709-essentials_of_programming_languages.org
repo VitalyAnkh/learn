@@ -1,0 +1,13 @@
+#+title: Essentials of Programming Languages
+* 介绍
+Daniel P. Friedman 的又一力作，使用 scheme 式的语言，讲述编程语言（理论上）和解释器（实现上）的诸多概念。非常好读，比[[file:20201215013937-practical_foundations_for_programming_languages.org][Practical Foundations For Programming Languages]] practical 多了。
+* 笔记
+** ch1 Inductive Sets of Data
+#+begin_src racket
+#lang eopl
+;; subst :: Sym -> Sym -> S-list -> S-list
+(+ 1 2)
+
+#+end_src
+
+#+RESULTS:
