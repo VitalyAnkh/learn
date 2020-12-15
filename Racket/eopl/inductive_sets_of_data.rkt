@@ -132,8 +132,8 @@
   (lambda (s1 s2 slist)
     (cond
       ((null? slist) '())
-      (cons (swapper-in-s-exp s1 s2 (car slist))
-            (swapper s1 s2 (cdr slist))))))
+      (else (cons (swapper-in-s-exp s1 s2 (car slist))
+            (swapper s1 s2 (cdr slist)))))))
 ;; ex1.18
 ;; swapper-in-s-exp :: SchemeVal -> SchemeVal -> S-exp -> S-exp
 ;; (swapper s1 s2 sexp) swaps s1 and s2 in the sexp
@@ -144,7 +144,16 @@
        (cond
         ((equal? s1 sexp) s2)
         ((equal? s2 sexp) s1)
-        (else sexp)
-      ))
+        (else sexp)))
       (else
        (swapper s1 s2 sexp)))))
+
+;; ex1.19
+;; list-set S-list -> Int -> SchemeVal
+;; (list-set lst n x) set the n-th element of lst to x
+(define list-set
+  (lambda (lst n x)
+    (if
+      (null? lst) '()
+      (if (zero? n) (cons x (cdr lst))
+      (cons (car lst) (list-set (cdr lst) (- n 1) x))))))
