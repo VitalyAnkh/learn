@@ -47,7 +47,8 @@
       '()
       (cons
        (subst-in-s-exp new old (car slist))
-       (subst new old (cdr slist))))))
+       (subst new old (cdr slist))
+       ))))
 
 (define subst-in-s-exp
   (lambda (new old sexp)
