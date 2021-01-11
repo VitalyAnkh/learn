@@ -1,7 +1,12 @@
 extern crate structopt;
 
+use std::collections::HashMap;
 use std::path::PathBuf;
 use structopt::StructOpt;
+
+struct TransTable {
+    table: Vec<(String, String)>,
+}
 
 /// A command line tool to convert number's base
 #[derive(StructOpt, Debug)]
@@ -41,5 +46,15 @@ struct Opt {
 
 fn main() {
     let opt = Opt::from_args();
+    let mut table = HashMap::new();
+    let s = "S".to_owned();
+    let u = "U".to_owned();
+    let t = "T".to_owned();
+    let input_1 = "1".to_owned();
+    let input_3 = "3".to_owned();
+    let input_4 = "4".to_owned();
+    table.insert((s, input_1), Some(t));
+    table.insert((t, 3), Some(t));
+    table.insert((t, 4), Some(u));
     println!("{:?}", opt);
 }

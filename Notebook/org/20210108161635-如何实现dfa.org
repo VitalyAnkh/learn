@@ -1,0 +1,8 @@
+#+title: 如何实现DFA
+* DFA 可以用转移表来表示，实现转移表就好了，比如 Rust 中使用 HashMap 或 BTreeMap :ATTACH:
+:PROPERTIES:
+:DIR:      /home/vitalyr/projects/learn/Notebook/org/.attach/
+:END:
+
+
+* 比直接实现转移表更方便的是，用一个一维数组表示状态，用另一个一维数组表示输入，转移就是两个数组元素之间的箭头
