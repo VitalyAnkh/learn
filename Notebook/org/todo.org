@@ -91,6 +91,7 @@ update in 2020-12-15: -k 是正则表达式，所以没有何时结果了，运�
 z z
 类似的还有 z t, z b
 ** [ ] racket-mode 如何 format 代码
+没有现成的解决方法。学习一下，然后给 racket-mode 添加这个功能吧
 ** [ ] 备份手机数据，包括微信聊天记录、图片、下载的歌曲，记录好用的 APP ，然后恢复出厂设置
 ** [ ] 写一个自动更新所有 aur git 包的软件（rust 来写？）
 思路：
@@ -135,7 +136,11 @@ cd zircon-user && make zbi mode=release 之前要 rustup target add x86_64-fuchs
 ** [ ] 配置 rime emoji ，让它可以提示 emoji
 ** [ ] 维数更高的世界里的人，智力会更高吗
 ** [ ] 读 manage personal life in org-mode
-** [ ] [#A] 解决一堆 Qt 5 应用无法在 Wayland 下运行的问题。都是说有 Wayland 插件但无法加载。是构建选项有问题，还是系统的问题，还是 Qt 5 的问题？
+** [X] [#A] 解决一堆 Qt 5 应用无法在 Wayland 下运行的问题。都是说有 Wayland 插件但无法加载。是构建选项有问题，还是系统的问题，还是 Qt 5 的问题？
+编译时没有加入 Qt 5 plugin 的问题。
+如此解决：
+启动时设置环境变量：
+QT_QPA_PLATFORM = ''
 ** [ ] 阅读 99 bottles of OOP
 ** [ ] [#A] 解决一些 Java 的图形软件包，点开下拉菜单后，菜单立即消失的问题（例如 Digital ，类似 logisim 的数字逻辑仿真软件）
 ** [ ] 写一个方便 Emacs 的 org-roam 用户分享笔记的网络平台

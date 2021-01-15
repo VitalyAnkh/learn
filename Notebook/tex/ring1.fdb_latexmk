@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1601876927 "ring1.tex" "ring1.pdf" "ring1" 1601876927
-  "/usr/share/texmf-dist/web2c/texmf.cnf" 1591545468 33301 a3134070eacafb10b1f371612ce2650d ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1601059275 5164749 af672db3fec29ea346d0969b2a854123 ""
-  "ring1.aux" 1601341382 8 a94a2480d3289e625eea47cd1b285758 ""
-  "ring1.tex" 1601341484 800 9fa537cd967fda132f3b88839241ac3d ""
+["pdflatex"] 1610362363 "ring1.tex" "ring1.pdf" "ring1" 1610362363
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1607249373 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1609751599 5313617 6992c6d8a7510d7c192adaea94608045 ""
+  "ring1.aux" 1607855553 8 a94a2480d3289e625eea47cd1b285758 ""
+  "ring1.tex" 1607855553 800 9fa537cd967fda132f3b88839241ac3d ""
   (generated)
-  "ring1.log"
   "ring1.pdf"
+  "ring1.log"
