@@ -1,4 +1,5 @@
 * Inbox
+** [ ] pandas 把嵌套的字典转为 DataFrame 时，若是二重嵌套的字典，会把外层的键作为 DataFrame 的列索引，把内层的键作为 DataFrame 的行索引。那么，若是多于二重的嵌套字典，会如何转为 DataFrame 呢？
 ** [ ] 设置 ANDROID_SDK_ROOT 环境变量
 ** [ ] 如何在 org 文件中引用代码文件
 ** [ ] 写替代 tabs-outlier 的浏览器插件
