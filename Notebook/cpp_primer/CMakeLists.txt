@@ -56,4 +56,5 @@ add_executable(read_and_print SalesItem/ex_1_20_read_and_print_2.cpp)
 add_executable(read_and_add SalesItem/ex_1_21_read_and_add.cpp)
 add_executable(read_and_count SalesItem/ex_1_23_read_and_count.cpp)
 add_executable(compare_string_size ch6/compare_string_size.cpp)
+add_executable(use_string ch2/use_string.cpp)
 
