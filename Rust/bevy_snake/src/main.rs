@@ -29,7 +29,12 @@ impl Size {
 struct Materials {
     head_material: Handle<ColorMaterial>,
 }
-
+#[derive()]
+pub enum Variant {
+    Undefined,
+    Minor,
+    Major,
+}
 fn main() {
     App::build()
         .add_resource(WindowDescriptor {
@@ -38,7 +43,7 @@ fn main() {
             height: 500,
             ..Default::default()
         })
-        .add_resource(ClearColor(Color::rgb(0.04,0.04,0.04)))
+        .add_resource(ClearColor(Color::rgb(0.04, 0.04, 0.04)))
         .add_startup_system(setup.system())
         .add_startup_stage("game_setup")
         // if I have typo on the stage_name, there will be runtime
@@ -70,8 +75,10 @@ fn game_setup(mut commands: Commands, materials: Res<Materials>) {
         .with(Size::square(0.8));
 }
 
-fn snake_movement(keyboard_input: Res<Input<KeyCode>>,
-                  mut head_positions: Query<With<SnakeHead, &mut Position>>) {
+fn snake_movement(
+    keyboard_input: Res<Input<KeyCode>>,
+    mut head_positions: Query<With<SnakeHead, &mut Position>>,
+) {
     for mut pos in head_positions.iter_mut() {
         if keyboard_input.pressed(KeyCode::Left) {
             pos.x -= 1;

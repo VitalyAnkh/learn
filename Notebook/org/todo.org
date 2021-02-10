@@ -1,8 +1,23 @@
 * Inbox
+** [ ] 解决 opam 安装 coq 中，安装 coq 依赖的 zarith 包时卡住的问题
+** [ ] 用 Rust 写一个 prolog 编译器
+** [ ] 用 Rust 写一个 SMT Solver
+** [ ] 学习 youtube 上 Elena Lin 用电子笔记做日程和计划的教程
+** [ ] 找到适合自己的硬币字帖，练之
+** [ ] 用 Rust 写一个 ECS ，参考 Bevy 改写过的 simple_ecs
+** [ ] 解决 redox 编译的问题，也许只需要重新运行一下 bootstrap.sh ？
+** [X] 给电脑清灰
+** [ ] update chemacs
+** [ ] 写一个可以通过命令行把程序放到后台或者前台的软件
+例如：
+在软件 A 未运行在前台时，"$Mod a" 为把与 a 绑定的软件 A 放到前台，再按一下"$Mod a" 会把它放到后台
+
+情景：
+把 alacritty 绑定到 a ，于是 alacritty 就基本上拥有了类似 drop-down 终端的功能
 ** [ ] pandas 把嵌套的字典转为 DataFrame 时，若是二重嵌套的字典，会把外层的键作为 DataFrame 的列索引，把内层的键作为 DataFrame 的行索引。那么，若是多于二重的嵌套字典，会如何转为 DataFrame 呢？
 ** [ ] 设置 ANDROID_SDK_ROOT 环境变量
 ** [ ] 如何在 org 文件中引用代码文件
-** [ ] 写替代 tabs-outlier 的浏览器插件
+** [ ] 写替代 tabs-outliner 的浏览器插件
 ** [ ] 学习 wireshark ，看 Linux 上的 microsoft-edge-dev 是如何不需要手动设置代理就可以访问墙外网站
 ** [ ] 把 AUR 上的 uno-calculator 改写成 uno-calculator-git
 ** [X] blender 编译错误
@@ -415,8 +430,7 @@ C-h i
 不知道何时，org-capture 不会自动链接到当前 buffer 了。但我开始怀念这个特性。如何才能开启这个特性呢？如何控制这个特性呢？快去学习 ELisp 吧！
 [[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-12 五 19:29\]][[2020-06-12 五 19:29]​]]
 ** DONE 学习如何用 org-mode 做 gtd
-
-** TODO 制定考研计划
+** DONE 制定考研计划
 ** DONE 所以，如何正确使用 org-mode 写日记呢？
 使用 org capture ，选择 journal ，完事。默认链接当前文档是一个特性，还挺好用，配合 org-roam 很棒。
 ** TODO 要学习使用 org capture
