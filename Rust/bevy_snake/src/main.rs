@@ -38,9 +38,9 @@ pub enum Variant {
 fn main() {
     App::build()
         .add_resource(WindowDescriptor {
-            title: "Snake!".to_string(),
             width: 500,
             height: 500,
+            title: "Snake!".to_string(),
             ..Default::default()
         })
         .add_resource(ClearColor(Color::rgb(0.04, 0.04, 0.04)))
