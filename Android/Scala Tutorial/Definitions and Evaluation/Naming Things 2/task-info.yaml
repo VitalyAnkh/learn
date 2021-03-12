@@ -1,0 +1,60 @@
+type: edu
+files:
+- name: src/DefinitionsAndEvaluation.scala
+  visible: true
+  placeholders:
+  - offset: 123
+    length: 31
+    placeholder_text: // reuse the square method here
+    initial_state:
+      length: 31
+      offset: 123
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: square(radius)
+  text: |-
+    object DefinitionsAndEvaluation {
+
+      def square(x: Double): Double = x * x
+
+      def area(radius: Double): Double = 3.14159 * // reuse the square method here
+
+      def main(args: Array[String]): Unit = {
+        println(area(10))
+      }
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `check square`(): Unit = {
+        DefinitionsAndEvaluation.square(2) shouldBe 4
+        DefinitionsAndEvaluation.square(10) shouldBe 100
+      }
+
+      def `check area`(): Unit = {
+        DefinitionsAndEvaluation.area(10) shouldBe 314.159
+        DefinitionsAndEvaluation.area(20) shouldBe 314.159*4
+      }
+
+    }
+  learner_created: false
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Naming-Things-2` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+status: Unchecked
+record: -1

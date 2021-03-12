@@ -1,0 +1,77 @@
+type: edu
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Covariance` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import Covariance.{Animal, AnimalVet, Reptile, Zebra}
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers {
+
+      def `size exercise`(): Unit = {
+        //Arrange
+        val zebra = new Zebra
+        val zebraAnimal = new Animal[Zebra](zebra)
+        val zebraVet = new AnimalVet(zebraAnimal)
+
+        //Assert
+        zebraVet.animal shouldBe zebraAnimal
+      }
+    }
+  learner_created: false
+- name: src/Covariance.scala
+  visible: true
+  placeholders:
+  - offset: 34
+    length: 71
+    placeholder_text: /*complete  the class definition with covariance and animal
+      parameter*/
+    initial_state:
+      length: 71
+      offset: 34
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: '[+T](val animal: T)'
+  text: |+
+    object Covariance {
+      class Animal/*complete  the class definition with covariance and animal parameter*/
+
+      class Reptile extends Animal
+
+      class Mammal extends Animal
+
+      class Zebra extends Mammal
+
+      class AnimalVet(val animal:Animal[Mammal])
+
+      def main(args: Array[String]): Unit = {
+        val reptile = new Reptile
+        val zebra = new Zebra
+
+        val reptileAnimal = new Animal[Reptile](reptile)
+        val zebraAnimal = new Animal[Zebra](zebra)
+
+        //Uncomment the line below to see if the reptileAnimal passes type-checking
+        //val reptileVet = new AnimalVet(reptileAnimal)
+        val zebraVet = new AnimalVet(zebraAnimal)
+
+        println(zebraVet)
+      }
+    }
+
+  learner_created: false
+status: Unchecked
+record: -1

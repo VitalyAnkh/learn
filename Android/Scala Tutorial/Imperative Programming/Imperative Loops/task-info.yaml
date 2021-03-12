@@ -1,0 +1,85 @@
+type: edu
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Imperative-Loops` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: src/ImperativeProgramming.scala
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 34
+    placeholder_text: /*insert the initial resul value*/
+    initial_state:
+      length: 34
+      offset: 80
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 1
+  - offset: 132
+    length: 30
+    placeholder_text: /*insert the initial i value*/
+    initial_state:
+      length: 30
+      offset: 132
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 2
+  - offset: 224
+    length: 21
+    placeholder_text: /*insert the i step*/
+    initial_state:
+      length: 21
+      offset: 224
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 1
+  text: |
+    object ImperativeProgramming{
+      def factorial(n: Int): Int = {
+        var result = /*insert the initial resul value*/
+        var i      = /*insert the initial i value*/
+        while (i <= n) {
+          result = result * i
+          i = i + /*insert the i step*/
+        }
+        result
+      }
+
+      def main(args: Array[String]): Unit = {
+        println(factorial(5))
+        println(factorial(11))
+        println(factorial(15))
+      }
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import ImperativeProgramming.factorial
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers {
+
+      def `test factorial`(): Unit = {
+
+        factorial(2) shouldBe 2
+        factorial(3) shouldBe 6
+        factorial(4) shouldBe 24
+        factorial(5) shouldBe 120
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

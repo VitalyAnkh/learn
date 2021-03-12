@@ -1,4 +1,33 @@
 * Inbox
+** [ ] 设置 auto refill mode
+** [ ] learn how to use Switcher ( a gnome plugin )
+** [ ] 
+depot_tools is installed in /opt/depot_tools/.
+This directory is not in $PATH by default, so make sure to export PATH=/opt/depot_tools:$PATH before using it.
+Also, this directory has root permissions, so either use it as root, or if you want to use it as your currect user:
+
+# groupadd depot_tools
+# gpasswd -a $(whoami) depot_tools
+# setfacl -m g:depot_tools:rwX /opt/depot_tools/
+
+Then re-login as your current user or log your terminal in to the newly created group:
+
+$ newgrp depot_tools
+depot-tools-git 的可选依赖
+    bash-completion: for bash completion
+
+** [ ] 如何自动开启 auto-fill-mode ？
+** [ ] 写一个 typed elisp 如何？像 typescript 对 javascript ，或 typed racket 对 racket 做的那样
+** [ ] OS 里的 SMT 是什么意思
+** [ ] Rust 里的 #[macro_export(local_inner_macros)] 是什么意思
+** [ ] Scheme 中 eq? equal? eqv? 的区别是什么？
+** [ ] 创建 AUR 包：libresprite-git ，参考 libresprite
+** [ ] 配置 Ulauncher
+支持 wayland ，可以启动应用，可以搜索文件，打开 URL ，不错
+** [ ] 解决 emacs 中保存 markdown 文件时，自动去掉一些换行符，从而使单行长度大于设置的 max_line_length ，不符合规范的问题
+
+[[file:~/projects/contribute/rustc-dev-guide/src/appendix/glossary.md::variant index]]
+** [ ] 写一个 MarginNote 插件，功能是自动把从 libgen 上下载的书籍文件名重命名为只书籍名，大概使用正则表达式就可以实现
 ** [ ] 解决 opam 安装 coq 中，安装 coq 依赖的 zarith 包时卡住的问题
 ** [ ] 用 Rust 写一个 prolog 编译器
 ** [ ] 用 Rust 写一个 SMT Solver

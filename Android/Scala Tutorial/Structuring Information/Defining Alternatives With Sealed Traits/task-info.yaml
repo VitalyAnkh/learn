@@ -1,0 +1,116 @@
+type: edu
+files:
+- name: src/StructuringInformation.scala
+  visible: true
+  placeholders:
+  - offset: 243
+    length: 37
+    placeholder_text: //extend the sealed trait Symbol here
+    initial_state:
+      length: 37
+      offset: 243
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: extends Symbol
+  - offset: 389
+    length: 47
+    placeholder_text: //we need to return a similar to the Rest field
+    initial_state:
+      length: 47
+      offset: 389
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: duration
+  - offset: 546
+    length: 40
+    placeholder_text: //return a result of equality check here
+    initial_state:
+      length: 40
+      offset: 546
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: note == otherNote
+  text: |-
+    import org.scalatest.{FlatSpec, Matchers}
+
+    object StructuringInformation extends FlatSpec with Matchers {
+
+      sealed trait Symbol
+      case class Note(name: String, duration: String, octave: Int) extends Symbol
+      case class Rest(duration: String) //extend the sealed trait Symbol here
+
+      def symbolDuration(symbol: Symbol): String =
+        symbol match {
+        case Note(name, duration, octave) => //we need to return a similar to the Rest field
+        case Rest(duration) => duration
+      }
+
+      def caseClassEquals(note: Note, otherNote: Note): Boolean = {
+        //return a result of equality check here
+      }
+
+      def main(args: Array[String]): Unit = {
+        val c3      = Note("C", "Quarter", 3)
+        val otherC3 = Note("C", "Quarter", 3)
+        val f3      = Note("F", "Quarter", 3)
+        val wholeRest = Rest("Whole")
+
+        println("c3 equals to otherC3: " + caseClassEquals(c3, otherC3))
+        println("The duration of the c3 is: " + symbolDuration(c3))
+        println("c3 equals to f3: " + caseClassEquals(c3, f3))
+        println("The duration of the wholeRest is: " + symbolDuration(wholeRest))
+      }
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import StructuringInformation.{Note, Rest}
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `check class equals`(): Unit = {
+        //Arrange
+        val c1     = Note("C", "Quarter", 1)
+        val otherC1 = Note("C", "Quarter", 1)
+
+        //Assert
+        StructuringInformation.caseClassEquals(c1, otherC1) shouldBe true
+
+        //Arrange
+        val c2 = Note("C", "Whole", 2)
+
+        //Assert
+        StructuringInformation.caseClassEquals(c1, c2) shouldBe false
+
+        //Assert
+        StructuringInformation.caseClassEquals(c1, c1) shouldBe true
+      }
+
+      def `check Rest extends Symbol`(): Unit = {
+        def isSymbol[P](implicit m: Manifest[P]): Boolean =
+          classOf[StructuringInformation.Symbol].isAssignableFrom(m.erasure)
+
+        isSymbol[Rest] shouldBe true
+      }
+
+    }
+  learner_created: false
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Defining-Alternatives-With-Sealed-Traits` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+status: Unchecked
+record: -1

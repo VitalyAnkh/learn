@@ -1,0 +1,43 @@
+= Learning Roadmap
+
+- 汇编语言
+.. Reverse Engineering For Beginners(RE4B)
+.. 汇编语言 || 王爽
+.. x86汇编语言：从实模式到保护模式 || 李忠
+.. Intel汇编语言程序设计 || Kip R. Irvine
+.. 逆向工程核心原理 || 李承远
+.. Linux二进制分析
+
+- 操作系统
+.. Unix/Linux实践教程
+.. Linux/UNIX系统编程手册
+.. 操作系统真相还原 郑钢
+
+. 编译原理
+.. 编译器设计 
+.. Parsing Techniques
+
+- 计算理论
+.. 计算理论导引
+.. 自动机，语言和计算导论
+
+- 编程语言理论
+.. Types and Programming Languages
+.. Programming Languages Foundations in Agda
+.. Software Foundations
+.. Programming Languages: Application and Interpretation || Shriram Krishnamurthi
+- 编程语言
+.. Realm of Racket
+.. The Go Programming Language
+.. Verified Programming in Agda
+.. Type Driven Development
+
+- 数据库
+.. Database System Concepts
+.. Designing Data Sensitive Application
+ 
+- 数理逻辑
+.. A Mathematical Introduction to Logic || Enderton
+
+- 范畴论
+.. Category Theory || Steve Awodey

@@ -1,0 +1,47 @@
+type: theory
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Case-Classes-Encoding` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: src/ClassesVsCaseClasses.scala
+  visible: true
+  text: |-
+    object ClassesVsCaseClasses {
+      val c3 = Note("C", "Quarter", 3)
+      val d = Note("D", "Quarter", 3)
+      val c4 = c3.copy(octave = 4)
+
+      def main(args: Array[String]): Unit = {
+        println(c3.toString)
+        println(c3.equals(d))
+        println(c4.toString)
+      }
+    }
+  learner_created: false
+- name: src/Note.scala
+  visible: true
+  text: 'case class Note(name: String, duration: String, octave: Int)'
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec {
+
+      def `test encoding`(): Unit = {
+
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,28 @@
+type: theory
+files:
+- name: src/Main.scala
+  visible: true
+  text: |-
+    object Main {
+       def main(args: Array[String]): Unit = {
+          // Write your solution here
+       }
+    }
+  learner_created: false
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `First-Steps` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: edu_course_overview.png
+  visible: false
+  learner_created: false
+status: Solved
+record: -1
+post_submission_on_open: true

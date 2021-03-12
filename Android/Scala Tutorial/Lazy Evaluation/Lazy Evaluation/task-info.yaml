@@ -1,0 +1,61 @@
+type: edu
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Lazy-Evaluation` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: src/LazyEvaluation.scala
+  visible: true
+  placeholders:
+  - offset: 171
+    length: 54
+    placeholder_text: /*complete the declaration for y to be executed lazy*/
+    initial_state:
+      length: 54
+      offset: 171
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 'lazy '
+  text: |-
+    import org.scalatest.{FlatSpec, Matchers}
+
+    object LazyEvaluation extends FlatSpec with Matchers {
+      val builder = new StringBuilder
+      val x      = { builder += 'x'; 1 }
+      /*complete the declaration for y to be executed lazy*/val y = { builder += 'y'; 2 }
+      def z      = { builder += 'z'; 3 }
+
+      def main(args: Array[String]): Unit = {
+
+        println(z + y + x + z + y + x)
+
+        println(builder.result())
+      }
+
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import LazyEvaluation.{builder, z, x, y}
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `lazy evaluation`(): Unit = {
+        z + y + x + z + y + x
+        builder.result() shouldBe "xzyz"
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

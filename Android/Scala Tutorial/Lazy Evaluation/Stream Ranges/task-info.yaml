@@ -1,0 +1,73 @@
+type: edu
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Stream-Ranges` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: src/LazyEvaluation.scala
+  visible: true
+  placeholders:
+  - offset: 208
+    length: 49
+    placeholder_text: /*call the streamRange for the rest of the list*/
+    initial_state:
+      length: 49
+      offset: 208
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: streamRange(lo + 1, hi)
+  text: |-
+    import org.scalatest.{FlatSpec, Matchers}
+
+    object LazyEvaluation {
+      var rec = 0
+      def streamRange(lo: Int, hi: Int): Stream[Int] = {
+        rec = rec + 1
+        if (lo >= hi) Stream.empty
+        else Stream.cons(lo, /*call the streamRange for the rest of the list*/)
+      }
+
+      def main(args: Array[String]): Unit = {
+        streamRange(1, 10).take(3).toList
+        println(rec)
+
+        streamRange(1, 10).take(5).toList
+        println(rec)
+
+        streamRange(1, 10).take(3).toList
+        println(rec)
+      }
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import LazyEvaluation.{rec, streamRange}
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `test encoding`(): Unit = {
+        streamRange(1, 10).take(3).toList
+        rec shouldBe 3
+
+        streamRange(1, 10).take(1).toList
+        rec shouldBe 4
+
+
+        streamRange(1, 10).take(2).toList
+        rec shouldBe 6
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

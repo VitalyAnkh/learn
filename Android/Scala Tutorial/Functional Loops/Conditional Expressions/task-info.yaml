@@ -1,0 +1,69 @@
+type: edu
+files:
+- name: src/FunctionalLoops.scala
+  visible: true
+  placeholders:
+  - offset: 135
+    length: 65
+    placeholder_text: /*insert the corner case condition for the factorial evaluation*/
+    initial_state:
+      length: 65
+      offset: 135
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: n == 0
+  - offset: 211
+    length: 50
+    placeholder_text: //insert the common case factorial expression here
+    initial_state:
+      length: 50
+      offset: 211
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: factorial(n - 1) * n
+  text: |-
+    import org.scalatest.{FlatSpec, Matchers}
+
+    object FunctionalLoops extends FlatSpec with Matchers {
+     def factorial(n: Int): Int =
+      if (/*insert the corner case condition for the factorial evaluation*/) 1
+      else //insert the common case factorial expression here
+
+      def main(args: Array[String]): Unit = {
+        println(factorial(5))
+      }
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import FunctionalLoops.factorial
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `check factorial`(): Unit = {
+        factorial(0) shouldBe 1
+        factorial(3) shouldBe 6
+        factorial(4) shouldBe 24
+        factorial(10) shouldBe 3628800
+      }
+
+    }
+  learner_created: false
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Conditional-Expressions` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+status: Unchecked
+record: -1

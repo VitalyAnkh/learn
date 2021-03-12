@@ -1,0 +1,108 @@
+type: edu
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Type-Classes` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: src/Rational.scala
+  visible: true
+  text: |
+    class Rational(x: Int, y: Int) {
+
+      private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
+      private val g                        = gcd(x, y)
+
+      lazy val numer: Int = x / g
+      lazy val denom: Int = y / g
+
+    }
+  learner_created: false
+- name: src/Sorting.scala
+  visible: true
+  text: |-
+    object Sorting {
+
+      def insertionSort[A](xs: List[A])(implicit ord: Ordering[A]): List[A] = {
+        def insert(y: A, ys: List[A]): List[A] =
+          ys match {
+            case List() => y :: List()
+            case z :: zs =>
+              if (ord.lt(y, z)) y :: z :: zs
+              else z :: insert(y, zs)
+          }
+
+        xs match {
+          case List()  => List()
+          case y :: ys => insert(y, insertionSort(ys))
+        }
+      }
+
+    }
+  learner_created: false
+- name: src/TypeClasses.scala
+  visible: true
+  placeholders:
+  - offset: 433
+    length: 27
+    placeholder_text: /*complete the expression*/
+    initial_state:
+      length: 27
+      offset: 433
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: '(x: Rational, y: Rational) => x.numer * y.denom -
+      y.numer * x.denom'
+  text: |-
+    object TypeClasses {
+      /**
+        * Returns an integer whose sign communicates how the first parameter
+        * compares to the second parameter.
+        *
+        * The result sign has the following meaning:
+        *  - Negative if the first parameter is less than the second parameter
+        *  - Positive if the first parameter is greater than the second parameter
+        *  - Zero otherwise
+        */
+      val compareRationals: (Rational, Rational) => Int = /*complete the expression*/
+
+      implicit val rationalOrder: Ordering[Rational] =
+        (x: Rational, y: Rational) => compareRationals(x, y)
+
+      def main(args: Array[String]): Unit = {
+        val half      = new Rational(1, 2)
+        val third     = new Rational(1, 3)
+        val fourth    = new Rational(1, 4)
+        val rationals = List(third, half, fourth)
+        println(Sorting.insertionSort(rationals) == List(fourth, third, half))
+      }
+
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import TypeClasses.rationalOrder
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `rational Ordering`(): Unit = {
+        val testThird      = new Rational(1, 3)
+        val testHalf     = new Rational(2, 4)
+        val testSixth    = new Rational(1, 6)
+        val rationals = List(testThird, testHalf, testSixth)
+        Sorting.insertionSort(rationals) shouldBe List(testSixth, testThird, testHalf)
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

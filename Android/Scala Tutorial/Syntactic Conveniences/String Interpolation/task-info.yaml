@@ -1,0 +1,71 @@
+type: edu
+files:
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `String-Interpolation` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import SyntacticConveniences.{greet, greetLouder}
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers{
+
+      def `check greet`(): Unit = {
+        greet("Test") shouldBe "Hello, Test!"
+      }
+
+      def `check greetLouder`(): Unit = {
+        greetLouder("Test") shouldBe "Hello, TEST!"
+      }
+    }
+  learner_created: false
+- name: src/SyntacticConveniences.scala
+  visible: true
+  placeholders:
+  - offset: 70
+    length: 34
+    placeholder_text: /*insert the correct prefix here*/
+    initial_state:
+      length: 34
+      offset: 70
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: s
+  - offset: 176
+    length: 58
+    placeholder_text: /*introduce the dynamic value here and make it uppercase*/
+    initial_state:
+      length: 58
+      offset: 176
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ${name.toUpperCase}
+  text: |-
+    object SyntacticConveniences{
+      def greet(name: String): String =
+        /*insert the correct prefix here*/"Hello, $name!"
+
+      def greetLouder(name: String): String =
+        s"Hello, /*introduce the dynamic value here and make it uppercase*/!"
+
+      def main(args: Array[String]): Unit = {
+        println(greet("Scala"))
+        println(greet("Functional Programming"))
+        println(greetLouder("Scala"))
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

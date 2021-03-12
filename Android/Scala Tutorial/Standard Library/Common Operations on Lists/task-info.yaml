@@ -1,0 +1,101 @@
+type: edu
+files:
+- name: src/StandardLibrary.scala
+  visible: true
+  placeholders:
+  - offset: 153
+    length: 29
+    placeholder_text: /*map the x values to x + 1*/
+    initial_state:
+      length: 29
+      offset: 153
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: x.map(x => x + 1)
+  - offset: 244
+    length: 48
+    placeholder_text: /*filter the x values to return only even ones*/
+    initial_state:
+      length: 48
+      offset: 244
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: x.filter(x => x % 2 == 0)
+  - offset: 355
+    length: 46
+    placeholder_text: /*use flatMap to return the option for x + 1*/
+    initial_state:
+      length: 46
+      offset: 355
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: x.flatMap(x => Some(x + 1))
+  text: |-
+    import org.scalatest.{FlatSpec, Matchers}
+
+    object StandardLibrary extends FlatSpec with Matchers {
+
+      def optionMap(x: Option[Int]) : Option[Int]= {
+        /*map the x values to x + 1*/
+      }
+
+      def optionFilter(x: Option[Int]): Option[Int] = {
+        /*filter the x values to return only even ones*/
+      }
+
+      def optionFlatMap(x: Option[Int]): Option[Int] = {
+        /*use flatMap to return the option for x + 1*/
+      }
+
+      def main(args: Array[String]): Unit = {
+        println(optionMap(Some(7)))
+        println(optionMap(None))
+        println(optionFilter(Some(5)))
+        println(optionFilter(Some(6)))
+        println(optionFlatMap(Some(4)))
+        println(optionFlatMap(None))
+      }
+
+    }
+  learner_created: false
+- name: test/Test.scala
+  visible: false
+  text: |
+    import org.scalatest.Matchers
+    import org.scalatest.refspec.RefSpec
+
+    class Test extends RefSpec with Matchers {
+
+      def `check option map`(): Unit = {
+        StandardLibrary.optionMap(Some(2)) shouldBe Some(3)
+        StandardLibrary.optionMap(None) shouldBe None
+      }
+
+      def `check option filter`(): Unit = {
+        StandardLibrary.optionFilter(Some(49)) shouldBe None
+        StandardLibrary.optionFilter(Some(12)) shouldBe Some(12)
+      }
+
+      def `check option flat map`(): Unit = {
+        StandardLibrary.optionFlatMap(Some(5)) shouldBe Some(6)
+        StandardLibrary.optionFlatMap(None) shouldBe None
+      }
+
+    }
+  learner_created: false
+- name: build.sbt
+  visible: false
+  text: |2
+
+    lazy val `Common-Operations-on-Lists` = (project in file("."))
+      .settings(
+        scalaSource in Compile := baseDirectory.value / "src",
+        scalaSource in Test := baseDirectory.value / "test",
+        libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
+      )
+  learner_created: false
+status: Unchecked
+record: -1
