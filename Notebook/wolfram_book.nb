@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    345991,       7821]
-NotebookOptionsPosition[    329518,       7529]
-NotebookOutlinePosition[    329918,       7545]
-CellTagsIndexPosition[    329875,       7542]
+NotebookDataLength[    394354,       9001]
+NotebookOptionsPosition[    377873,       8709]
+NotebookOutlinePosition[    378274,       8725]
+CellTagsIndexPosition[    378231,       8722]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -7512,13 +7512,1193 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[BoxData["ad"], "Input",
- CellChangeTimes->{{3.814580416727538*^9, 3.814580419105536*^9}},
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"labeledgraph", "=", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\"\<TopologicalSpaceType\>\"", ",", "\"\<BanachSpace\>\""}], 
+      "]"}], "[", "\"\<RelationshipGraph\>\"", "]"}]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.814580416727538*^9, 3.814580419105536*^9}, {
+  3.824187216087226*^9, 3.824187216570928*^9}},
  CellLabel->"In[1]:=",ExpressionUUID->"f6cf9570-a0ce-4b57-adfc-9d8aed2cba99"],
 
-Cell[BoxData["ad"], "Output",
- CellChangeTimes->{3.814580420133244*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"94955e3d-9ecd-46af-b9c3-ab39e78acdd3"]
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.5291344316464972`, 6.}, {3.529134432976491, 5.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.5291344316464972`, 6.}, {0.5291344307819088, 5.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.5291344316464972`, 6.}, {1.529134433597136, 5.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{5.000000002405017, 3.}, {3.0000000021677806`, 2.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{5.000000002405017, 3.}, {4.000000000592138, 2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{3.0000000016520687`, 3.}, {3.0000000021677806`, 
+       2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{3.0000000016520687`, 3.}, {4.000000000592138, 2.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQzXDdCkh82M8ABgIO+9Qg/ODzN46+ns/v8CHZEszf
+6CFZscuU32FqnwWYL5FzUCznIJ/D6mXmYH6r5cWFDM58DiZrzMD8PxtAGngd
+9Oabgvl1l9RrL6nzOsyuNwHz2eblneXv5nGo9jUG82cIy3IZPOF2OMthBOYb
+gwG3w+o4AzD/Ikh7LZeD8R9dML9I5nihzHFOh8SHWmC+sCAIcDqY8amD+RtY
+o4GIw2FLkxKYH/Brif+vJewON+xkwfz370CAzWGJkziY3/fYAojYHCT6BMB8
+vRtNujeaWB2MFTnB/DNgwOJQ388I5qe9efT1vDSLA+fNL////3+//1fiRKMP
+JcwOnQXPwfwWXZABTA5VT2+B+Sz+25+1uzI5PDI/D+ZXHdOL+7+H0WFP+hEw
+/9Vku5eT7RgdOEt3gflg5acYHE7HbwTz1xioW4kkMDgwaKwE8yHxxeAAAF/U
+wh4=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-1.0000000008562324`, 4.}, {7.563016879430506*^-11, 
+       3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-1.0000000008562324`, 4.}, {2.0000000007185577`, 
+       3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{7.563016879430506*^-11, 3.}, {
+       2.5642066248110496`*^-10, 2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{7.563016879430506*^-11, 3.}, {1.00000000025085, 
+       2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{5.000000001944471, 4.}, {3.0000000016520687`, 3.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQ/SBdEUiKODCAgYCDl3OPW6uhiIOWjHbx1zn8Dh94
+CzP5s0Uc+GqSdB9q8jtcOH4+Y94aEYdV8sv0Di/jc3hRsMLF6JuIwy+2b2Wz
+hfkcrDh//znlLurAYhTEllXA63BiwvGJGQtFHY4u2HVHby+PQx87HzM3s5iD
+TbD+r5c/uR36cs8FbMoRc8jx3BA3W43b4cQhjuq4e2IOwc22XM7OXA7TZlx+
+pC4t7rA0VkB98n5OB6epmztPBYg7rLjYPu+bKafDiR0r8t3qxR0i7i8uyF3G
+4aDJvHnK7GXiDtvaUuZ+F+BwSC259OPkMXGHI8dPqkwtZXeo4WGfc/G+uEPD
+ostsblfYHPJPB9Rt+iju8FqsyZlLl83BbuP6+Tl/xB1YVa/eeljP6vBsrzIw
+XCQczoABi8OhdCUwP+3No6/npVkc9FQVwfxfiRONPpQwO6h9kwfzW3RvNOne
+YHJYeUsOzGfx3/6s3ZXJYdclWTC/6phe3P89jA4R92TA/FeT7V5OtmN0aP4r
+DeaDlZ9icLAxgPDXGKhbiSQwODSUSYH5kPhicAAAI6ukyA==
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQ3TAp7eoqax4HBjAQcZAO5/172oTXIef+Ta1pZ4Ud
+AmzajybE8TkkNx+Kjpso7CDvdEUvcwe/w5PXOydFeAs7OJlUzSlaKODwTuLA
++ZbfQg4Hrn8ufFUn6NDMdVXo8UIhhx7u6+JzSoQcFh74EV1sJ+Sw5LxyX3uT
+sIOntfZq04uCDhwqt66sWSHiUF2Vw6AVJeiwk+PXa+7nog7mdXuiA24KONgt
+mcG+PkjMYUbLnCdLlwk42P/X+PNpmZhDfVX4X+t8AYddkqtPXn8s5vAm/u1S
+IWMBh3Wf5QpiOcUddmXu2RP8hN9BprflfbO4uMOKT8G+zJH8DizPbrt784k7
+LIha+Nf4CJ9D2j+Vys1vxRyWLFxy9qkqn4PztfjmPVvFHLYcj90rUcfrMCu3
+Jy0tTczh7BkQ4HHY8k3893NeMYf0N4++npfmcbi7OF+yYpeow6/EiUYfSrgd
+hEonHxTLEXVo0b3RpHuDyyE4q/nzYSVRBxb/7c/aXbkcFjbbr6+/B/TvMb24
+/3s4Hf4dOP7Fc76Iw6vJdi8n23E6pCnJHFFKFXEAKz/F4XB3uY0sl4GIwxoD
+dSuRBA6HhEBNcDxB4ovDAQBcBLwl
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{3.529134432976491, 5.}, {5.000000001944471, 4.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{3.529134432976491, 5.}, {2.000000000800128, 4.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQ3TAp7eoqax4HBjAQcUj6XyF/hYPHYWX6m0dfzws7
+7C4PL1x8gdshYgmPzd1Zwg49vxlPS0zmduDZlsC9LUHY4WJXhY5JALfD4Tkv
+AhoUhR16VXdP/crO7VAH1iDksO/0SbbYXVwO9i8n272cLOSQXrukPiudy4HF
+f/uzdlchhzYrbwY5fi6HM518rBKfBB2kmPd1lG/kdJg1EwQEHbaceHQ2zY/T
+gfd22OVp9oIOr2rmt9x+yuFwbJXLw5nPBRy2y39Zc7Wcw+E4R/LhRRMFHGQ2
+PnALZeFw4Pm6sXKjrYCDlGFqUFQ3u4PR/SSOnuv8DhvmN55/wsPucOPDoaMH
+zPkd7v0x3felg82BS75Fm3EOn8Myjya5rv+sDmcyl1n6svA5sDanfVhSwOog
+cVETSPM6vNthy+Q6l8WBtY4NSPM4CO/nu8B7g9mhbO6d87w3uB2Kpt6M/K/A
+7JCrvwZIcztw28ybL1nB5PDUuBRIczk82BSzMOYuo8OjVeZAmtPhw0+R+BMB
+jA4pUz7HnQjgdLASPH4j5hKDQ8aHFUCaw+HAjyI+qSQGh8/7woE0h0PDBglQ
+REHji8MBAFvstE8=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGBQBWIQ3TAp7eoqax4HBjAQcZj4fZfwk5O8Di6P7rqmnBF2
+YC/cstl0G7/Dwb5Lx6f1CDsU1q+85c8g6FDBeq91uoOwQ1+AN8/EECGHNDeG
+hrQXQg53V+/Pu3cdKB5ouY25RcghbiIbk0WXqMN7tU6NfGEhBwFGhWNzs8Ud
+Oo+9v7ZimqDDl1/cu/lrJB1iDHIPbuAVdOCqP/Wgd7e0Q3oK44u2CgGHbDch
+T3sFGYcKq7lLdaIEHPIOG55YXi/jsJ9VRnO9iYAD/zeNuOM3ZRysjtUW8XEI
+OPjc+841T0/W4cL3FuapK/gdtGrmndOuk3WY4Xtl7TEjfodl52VWFpyQdTjR
++/LxxnV8DgdvFM3K4ZVzSNhxZGmYDJ9DzfQFi+R95RySz6Z+3lLN6xAcHjqD
+QUveweDDQq3GXVwOTKYnI16FyTs8nbC6/5Qsl0NNOFNOd528w7Ml87gk6zgd
+juxjuPR4gbyDrk717JzbHA6Xs450fd4r77BHzdHpqCmHw7po32m7rso7TJny
+4Z9SL7tDyMTZXyxeyDtsK+282PqQzeEI9/qleV/lHeRPce96a8TmwHC6fWX0
+X3mHSxPLd0Q1sjo0PxcCxpOCwxkwYHHItBAG89PePPp6XprFYUMLhP8rcaLR
+hxJmh4gzEH6L7o0m3RtMDgn8ImA+i//2Z+2uTA4nfCH8qmN6cf/3MDpMaofw
+X022eznZjtFh9x4IH6z8FIOD21sIf42BupVIAoODgaQomA9JPwwOAKYi4+k=
+
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{2.000000000800128, 4.}, {7.563016879430506*^-11, 
+       3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{2.000000000800128, 4.}, {-3.000000004444246, 3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJwtknlI03EAxX/O6TaPbdo2j98idKWltcp1WCbfh1FkZVSLCiuPDjXD7NBZ
+RmkQHRiuIKelmdo101CyxFhePw8sK8NNOxZmqLXlNI88qBll9IH3Pv8/ntfe
+xK0HWBRFyf9m2tQZerpB/UMIy8vkKkceCwkBuqQX2QKsShuZGstiw7OjSLFU
+LMDgtatvau5xwDZVrsIJPlh85aKYIEfMOzSh7q9zRuq3ZTMtSgEuR+xfsPy7
+E+Zl5W+YO+kCOTMlktk6oeVLQFvoRREcNA1ry6wOkMTvvB4e7gbfD08Yo5EH
+t1mCB+GHPZGWabioLeCilSQev8d4InJQnKFP4qK05eARjjONFJG0XxfIRfXT
+3wWnw2g0UF+10RYOxl3ldrxzNFChamxUc7DHMJFXXE7jh39rcJ83ByNTu+Ii
+9TSM8b2ihrv2qFCHx/pZaIwnMqER7vYouDR63eEXjXVBBz5WptrhfvDcv7tI
+sUQxjS0+l+4IcbHSYG/vCTGns6B43ctdM0RD0RGp8O60QU5hmzL3I42mci27
+K8AGQl93maieRqWpulKaTSE/okZVdpMG7/St0C4WhZB1zKaEYzROGm+krrH8
+JtYeWUkYoVGUrJYZPk+R54t7MjazaWS0SDPjvliJKL7j7CjHAzH/GCemPnmd
+QuOOKGne7kmbMeJfK8/29XZH5yExYywdJe/GDPZtJW5o3tauEcaOkJFLXgI/
+hRvmv23/oFk0TFSnROWBVRLwRyWZh3lDJO7FQ/PPlRK82RwcvbBngDSrBnRH
+dGKkDurPzW7vJ1fS9T43Voghrh0+/+yTmTR9jfRLeSLCbUYTO+FoIgNF7xMU
+OTNgFRzT5q7uJXXV3uZutSt8TUslO5huEhwYlJeW54IQTWO0Umgk+1xlFwQ1
+QhiODg75+HWQgzmPlV5mATjN7RVb7rSRqNZ6rn06H8X6+BWPhM2kpDphwSs4
+g++xvq8rQEc2JlbVq/ydkMXYnZnzU0vQXdjEguP/P1PUH0CwOy4=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.5291344320686449`, 7.}, {1.5291344316464972`, 
+       6.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.5291344320686449`, 7.}, {0.5291344324845397, 6.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJwlUmlIkwEA/SqvefV9ft/2fXO51DTDA0wLO8S9wEyDBGNKNEmbc1Y6XYQH
+RktcB5SFGpraRDrQPLI1Ai+wuUaiMoIRhYUlKswcKqaDZnZMe7zHg8f78+CF
+yEtO528nCCLcpU0nTPe7Mst/Sogt7ELv0CO6il2XrM00+85ZRCiLjn/m7bYh
+uVFnmmmoFyGLycx2JP6R9PhUVvPTRegYIMTB5wkUZxjtckIEfZjusWNsG8bl
+DWJNZyCSJzYO/TqzA0aJM7AgLRDKF6Fzsf7uSJ+3TwdNC0FP+D1t/O6BimyV
++olKiFNhw6XRdi8c0V0bW1vh4D4ym5E3ysMDZatUPMihu0Z2srLVG9oILj5M
+w+Hw7fCcyyof8L4tKjySOBj0x2pTE3yx5554wexkwfD0U3/XfWHd32XKecVC
+Uas+8bDfD5yldumjgoUuRWvxV/vjxzmrKpJhMRw1X6IM2Qm5rRhn3wig749j
+lLMkLJ/clgukfLBTRTF9oRTedd9atHnyEfPlgnlBSkFjjKwxDDBYMuydJCop
+OPgr46MXGcgU7YXOOgpRPZOdERyD0mXb1Q86Cru1c/usZhqJUjuvvoWCtYVK
+HS2h0Vuv58fdpZC8muvpKaTxviuh7XUxhbIaq7LOGIAWXVW78DgF5RYCIL/T
+dylFQOFA2cq6zS8A5Y1eUcELJH7rU4UVgxQmjVds7UYSJkHRiKCIwk2es+1z
+M4nqDtnqW9cOjbpJOlRKIimPfXn9KwmzI8M9TUpiLa3NRRJZzeEG7UESzzfr
++SQOymhZodCVN9FB3rEkco+KXL8h8f8/JP4BGu/waA==
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{0.5291344324845397, 6.}, {0.5291344307819088, 5.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{6.000000001540343, 2.}, {3.4062552875962524`, 1.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{3.4062552875962524`, 1.}, {3.406255287172854, 0.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-6.000000004490744, 3.}, {-6.000000004650474, 2.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{3.0000000021677806`, 2.}, {3.4062552875962524`, 
+       1.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-3.000000004444246, 3.}, {-0.9999999993681286, 2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-3.000000004444246, 3.}, {-3.0000000041953854`, 
+       2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{2.529134433473075, 5.}, {4.000000001585107, 4.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJwB0QEu/iFib1JlAgAAABwAAAACAAAAAKtsVKvu4D8AAAAAAAAUQPO8VWWh
+o+E/qWfs4vXPE0DmmtDjo2viP1ikDDzdmhNA2ETdz7JG4z8MtmALtmATQMi6
+eynONOQ/w5zoUIAhE0C4/Kvw9TXlP35YpAw83RJApQpuJSpK5j8/6ZM+6ZMS
+QJDkwcdqcec/BE+35odFEkB8iqfXt6voP8yJDgUY8hFAZvweVRH56T+amZmZ
+mZkRQH3ODBLjZOs/3NCmiyJBEUD1lFXgmPrsPwCChMLI7RBAx0/5vzK67j8J
+rTI+jJ8QQHz/e1jYUfA/9FGx/mxWEEBE0ahZiVvxP8RwAARrEhBAOh2DYyx6
+8j/uEkCcDKcPQF/jCnbBrfM/Gjggun0zD0CzI0CRSPb0PxBRoWEpyg5ANt4i
+tcFT9j/KXcOSD2sOQDo5NVh7c/o/SGUBKiFjDUCjnmGG1kH+P4a2eF6KbwxA
+OQfUn2nfAECEUSkwS5ALQFFEBMI4dQJAPDYTn2PFCkCdhsGpWOIDQLNkNqvT
+DgpAGs4LV8kmBUDq3JJUm2wJQMoa48mKQgZA3Z4om7reCECsbEcCnTUHQJCq
+934xZQhAwMM4AAAACEAAAAAAAAAIQD3uxU8=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{0.5291344307819088, 5.}, {-2.000000003082988, 4.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJwB0QEu/iFib1JlAgAAABwAAAACAAAAAKtsVKvu4D8AAAAAAAAUQG7C00qf
+59U/axeB9JbME0Bc8X/oBc28P2BjX4JhjRNAifiDkoV/xL/d45qpX0ITQGgn
+Un9tcd6/4JgzapHrEkCJQghU37Dqv22CKcT2iBJAT0XfkC3E87+CoHy3jxoS
+QPz1ZRSV3/q/HvMsRFygEUClGUwaU1UBwEN6OmpcGhFAnf66eLCSBcDwNaUp
+kIgQQIeZgRU3cAbAX4RqTthmEEA1gFpS9kQHwFQyWZZiPhBAqbJFL+4QCMDM
+P3EBLw8QQN8wQ6we1AjAjlllH3uyD0Da+lLJh44JwIryOoIcOQ9AmhB1hilA
+CsCQSmMrQrIOQB5yqeMD6QrAnmHeGuwdDkBnH/DgFokLwLI3rFAafA1AcxhJ
+fmIgDMDNzMzMzMwMQGnvhME1rwzAZ+zi9c8bDEBuNnSw3zUNwPphkTLwdAtA
+he0WS2C0DcCELdiCLdgKQKcUbZG3Kg7ABE+35odFCkDaq3aD5ZgOwHvGLl7/
+vAlAHrMzIer+DsDqkz7pkz4JQHAqpGrFXA/AT7fmh0XKCEDQEchfd7IPwKww
+JzoUYAhAoLRPAAAAEMAAAAAAAAAIQDtBxRg=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-5.000000004593602, 3.}, {-5.000000004484605, 2.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-4.788943521832351, 4.}, {7.563016879430506*^-11, 
+       3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-4.788943521832351, 4.}, {-6.000000004490744, 3.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-4.788943521832351, 4.}, {-3.000000004444246, 3.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-4.788943521832351, 4.}, {-7.000000004313762, 3.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{2.5642066248110496`*^-10, 2.}, {0., 1.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.529134433597136, 5.}, {2.000000000800128, 4.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.529134433597136, 5.}, {-2.000000003082988, 4.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{4.000000000592138, 2.}, {3.4062552875962524`, 1.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{1.00000000025085, 2.}, {1.0000000000934506`, 1.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-2.000000003082988, 4.}, {-3.000000004444246, 3.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGDQA2IQ7fAuE0gyHGAAAwGHc4zZYH7w+RtHX8/nd0gwygHz
+N3pIVuwy5Xf4XJ8L5kvkHBTLOcjn0PoqD8xvtby4kMGZz0G6qADM/7MBpIHX
+YZNYEZhfd0m99pI6r4PXjWIwn21e3ln+bh6HJ9tKwfwZwrJcBk+4HRo2lYP5
+xmDA7WBysRLMvwjSXsvlICZZA+YXyRwvlDnO6aDRVQfmCwuCAKdDhkojmL+B
+NRqIOByuP28G8wN+LfH/tYTdoeRKG5j//h0IsDk4vuoE8/seWwARm4ONZi+Y
+r3ejSfdGE6uDVNYMMN8E7B5mh/lrZryO//x//zzb7xJx9UwOD50Orao/+3//
+nOL13V/PMzr8mLbWLr7v/37Dq9HdP1UYHR6tiFr+z/T//qikP+JZdQwOCypO
+Pok98m+/gZlSct+O//bGbL++1Vj+23/jn/EGxdp/9rMC39yNnvp3/yo5PfE+
+r7/2V6MWzPx1/c/+ZVMFZlxW+GNvcnFZ2vSQH/vTwOCbfd+r1Q6TNb7v9xeT
+YOLh/GqvM73vj9urr/v7g1kjtE5+tue67jdr08wv+9Xl9DIOLvtkr7bqjeQ1
+s8/7hcomGV1c+NG+SSCjeuPBj/tDo422R+76YK/IdXCfi9WH/bdnS7/Z+uC9
+/R/d98flHd/u3zXb897K9nf2Vnni11Rfvtzvsu2dS3/mW/vvV34tn53zbH/V
+ay6FtLY39m1Gar6x/lP3a7Pnp+WdfW4/STKlboPvY/v0qavz75Q/trdrM/P8
+vPeTfYROY3kC9337KZdvrBD+8Mv+vVDM1Mtvr9unV/GsnyPH6DD73nMLoekX
+7b+UVJtsCmJx2CznecSC74R9UeTOFC8RdoflUzxcTnzfY/9Q/Zh9ajKnQyJD
+q+6sOyvtHR4sPMrkwO3AAAUAaHs95A==
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{4.000000001585107, 4.}, {5.000000002405017, 3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{4.000000001585107, 4.}, {4.000000001718945, 3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{4.000000001585107, 4.}, {2.0000000007185577`, 3.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-5.000000004484605, 2.}, {3.4062552875962524`, 1.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQvWCLP5AUOMAABhwOp7b5gfkh528cfT2f3cF6ni+Y
+v8lDsmKXKbvDlywfMF8856BYzkE2hy8y3mB+m+XFhQzObA62WzzB/L8bQBpY
+Hc4aeID5dZfUay+pszosneQG5nPMyzvL383icPSmC5g/U1iWy+AJs4MOmzOY
+b2IMAswOWyUtTH995T/gJFJU9qqVyWHB0dDLL67zH9A5N4tR/RWjg5jA/Vun
+l/If+Jqw9sqLeEYHyZ+XvRfH8x+YdWble/3nDA4rGkzU8ln5D8gITgj6U8/g
+cHQZQ5b+dL4D1XoJf321GBzysi3En4jwHSjwNHngeea//ZJzt3V763gPLH5e
+HcqU/t8+9cKrtVpXeA5MMJ8edVTlv/38Bjaj+DTmA2ICNs8+zvhjH3j2WVZN
+19f9bm5PNZJdftn/F+45aNt2fb/8rUlKkuo/7LPW/xETjHlgP/+0y2Vhx2/2
+Zzz2dngv+WJ/TOq3VfCkL/Yu5yLbLRv/2884vjXyutRne8EvK50zk1gchC6V
+6C+49dHe4HSoS7c5h4OZlcWetRc/2DfkbDjK5MDtAImvD/YA8He3ng==
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-4.000000004639475, 3.}, {-3.0000000041953854`, 
+       2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQzdAhCyQEHBjAgMOBu9lYlstAwCHk/I2jr+ezO8S8
+FD2ilCrgsMlDsmKXKbvDp11HvnjOF3AQzzkolnOQzeHUd/v19fcEHNosLy5k
+cGZzeDG//fNhJUGHvxtAGlgdvDbPBioUdKi7pF57SZ3V4ZNhDVBc0IFjXt5Z
+/m4Wh7vSmr+f8wo5zBQGWvuE2YG3cFFaWpqQg4kxCDA7vF+45qTfNiEHGYmv
+V1fVMzl8lOOZ9Oe9kMOUu8vqNS4yOgi/OLA/X1jYYWGzh8EadUaHkL+nglYo
+CDvYcN16btrM4LAlTst7mbiww5VH23y6j/+3N+G5vyLzh5BDSNHM69sm/bO/
+wvoy+9MhIYdvh6IL3qX/tZ/s7THFoVzIYfeVv2JG7n/sC+/+UQwRFXJYtLz+
+dKPBb/ulJUd/OqcJOuj+3btcsfKn/dcjwiecDws4nNnPs5P9wXf7pHPPe4J1
+BBxq3mf/N079Zn9FsXnCMyd+B5ue21XLOL7aK0g6fXF15XPgnRatHX/qs/2i
+Jh7Xo/G8Dh943gjErfpkHxf3qCllEo/Dkw892otXfLQPXnN4rfJdbodXjnbV
+ekc/2DfkbDjK5MANja8P9gDt7MBM
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{4.000000001718945, 3.}, {1.00000000025085, 2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQDQIJyhL7ICwBhyWbbOr4WFfYB5+/cfT1fH4HHpXw
+7xs8dtpv9JCs2GXK7yB2JGCi3cvD9hI5B8VyDvI53DpU9+Dr+dP2rZYXFzI4
+8zloHZ9lYq9zyf7PBpAGXge7ybtEcw5es6+7pF57SZ3XYd3ReZMbl9+2Z5uX
+d5a/m8fBer3ydfv8B/YzhGW5DJ5wO5zVu2VkbPzY3hgMuB3e/f0+48D6p/ae
+DR459xu4HNgsm47ylj63D6r7cuPXVU4HoQcVO6SaX9h765pXthpxOgh/vl34
+/OYLe4NeAd/6aRwOHEWrPxZXvrDnmNcQ8oKRw+FTzHPzA4nP7c/Ht/cfKGF3
+uLC53+XMpKf2bZdU/rG/Z3NYUrZEfAbPY3u9bxEL9hWwOVzz8k5yn3ff/sgp
+5bInP1kd3tvu6E6bfcE+jWtnxjZOVger5HkOgV1L7T8F1C4S0WZxaBd2mSjt
+cGR/yrwC5f+xzA79LpluC29c3b/n06TXpYuYHP59XKBhYfNg/y/fJ78qfjA6
+sH2ZWrL3/5P9ShtSAjkSGB1iVwi3PzB7uV9fUuS98k0GB3Z+qYSFD9/sV+n8
+dPl0MoMDg8bK////v98PjToHACfaySo=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-1.4050272056920221`*^-9, 4.}, {
+       7.563016879430506*^-11, 3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], 
+      ArrowBox[{{-1.4050272056920221`*^-9, 4.}, {2.0000000007185577`, 3.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[CompressedData["
+1:eJxTTMoPSmViYGCQAWIQ3bBBAkgyODCAAYdDfrUkmB9y/sbR1/PZHfZES4H5
+mzwkK3aZsjukBkqD+eI5B8VyDrI5ZMXIgPltlhcXMjizOZypkQXz/24AaWB1
+6NkkB+bXXVKvvaTO6rD8rzyYzzEv7yx/N4uDfJwimD9TWJbL4Amzw+fLSmC+
+iTEIMDtsqlT5Y8vB4LCTe0ZFRiOTw+tMtQ/fFYD61xhxyd9gdJi3ROOOrheD
+g6oI84swc0aHE5raB+43MzjwuHAKCcxncMj9qTuH9xyDw35r1w4vfgaHLmHD
+gu0ajA5V33Kn8gj8t1eoMLG5O5nRgY9176Y2oX/2BuoWDPX8TA4Wi8szmNX+
+2u9UsNkzZzaTw48Lc7c1ef2xLz5+RFnrF7PD6tPmPz+F/7Kf5aZwrsOO1eEp
+Y97v+V0/7PXm+e3ekcHmsLjYYW/no2/2uuf8X++sYHd4orDebkP8V/sZ15Tj
+evI4HNZw7qoXZvpiX7D9lLCBF6fDL93Ehs0nP9lvKXDhWcrN5XCmd4nDhG0f
+7VOYJrq/3sTloKLZcmDliQ/2DTkbjjI5cEPj64M9ADwon4U=
+       "]]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{2.0000000007185577`, 3.}, {2.5642066248110496`*^-10, 
+       2.}}]},
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{-6.000000004650474, 2.}, {-6.000000004704532, 1.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {GrayLevel[0.5], Opacity[0.7], 
+    StyleBox[
+     {Arrowheads[{{0.02, 0.}, {0.02, 0.25}, {0.02, 0.5}, {0.02, 0.75}, {0.02, 
+       1.}}], ArrowBox[{{8.000000002456176, 2.}, {3.4062552875962524`, 1.}}]},
+     
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Baire\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {0., 1.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"barrelled\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {5.000000002405017, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"bornological\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {3.0000000016520687, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Brauner\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-1.0000000008562324, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"compactly\"\>"},
+          {"\<\"generated\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-0.9999999993681286, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"complete\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {7.563016879430506*^-11, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"convenient\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {5.000000001944471, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Fr\[EAcute]chet\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {3.529134432976491, 5.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"F\[Hyphen]\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {2.000000000800128, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Hilbert\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {1.5291344320686449, 7.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"inner\"\>"},
+          {"\<\"product\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {0.5291344324845397, 6.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"locally\"\>"},
+          {"\<\"complete\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {6.000000001540343, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"locally\"\>"},
+          {"\<\"convex\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {3.4062552875962524, 1.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Lusin\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-6.000000004490744, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Mackey\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {3.0000000021677806, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"metrizable\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-3.000000004444246, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Montel\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {2.529134433473075, 5.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"normed\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {0.5291344307819088, 5.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"nuclear\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-5.000000004593602, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Polish\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-4.788943521832351, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"pseudo\[Hyphen]\"\>"},
+          {"\<\"complete\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {2.5642066248110496*^-10, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"pseudo\[Hyphen]\"\>"},
+          {"\<\"metrizable\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-3.0000000041953854, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"quasi\[Hyphen]\"\>"},
+          {"\<\"Banach\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {1.529134433597136, 5.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"quasi\[Hyphen]\"\>"},
+          {"\<\"barrelled\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {4.000000000592138, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"quasi\[Hyphen]\"\>"},
+          {"\<\"complete\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {1.00000000025085, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"quasi\[Hyphen]\"\>"},
+          {"\<\"normed\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-2.000000003082988, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Radon\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-6.000000004704532, 1.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"reflexive\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {4.000000001585107, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Schwartz\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-5.000000004484605, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"seminormed\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-4.000000004639475, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"semi\[Hyphen]\"\>"},
+          {"\<\"reflexive\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {4.000000001718945, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"separable\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-7.000000004313762, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"sequentially\"\>"},
+          {"\<\"complete\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {1.0000000000934506, 1.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Smith\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-1.4050272056920221*^-9, 4.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"stereotype\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {2.0000000007185577, 3.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Suslin\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {-6.000000004650474, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"topological\"\>"},
+          {"\<\"vector\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {3.406255287172854, 0.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"webbed\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {8.000000002456176, 2.}],
+     ImageSizeMultipliers->1]}, 
+   {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+    StyleBox[InsetBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {"\<\"Banach\"\>"},
+          {"\<\"space\"\>"}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       Background->RGBColor[1, 1, 0.8],
+       FrameStyle->RGBColor[0.94, 0.85, 0.36],
+       StripOnInput->False], {1.5291344316464972, 6.}],
+     StripOnInput->False,
+     ImageSizeMultipliers->1]}},
+  BaseStyle->{ImageSizeMultipliers -> 1},
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{509.99999999999966`, Automatic}]], "Output",
+ CellChangeTimes->{3.814580420133244*^9, 3.8241872246253138`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"6b17e1b2-5c24-4046-a1cd-b84af7ff0597"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -7527,9 +8707,9 @@ Cell[BoxData[""], "Input",
    3.814658597664568*^9}},ExpressionUUID->"d66c249c-11d3-47ed-b0c7-\
 56a7f5ee9332"]
 },
-WindowSize->{720, 789},
+WindowSize->{720, 765},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
-FrontEndVersion->"12.1 for Linux x86 (64-bit) (2020\:5e746\:670819\:65e5)",
+FrontEndVersion->"12.2 for Linux x86 (64-bit) (2020\:5e7412\:670812\:65e5)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"05cf7934-b3a4-4298-90db-728a2fa65e86"
 ]
@@ -7567,7 +8747,7 @@ Cell[45030, 1123, 207, 4, 41, "Output",ExpressionUUID->"08eb78c7-db2a-49d6-87fe-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[45274, 1132, 298, 7, 36, "Input",ExpressionUUID->"bfd7d41b-de09-4408-ba37-f8bfbc796c5a"],
-Cell[45575, 1141, 555, 12, 33, "Message",ExpressionUUID->"7c417c71-0cf6-4ab4-ae44-cbfadc405725"],
+Cell[45575, 1141, 555, 12, 29, "Message",ExpressionUUID->"7c417c71-0cf6-4ab4-ae44-cbfadc405725"],
 Cell[46133, 1155, 275, 7, 41, "Output",ExpressionUUID->"5b05fc8a-830d-4b22-a468-4a1910261a02"]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -7593,7 +8773,7 @@ Cell[52731, 1338, 151, 2, 41, "Output",ExpressionUUID->"cbd1dee2-bef0-49d9-80cf-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[52919, 1345, 234, 4, 56, "Input",ExpressionUUID->"5fc6617d-985b-4aab-8166-42dd42444f7f"],
-Cell[53156, 1351, 418, 10, 33, "Message",ExpressionUUID->"e7c5fc05-1026-428a-8af7-e21056da1e82"],
+Cell[53156, 1351, 418, 10, 29, "Message",ExpressionUUID->"e7c5fc05-1026-428a-8af7-e21056da1e82"],
 Cell[53577, 1363, 211, 4, 41, "Output",ExpressionUUID->"d07491ee-e135-494f-bf9c-0d586048bd40"]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -7699,7 +8879,7 @@ Cell[68564, 1813, 173, 2, 41, "Output",ExpressionUUID->"345966b7-de90-47df-9db1-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[68774, 1820, 278, 5, 56, "Input",ExpressionUUID->"af69da29-b4b9-45ed-882f-304d08684f20"],
-Cell[69055, 1827, 2008, 53, 311, "Output",ExpressionUUID->"5b315e3b-8447-4c44-9e57-175d3e338ed4"]
+Cell[69055, 1827, 2008, 53, 310, "Output",ExpressionUUID->"5b315e3b-8447-4c44-9e57-175d3e338ed4"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[71100, 1885, 326, 8, 56, "Input",ExpressionUUID->"e011de58-4522-4cf7-8f5e-b6b5e33c1507"],
@@ -7760,7 +8940,7 @@ Cell[306742, 6771, 197, 3, 41, "Output",ExpressionUUID->"5d3bdb87-afd5-45c4-b31e
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[306976, 6779, 390, 10, 81, "Input",ExpressionUUID->"b57b35fc-b5a3-47e5-81b3-b79a6c251556"],
-Cell[307369, 6791, 349, 11, 108, "Output",ExpressionUUID->"648edaf8-b29d-4066-9266-5768883db2fd"]
+Cell[307369, 6791, 349, 11, 74, "Output",ExpressionUUID->"648edaf8-b29d-4066-9266-5768883db2fd"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[307755, 6807, 942, 31, 107, "Input",ExpressionUUID->"7e4dd5b2-d681-4f69-a04c-ac47f20424d1"],
@@ -7819,10 +8999,10 @@ Cell[324238, 7360, 954, 27, 63, "Input",ExpressionUUID->"8adc0c5a-79f2-47ed-8091
 Cell[325195, 7389, 3765, 120, 223, "Output",ExpressionUUID->"ce01930f-262b-4baa-bf3c-929b009756b0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[328997, 7514, 172, 2, 36, "Input",ExpressionUUID->"f6cf9570-a0ce-4b57-adfc-9d8aed2cba99"],
-Cell[329172, 7518, 149, 2, 41, "Output",ExpressionUUID->"94955e3d-9ecd-46af-b9c3-ab39e78acdd3"]
+Cell[328997, 7514, 518, 11, 150, "Input",ExpressionUUID->"f6cf9570-a0ce-4b57-adfc-9d8aed2cba99"],
+Cell[329518, 7527, 48158, 1173, 342, "Output",ExpressionUUID->"6b17e1b2-5c24-4046-a1cd-b84af7ff0597"]
 }, Open  ]],
-Cell[329336, 7523, 178, 4, 36, "Input",ExpressionUUID->"d66c249c-11d3-47ed-b0c7-56a7f5ee9332"]
+Cell[377691, 8703, 178, 4, 36, "Input",ExpressionUUID->"d66c249c-11d3-47ed-b0c7-56a7f5ee9332"]
 }
 ]
 *)

@@ -1,4 +1,12 @@
 * Inbox
+** [ ] 配置 smart-input-source （或者其他类似工具？）
+** [ ] 如何加速磁力下载？
+** [ ] 配置 fcitx5 的俄语输入
+** [ ] 练习日语输入
+** [ ] 练习德语输入
+** [ ] 配置系统的日语输入
+** [ ] 配置系统的德语输入
+** [ ] 配置 wakatime
 ** [ ] 设置 auto refill mode
 ** [ ] learn how to use Switcher ( a gnome plugin )
 ** [ ] 
@@ -19,6 +27,8 @@ depot-tools-git 的可选依赖
 ** [ ] 如何自动开启 auto-fill-mode ？
 ** [ ] 写一个 typed elisp 如何？像 typescript 对 javascript ，或 typed racket 对 racket 做的那样
 ** [ ] OS 里的 SMT 是什么意思
+super multi-threading
+超线程
 ** [ ] Rust 里的 #[macro_export(local_inner_macros)] 是什么意思
 ** [ ] Scheme 中 eq? equal? eqv? 的区别是什么？
 ** [ ] 创建 AUR 包：libresprite-git ，参考 libresprite
@@ -28,11 +38,12 @@ depot-tools-git 的可选依赖
 
 [[file:~/projects/contribute/rustc-dev-guide/src/appendix/glossary.md::variant index]]
 ** [ ] 写一个 MarginNote 插件，功能是自动把从 libgen 上下载的书籍文件名重命名为只书籍名，大概使用正则表达式就可以实现
-** [ ] 解决 opam 安装 coq 中，安装 coq 依赖的 zarith 包时卡住的问题
+** [X] 解决 opam 安装 coq 中，安装 coq 依赖的 zarith 包时卡住的问题
+莫名奇妙地解决了
 ** [ ] 用 Rust 写一个 prolog 编译器
 ** [ ] 用 Rust 写一个 SMT Solver
 ** [ ] 学习 youtube 上 Elena Lin 用电子笔记做日程和计划的教程
-** [ ] 找到适合自己的硬币字帖，练之
+** [ ] 找到适合自己的硬笔字帖，练之
 ** [ ] 用 Rust 写一个 ECS ，参考 Bevy 改写过的 simple_ecs
 ** [ ] 解决 redox 编译的问题，也许只需要重新运行一下 bootstrap.sh ？
 ** [X] 给电脑清灰
@@ -322,7 +333,8 @@ Solution: 是第 2 个方法解决的。需要把那个方法记录一下。
 ** [ ] [#C] doom emacs 中 tools 节的 editorconfig 扩展是做什么用的呢？
 
 [[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::editorconfig ; let someone else argue about tabs vs spaces]]
-** [ ] 禁用 nox 中的 rust-mode ，安装 rust-analyzer 的 emacs 扩展
+** [X] 禁用 nox 中的 rust-mode ，安装 rust-analyzer 的 emacs 扩展
+不用 nox 了
 
 [[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::']]
 ** [ ] [#C] 安装，配置并学习使用 emacs 的 telegram 客户端 telega

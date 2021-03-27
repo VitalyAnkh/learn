@@ -1,0 +1,4 @@
+* Inbox
+** [2021-03-27 六]
+smart-inut-source 好爽！
+我也要好好学习 emacs lisp ，我也要写出这么好用的插件造福人类！

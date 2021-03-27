@@ -1,0 +1,561 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.3.3)  27 MAR 2021 10:51
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&xelatex prv_try_latex.ini \nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input \detokenize{ try_latex.tex }
+(./prv_try_latex.ini
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-12-03> xparse <2020-03-03> (/usr/share/texmf-dist/tex/latex/mylatex/mylatex.ltx)) (/usr/share/texmf-dist/tex/latex/tools/.tex File ignored)
+No auxiliary output files.
+
+(./try_latex.tex (/usr/share/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/share/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+File: ctexbackend.cfg 2020/10/19 v2.5.5 Backend configuration file (CTEX)
+) (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-12-03 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2020-09-24 L3 backend support: XeTeX
+\g__graphics_track_int=\count173
+\l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count174
+\g__pdf_backend_annotation_int=\count175
+))
+Document Class: ctexart 2020/10/19 v2.5.5 Chinese adapter for class article (CTEX)
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-10-27 L3 Experimental document command parser
+ (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)) (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
+) (/usr/share/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2020/10/19 v2.5.5 Document and package hooks (CTEX)
+) (/usr/share/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2020/10/19 v2.5.5 Patching commands (CTEX)
+) (/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+ (/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)) (/usr/share/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\l__ctex_tmp_int=\count176
+\l__ctex_tmp_box=\box48
+\l__ctex_tmp_dim=\dimen138
+\g__ctex_section_depth_int=\count177
+\g__ctex_font_size_int=\count178
+ (/usr/share/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2020/10/19 v2.5.5 Option configuration file (CTEX)
+) (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen139
+) (/usr/share/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2020/10/19 v2.5.5 XeLaTeX adapter (CTEX)
+ (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2020/10/19 v3.8.6 Typesetting CJK scripts with XeLaTeX
+ (/usr/share/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2020-10-27 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen140
+\l__xtemplate_tmp_int=\count187
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip49
+)
+\l__xeCJK_tmp_int=\count188
+\l__xeCJK_tmp_box=\box49
+\l__xeCJK_tmp_dim=\dimen141
+\l__xeCJK_tmp_skip=\skip50
+\g__xeCJK_space_factor_int=\count189
+\l__xeCJK_begin_int=\count190
+\l__xeCJK_end_int=\count191
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip51
+\g__xeCJK_node_int=\count192
+\c__xeCJK_CJK_node_dim=\dimen142
+\c__xeCJK_CJK-space_node_dim=\dimen143
+\c__xeCJK_default_node_dim=\dimen144
+\c__xeCJK_default-space_node_dim=\dimen145
+\c__xeCJK_CJK-widow_node_dim=\dimen146
+\c__xeCJK_normalspace_node_dim=\dimen147
+\l__xeCJK_ccglue_skip=\skip52
+\l__xeCJK_ecglue_skip=\skip53
+\l__xeCJK_punct_kern_skip=\skip54
+\l__xeCJK_last_penalty_int=\count193
+\l__xeCJK_last_bound_dim=\dimen148
+\l__xeCJK_last_kern_dim=\dimen149
+\l__xeCJK_widow_penalty_int=\count194
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2341.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen150
+\l__xeCJK_mixed_punct_width_dim=\dimen151
+\l__xeCJK_middle_punct_width_dim=\dimen152
+\l__xeCJK_fixed_margin_width_dim=\dimen153
+\l__xeCJK_mixed_margin_width_dim=\dimen154
+\l__xeCJK_middle_margin_width_dim=\dimen155
+\l__xeCJK_bound_punct_width_dim=\dimen156
+\l__xeCJK_bound_margin_width_dim=\dimen157
+\l__xeCJK_margin_minimum_dim=\dimen158
+\l__xeCJK_kerning_total_width_dim=\dimen159
+\l__xeCJK_same_align_margin_dim=\dimen160
+\l__xeCJK_different_align_margin_dim=\dimen161
+\l__xeCJK_kerning_margin_width_dim=\dimen162
+\l__xeCJK_kerning_margin_minimum_dim=\dimen163
+\l__xeCJK_bound_dim=\dimen164
+\l__xeCJK_reverse_bound_dim=\dimen165
+\l__xeCJK_margin_dim=\dimen166
+\l__xeCJK_minimum_bound_dim=\dimen167
+\l__xeCJK_kerning_margin_dim=\dimen168
+\g__xeCJK_family_int=\count195
+\l__xeCJK_fam_int=\count196
+\g__xeCJK_fam_allocation_int=\count197
+\l__xeCJK_verb_case_int=\count198
+\l__xeCJK_verb_exspace_skip=\skip55
+ (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+ (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count199
+\l__fontspec_language_int=\count266
+\l__fontspec_strnum_int=\count267
+\l__fontspec_tmp_int=\count268
+\l__fontspec_tmpa_int=\count269
+\l__fontspec_tmpb_int=\count270
+\l__fontspec_tmpc_int=\count271
+\l__fontspec_em_int=\count272
+\l__fontspec_emdef_int=\count273
+\l__fontspec_strong_int=\count274
+\l__fontspec_strongdef_int=\count275
+\l__fontspec_tmpa_dim=\dimen169
+\l__fontspec_tmpb_dim=\dimen170
+\l__fontspec_tmpc_dim=\dimen171
+ (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2020/10/19 v3.8.6 Configuration file for xeCJK package
+))
+\ccwd=\dimen172
+\l__ctex_ccglue_skip=\skip56
+)
+\l__ctex_ziju_dim=\dimen173
+ (/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count276
+ (/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
+))
+\l__ctex_heading_skip=\skip57
+ (/usr/share/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
+File: ctex-scheme-chinese-article.def 2020/10/19 v2.5.5 Chinese scheme for article (CTEX)
+ (/usr/share/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2020/10/19 v2.5.5 Caption with encoding UTF-8 (CTEX)
+)) (/usr/share/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+File: ctex-c5size.clo 2020/10/19 v2.5.5 c5size option (CTEX)
+) (/usr/share/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+File: ctex-fontset-fandol.def 2020/10/19 v2.5.5 Fandol fonts definition (CTEX)
+
+
+Package fontspec Warning: Font "FandolSong-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
+(fontspec)             'FandolSong-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolKai-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+)) (/usr/share/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2020/10/19 v2.5.5 Configuration file (CTEX)
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.53937> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+
+
+Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
+(fontspec)             'FandolFang-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
+(fontspec)             'FandolHei-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolHei-Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+ )
+Beginning to dump on file prv_try_latex.fmt
+ (preloaded format=prv_try_latex 2021.3.27)
+94493 strings of total length 599134
+508503 memory locations dumped; current usage is 1592&484753
+25841 multiletter control sequences
+\font\nullfont=nullfont
+\font\c__fp_exp_intarray=cmr10 at 0.00002pt
+\font\c__fp_trig_intarray=cmr10 at 0.00003pt
+\font\c_initex_cctab=cmr10 at 0.00005pt
+\font\c_other_cctab=cmr10 at 0.00006pt
+\font\c_str_cctab=cmr10 at 0.00008pt
+\font\g__regex_state_active_intarray=cmr10 at 0.00009pt
+\font\g__regex_thread_info_intarray=cmr10 at 0.0001pt
+\font\g__regex_submatch_prev_intarray=cmr10 at 0.00012pt
+\font\g__regex_submatch_begin_intarray=cmr10 at 0.00014pt
+\font\g__regex_submatch_end_intarray=cmr10 at 0.00015pt
+\font\g__regex_balance_intarray=cmr10 at 0.00017pt
+\font\OMX/cmex/m/n/5=cmex10
+\font\tenln=line10
+\font\tenlnw=linew10
+\font\tencirc=lcircle10
+\font\tencircw=lcirclew10
+\font\OT1/cmr/m/n/5=cmr5
+\font\OT1/cmr/m/n/7=cmr7
+\font\OT1/cmr/m/n/10=cmr10
+\font\OML/cmm/m/it/5=cmmi5
+\font\OML/cmm/m/it/7=cmmi7
+\font\OML/cmm/m/it/10=cmmi10
+\font\OMS/cmsy/m/n/5=cmsy5
+\font\OMS/cmsy/m/n/7=cmsy7
+\font\OMS/cmsy/m/n/10=cmsy10
+\font\c_code_cctab=cmr10 at 0.00018pt
+\font\c_document_cctab=cmr10 at 0.0002pt
+\font\TU/lmr/m/n/10=[lmroman10-regular]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.0pt
+\font\TU/lmr/bx/n/10=[lmroman10-bold]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.0pt
+\font\TU/lmr/m/n/7.52812=[lmroman8-regular]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 7.52812pt
+\font\TU/lmr/m/n/10.53937=[lmroman10-regular]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53937pt
+\font\l__fontspec_test_font=[FandolSong-Regular.otf]/OT
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53934pt
+\font\l_fontspec_font=[FandolSong-Regular.otf]/OT
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\l_fontspec_font=[FandolSong-Regular.otf]/OT:language=dflt;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\l_fontspec_font=[FandolSong-Bold.otf]/OT:language=dflt;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\l_fontspec_font=[FandolKai-Regular.otf]/OT:language=dflt;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\OT1/cmr/m/n/10.53937=cmr10 at 10.53937pt
+\font\OML/cmm/m/it/10.53937=cmmi10 at 10.53937pt
+\font\OMS/cmsy/m/n/10.53937=cmsy10 at 10.53937pt
+\font\TU/lmr/m/n/12.045=[lmroman12-regular]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+\font\TU/lmr/bx/n/10.53937=[lmroman10-bold]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53937pt
+\font\TU/lmr/bx/it/10.53937=[lmroman10-bolditalic]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53937pt
+\font\TU/lmr/m/it/10.53937=[lmroman10-italic]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53937pt
+\font\l__fontspec_test_font=[FandolFang-Regular.otf]/OT
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53934pt
+\font\l_fontspec_font=[FandolFang-Regular.otf]/OT
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\l_fontspec_font=[FandolFang-Regular.otf]/OT:language=dflt;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\TU/lmtt/m/n/10.53937=[lmmono10-regular]:
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53937pt
+\font\l__fontspec_test_font=[FandolHei-Regular.otf]/OT
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53934pt
+\font\l_fontspec_font=[FandolHei-Regular.otf]/OT
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\l_fontspec_font=[FandolHei-Regular.otf]/OT:language=dflt;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+\font\TU/lmss/m/n/10.53937=[lmsans10-regular]:mapping=tex-text;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.53937pt
+\font\l_fontspec_font=[FandolHei-Bold.otf]/OT:language=dflt;
+! Can't \dump a format with native fonts or font-mappings.
+<*> ...05]\fi} \input \detokenize{ try_latex.tex }
+                                                  
+You really, really don't want to do this.
+It won't work, and only confuses me.
+(Load them at runtime, not as part of the format file.)
+
+ at 10.5394pt
+404515 words of font info for 52 preloaded fonts
+1348 hyphenation exceptions
+Hyphenation trie of length 465097 has 9747 ops out of 35111
+  143 for language 85
+  110 for language 84
+  138 for language 83
+  7 for language 82
+  12 for language 81
+  53 for language 80
+  127 for language 79
+  195 for language 78
+  71 for language 77
+  248 for language 76
+  66 for language 75
+  66 for language 74
+  15 for language 73
+  119 for language 72
+  43 for language 71
+  58 for language 70
+  7 for language 69
+  194 for language 68
+  37 for language 67
+  23 for language 66
+  852 for language 65
+  852 for language 64
+  21 for language 63
+  38 for language 62
+  38 for language 61
+  77 for language 60
+  58 for language 59
+  206 for language 58
+  25 for language 57
+  316 for language 56
+  27 for language 55
+  37 for language 54
+  229 for language 53
+  38 for language 52
+  21 for language 51
+  6 for language 50
+  7 for language 49
+  6 for language 48
+  12 for language 47
+  6 for language 46
+  6 for language 45
+  8 for language 44
+  6 for language 43
+  6 for language 42
+  6 for language 41
+  6 for language 40
+  6 for language 39
+  147 for language 38
+  185 for language 37
+  20 for language 36
+  44 for language 35
+  460 for language 34
+  475 for language 33
+  478 for language 32
+  39 for language 31
+  76 for language 30
+  40 for language 29
+  89 for language 28
+  31 for language 27
+  3 for language 25
+  113 for language 24
+  145 for language 23
+  377 for language 22
+  224 for language 21
+  265 for language 20
+  60 for language 19
+  63 for language 18
+  19 for language 17
+  15 for language 16
+  111 for language 15
+  3 for language 14
+  21 for language 13
+  54 for language 12
+  36 for language 11
+  5 for language 10
+  2 for language 9
+  148 for language 7
+  78 for language 6
+  137 for language 5
+  475 for language 4
+  478 for language 3
+  2 for language 1
+  181 for language 0
+No pages of output.
