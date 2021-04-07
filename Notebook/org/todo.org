@@ -1,5 +1,27 @@
 * Inbox
-** [ ] 配置 smart-input-source （或者其他类似工具？）
+** [ ] 用doom emacs的discourse论坛上的方法，找出使emacs启动慢的配置，修改，加速启动
+
+** [ ] 学习rainbow-mode的代码
+** [X] 写Emacs包：可以根据RGB值inline显示颜色
+CLOSED: [2021-04-03 六 02:56]
+不需要了。已经有了rainbow-mode。可以看代码学习一下。
+** [ ] 配置org-mode 中latex的snippet
+** [X] 解决org-appear不起作用的问题
+CLOSED: [2021-04-02 五 18:47]
+解决了。
+是配置文件前面有问题，导致org-appear没有起作用。
+解决配置文件的问题即可。
+要是一时难以解决，手动M-x org-appear开启org-appear也行。
+** [ ] 给博客建rss订阅
+** [X] 解决Emacs中无法使用rustic的问题
+CLOSED: [2021-04-02 五 18:47]
+解决了。
+还是多运行几次pqd sync -u和pqd build -r。doom doctor也很有用。
+** [ ] 设置 org-mode 中关掉 solaire-mode
+** [ ] alias "git st" to "git status" using ansible
+** [X] 配置 smart-input-source （或者其他类似工具？）
+CLOSED: [2021-04-02 五 19:09]
+配置完成
 ** [ ] 如何加速磁力下载？
 ** [ ] 配置 fcitx5 的俄语输入
 ** [ ] 练习日语输入
@@ -10,7 +32,7 @@
 ** [ ] 设置 auto refill mode
 ** [ ] learn how to use Switcher ( a gnome plugin )
 ** [ ] 
-depot_tools is installed in /opt/depot_tools/.
+depot_tools is installed in =/opt/depot_tools/.
 This directory is not in $PATH by default, so make sure to export PATH=/opt/depot_tools:$PATH before using it.
 Also, this directory has root permissions, so either use it as root, or if you want to use it as your currect user:
 
@@ -26,7 +48,8 @@ depot-tools-git 的可选依赖
 
 ** [ ] 如何自动开启 auto-fill-mode ？
 ** [ ] 写一个 typed elisp 如何？像 typescript 对 javascript ，或 typed racket 对 racket 做的那样
-** [ ] OS 里的 SMT 是什么意思
+** [X] OS 里的 SMT 是什么意思
+CLOSED: [2021-04-02 五 19:10]
 super multi-threading
 超线程
 ** [ ] Rust 里的 #[macro_export(local_inner_macros)] 是什么意思

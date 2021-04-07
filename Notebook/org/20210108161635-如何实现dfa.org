@@ -10,4 +10,11 @@
 [[attachment:_20210111_180433screenshot.png]]
 
 [[attachment:_20210111_181525screenshot.png]]
-* 比直接实现转移表更方便的是，用一个一维数组表示状态，用另一个一维数组表示输入，转移就是两个数组元素之间的箭头
+* 比直接实现转移表更方便的是，用一个一维数组表示状态，用另一个一维数组表示输入，转移就是两个数组元素之间的箭头 :ATTACH:
+:PROPERTIES:
+:ID:       d1de55bf-ab3a-45f1-b719-4ba67a038001
+:END:
+
+
+
+[[attachment:_20210331_052306screenshot.png]]

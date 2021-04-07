@@ -1,0 +1,50 @@
+#+title: test-org-face
+#+latex_header: \usepackage{mathrsfs}
+#+latex_header: \usepackage{unicode-math}
+* Xah Lee
+** Subsection
+Hello *there* this is /Emacs/ _org-mode_ --No markdown!--.
+
+#+begin_src rust
+fn main() {
+    println!("Hello, org-mode!");
+    println!("jkk");
+}
+#+end_src
+
+#+RESULTS:
+: Hello, org-mode!
+: jkk
+
+#+begin_src python
+print("Hello!")
+#+end_src
+#+RESULTS:
+: None
+
+我爱你。
+
+#+begin_src cpp
+#include<cstdio>
+int main(){
+    printf("Hello, Emacs!\n");
+    return 0;
+}
+#+end_src
+#+RESULTS:
+| Hello | Emacs! |
+
+\(D = {B \times C E \ | \ B  \in \mathscr{B} \ and \ C \in \ \mathscr{C} }\)
+
+Theorem 15.1 If \(\mathscr{C}\\}\) is a basis for the topology of \(X\) and
+
+Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}}\). 若\(f(1)=1\)，且方程\(f(x)=1\)在区间\((0,1)\) 内
+有实根，求实数\(b\)的取值范围.
+
+\(f(b)=\sum_{1}^{\infty}\)
+
+\(f(x)-g(x)\)
+
+\(\mathbb{R}\)
+\(\rm G\)
+\(f^{-1}\)

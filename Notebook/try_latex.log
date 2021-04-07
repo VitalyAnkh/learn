@@ -1,35 +1,49 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.3.3)  27 MAR 2021 10:52
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.4.5)  6 APR 2021 07:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input \detokenize{ try_latex.tex }
-(./try_latex.tex (/usr/share/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/share/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+**try_latex.tex
+(./try_latex.tex
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-12-03> xparse <2020-03-03>
+(/usr/share/texmf-dist/tex/latex/ctex/ctexart.cls
+(/usr/share/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2020/10/19 v2.5.5 Backend configuration file (CTEX)
-) (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-12-03 L3 programming layer (loader) 
- (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2020-09-24 L3 backend support: XeTeX
 \g__graphics_track_int=\count173
 \l__pdf_internal_box=\box47
 \g__pdf_backend_object_int=\count174
 \g__pdf_backend_annotation_int=\count175
 ))
-Document Class: ctexart 2020/10/19 v2.5.5 Chinese adapter for class article (CTEX)
+Document Class: ctexart 2020/10/19 v2.5.5 Chinese adapter for class article (CT
+EX)
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-10-27 L3 Experimental document command parser
- (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)) (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
-) (/usr/share/texmf-dist/tex/latex/ctex/ctexhook.sty
+)
+(/usr/share/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2020/10/19 v2.5.5 Document and package hooks (CTEX)
-) (/usr/share/texmf-dist/tex/latex/ctex/ctexpatch.sty
+)
+(/usr/share/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2020/10/19 v2.5.5 Patching commands (CTEX)
-) (/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
+)
+(/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
- (/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
-)) (/usr/share/texmf-dist/tex/latex/ms/everysel.sty
+))
+(/usr/share/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \l__ctex_tmp_int=\count176
@@ -37,9 +51,11 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \l__ctex_tmp_dim=\dimen138
 \g__ctex_section_depth_int=\count177
 \g__ctex_font_size_int=\count178
- (/usr/share/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+
+(/usr/share/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2020/10/19 v2.5.5 Option configuration file (CTEX)
-) (/usr/share/texmf-dist/tex/latex/base/article.cls
+)
+(/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
@@ -55,11 +71,14 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen139
-) (/usr/share/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+)
+(/usr/share/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2020/10/19 v2.5.5 XeLaTeX adapter (CTEX)
- (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+
+(/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2020/10/19 v3.8.6 Typesetting CJK scripts with XeLaTeX
- (/usr/share/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+
+(/usr/share/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2020-10-27 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen140
 \l__xtemplate_tmp_int=\count187
@@ -124,10 +143,13 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count197
 \l__xeCJK_verb_case_int=\count198
 \l__xeCJK_verb_exspace_skip=\skip55
- (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
- (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
+X
 \l__fontspec_script_int=\count199
 \l__fontspec_language_int=\count266
 \l__fontspec_strnum_int=\count267
@@ -142,29 +164,39 @@ Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpa_dim=\dimen169
 \l__fontspec_tmpb_dim=\dimen170
 \l__fontspec_tmpc_dim=\dimen171
- (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+)
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2020/10/19 v3.8.6 Configuration file for xeCJK package
 ))
 \ccwd=\dimen172
 \l__ctex_ccglue_skip=\skip56
 )
 \l__ctex_ziju_dim=\dimen173
- (/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+
+(/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count276
- (/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+
+(/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
 ))
 \l__ctex_heading_skip=\skip57
- (/usr/share/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
-File: ctex-scheme-chinese-article.def 2020/10/19 v2.5.5 Chinese scheme for article (CTEX)
- (/usr/share/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+
+(/usr/share/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
+File: ctex-scheme-chinese-article.def 2020/10/19 v2.5.5 Chinese scheme for arti
+cle (CTEX)
+
+(/usr/share/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2020/10/19 v2.5.5 Caption with encoding UTF-8 (CTEX)
-)) (/usr/share/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+))
+(/usr/share/texmf-dist/tex/latex/ctex/ctex-c5size.clo
 File: ctex-c5size.clo 2020/10/19 v2.5.5 c5size option (CTEX)
-) (/usr/share/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+)
+(/usr/share/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
 File: ctex-fontset-fandol.def 2020/10/19 v2.5.5 Fandol fonts definition (CTEX)
 
 
@@ -174,7 +206,8 @@ Package fontspec Warning: Font "FandolSong-Regular" does not contain requested
 
 Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
 (fontspec)             'FandolSong-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolKai-Regular}].
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold
+},ItalicFont={FandolKai-Regular}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -208,26 +241,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
- (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/preview.sty
-Package: preview 2017/04/24 12.3 (AUCTeX/preview-latex)
- (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
-Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
-) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prtightpage.def
-\PreviewBorder=\dimen174
-) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prauctex.def
-No auxiliary output files.
 
-
-\hbadness=\count277
-\hfuzz=\dimen175
-(/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prauctex.cfg)) (/home/vitalyr/sdk/config/emacs/emacs.d-doom/.local/straight/build-28.0.50/auctex/latex/prfootnotes.def)
-\pr@snippet=\count278
-\pr@box=\box50
-\pr@output=\toks15
-
-Preview: Fontsize 10.53937pt
-Preview: PDFoutput 1
-) ABD: EverySelectfont initializing macros
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 7.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -292,47 +307,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
-
-./try_latex.tex:9: Preview: Snippet 1 started.
-<-><->
-      
-l.9 \tableofcontents
-                    
-Not a real error.
-
-Preview: Tightpage -32891 -32891 32891 32891
-./try_latex.tex:9: Preview: Snippet 1 ended.(736098+144061x22609920).
-<-><->
-      
-l.9 \tableofcontents
-                    
-Not a real error.
-
-[1] (./try_latex.toc)
-./try_latex.tex:11: Preview: Snippet 2 started.
-<-><->
-      
-l.11 \section
-             {文字}
-Not a real error.
-
-./try_latex.tex:11: Preview: Snippet 2 ended.(750899+160835x22609920).
-<-><->
-      
-l.11 \section{文字}
-                 
-Not a real error.
-
-[2
-
-]
-./try_latex.tex:16: Preview: Snippet 3 started.
-<-><->
-      
-l.16 欧几里得\footnote
-                  {, B.C. 330--275}
-Not a real error.
-
+ (./try_latex.toc)
+\tf@toc=\write3
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.53937> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -341,192 +317,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7.52812> on input line 16.
-./try_latex.tex:16: Preview: Snippet 3 ended.(555263+0x293798).
-<-><->
-      
-l.16 欧几里得\footnote{, B.C. 330--275}
-                                   
-Not a real error.
-
-[3]
-./try_latex.tex:22: Preview: Snippet 4 started.
-<-><->
-      
-l.22 \section
-             {胡言乱语}
-Not a real error.
-
-./try_latex.tex:22: Preview: Snippet 4 ended.(754845+165769x22609920).
-<-><->
-      
-l.22 \section{胡言乱语}
-                   
-Not a real error.
-
-[4
+ [1
 
 ]
-./try_latex.tex:52: Preview: Snippet 5 started.
-<-><->
-      
-l.52 \begin{equation}
-                     
-Not a real error.
-
-./try_latex.tex:54: Preview: Snippet 5 ended.(1921029+0x22609920).
-<-><->
-      
-l.54 \end{equation}
-                   
-Not a real error.
-
-[5]
-./try_latex.tex:57: Preview: Snippet 6 started.
-<-><->
-      
-l.57 \[
-       a^{2}+b^{2}=c^{2}\] is a 丢番图 equation.
-Not a real error.
-
-./try_latex.tex:57: Preview: Snippet 6 ended.(638387+0x13108750).
-<-><->
-      
-l.57 \[a^{2}+b^{2}=c^{2}\]
-                           is a 丢番图 equation.
-Not a real error.
-
-[6]
-./try_latex.tex:66: Preview: Snippet 7 started.
-<-><->
-      
-l.66 \section
-             {我爱你}
-Not a real error.
-
-./try_latex.tex:66: Preview: Snippet 7 ended.(751885+160835x22609920).
-<-><->
-      
-l.66 \section{我爱你}
-                  
-Not a real error.
-
-[7
-
-]
-./try_latex.tex:73: Preview: Snippet 8 started.
-<-><->
-      
-l.73 \begin{equation}
-                     
-Not a real error.
-
-./try_latex.tex:76: Preview: Snippet 8 ended.(753504+0x22609920).
-<-><->
-      
-l.76 \end{equation}
-                   
-Not a real error.
-
-[8
-
-]
-./try_latex.tex:81: Preview: Snippet 9 started.
-<-><->
-      
-l.81 \[
-       a^{2}+b^{2}=c^{2}\]
-Not a real error.
-
-./try_latex.tex:81: Preview: Snippet 9 ended.(638387+0x13108750).
-<-><->
-      
-l.81 \[a^{2}+b^{2}=c^{2}\]
-                          
-Not a real error.
-
-[9]
-./try_latex.tex:83: Preview: Snippet 10 started.
-<-><->
-      
-l.83 \[
-       a^{2}+b^{2}=c^{2}\] \(\oint_{Z}f(x)dx = \) Yes.
-Not a real error.
-
-./try_latex.tex:83: Preview: Snippet 10 ended.(638387+0x13108750).
-<-><->
-      
-l.83 \[a^{2}+b^{2}=c^{2}\]
-                           \(\oint_{Z}f(x)dx = \) Yes.
-Not a real error.
-
-[10]
-./try_latex.tex:83: Preview: Snippet 11 started.
-<-><->
-      
-l.83 \[a^{2}+b^{2}=c^{2}\] \(
-                             \oint_{Z}f(x)dx = \) Yes.
-Not a real error.
-
-./try_latex.tex:83: Preview: Snippet 11 ended.(536769+224183x3674398).
-<-><->
-      
-l.83 \[a^{2}+b^{2}=c^{2}\] \(\oint_{Z}f(x)dx = \)
-                                                  Yes.
-Not a real error.
-
-[11]
-./try_latex.tex:87: Preview: Snippet 12 started.
-<-><->
-      
-l.87 \(
-       \oint_{Z}f(x)dx\)
-Not a real error.
-
-./try_latex.tex:87: Preview: Snippet 12 ended.(536769+224183x2945319).
-<-><->
-      
-l.87 \(\oint_{Z}f(x)dx\)
-                        
-Not a real error.
-
-[12]
-./try_latex.tex:89: Preview: Snippet 13 started.
-<-><->
-      
-l.89 \(
-       fr\)
-Not a real error.
-
-./try_latex.tex:89: Preview: Snippet 13 ended.(479658+134304x743312).
-<-><->
-      
-l.89 \(fr\)
-           
-Not a real error.
-
-[13]
-./try_latex.tex:90: Preview: Snippet 14 started.
-<-><->
-      
-l.90 \[
-       \]
-Not a real error.
-
-./try_latex.tex:90: Preview: Snippet 14 ended.(0+0x11304960).
-<-><->
-      
-l.90 \[\]
-         
-Not a real error.
-
-[14] ) 
+LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.5393
+7> not available
+(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on
+ input line 89.
+ [2]
+(./try_latex.aux) ) 
 Here is how much of TeX's memory you used:
- 6517 strings out of 477299
- 193145 string characters out of 5838339
- 512579 words of memory out of 5000000
- 26079 multiletter control sequences out of 15000+600000
- 408182 words of font info for 65 fonts, out of 8000000 for 9000
+ 6340 strings out of 477299
+ 190197 string characters out of 5838339
+ 515545 words of memory out of 5000000
+ 25919 multiletter control sequences out of 15000+600000
+ 408190 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,10n,100p,605b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,8n,100p,367b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on try_latex.pdf (14 pages).
+Output written on try_latex.pdf (2 pages).
