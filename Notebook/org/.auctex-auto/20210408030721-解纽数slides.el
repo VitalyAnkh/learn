@@ -28,6 +28,7 @@
     "textcomp"
     "amssymb"
     "capt-of"
-    "hyperref"))
+    "hyperref"
+    "ctex"))
  :latex)
 

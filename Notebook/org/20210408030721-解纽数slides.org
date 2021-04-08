@@ -1,5 +1,5 @@
 #+title: 解纽数slides
-#+authour: 郑权
+#+author: 郑权
 #+email: 16271029@bjtu.edu.cn
 #+date: 2021-04-05
 #+latex_compiler: xelatex
@@ -13,9 +13,21 @@
 #+beamer_outer_theme:
 #+beamer_header:
 #+latex_class_options: [bigger]
-#+beamer_frame_level: 2
+#+beamer_frame_level: 3
+#+latex_header: \usepackage{ctex}
 
 * 研究内容
+** Introduction
+*** 何为纽结？
+**** 纽结就是\(\mathbb{R}^{3}\) 中的简单闭曲线
+**** 用拓扑学的语言：
+在拓扑空间\(X\)中，\(X\)的一个子集\(K\)称作是一个纽结，如果\(K \cong S^{2}\)
+
+
+***
+*** 通俗地说，就说关于三维空间中绳圈的研究。
+*** 研究什么？
+主要是关于各种拓扑不变量
 * 进展
 * 问题
 * 后续计划
