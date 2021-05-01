@@ -48,3 +48,16 @@ Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}}\). 若\(f(1)=1\)，且方�
 \(\mathbb{R}\)
 \(\rm G\)
 \(f^{-1}\)
+
+This cpp code is bad. Aliasing is hard. Why?
+#+begin_src C++ :includes iostream string vector
+  std::vector<std::string> v;
+  v.push_back("Hello, ");
+  std::string &x = v[0];
+
+  v.push_back(" world!");
+  std::cout << x << std::endl;
+  std::cout << v;
+#+end_src
+
+#+RESULTS:

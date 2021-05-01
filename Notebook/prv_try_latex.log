@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.3.3)  27 MAR 2021 10:51
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.4.5)  16 APR 2021 06:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -240,9 +240,9 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 
  )
 Beginning to dump on file prv_try_latex.fmt
- (preloaded format=prv_try_latex 2021.3.27)
+ (preloaded format=prv_try_latex 2021.4.16)
 94493 strings of total length 599134
-508503 memory locations dumped; current usage is 1592&484753
+508503 memory locations dumped; current usage is 1592&484751
 25841 multiletter control sequences
 \font\nullfont=nullfont
 \font\c__fp_exp_intarray=cmr10 at 0.00002pt

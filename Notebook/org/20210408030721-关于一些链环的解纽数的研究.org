@@ -81,48 +81,55 @@
 上图中，左手三叶结的解纽数是1,8字结的解纽数是2，Hopf链环的解纽数是1.
 
 
-* 查阅资料情况
+* 国内外研究现状
 ** 1984年，Beiler给出了一个奇妙的例子：对于一个纽结，它的极小投影图有10个交叉点，它不可能用少于三个交叉点的改变来变成平凡纽结，但它有个14个交叉点的投影图，与之同痕，但可以用两个交叉点的改变来变为平凡纽结
 ** 1991年S.Fukuhara、Y. Matsumoto、O. Saeki 给出了一些类型torus纽结的解纽数的证明 [1]
-对于(p,q)=(2,q),(3,4),(3,5),(3,7),(3,8),(3,10),(4,5),有
+对于\((p,q)=(2,q),(3,4),(3,5),(3,7),(3,8),(3,10),(4,5)\),有
 \(u(T(p,q))=\frac{(p-1)(q-1)}{2}\)
 #+reveal: split
-** 2004年，Owens给出了所有交叉点小于等于9的纽结的解纽数[3]
-** 2014年，V. Siwach, P. Madeti给出了多于700中交叉点在10-16的torus纽结的解纽数[4]
+** 2004年，Owens给出了所有交叉点小于等于9的纽结的解纽数.[3]
+** 2014年，V. Siwach, P. Madeti给出了多于700种交叉点数在10-16的torus纽结的解纽数.[4]
 * 进展
 ** 求出了Kanenobu纽结K(p,q)的解纽数是2，与p，q无关 :ATTACH:
 :PROPERTIES:
-:ID:       f3c2468a-9dd1-44bc-a40b-c4ab7d22a5d4
+:ID:       d61e5672-ac65-45fd-a753-d8d787bb16df
 :END:
+先证明K(p,q)的交叉点任取一个都无法使之成为平凡纽结，然后说明改变最左和最右的这
+两个交叉点可以使之成为平凡纽结
+#+reveal: split
 
-[[attachment:_20210411_222930screenshot.png]]
+[[attachment:_20210412_080553screenshot.png]]
+
+
 #+reveal: split
 ** 求出推广的Kanenobu纽结K(p,q,n)的解纽数也都是2，与p，q，n无关 :ATTACH:
 :PROPERTIES:
-:ID:       b6184e8d-8c0a-4a21-8ef6-e42971c48244
+:ID:       ccf8be78-efa6-49ff-ab4c-46f3934e4317
 :END:
+先证明K(p,q,n)的交叉点任取一个都无法使之成为平凡纽结，然后说明改变图中标注的
+两个交叉点可以使之成为平凡纽结：
+#+reveal: split
 
-[[attachment:_20210411_222515screenshot.png]]
+[[attachment:_20210412_080201screenshot.png]]
 
 * 存在的问题
 ** 研究出的结果太过平凡，应该以更复杂的纽结作为研究对象，寻求更有趣的结果
-** 知识储备不足，很多代数拓扑工具不了解，看论文时感觉吃力
 * 后续计划
-** 推广Kanenobu纽结，在下列画圈处添加一列交叉点作为研究对象： :ATTACH:
+** 4月10日-20日，推广Kanenobu纽结，在下列画圈处添加一列交叉点作为研究对象： :ATTACH:
 :PROPERTIES:
 :ID:       bab073bc-26d0-4729-b585-cb1577040d9c
 :END:
 
 [[attachment:_20210411_223720screenshot.png]]
-*# 
 #+reveal: split
-** 研究其他一些链环类的解纽数
-** 进一步学习相关的代数拓扑工具
+** 4月21日-30日，研究其他一些链环类的解纽数
+** 5月1日-31日，撰写论文
 * 参考资料
 ** [1] S.Fukuhara, Y.Matsumoto, O.Saeki, An estimate for the unknotting numbers of torus knots[J], Topology and its Applications, 1991, 38(3): 293-299
 ** [2] 姜伯驹，绳圈的数学，湖南教育出版社[M],1991
 ** [3] B. Owens, On slicing invariants of knots[J], Journal of Knot Theory and Its Ramifications, 2011, 14(01):3-8.
 ** [4] V.Siwach, P. Madeti, Unknotting Number of Some Knots[J], Elsevier, 2014
+#+reveal: split
 ** [5] V. Siwach, M. Prabhakar, A Method for Unknotting Torus Knots[J], Mathematics, 2012
 ** [6] Rolfen, Knots and Links[M], Publish or Perish, 1976
 ** [7] W.B. Raymond Lickorish, Introduction to Knot Theory[M], Springer, 1997
