@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 iced = {git = "https://github.com/hecrj/iced.git", feature="image"}
-iced_native = "0.2.2"
+iced_native = "*"

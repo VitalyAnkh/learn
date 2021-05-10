@@ -5,23 +5,8 @@ const DEFAULT_STACK_SIZE: usize = 1024 * 1024 * 2;
 const MAX_THREADS: usize = 4;
 static mut RUNTIME: usize = 0;
 
-pub struct Runtime {
-    threads: Vec<Thread>,
-    current: usize,
-}
-#[derive(Eq, PartialEq, Debug)]
-enum State {
-    Available,
-    Running,
-    Ready,
-}
+pub struct Runtime
 
-struct Thread {
-    id: usize,
-    stack: Vec<u8>,
-    ctx: ThreadContext,
-    state: State,
-}
 
 impl Thread {
     // TODO: 用Default 的default 方法替换new

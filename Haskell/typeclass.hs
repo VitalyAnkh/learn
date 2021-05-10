@@ -1,4 +1,3 @@
--- import           Data.Functor
 import           Data.Monoid
 import           Test.QuickCheck
 class YesNo a where

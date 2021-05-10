@@ -1,1 +1,8 @@
-#+title: 曼昆经济学
+#+title: 曼昆《经济学原理》
+
+\(\mathbb{R^{3}}\)
+\(\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\)
+
+\(f(a)=\frac{1}{2 \pi i}\oint_{\gamma}\frac{f(z)}{z-a}dz\)
+
+This is a beautiful world.

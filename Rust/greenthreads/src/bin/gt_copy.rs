@@ -160,6 +160,7 @@ unsafe fn switch(old: *mut ThreadContext, new: *const ThreadContext) {
         mov     %rbx, 0x28($0)
         mov     %rbp, 0x30($0)
 
+
         mov     0x00($1), %rsp
         mov     0x08($1), %r15
         mov     0x10($1), %r14

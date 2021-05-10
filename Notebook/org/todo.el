@@ -1,7 +1,6 @@
 (use-package! org
   :init
   (setq
-   org-directory "~/Dropbox/org"
    diary-file (concat org-directory "/diary")))
 
 (use-package! org-agenda
