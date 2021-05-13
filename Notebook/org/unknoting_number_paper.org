@@ -63,7 +63,7 @@ The original motivation for the founders of knot theory was to create a table of
 
 To gain further insight, mathematicians have generalized the knot concept in several ways. Knots can be considered in other three-dimensional spaces and objects other than circles can be used; see knot (mathematics). Higher-dimensional knots are n-dimensional spheres in m-dimensional Euclidean space.
 ** The Meaning of Researches on Knot Theory
-* Chapter 2. Basic Theory about Knot Theory and the Unknoting Number
+* Chapter 2. Propaedeutics
 ** Knot Diagram and Reidemeister Move
 A Knot or link could be in many phases on \(\mathbb{R^{3}}\)
 In the mathematical area of knot theory, a Reidemeister move is any of three local moves on a link diagram. Kurt Reidemeister (1927) and, independently, James Waddell Alexander and Garland Baird Briggs (1926), demonstrated that two knot diagrams belonging to the same knot, up to planar isotopy, can be related by a sequence of the three Reidemeister moves.
@@ -78,6 +78,8 @@ One important context in which the Reidemeister moves appear is in defining knot
 ** Knot Invariants
 ** Kanenobu Knot and Generalized Kanenobu Knot
 * Chapter 3. Unknoting Number for Kanenobu Knot
+** Theorem: the unknoting number for kanenobu knot is 2
+Proof.
 * Chapter 4. Unknoting Number for Generalized Kanenobu Knot
 * Chapter 5. Unknoting Number for Asymetric Generalized Kanenobu Knot
 * Chapter 5. Summary and Outlook

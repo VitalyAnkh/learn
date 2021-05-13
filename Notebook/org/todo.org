@@ -1,4 +1,5 @@
 * Inbox
+** [ ] 配置Emacs的dap (debug adapter protocol)
 ** [ ] 配置org-re-reveal或者org-reveal
 1. 可以生成slide
 2. 可以放到网站上，（与hugo配合？）
