@@ -119,7 +119,7 @@ fn main() {
                 .with_system(food_spawner.system()),
         )
         // will be wrong if add game_over system here
-       // .add_system(game_over.system().after(SnakeMovement::Movement))
+        // .add_system(game_over.system().after(SnakeMovement::Movement))
         .add_system_set_to_stage(
             CoreStage::PostUpdate,
             SystemSet::new()

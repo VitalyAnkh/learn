@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1619965898 "try_latex.tex" "try_latex.pdf" "try_latex" 1619965899
+["pdflatex"] 1620961000 "try_latex.tex" "try_latex.pdf" "try_latex" 1620961001
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1616952564 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1616952564 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1616952564 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -48,10 +48,10 @@
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg" 1616952564 408 1981e3b80ee2804b42048f88981cf6ef ""
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty" 1616952564 180725 b63aab970a0b297a5ae2ef5421b881ec ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1616952564 33301 a3134070eacafb10b1f371612ce2650d ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1618685499 5313616 a4c50ed8f05c0bfacf2b451bba31f5ee ""
-  "try_latex.aux" 1619965899 364 777bf2425f3695f023c898f8b5b3d1cd "pdflatex"
-  "try_latex.tex" 1619367812 1268 a037851217e48c1865efbfcda6d8a762 ""
-  "try_latex.toc" 1619965899 168 c4978acae89b0d6fb78d379d9a7859de "pdflatex"
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1620068509 5313605 7c2660894dd57e602177f0fcc813be44 ""
+  "try_latex.aux" 1620961000 364 777bf2425f3695f023c898f8b5b3d1cd "pdflatex"
+  "try_latex.tex" 1620960998 1283 9ab1e678e5d2e138d694615bd2f839e9 ""
+  "try_latex.toc" 1620961000 168 c4978acae89b0d6fb78d379d9a7859de "pdflatex"
   (generated)
   "try_latex.aux"
   "try_latex.toc"
