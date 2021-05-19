@@ -22,6 +22,9 @@ struct GameOverEvent;
 #[derive(Default)]
 struct SnakeSegments(Vec<Entity>);
 
+#[derive(Default)]
+struct GameOverCounts(i32);
+
 #[derive(Default, Copy, Clone, Eq, PartialEq, Hash)]
 struct Position {
     x: i32,
@@ -40,6 +43,7 @@ enum Direction {
     Up,
     Down,
 }
+
 impl Direction {
     fn opposite(self) -> Self {
         match self {
@@ -64,6 +68,7 @@ struct Materials {
     head_material: Handle<ColorMaterial>,
     food_material: Handle<ColorMaterial>,
     segment_material: Handle<ColorMaterial>,
+    brick_material: Handle<ColorMaterial>,
 }
 
 #[derive(SystemLabel, Debug, Hash, PartialEq, Eq, Clone)]
@@ -84,6 +89,7 @@ fn main() {
             ..Default::default()
         })
         .insert_resource(SnakeSegments::default())
+        .init_resource::<GameOverCounts>()
         .insert_resource(LastTailPosition::default())
         .add_event::<GrowthEvent>()
         .add_event::<GameOverEvent>()
@@ -126,6 +132,7 @@ fn main() {
                 .with_system(position_translation.system())
                 .with_system(size_scaling.system()),
         )
+        .add_system(spawn_bricks_after_game_over.system())
         .add_plugins(DefaultPlugins)
         .run();
 }
@@ -136,6 +143,7 @@ fn setup(mut commands: Commands, mut materials: ResMut<Assets<ColorMaterial>>) {
         head_material: materials.add(Color::rgb(0.7, 0.7, 0.7).into()),
         food_material: materials.add(Color::rgb(1.0, 0.0, 1.0).into()),
         segment_material: materials.add(Color::rgb(0.3, 0.3, 0.3).into()),
+        brick_material: materials.add(Color::rgb(0.8, 0.0, 0.0).into()),
     });
 }
 
@@ -154,6 +162,7 @@ fn spawn_snake(
             .insert(SnakeHead {
                 direction: Direction::Up,
             })
+            .insert(SnakeSegment)
             .insert(Position { x: 3, y: 3 })
             .insert(Size::square(0.8))
             .id(),
@@ -298,7 +307,7 @@ fn snake_eating(
 }
 
 fn snake_growth(
-    mut commands: Commands,
+    commands: Commands,
     mut growth_reader: EventReader<GrowthEvent>,
     last_tail_position: ResMut<LastTailPosition>,
     mut segments: ResMut<SnakeSegments>,
@@ -326,5 +335,28 @@ fn game_over(
             commands.entity(ent).despawn()
         }
         spawn_snake(commands, materials, segments_res)
+    }
+}
+
+fn spawn_bricks_after_game_over(
+    mut commands: Commands,
+    mut game_over_reader: EventReader<GameOverEvent>,
+    mut game_over_counts: ResMut<GameOverCounts>,
+    segments: Res<SnakeSegments>,
+    materials: Res<Materials>,
+) {
+    if game_over_reader.iter().next().is_some() {
+        commands
+            .spawn_bundle(SpriteBundle {
+                material: materials.brick_material.clone(),
+                sprite: Sprite::new(Vec2::new(8.0, 8.0)),
+                ..Default::default()
+            })
+            .insert(Position {
+                x: game_over_counts.0,
+                y: game_over_counts.0,
+            });
+        game_over_counts.0 += 1;
+        eprintln!("{:?} is the segments when game over!", segments.0)
     }
 }

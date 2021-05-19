@@ -840,3 +840,7 @@ cache/eln/emacs-28.0.50/rustic* 然后重新build：pqd build -r
 总是把时间浪费在编译Emacs上，真是罪过。
 我以后一个月编译一次Emacs。更新前，先去emacs-devel邮件组和doom emacs的
 discord服务器和discourse上看看是否有任何问题。
+
+*** 2021-05-18 星期二
+**** [2021-05-18 二 21:12]
+岩仓使节团的“始惊”“次醉”“终狂”可以完美地描写倾心之恋。

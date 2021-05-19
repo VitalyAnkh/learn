@@ -77,6 +77,7 @@ No other part of the diagram is involved in the picture of a move, and a planar 
 One important context in which the Reidemeister moves appear is in defining knot invariants. By demonstrating a property of a knot diagram which is not changed when we apply any of the Reidemeister moves, an invariant is defined. Many important invariants can be defined in this way, including the Jones polynomial.
 ** Knot Invariants
 ** Kanenobu Knot and Generalized Kanenobu Knot
+The  Kanenobu Knots, which is a infinitely many knots with the same knot ploynomial invariant,
 * Chapter 3. Unknoting Number for Kanenobu Knot
 ** Theorem: the unknoting number for kanenobu knot is 2
 Proof.
