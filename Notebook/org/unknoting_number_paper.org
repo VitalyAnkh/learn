@@ -159,17 +159,26 @@ The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomi
 [[attachment:_20210523_133107screenshot.png]]
 
 The Kanenobu knot with parameter p, q is represented  by K(p,q). When p>0, the upper braid  has the right curve above. When p<0, the upper braid has the left curve above. When q>0, then lower braid has the left curve above. The q<0, the lower braid has the left curve above.
-*** Generalized Kanenobu Knot
-The Kanenobu knot could be generalized by add more parameters. After adding twisting between every crossing point of it, we get K(p, q, m, n):
 
-*** Twisted Knot
-A twisted knot is a knot formed by repeatedly twisting a closed loop and then joining the two ends. (That is, a twisted knot is any Whitehead double of an untwisted knot.) Twisted knots are an infinite family of knots and are considered to be the simplest type of knot after the loop knot.
+*** Generalized Kanenobu Knot :ATTACH:
+The Kanenobu knot could be generalized by adding more parameters. After adding twisting between every crossing point of it, we get K(p, q, m, n):
+
+[[attachment:_20210523_135628screenshot.png]]
+
+By adding parameters further, we get K(m, n, l, p, q):
+
+[[attachment:_20210523_140428screenshot.png]]
+Which has all its crossing point be a crossing point family.
+*** Twist Knot :ATTACH:
+A twist knot is a knot formed by repeatedly twisting a closed loop and then joining the two ends. (That is, a twisted knot is any Whitehead double of an untwisted knot.) Twisted knots are an infinite family of knots and are considered to be the simplest type of knot after the loop knot.
+
+[[attachment:_20210523_140639screenshot.png]]
 
 * Section 3. Unknotting Number for Kanenobu Knot
 ** Theorem 3.1 The unknotting number for a twist knot is 1.
 *Proof*. Obviously, Every twist knot is not the unknot.
 And after untie the two ends of the twisted knot, the knot becomes unknot. Thus the unknotting number is 1.
-** Theorem 3.1: the unknotting number of Kanenobu knot K(1,1) is 2. :ATTACH:
+** Theorem 3.1: the unknotting number of Kanenobu knot K(0,0) is 2. :ATTACH:
 :PROPERTIES:
 :ID:       423645b7-8eb0-455c-a99b-a98adccb41ce
 :END:
@@ -192,18 +201,24 @@ First, we show that after changing the crossing point 1 and 8, this Kanenobu kno
 
 Second, we show that for any one change to the crossing point, the Kanenobu knot won't be transformed to the unknot.
 1. If we change the crossing point 1, we get an twisted knot, and twisted knot is not an unknot:
+
 2. If we change the crossing point 2, we get an twisted knot, and twisted knot is not an unknot:
+
 3. If we change the crossing point 3, we get an twisted knot, and twisted knot is not an unknot:
 4. If we change the crossing point 4, we get an twisted knot, and twisted knot is not an unknot:
 5. If we change the crossing point 5, we get an twisted knot, and twisted knot is not an unknot:
 
-All other circumstances could be applied to the same procedure.
-...
-
+All other circumstances could be applied to the same procedure. Thus the knot can't be untied by changing one crossing. Then we proved the unknotting number for Kanenobu knot K(0, 0) is 2.
 * Section 4. Unknotting Number for Generalized Kanenobu Knot
+** Theorem 4.1 The unknotting number for Generalized Kanenobu knot K(p, q) is 2. :ATTACH:
+[[attachment:_20210523_152939screenshot.png]]
 
-** Theorem 4.1 The unknotting number for Generalized Kanenobu knot is 2.
+:PROPERTIES:
+:ID:       23575a83-0649-48c0-ad07-54b2c55a79b9
+:END:
 *Proof*.
+Label the 12 crossing points (excluding the p, q, n crossing points) with number 1, 2, ..., 12.
+First, change crossing
 * Section 5. Unknotting Number for More Generalized Kanenobu Knot
 The more generalized Kanenobu knot is complex then we will break this problem into several situations:
 ** 5.1 a plat form for a surface-link
