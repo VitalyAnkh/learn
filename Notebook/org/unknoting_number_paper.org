@@ -148,12 +148,15 @@ Crossing changes will usually alter the isotopy type of the diagram.
 *Definition*. The unknotting number, \(u(K)\), is the smallest number of crossing changes required to obtain the unknot from some diagram of the knot \(K\).
 
 ** Kanenobu Knot, Generalized Kanenobu Knot and twisted knots :ATTACH:
-The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomial invariant,cite:kanenobuInfinitelyManyKnots1986 , are knots like following:
+:PROPERTIES:
+:ID:       575a3ce3-c2d4-4d15-874f-4054cf3c0acc
+:END:
+The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomial invariant, cite:kanenobuInfinitelyManyKnots1986 , are knots like following:
 :PROPERTIES:
 :ID:       4f7bf60b-78ae-4365-b59d-29b51ce88612
 :END:
 
-[[attachment:_20210520_031220screenshot.png]]
+[[attachment:_20210523_133107screenshot.png]]
 
 The Kanenobu knot with parameter p, q is represented  by K(p,q). When p>0, the upper braid  has the right curve above. When p<0, the upper braid has the left curve above. When q>0, then lower braid has the left curve above. The q<0, the lower braid has the left curve above.
 *** Generalized Kanenobu Knot
@@ -208,7 +211,6 @@ In this section, we introduce a plat form for a surface-link.We assume \(D_{2}\s
 ** Theorem 5.1 The unknotting number for
 ** Theorem 5.2
 
-* Section 5. Summary and Outlook
 * Section 6. Acknowledgements
 　After more than four months of hard work, I finally finished writing my thesis. From the beginning of receiving the thesis topic to the implementation of the system and then to the completion of the thesis article, each step was a new trial and challenge for me, and it was the biggest project I have completed independently during my time at university. During this time, I learned a lot and felt a lot. From knowing nothing, I started to study and experiment independently, checking relevant materials and books, making the vague concepts in my mind gradually clear, and making my very young work perfect step by step. Every time I understood a new concept and new theorem was the gain of my study, and every successful proof of a theorem would make me excited for a long time.
 
