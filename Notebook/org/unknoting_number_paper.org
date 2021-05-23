@@ -204,5 +204,19 @@ All other circumstances could be applied to the same procedure.
 * Section 5. Unknotting Number for More Generalized Kanenobu Knot
 The more generalized Kanenobu knot is complex then we will break this problem into several situations:
 ** 5.1 a plat form for a surface-link
-In this section, we introduce a plat form for a surface-link.We assume \(D_{2}\subset \mathbb{R}^{2}\). Let \(N\) be a regular neighborhood of \(\partial D\) in \(\mathbb{R}^{2}\ Int D_{2}\), which is parameterized with \((t, x) \in * \times S^{1}\) such that \(\partial D_{2} ={0} \times S^{1} \) and \(y_{0}=(0,0) \in * \times S^{1}\), where \(S^{1}=\mathbb{R}/\mathbb{Z}\).
+In this section, we introduce a plat form for a surface-link.We assume \(D_{2}\subset \mathbb{R}^{2}\). Let \(N\) be a regular neighborhood of \(\partial D\) in \(\mathbb{R}^{2}\ Int D_{2}\), which is parameterized with \((t, x) \in * \times S^{1}\) such that \(\partial D_{2} ={0} \times S^{1} \) and \(y_{0}=(0,0) \in * \times S^{1}\), where \(S^{1} =\mathbb{R}/\mathbb{Z}\).
+** Theorem 5.1 The unknotting number for
 ** Theorem 5.2
+
+* Section 5. Summary and Outlook
+* Section 6. Acknowledgements
+　After more than four months of hard work, I finally finished writing my thesis. From the beginning of receiving the thesis topic to the implementation of the system and then to the completion of the thesis article, each step was a new trial and challenge for me, and it was the biggest project I have completed independently during my time at university. During this time, I learned a lot and felt a lot. From knowing nothing, I started to study and experiment independently, checking relevant materials and books, making the vague concepts in my mind gradually clear, and making my very young work perfect step by step. Every time I understood a new concept and new theorem was the gain of my study, and every successful proof of a theorem would make me excited for a long time.
+
+　My thesis work is not very mature and has many shortcomings. But this experience of doing my dissertation has benefited me for life. I feel that doing a dissertation is something that you really have to put your heart and soul into, it is truly a process of learning and researching on your own, without learning there can be no potential for research, without your own research there will be no breakthrough, and then it will not be called a dissertation. I hope that this experience will inspire me to continue to progress in my future studies.
+
+  June, it's always sunny. In June, it's always the end of the song. In June, we refuse to be sentimental. The flowers give up their fragrance and we welcome the fruits. Graduation brings farewell, and we are on our way to glory. As I finish my thesis, I would like to express my deepest gratitude to my supervisor and my dear family who have helped me in the process of writing this thesis! I would like to thank my supervisor, Ms. Wan Liangxia. She has been a role model for me, a trusted mentor and friend, both as a person and in her studies. In spite of the heavy teaching and workload, he took the initiative to care about my study and research. From choosing a topic for my dissertation, writing the opening report, searching for information, to perfecting the structure, she gave me careful guidance so that I could successfully complete my dissertation. She also often supervised and motivated the lazy me to finish my characters on time. Thank you, Ms Wan!
+
+  In addition, I would like to thank my family for their encouragement and support, which enabled me to devote myself to my studies and work and complete my studies successfully. Thanks to the Instant App, I had a fun group of online friends to keep me company while I was writing my dissertation. I used Emacs and org-mode to produce all my papers, and then used word to format them to the university's requirements. Thanks to the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
+
+bibliographystyle:apacite
+bibliography:library.bib
