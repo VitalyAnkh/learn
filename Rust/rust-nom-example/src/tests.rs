@@ -29,3 +29,19 @@ fn test_authorithy() {
 
     assert_eq!(authorithy("vitalyr@"), Ok(("", ("vitalyr", None))));
 }
+
+#[test]
+fn test_host() {
+    assert_eq!(
+        host("localhost:1080"),
+        Ok((":1080", Host::HOST("localhost".to_string())))
+    );
+    assert_eq!(
+        host("example.org:8080"),
+        Ok((":8080", Host::HOST("example.org".to_string())))
+    );
+    assert_eq!(
+        host("subtitle.example.org:8080"),
+        Ok((":8080", Host::HOST("subtitle.example.org".to_string())))
+    );
+}

@@ -1,7 +1,7 @@
 use nom::{
     branch::alt,
     bytes::complete::{tag, tag_no_case},
-    character::complete::alphanumeric1,
+    character::complete::{alphanumeric1, alphanumerichyphen1},
     combinator::opt,
     error::{context, ErrorKind, VerboseError, VerboseErrorKind},
     sequence::{separated_pair, terminated},
@@ -74,11 +74,18 @@ fn authorithy(input: &str) -> Res<&str, Authorithy> {
     )(input)
 }
 
-fn host(input:&str)->Res<&str, Host>{
-    context{
+fn host(input: &str) -> Res<&str, Host> {
+    context(
         "host",
         alt((
-            tuple((many1(terminated(alphanumeric1hyphen1, tag(".")))))
-        ))
-    }
+            tuple((many1(terminated(alphanumeric1hyphen1, tag("."))), alpha1)),
+            tuple((many_m_n(1, 1, alphanumerichyphen1), take(0 as usize))),
+        )),
+    )(input)
+    .map(|(next_input, mut res)| {
+        if !res.1.is_empty() {
+            res.0.push(res.1);
+        }
+        (next_input, Host::HOST(res.0.join(".")))
+    })
 }

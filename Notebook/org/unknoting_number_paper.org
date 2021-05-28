@@ -167,7 +167,7 @@ The Kanenobu knot could be generalized by adding more parameters. After adding t
 
 [[attachment:_20210523_135628screenshot.png]]
 
-By adding parameters further, we get K(m, n, l, p, q):
+By adding parameters further, we get \(K(p, q, m, n, l\):
 
 [[attachment:_20210523_140428screenshot.png]]
 Which has all its crossing point be a crossing point family.
@@ -177,6 +177,7 @@ A twist knot is a knot formed by repeatedly twisting a closed loop and then join
 [[attachment:_20210523_140639screenshot.png]]
 
 * Section 3. Unknotting Number for Kanenobu Knot
+This section we will investagate the unknotting number for Kanenobu Knot.
 ** Theorem 3.1 The unknotting number for a twist knot is 1.
 *Proof*. Obviously, Every twist knot is not the unknot.
 And after untie the two ends of the twisted knot, the knot becomes unknot. Thus the unknotting number is 1.
@@ -221,7 +222,7 @@ All other circumstances could be applied to the same procedure. Thus the knot ca
 *Proof*.
 Label the 12 crossing points (excluding the p, q, n crossing points) with number 1, 2, ..., 12.
 First, change crossing points 2, 9, then  we could untie all the crossing point between 6 and 12.
-We could untie all the crossing points between 4 and 5, 10 and 11. Thus the all the points are all untied.
+We could untie all the crossing points between 4 and 5, 10 and 11. Thus the all the points
 :PROPERTIES:
 :ID:       23575a83-0649-48c0-ad07-54b2c55a79b9
 :END:
