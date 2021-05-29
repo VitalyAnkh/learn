@@ -45,43 +45,50 @@ low-dimensional topology or topological domain theory.
 :PROPERTIES:
 :ID:       d611f15a-84e2-4eec-b326-547f0a5a98cb
 :END:
-Knot theory is the study of mathematical knots. Inspired by knots that
-found in everyday life, such as shoelaces and ropes, the mathematical knot is distinguished by the fact that the
-the ends are connected in such a way that it cannot be untied, the simplest knot being a ring ("unkot").
+*** Definition. Knot
+A *knot* is a smooth (or piecewise-linear) embedding of the circle \(S^{1}\) into \(\mathbb{R}^{3}\), or equivalently into the 3-sphere \(S^{3}\) (one can also consider knots in other 3-manifolds).
+
+The dimension of knot could be extended. That's to say, we define higher dimensional knots. n-dimensional knot is a smooth (or piecewise-linear) embedding of a n-dimensional closed manifold (usually an n-sphere) into the (n+2)-dimensional sphere \(\mathbb{S}^{n}\).
+
 
 [[attachment:_20210506_034957screenshot.png]]
 
-In mathematical language, a knot is an embedding of a circle in 3-dimensional Euclidean
-space, \(\mathbb{R^{3}}\) (in topology, a circle isn't bound to the classical geometric concept, but to all of its homeomorphisms). Two mathematical knots are equivalent if one can be transformed into the other via a deformation of \(\mathbb{R^{3}}\)  upon itself (known as an ambient isotopy); these transformations correspond to manipulations of a knotted string that do not involve cutting the string or passing the string through itself.
-
-Knots can be described in various ways. Given a method of description, however, there may be more than one description that represents the same knot. For example, a common method of describing a knot is a planar diagram called a knot diagram. Any given knot can be drawn in many different ways using a knot diagram. Therefore, a fundamental problem in knot theory is determining when two descriptions represent the same knot.A complete algorithmic solution to this problem exists, which has unknown complexity. In practice, knots are often distinguished by using a knot invariant, a "quantity" which is the same when computed from different descriptions of a knot. Important invariants include knot polynomials, knot groups, and hyperbolic invariants.
-
-The original motivation for the founders of knot theory was to create a table of knots and links, which are knots of several components entangled with each other. More than six billion knots and links have been tabulated since the beginnings of knot theory in the 19th century.
-
-To gain further insight, mathematicians have generalized the knot concept in several ways. Knots can be considered in other three-dimensional spaces and objects other than circles can be used; see knot (mathematics). Higher-dimensional knots are n-dimensional spheres in m-dimensional Euclidean space.
-** The Meaning of Researches on Knot Theory
 * Section 2. Propaedeutics
 A knot invariant is map from isotopy equivalence classes of knots to any kind of structure you could imagine. These are helpful because it is often much easier to check that the structures one maps to (numbers, groups, etc.) are different than it is to check that knots are different. To define a knot invariant, it suffices to define its value on knot diagrams and check that this value is preserved under the Reidemeister moves (possibly with the exception of the first Reidemeister move, in the case of an invariant of framed knots).
 ** Knot Diagram
 In this article, we assume \(m, n, p, q, l\) are positive integers, \(I=[0,1]\) is the unit interval, \(D\) is the square \(I^{2}\) or 2-dimensional disk.
-All Knot or link could be in many phases on \(\mathbb{R^{3}}\)
-A useful way to visualise and manipulate knots is to project the knot onto a plane—think of the knot casting a shadow on the wall. A small change in the direction of projection will ensure that it is one-to-one except at the double points, called crossings, where the "shadow" of the knot crosses itself once transversely (Rolfsen 1976). At each crossing, to be able to recreate the original knot, the over-strand must be distinguished from the under-strand. This is often done by creating a break in the strand going underneath. The resulting diagram is an immersed plane curve with the additional data of which strand is over and which is under at each crossing. (These diagrams are called knot diagrams when they represent a knot and link diagrams when they represent a link.) Analogously, knotted surfaces in 4-space can be related to immersed surfaces in 3-space.
 
-A reduced diagram is a knot diagram in which there are no reducible crossings (also nugatory or removable crossings), or in which all of the reducible crossings have been removed.
+A link diagram is, roughly speaking, the combinatorial object obtained by projecting a link in ‘general position’ to a plane. Reidemeister's theorem establishes that one does not lose any essential information by passing from a link to its diagram, and thus it is possible to study knot theory in a way which takes link diagrams as primary.
+
+*** Definition. Connected Knot Diagram and Link Diagram
+A connected link diagram is a connected (undirected) 4-valent plane graph \(G\) equipped with the following data for every vertex \(v\) of \(G\).
+1. A choiceof division of the four edges incident to \(v\) into two pairs.
+2. A cyclic ordering of the four edges of \(G\) incident to \(v\) so that the over-edges and under-edges alternate.
+
+*** Definitioin. Connected Link Diagram
+A *link diagram* is a plannar graph such that each connected component satisfies either 1. or 2. below:
+1. It's (up to homeomorphism) a circle, disjoint from the rest of the link diagram.
+2. It is a connected link diagram in the sense of the Definition above.
 ** Reidemeister Move :ATTACH:
 :PROPERTIES:
 :ID:       5ca31ce0-780d-45d1-9bcf-1456d535bf9c
 :END:
-In the mathematical area of knot theory, a Reidemeister move is any of three local moves on a link diagram. Kurt Reidemeister (1927) and, independently, James Waddell Alexander and Garland Baird Briggs (1926), demonstrated that two knot diagrams belonging to the same knot, up to planar isotopy, can be related by a sequence of the three Reidemeister moves.
-Each move operates on a small region of the diagram and is one of three types:
-1. Twist and untwist in either direction.
-2. Move one loop completely over another.
-3. Move a string completely over or under a crossing.
+In the mathematical area of knot theory, a Reidemeister move is any of three local moves on a link diagram. Kurt Reidemeister (1927) and, independently, James Waddell Alexander and Garland Baird Briggs (1926), showing two differrent  knot diagrams could represent the same knot (up to planar isotopy), can be related by a sequence of the three Reidemeister moves.
+*** Definition 2.1 Reidemeister move \(R1\) :ATTACH:
+The first type of Reidemeister move, adds or reduce a circle to the knot diagram of a knot, like this:
 
-[[attachment:_20210520_034843screenshot.png]]
+[[attachment:_20210529_165842screenshot.png]]
+*** Definiton 2.2 Reidemeister move \(R2\) :ATTACH:
+The second type of Reidemeister move, add or reduce a circle between two strand of line (locally) to a knot diagram, like this:
+
+[[attachment:_20210529_170248screenshot.png]]
+
+*** Definition 2.3 Reidemeister move \(R3\) :ATTACH:
+The third type of Reidemeister move, move a  line over a crossing, or under a crossing, like this:
+
+[[attachment:_20210529_170612screenshot.png]]
 
 No other part of the diagram is involved in the picture of a move, and a planar isotopy may distort the picture. The numbering for the types of moves corresponds to how many strands are involved, e.g. a type II move operates on two strands of the diagram.
-The three types of moves are called R1, R2, R3 move, respectively.
 One important context in which the Reidemeister moves appear is in defining knot invariants. By demonstrating a property of a knot diagram which is not changed when we apply any of the Reidemeister moves, an invariant is defined. Many important invariants can be defined in this way, including the Jones polynomial.
 ** Knot Invariants
 *** The Jones Polynomial, HOMFLY-PT polynomial and Alexander polynomial
@@ -288,13 +295,13 @@ Second, we must show we can not untie this knot with any other ways.
 With theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\) part, they are the only two ways to untie this knot. This completes this proof.
 
 * Section 6. Acknowledgements
-　After more than four months of hard work, I finally finished writing my thesis. From the beginning of receiving the thesis topic to the implementation of the system and then to the completion of the thesis article, each step was a new trial and challenge for me, and it was the biggest project I have completed independently during my time at university. During this time, I learned a lot and felt a lot. From knowing nothing, I started to study and experiment independently, checking relevant materials and books, making the vague concepts in my mind gradually clear, and making my very young work perfect step by step. Every time I understood a new concept and new theorem was the gain of my study, and every successful proof of a theorem would make me excited for a long time.
+　After more than four months of hard work, I finally finished writing my thesis. During this time, I learned a lot and felt a lot. From knowing nothing, I read books of Professor Jiang, and GTM series. I look up every concept from various source: wikipedia, The KnotBook, etc. Every time I understood a new concept and new theorem was the gain of my study, and every successful proof of a theorem would make me happy for a few days.
 
-　My thesis work is not very mature and has many shortcomings. But this experience of doing my dissertation has benefited me for life. I feel that doing a dissertation is something that you really have to put your heart and soul into, it is truly a process of learning and researching on your own, without learning there can be no potential for research, without your own research there will be no breakthrough, and then it will not be called a dissertation. I hope that this experience will inspire me to continue to progress in my future studies.
+  My thesis is not very mature. It only deal with a simple situation of a special kind of knot. But this experience of doing my dissertation has benefited me for life. I feel that doing a dissertation is something that you really have to put your heart and soul into, it is truly a process of learning and researching on your own, otherwise it will not be called a dissertation.
 
-  June, it's always sunny. In June, it's always the end of the song. In June, we refuse to be sentimental. The flowers give up their fragrance and we welcome the fruits. Graduation brings farewell, and we are on our way to glory. As I finish my thesis, I would like to express my deepest gratitude to my supervisor and my dear family who have helped me in the process of writing this thesis! I would like to thank my supervisor, Ms. Wan Liangxia. She has been a role model for me, a trusted mentor and friend, both as a person and in her studies. In spite of the heavy teaching and workload, he took the initiative to care about my study and research. From choosing a topic for my dissertation, writing the opening report, searching for information, to perfecting the structure, she gave me careful guidance so that I could successfully complete my dissertation. She also often supervised and motivated the lazy me to finish my characters on time. Thank you, Ms Wan!
+  June, it's always sunny. In June, it's always the end of the song. In June, we refuse to be sentimental. The flowers give up their fragrance and we welcome the fruits. Graduation brings farewell, and we are on our way to glory. As I finish my thesis, I want to express my deepest gratitude to my supervisor and my dear family! I would like to thank my supervisor, Ms. Wan. She has been a role model for me, a trusted mentor and friend, both as a person and in her studies. She cares about my study and research. From choosing a topic for my dissertation, writing the opening report, searching for information, to writing thesis, she gave me very useful guidance so that I could successfully complete my dissertation. She also often supervised and motivated the lazy me to finish my characters on time. Thank you, Ms Wan!
 
-  In addition, I would like to thank my family for their encouragement and support, which enabled me to devote myself to my studies and work and complete my studies successfully. Thanks to the Instant App, I had a fun group of online friends to keep me company while I was writing my dissertation. I used Emacs and org-mode to produce all my papers, and then used word to format them to the university's requirements. Thanks to the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
+  In addition, I would like to thank to the Jike App, I had a fun group of online friends to keep me company while I was writing the thesis. I would like to thank the Rust programming language and the Veloren game, which is a free voxel game and developed with the Rust programming language. It is so relaxing where staying at the game world. I used Emacs and org-mode to produce all my papers, and then used word to format them to the university's requirements. Thanks to the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
 
 bibliographystyle:apacite
 bibliography:library.bib
