@@ -176,18 +176,17 @@ The Kanenobu knot could be generalized by adding more parameters. After adding t
 
 By adding parameters further, we get \(K(p, q, m, n, l\):
 
-[[attachment:_20210523_140428screenshot.png]]
+[[attachment:_20210531_040613screenshot.png]]
 Which has all its crossing point be a crossing point family.
-*** Twist Knot :ATTACH:
-A twist knot is a knot formed by repeatedly twisting a closed loop and then joining the two ends. (That is, a twisted knot is any Whitehead double of an untwisted knot.) Twisted knots are an infinite family of knots and are considered to be the simplest type of knot after the loop knot.
+*** Alternating Link :ATTACH:
+If in the diagram of a link, the crossings are alternating to each other, which means if one line in one crossing point is above, and in every neighbor crossing point it's below, we say this link is an alternating link.
 
-[[attachment:_20210523_140639screenshot.png]]
+[[attachment:_20210531_033544screenshot.png]]
 
 * Section 3. Unknotting Number for Kanenobu Knot
 This section we will investagate the unknotting number for Kanenobu Knot.
-** Theorem 3.1 The unknotting number for a twist knot is 1.
-*Proof*. Obviously, Every twist knot is not the unknot.
-And after untie the two ends of the twisted knot, the knot becomes unknot. Thus the unknotting number is 1.
+** Theorem 3.1 Every alternating link is not an unknot.
+*Proof* We can't change any crossing for every crossing point is alternating. To change one crossing, we could impact Reidemester move R1 or R2 on the link. With the property of alternating, we could reduce any crossing point, thus it can't be an unknot.
 ** Theorem 3.1: the unknotting number of Kanenobu knot K(0,0) is 2. :ATTACH:
 :PROPERTIES:
 :ID:       423645b7-8eb0-455c-a99b-a98adccb41ce
@@ -239,10 +238,10 @@ If we changes 0 crossing point, this problem is trivial: the Kanenobu knot K(p, 
 If we changes only 1 crossing point:
 
 [[attachment:_20210523_154226screenshot.png]]
-1. if we change the crossing point 1, the part between is a twist and the whole knot is not an unknot.
+1. if we change the crossing point 1, the part between is alternating and the whole knot is not an unknot.
 2. if we change the crossing point 2, the knot will become:
 [[attachment:_20210524_020604screenshot.png]]
-And it is not an unknot because we can not untie the twist in the \(n\) part, for locally it is an twist knot.
+And it is not an unknot because we can not untie the twist in the \(n\) part, for locally it is alternating.
 
 3. If we change any crossing point other than 1, 2, the situation are similar to thing above.
 
@@ -270,10 +269,17 @@ braided surface \(S\) of degree n, let \(\beta_{S}\) be a geometric \(n\)-braide
 *** Theorem 5.1.2 A braided surface \(S\) is equivalent to an adequate one if and only if \({\rm deg} S = 2m\) for some \(m \in \mathbb{N}\) and the braid \([\beta_{S}]\) belongs to \(K_{2m}\).
 *Proof* . Let \(S\) be equivalent to an adequate braided surface \(S_{0}\), and let \(A_{0}\) be a surface of \(m\)-wrick type such that \(\partial S_{0} = \partial A_{0}\). Thus \({\rm deg} S = {\rm deg } S_{0} = 2m\) for some \(m \in \mathbb{N}\), and \([\beta_{S}]=[\beta_{S_{0}}]\). Let \(f:[0,1] -> \mathscr{W}_{m}\) be a map defined by \(f(t) = A_{0} \cap D_{1} \times (I \times {t})\). Then \(f \) is a loop in \(\mathscr{W}_{m}\)such that \(f(0) = f(1)\) is the standard m-wicket system. By the isomorphism, the element \([f] \in \mathscr{W}_{m}\) corresponds to the braid \([\beta_{f}] \in K_{2m}\). Since \(\partial S_{0} = \partial A_{0}\), we have \(\beta_{S_{0}} = \beta_{f}\). Thus, \(\beta_{S} \in K_{2m}\).
 
+The more generalized Kanenobu knot is like:
+
+[[attachment:_20210531_040459screenshot.png]]
+
+
 ** Theorem 5.1 The unknotting number for more generalized Kanenobu knot \(K(p, q, m, n, l)\) is:
 
-*** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \([\frac{m+l}{2}]\), where \([\frac{m+l}{2}]\) is the integer part of \(\frac{m+l}{2}\)
-*** When \(n>m\), the unknotting number for \(K(p, q, m, n, l)\) is \([\frac{n+l}{2}]\), where \([\frac{n+l}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
+*** When \(n>m\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{n+l}{2}]\), where \([\frac{n+l}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
+
+*** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{m+l}{2}]\), where \([\frac{m+l}{2}]\) is the integer part of \(\frac{m+l}{2}\)
+*** When \(q + n < m + l\) and \(q + n < n + l\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{q+n}{2}]\), where \([\frac{q+n}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
 :PROPERTIES:
 :ID:       af1751e5-e917-47eb-a214-7839f043ee6c
 :END:
@@ -290,6 +296,11 @@ When \(n>m\), after changing the crossing points in \(n\) and \(l\) part(do this
 [[attachment:_20210524_062635screenshot.png]]
 
 We can untie this knot by reducing the \(p\) part first, then \(l\) part.
+
+When \(q + n < m + l\) and \(q + n < n + l\), we would untie the \(q\) and \(n\) part with \(2[\frac{q+n}{2}]\) changes, and get this:
+
+[[attachment:_20210531_042805screenshot.png]]
+Then we could untie the whole knot.
 
 Second, we must show we can not untie this knot with any other ways.
 With theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\) part, they are the only two ways to untie this knot. This completes this proof.
