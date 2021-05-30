@@ -1,4 +1,6 @@
 * Inbox
+** [ ] 类似bevy_egui ，可否写一个bevy_tui ，集成bevy 和tui-rs ，使bevy 可以方便地开发控制台应用
+** [ ] 如何使用doom emacs 配置lean 4 mode
 ** [ ] 解决vitalyr.com无法现实图片的问题
 ** [ ] 配置Emacs的dap (debug adapter protocol)
 ** [ ] 配置org-re-reveal或者org-reveal
