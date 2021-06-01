@@ -1,7 +1,6 @@
 #+title: 关于一些链环的投影图的解纽数的研究
 #+author: 郑权
 #+BIBILOGRAPHY: library.bib
-#+LaTeX_class: apa6
 #+LaTeX_CLASS_OPTIONS: [a4paper]
 #+LaTeX_HEADER: \usepackage{breakcites}
 #+LaTeX_HEADER: \usepackage{mathscr}
@@ -156,7 +155,7 @@ Crossing changes will usually alter the isotopy type of the diagram.
 *Proof*. After changing a crossing of \(D\), we could reduce at lease one crossing with a R1 move.
 *Definition*. The unknotting number, \(u(K)\), is the smallest number of crossing changes required to obtain the unknot from some diagram of the knot \(K\).
 
-** Kanenobu Knot, Generalized Kanenobu Knot and twisted knots :ATTACH:
+** Kanenobu Knot, Generalized Kanenobu Knot and Alternating Link :ATTACH:
 :PROPERTIES:
 :ID:       575a3ce3-c2d4-4d15-874f-4054cf3c0acc
 :END:
@@ -209,21 +208,22 @@ First, we show that after changing the crossing point 1 and 8, this Kanenobu kno
 4. put a R2 move to the part between crossing point 3 and 4, and another R2 move to the part between crossing point 5 and 6, we get the unknot.
 
 Second, we show that for any one change to the crossing point, the Kanenobu knot won't be transformed to the unknot.
-1. If we change the crossing point 1, we get an twisted knot, and twisted knot is not an unknot:
+1. If we change the crossing point 1, we get an alternating knot, and alternating knot is not an unknot:
 
-2. If we change the crossing point 2, we get an twisted knot, and twisted knot is not an unknot:
-
-3. If we change the crossing point 3, we get an twisted knot, and twisted knot is not an unknot:
-4. If we change the crossing point 4, we get an twisted knot, and twisted knot is not an unknot:
-5. If we change the crossing point 5, we get an twisted knot, and twisted knot is not an unknot:
+2. If we change the crossing point 2, we get an alternating knot, and alternating knot is not an unknot:
+...
 
 All other circumstances could be applied to the same procedure. Thus the knot can't be untied by changing one crossing. Then we proved the unknotting number for Kanenobu knot K(0, 0) is 2.
 * Section 4. Unknotting Number for Generalized Kanenobu Knot
-** Theorem 4.1 The unknotting number for Generalized Kanenobu knot K(p, q) is 2. :ATTACH:
+** Lemma 4.1 The Generalized Kanenobu knot is not an unknot.
+*Proof* From Theorem 5 in [9], we have assertion about the Khovanov homology for generalized Kanenobu knot:
+\(Kh(K_{\beta}(p,q)) \cong K_{beta}(p+1, q-1)\) ,
+then the genalized Kanenobu knot has different Khovanov homology with unknot, which mease it is not an unknot.
+** Theorem 4.2 The unknotting number for Generalized Kanenobu knot K(p, q) is 2. :ATTACH:
+[[attachment:_20210524_050205screenshot.png]]
 :PROPERTIES:
 :ID:       9ec74676-f57c-4ea3-925f-a35960fc4e77
 :END:
-[[attachment:_20210524_050205screenshot.png]]
 
 *Proof*.
 Label the 12 crossing points (excluding the p, q, n crossing points) with number 1, 2, ..., 12.
@@ -269,7 +269,7 @@ braided surface \(S\) of degree n, let \(\beta_{S}\) be a geometric \(n\)-braide
 *** Theorem 5.1.2 A braided surface \(S\) is equivalent to an adequate one if and only if \({\rm deg} S = 2m\) for some \(m \in \mathbb{N}\) and the braid \([\beta_{S}]\) belongs to \(K_{2m}\).
 *Proof* . Let \(S\) be equivalent to an adequate braided surface \(S_{0}\), and let \(A_{0}\) be a surface of \(m\)-wrick type such that \(\partial S_{0} = \partial A_{0}\). Thus \({\rm deg} S = {\rm deg } S_{0} = 2m\) for some \(m \in \mathbb{N}\), and \([\beta_{S}]=[\beta_{S_{0}}]\). Let \(f:[0,1] -> \mathscr{W}_{m}\) be a map defined by \(f(t) = A_{0} \cap D_{1} \times (I \times {t})\). Then \(f \) is a loop in \(\mathscr{W}_{m}\)such that \(f(0) = f(1)\) is the standard m-wicket system. By the isomorphism, the element \([f] \in \mathscr{W}_{m}\) corresponds to the braid \([\beta_{f}] \in K_{2m}\). Since \(\partial S_{0} = \partial A_{0}\), we have \(\beta_{S_{0}} = \beta_{f}\). Thus, \(\beta_{S} \in K_{2m}\).
 
-The more generalized Kanenobu knot is like:
+The more generalized Kanenobu knot \(K(p, q, l, m, n\)is like:
 
 [[attachment:_20210531_040459screenshot.png]]
 
@@ -312,7 +312,7 @@ With theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\)
 
   June, it's always sunny. In June, it's always the end of the song. In June, we refuse to be sentimental. The flowers give up their fragrance and we welcome the fruits. Graduation brings farewell, and we are on our way to glory. As I finish my thesis, I want to express my deepest gratitude to my supervisor and my dear family! I would like to thank my supervisor, Ms. Wan. She has been a role model for me, a trusted mentor and friend, both as a person and in her studies. She cares about my study and research. From choosing a topic for my dissertation, writing the opening report, searching for information, to writing thesis, she gave me  useful guidance so that I could successfully complete my dissertation. She also often supervised and motivated the lazy me to finish my characters on time. Thank you, Ms Wan!
 
-  In addition, I would like to thank to the Jike App, I had a fun group of online friends to keep me company while I was writing the thesis. I would like to thank the Rust programming language which is elegant and powerful to write my toy projects. I would like to thank the Veloren game, which is a free voxel game and is developed in the Rust programming language. It is so relaxing where staying at the game world. I used Emacs and org-mode to produce all my papers, and then used Microsoft Word to format them according to the university's requirements. Thanks to the creator of GNU Emacs, Richard M. Stallman, the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
+  In addition, I would like to thank to the Jike App, I had a group of online interesting friends to keep me company while I was writing the thesis. I would like to thank the Rust programming language which is elegant and powerful to write my toy projects. I would like to thank the Veloren game, which is a free voxel game and is developed in the Rust programming language. It is so relaxing where staying at the game world. I used Emacs and org-mode to produce all my papers, and then used Microsoft Word to format them according to the university's requirements. Thanks to the creator of GNU Emacs, Richard M. Stallman, the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
 
 bibliographystyle:apacite
 bibliography:library.bib
@@ -325,3 +325,6 @@ bibliography:library.bib
 ** [6] Rolfen, Knots and Links[M], Publish or Perish, 1976
 ** [7] W.B. Raymond Lickorish, Introduction to Knot Theory[M], Springer, 1997
 ** [8] C.C. Adams, The Knot Book: An Elementary Introduction to the Mathematical Theory of Knots[M], W.H.Freeman and Company, New York, 1994
+** [9] Kanenobu, T., Infinitely Many Knots with the Same Polynomial Invariant, Proceedings of the American Mathematical Society, 97(1), 158–162 (1986).  http://dx.doi.org/10.2307/2046099
+
+cite:kanenobuInfinitelyManyKnots1986
