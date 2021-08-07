@@ -1,6 +1,5 @@
 #+title: Misc
 
-
 * dictionary should be roam-like
 ((double link)) is more human mental friendly.
 
@@ -18,4 +17,4 @@ fn main() {
 #+RESULTS:
 : Hallo org-mode
 
-But whatever, **you** are still my _son_.
+But whatever, *you* are still my _son_.

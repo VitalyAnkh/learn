@@ -1,0 +1,10 @@
+* Beginning Linux Programming
+** Chapter 1
+*** 创建静态库并链接使用 :ATTACH:
+:PROPERTIES:
+:ID:       4a45f0c0-36a9-4867-8fb4-cf3bb42b98e7
+:END:
+
+
+[[attachment:_20210727_004624screenshot.png]]
+From the image, we could see that when ~gcc -c~ links a object file and a archive (static library file), the generated executable file will only contain the object files (members of the archive) which are needed by the object file. Look ~Notebook/blp/ch1~ for more information.

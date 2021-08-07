@@ -1,2 +1,16 @@
+aList = ["cat", "dog", "mouse"]
 
-aList = ["cat","dog","mouse"]
+f :: Integer -> Integer
+f x = 3 * x + 1
+
+convert :: Read a => String -> [a]
+convert = map read . words
+
+main = do
+  line <- getLine
+  let [n] = convert line :: [Integer] in print (f n)
+
+primes = filterPrime [2 ..]
+  where
+    filterPrime (p : xs) =
+      p : filterPrime [x | x <- xs, x `mod` p /= 0]

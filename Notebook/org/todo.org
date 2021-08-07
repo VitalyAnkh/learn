@@ -1,17 +1,35 @@
 * Inbox
+** [ ] 解决org粘贴剪切板图片后产生链接的问题：
+1. 为什么有链接？
+2. 能否避免？
+** [ ] 给paru提pr，反向排列搜索结果
+** [ ] 学习tree-sitter
+** [ ] 配置arch-ansible
+** [ ] 每两个月给自己的桌面各种工作界面截屏存档
+** [ ] 解决yofi字体重叠（font kerning）的问题
+** [ ] 解决fcitx5在wayland程序下卡顿的问题（相比x11）
+** [ ] 设置org-shiftright (C-S-l) 切换的org TODO keyword，去掉无用的
+** [ ] 解决emacs的org-roam包开启org-roam-back-link的buffer时显示在窗口下方的问题
+我想要它显示在窗口右侧
+可能的解决方案：配置shackle?
 ** [ ] 类似bevy_egui ，可否写一个bevy_tui ，集成bevy 和tui-rs ，使bevy 可以方便地开发控制台应用
 ** [ ] 如何使用doom emacs 配置lean 4 mode
-** [ ] 解决vitalyr.com无法现实图片的问题
+** [ ] 解决vitalyr.com无法显示图片的问题
 ** [ ] 配置Emacs的dap (debug adapter protocol)
 ** [ ] 配置org-re-reveal或者org-reveal
-1. 可以生成slide
-2. 可以放到网站上，（与hugo配合？）
-** [ ] 解决emacs编译失败的问题
+*** [X] 可以生成slide
+CLOSED: [2021-06-25 五 10:36]
+编译成single file，可以放到U盘里，很方便
+*** [ ] 可以放到网站上，（与hugo配合？）
+** [X] 解决emacs编译失败的问题
+把编译器从clang换到gcc就好了
+CLOSED: [2021-06-28 一 15:40]
 ** [X] 解决系统的链接器/usr/bin/ld出问题导致gcc和clang编译cpp文件失败，并且无法编译emacs的问题
 CLOSED: [2021-04-16 五 23:30]
 并不是系统/usr/bin/ld的问题。编译cpp文件应该用g++或者clang++，而不是gcc或者clang
-至于emacs native-comp编译失败，是另外一个问题
+至于emacs native-comp编译失败，是GNU Emacs的开发者都使用gcc编译器，gcc跟clang有一些差异导致编译失败
 ** [ ] 看《电锯人》漫画
+** [ ] 看《异兽魔都》
 ** [ ] 用doom emacs的discourse论坛上的方法，找出使emacs启动慢的配置，修改，加速启动
 ** [ ] 学习rainbow-mode的代码
 ** [X] 写Emacs包：可以根据RGB值inline显示颜色
@@ -29,7 +47,8 @@ CLOSED: [2021-04-02 五 18:47]
 CLOSED: [2021-04-02 五 18:47]
 解决了。
 还是多运行几次pqd sync -u和pqd build -r。doom doctor也很有用。
-** [ ] 设置 org-mode 中关掉 solaire-mode
+** [X] 设置 org-mode 中关掉 solaire-mode
+CLOSED: [2021-06-25 五 10:40]
 ** [ ] alias "git st" to "git status" using ansible
 ** [X] 配置 smart-input-source （或者其他类似工具？）
 CLOSED: [2021-04-02 五 19:09]
@@ -38,16 +57,40 @@ CLOSED: [2021-04-02 五 19:09]
 CLOSED: [2021-04-18 日 16:42]
 要添加tracker网站。
 有公网IP就更好了。
-** [ ] 配置 fcitx5 的俄语输入
-** [ ] 练习日语输入
-** [ ] 练习德语输入
-** [ ] 配置系统的日语输入
-** [ ] 配置系统的德语输入
-** [ ] 配置 wakatime
+** [X] 配置 fcitx5 的俄语输入
+CLOSED: [2021-06-28 一 15:38]
+** [X] 练习日语输入
+CLOSED: [2021-06-28 一 15:38]
+日语输入用romeji模式的花话跟汉语拼音差不多，不需要怎么练。还不如练习俄语输入。
+** [X] 练习德语输入
+CLOSED: [2021-06-28 一 15:38]
+** [X] 在fcitx5上配置日语输入
+CLOSED: [2021-06-28 一 15:39]
+** [X] 在fcitx5上配置德语输入
+CLOSED: [2021-06-28 一 15:39]
+** [X] 配置 wakatime
+CLOSED: [2021-06-25 五 12:32]
+*** [X] vscode wakatime
+CLOSED: [2021-06-25 五 11:09]
+Done! Install wakatime plugin.
+*** [X] emacs wakatime
+CLOSED: [2021-06-25 五 11:10]
+Done! Install ~wakatime-mode~, and edit ~config.org~.
+*** [X] intellij-idea wakatime
+CLOSED: [2021-06-25 五 11:13]
+Done! Install plugin following wakatime's documents.
+*** [X] pycharm-edu wakatime
+CLOSED: [2021-06-25 五 11:13]
+Done! Install plugin following wakatime's documents.
+*** [X] fish wakatime
+Done! Add some code to ~.config/fish/functionis/fish_prompt.fish~ following wakatime's documents.
+CLOSED: [2021-06-25 五 11:07]
+*** [X] blender wakatime
+CLOSED: [2021-06-25 五 11:09]
+Done! Install wakatime plugin.
 ** [ ] 设置 auto refill mode
 ** [ ] learn how to use Switcher ( a gnome plugin )
-** [ ] 
-depot_tools is installed in =/opt/depot_tools/.
+** [ ] depot_tools is installed in =/opt/depot_tools/.
 This directory is not in $PATH by default, so make sure to export PATH=/opt/depot_tools:$PATH before using it.
 Also, this directory has root permissions, so either use it as root, or if you want to use it as your currect user:
 
@@ -123,7 +166,9 @@ sway --my-next-gpu-wont-be-nvidia
 Running darling-setup=ld-so
 /tmp/alpm_sxAdMv/.INSTALL:行 6: /usr/bin/darling-setup-ld-so: 没有那个文件或目录
 错误：命令未能被正确执行
-** [ ] 为什么 emacs-pgtk-native-comp 中使用 pdf-tools 渲染 pdf 文件，这么模糊
+** [X] 为什么 emacs-pgtk-native-comp 中使用 pdf-tools 渲染 pdf 文件，这么模糊
+CLOSED: [2021-06-28 一 15:48]
+pdf-tools新的维护者和doom emacs作者联手解决了这个问题
 ** [ ] 写一个浏览器插件，给 nLab wikipedia 这样的 wiki 网站添加一个 backlink 和 roam 式的链接图
 ** [ ] 为什么 nvidia 这个内核模块没开？
 ==> dkms remove --no-depmod -m nvidia -v 455.23.04 -k 5.8.10-arch1-1
@@ -164,7 +209,6 @@ update in 2020-12: 已设置。其实这个任务下达之前就已经设置了
 玩法：扮演牧羊犬，把羊群（牛群）赶进畜栏
 核心算法在于羊群（牛群）的模拟，可以参考 bevy 游戏引擎的一个 demo ，实现了鸟群的模拟
 ** [ ] 更新 emacs-native-git-enhanced 和 doom emacs
-SCHEDULED: <2020-08-23 日 +1w>
 ** [ ] 解决 android studio 中无法进行 flutter 的问题，主要原因在于无法正常使用代理，于是无法下载 android sdk
 ** [X] 设置全局的 cargo 编译 target
 update in 2020-12: 设置了，但是妨碍开发，多个项目同时进行时，编译缓存总是被互相覆盖，总要重新编译，放弃设置
@@ -201,7 +245,7 @@ z z
 1. 使用 pacman -Q | rg git 找到所有 git 软件包，使用一些方法分割出软件包名字
 2. 使用 proxychains -q rua i 开逐个更新
 ** [ ] Rust 的 drop-flag 是什么
-** [ ] 学习 condvar ，条件变量是什么
+** [ ] 学习 condvar ，条件变量
 ** [ ] 写类似 alfred 的启动器，使用 Rust iced 写
 ** [ ] 验证《Rust 编程之道》书上介绍的字节对齐的例子时，解释是错误的
 ** [ ] 通过预编译的方式，使 zCore 支持 rustc（在 zircon 中而不是 linux 中）：
@@ -533,8 +577,9 @@ C-h i
 使用 org capture ，选择 journal ，完事。默认链接当前文档是一个特性，还挺好用，配合 org-roam 很棒。
 ** TODO 要学习使用 org capture
 ** TODO 学习使用 org template
-** DONE 学习 org-mode 的用法：这个<SPC + X> 的 org capture 的功能会默认链接当前打开的文档的嘛？
+** TODO 学习 org-mode 的用法：这个<SPC + X> 的 org capture 的功能会默认链接当前打开的文档的嘛？
 是的，会默认链接当前文档。
-** WAIT to learn and practise PaperWM
+** DONE to learn and practise PaperWM
+CLOSED: [2021-06-28 一 15:49]
 不用了，太过辣鸡。等以后有闲心再来试试吧。
 最好到学习了 gnome 插件开发，可以修改 PaperWM 源代码后。

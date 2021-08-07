@@ -1,4 +1,5 @@
 #+title: tokei
+* tokei
 #+BEGIN_SRC rust
 cargo install tokei
 #+END_SRC

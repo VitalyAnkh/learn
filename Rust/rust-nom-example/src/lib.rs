@@ -1,11 +1,12 @@
 use nom::{
     branch::alt,
-    bytes::complete::{tag, tag_no_case},
-    character::complete::{alphanumeric1, alphanumerichyphen1},
+    bytes::complete::{tag, tag_no_case, take},
+    character::complete::{alpha1, alphanumeric1},
     combinator::opt,
     error::{context, ErrorKind, VerboseError, VerboseErrorKind},
-    sequence::{separated_pair, terminated},
-    Err as NomErr, IResult,
+    multi::{many1, many_m_n},
+    sequence::{separated_pair, terminated, tuple},
+    AsChar, Err as NomErr, IResult, InputTakeAtPosition,
 };
 
 #[cfg(test)]
@@ -78,7 +79,7 @@ fn host(input: &str) -> Res<&str, Host> {
     context(
         "host",
         alt((
-            tuple((many1(terminated(alphanumeric1hyphen1, tag("."))), alpha1)),
+            tuple((many1(terminated(alphanumerichyphen1, tag("."))), alpha1)),
             tuple((many_m_n(1, 1, alphanumerichyphen1), take(0 as usize))),
         )),
     )(input)
@@ -88,4 +89,17 @@ fn host(input: &str) -> Res<&str, Host> {
         }
         (next_input, Host::HOST(res.0.join(".")))
     })
+}
+fn alphanumerichyphen1<T>(i: T) -> Res<T, T>
+where
+    T: InputTakeAtPosition,
+    <T as InputTakeAtPosition>::Item: AsChar,
+{
+    i.split_at_position1_complete(
+        |item| {
+            let char_item = item.as_char();
+            !(char_item == '-') && !char_item.is_alphanum()
+        },
+        ErrorKind::AlphaNumeric,
+    )
 }

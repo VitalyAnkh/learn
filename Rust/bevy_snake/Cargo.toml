@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 bevy = {version="0.5",features=["wayland"]}
+
 rand = "*"
 
 [features]

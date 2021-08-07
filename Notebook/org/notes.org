@@ -1,4 +1,7 @@
 * Inbox
+** [2021-07-10 六]
+discord使用代理：http_proxy=socks5://127.0.0.1:1080 https_proxy=socks5://127.0.0.1:1080 discord --proxy-server="socks5://127.0.0.1:1080"
+
 ** [2021-05-16 日]
 *** 那些年我们一起追过的Rust社区八卦
 我2017年开始关注Rust，关于Rust没学过多少，却听了四年的社区八卦，经历了好多

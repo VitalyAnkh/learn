@@ -1,5 +1,8 @@
 #+title: 让人动心的快捷键
 * Emacs 快捷键
+:PROPERTIES:
+:ID:       2ce7f768-bbbd-4a1e-ac12-822b7488e706
+:END:
 | 快捷键 | 功能                | 备注                     |   |   |
 |--------+---------------------+--------------------------+---+---|
 | C-[    | 模拟了 vim 中的 ESC | 其实是[[file:20200720003955-escape_的ansi_code.org][ESCAPE 的ANSI code]] |   |   |

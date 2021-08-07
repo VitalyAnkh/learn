@@ -1,0 +1,2 @@
+* README for Beginning Linux Programming
+These are the notes I made when reading the book ~Beginning Linux Programming~.
