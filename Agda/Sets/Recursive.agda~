@@ -1,6 +1,0 @@
-module Sets.Recursive where
-open import Sets.Enumerated using (Bool; true; false)
-
-data ℕ : Set where
-  zero : ℕ
-  suc : ℕ → ℕ

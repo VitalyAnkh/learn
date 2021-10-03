@@ -8,12 +8,47 @@ import static java.util.Arrays.asList;
 
 class Typecheck {
     public static String tc(Exp p) throws TCException {
-        if (p instanceof IntLiteral){
+        if (p instanceof IntLiteral) {
             return "Int";
+        } else if (p instanceof Variable) {
+            return "Int";
+        } else if (p instanceof Assign) {
+            if (!tc(((Assign) p).e).equals("Int")) {
+                throw new TCException("the type of the right expression of the assignment is not Int!");
+            } else {
+                return "Unit";
+            }
+        } else if (p instanceof Binexp) {
+            if (!tc(((Binexp) p).l).equals("Int")) {
+                throw new TCException("The left expression of Binexp is not an Int!");
+            } else if (!tc(((Binexp) p).r).equals("Int")) {
+                throw new TCException("The right expression of Binexp is not an Int!");
+            } else return "Int";
+        } else if (p instanceof Block) {
+            return tc((((Block) p)._expl).get(((Block) p)._expl.size() - 1));
+        } else if (p instanceof If) {
+            If p_temp = ((If) p);
+            if (!tc(p_temp.l).equals("Int") || !tc(p_temp.r).equals("Int")) {
+                throw new TCException("The type of variables in Comp is not Int!");
+            } else if (tc(p_temp.thenBody) != tc(p_temp.elseBody)) {
+                throw new TCException("The types of the two branches does not match!");
+            } else return tc(p_temp.thenBody);
+        } else if (p instanceof RepeatUntil) {
+            RepeatUntil p_temp = (RepeatUntil) p;
+            if (!tc(p_temp.l).equals("Int") || !tc(p_temp.r).equals("Int")) {
+                throw new TCException("The type of variables in Comp is not Int!");
+            } else if (!tc(p_temp.body).equals("Unit")) {
+                throw new TCException("The type of body in RepeatUntil is not Unit!");
+            } else return "Unit";
+        } else if (p instanceof While) {
+            While p_temp = (While) p;
+            if (!tc(p_temp.l).equals("Int") || !tc(p_temp.r).equals("Int")) {
+                throw new TCException("The type of variables in Comp is not Int!");
+            } else if (!tc(p_temp.body).equals("Unit")) {
+                throw new TCException("The type of body in RepeatUntil is not Unit!");
+            } else return "Unit";
         }
-        else if(p instanceof Equals ){
-            if p
-        }
+        else return "Bool";
     }
 }
 

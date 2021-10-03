@@ -3,7 +3,7 @@
 #+latex_header: \usepackage{unicode-math}
 * Xah Lee
 ** Subsection
-Hello *there* this is /Emacs/ _org-mode_ --No markdown!--.
+Hello *there* this is /Emacs/ _org-mode_ *No markdown!*.
 
 #+begin_src rust
 fn main() {
@@ -38,10 +38,10 @@ int main(){
 
 Theorem 15.1 If \(\mathscr{C}\\}\) is a basis for the topology of \(X\) and
 
-Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}}\). 若\(f(1)=1\)，且方程\(f(x)=1\)在区间\((0,1)\) 内
+Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}} - 我\). 若\(f(1)=1\)，且方程\(f(x)=12\)在区间\((0,1)\) 内
 有实根，求实数\(b\)的取值范围.
 
-\(f(b)=\sum_{1}^{\infty}\)
+\(f(b)=\sum_{i=1}^{\infty}\frac{1}{i_{雪}}\)
 
 \(\sum_{5}^{6} \)
 \(f(x)-g(x)\)

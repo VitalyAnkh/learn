@@ -1,3 +1,0 @@
-#lang racket
-(require "Play.rkt")
-(rainbow (square 5))

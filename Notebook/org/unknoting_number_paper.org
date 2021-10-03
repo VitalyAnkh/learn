@@ -9,6 +9,8 @@
 #+LaTeX_HEADER: \let\itemize\compactitem
 #+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \let\enumerate\compactenum
+#+LaTeX_HEADER: \usepackage{fontspec}
+#+LaTeX_HEADER: \setmainfont{Noto Serif CJK SC}
 
 #+BEGIN_ABSTRACT
 *Abstract*
