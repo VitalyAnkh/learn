@@ -47,16 +47,11 @@
 #+attr_html: :width 50% :height 50%
 [[attachment:_20210411_211308screenshot.png]]
 
-
 #+reveal: split
 ** 纽结理论的中心问题是对纽结进行分类（up to homeomorphism)
-:PROPERTIES:
-:ID:       cf4784d6-58d1-470f-b28e-8cda4a59f4c6
-:END:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
-[[attachment:_20210411_205917screenshot.png]]
-
+[[https://gitee.com/Vitaly/img/raw/master/images/E_86xTOVgA0jsag.jpeg]]
 #+reveal: split
 ** 如何分类？使用各种纽结不变量
 *** 交叉点数
@@ -78,12 +73,10 @@
 * 研究内容
 ** 纽结或链环的解纽数（unknotting number)
 *** 把一个链环\(K\)变换成平凡链环时所改变的交叉点的最小数，一般记作\(u(K)\)
-:PROPERTIES:
-:ID:       72d84080-51b9-4c1c-824b-8a0910c6e6a6
-:END:
-
 #+reveal: split
-[[attachment:_20210411_213150screenshot.png]]
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+[[https://gitee.com/Vitaly/img/raw/master/images/FA1TcsSVcAQZ2Bj.jpeg]]
 
 上图中，左手三叶结的解纽数是1,8字结的解纽数是2，Hopf链环的解纽数是1.
 #+reveal: split
@@ -95,23 +88,24 @@
 如果链环的“线”在一个交叉点在下，而在任何相邻的交叉点都在上，或者反过来，那就称它为交错链环（alternating link）。
 #+reveal: split
 下面左手三叶结是一个交错纽结：
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
 [[attachment:_20210605_110121screenshot.png]]
 
 #+reveal: split
 例如下面这个链环不是交错纽结：
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
 [[attachment:_20210605_083014screenshot.png]]
 #+reveal: split
 论文的结果依赖于交错链环是非平凡的这一性质
 #+reveal: split
 ** Kanenobu纽结
-:PROPERTIES:
-:ID:       29e7c797-3d58-4399-8938-08aed6aec0ec
-:END:
 由日本数学家Kanenobu在1986年在[9]中提出的一族具有相同琼斯多项式的纽结
-
-[[attachment:_20210605_110029screenshot.png]]
-
+#+reveal: split
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+[[https://gitee.com/Vitaly/img/raw/master/anime.jpg]]
 
 * 国内外研究现状
 ** 1991年S.Fukuhara、Y. Matsumoto、O. Saeki 给出了一些类型torus纽结的解纽数的证明 [1]
@@ -131,7 +125,7 @@
 :ID:       cbef0049-b628-4f6d-8671-a3b10a2d8ce7
 :END:
 #+attr_html: :width 50% :height 50%
-
+#+attr_org: :width 50% :height 50%
 [[attachment:_20210625_084436screenshot.png]]
 #+reveal: split
 ** 求出了推广的Kanenobu纽结\(K(p, q, n)\)的解纽数是2，与\(p, q, n\)无关: :my_org_tag:
@@ -141,9 +135,6 @@ The Khovanov homology for generalized Kanenobu knot:
 *** 然后说明改变2号和9号交叉点可以可以使之成为平凡纽结
 #+reveal: split
 
-
-
-#+reveal: split
 
 ** 在进一步推广Kanenobu纽结\(K(p, q, m, n, l)\)非平凡的前提下，得到它的解纽数
 :PROPERTIES:
@@ -161,6 +152,7 @@ The Khovanov homology for generalized Kanenobu knot:
 #+reveal: split
 *** When \(n>m\), after changing the crossing points in \(n\) and \(l\) part(do this by reducing \([\frac{n+l}{2}]\) crossing numbers), we get the knot like:
 #+attr_html: :width 50% :height 50%
+#+attr_org: :width 50% :height 50%
 [[attachment:_20210605_071532screenshot.png]]
 
 #+reveal: split
@@ -186,7 +178,6 @@ x ^{2} + y^{2} = z^{2}
 1 & 0
 \end{table}
 
-\(f(x)\)
 * 参考资料
 ** [1] S.Fukuhara, Y.Matsumoto, O.Saeki, An estimate for the unknotting numbers of torus knots[J], Topology and its Applications, 1991, 38(3): 293-299
 ** [2] 姜伯驹，绳圈的数学，湖南教育出版社[M],1991

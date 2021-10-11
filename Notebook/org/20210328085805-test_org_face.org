@@ -23,6 +23,7 @@ print("Hello!")
 : None
 
 我爱你。
+[[https://gitee.com/Vitaly/img/raw/master/anime.jpg]]
 
 #+begin_src cpp
 #include<cstdio>
@@ -36,23 +37,28 @@ int main(){
 
 \(D = {B \times C E \ | \ B  \in \mathscr{B} \ and \ C \in \ \mathscr{C} }\)
 
+[[https://gitee.com/Vitaly/img/raw/master/images/habitica.png]]
+
 Theorem 15.1 If \(\mathscr{C}\\}\) is a basis for the topology of \(X\) and
 
 Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}} - 我\). 若\(f(1)=1\)，且方程\(f(x)=12\)在区间\((0,1)\) 内
 有实根，求实数\(b\)的取值范围.
 
-\(f(b)=\sum_{i=1}^{\infty}\frac{1}{i_{雪}}\)
+\(f(b)=\sum_{i=1}^{\infty}\frac{1}{i_{i}}\)
 
 \(\sum_{5}^{6} \)
-\(f(x)-g(x)\)
+\(f(x)-g(x)=\sum_{1}^{\infty}\)
 \(5^2\)
 
-\(\mathbb{R}\)
-\(\langle \rangle\)
+\(\mathbb{W}\)
+\(\langle a\rangle\)
 \(\bm{fdsa}\)
-\(\rm G\)
-\(f^{-1}\)
+\(\rm GM\)
+\(f^{-1}=g(x)\)
+\(f(x)\)
+\(f(x)-g(x)\)
 
+\(f(x)g(x)\)  is good to use.
 This cpp code is bad. Aliasing is hard. Why?
 #+begin_src C++ :includes iostream string vector
   std::vector<std::string> v;

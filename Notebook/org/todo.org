@@ -1,10 +1,24 @@
 * Inbox
-** [ ] 解决博客无法插入图片的问题
+** [ ] 解决emacs-client无法启动的问题
+** [ ] 把ElegantLaTeX项目的其他LaTeX模板配置一下，包括legantNote，ElegantBook
+配置方法类似ElegantPaper，在 ~config.org~ 里搜索elegantpaper
+** [ ] 如何在org文件里插入images from URL，export to LaTeX or pdf 时链接转为图片
+
+** [ ] 让org-mode中的\(\LaTeX\)支持Unicode
+具体来说，让下标可以用汉字
+** [ ] 开发iPad app，使iPad上的zotero笔记与电脑上的zotero和Emacs笔记同步
+** [ ] fork 并扩展org-noter，配合Zotero for iOS，以此替代MarginNote
+** [ ] 解决设置Emacs全局image的attribute
+** [X] 解决博客无法插入图片的问题
+CLOSED: [2021-10-10 日 00:51]
+解决了，先把图片上传到gitee图床，然后在org文章里贴图片的链接
 ** [ ] 写盘点Linux上开源免费好玩的游戏的文章
 ** [ ] 解决org粘贴剪切板图片后产生链接的问题：
 1. 为什么有链接？
 2. 能否避免？
-** [ ] 给paru提pr，反向排列搜索结果
+** [X] 给paru提pr，反向排列搜索结果
+CLOSED: [2021-10-10 日 00:52]
+paru有这个功能
 ** [ ] 学习tree-sitter
 ** [ ] 配置arch-ansible
 ** [ ] 每两个月给自己的桌面各种工作界面截屏存档
@@ -164,6 +178,7 @@ sway --my-next-gpu-wont-be-nvidia
 应注意的文件：/etc/gdm/* , /etc/mkinitramfs* , /etc/modprobe.d/*
 2021年4月18日：
 放弃，等到nvidia对wayland支持更好时再看
+Update in 2021.10.09: 现在nvidia对Wayland支持不错了，而且还在持续改进中
 ** [ ] resolve this:
 Running darling-setup=ld-so
 /tmp/alpm_sxAdMv/.INSTALL:行 6: /usr/bin/darling-setup-ld-so: 没有那个文件或目录
@@ -206,7 +221,8 @@ You may override by specifying --force.
 update in 2020-12: 已设置。其实这个任务下达之前就已经设置了
 ** [ ] 写替代 toby 的用于书签/标签页管理的浏览器插件
 ** [ ] 使用 ansible 编写自动化任务：拉取~/projects/contribute 目录下的所有 git 仓库
-** [ ] 解决密钥导入失败的问题
+** [X] 解决密钥导入失败的问题
+CLOSED: [2021-10-10 日 00:46]
 ** [ ] 写一个类似鸟群模拟的游戏：牧羊犬模拟器
 玩法：扮演牧羊犬，把羊群（牛群）赶进畜栏
 核心算法在于羊群（牛群）的模拟，可以参考 bevy 游戏引擎的一个 demo ，实现了鸟群的模拟

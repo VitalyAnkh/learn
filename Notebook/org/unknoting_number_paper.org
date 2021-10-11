@@ -1,17 +1,17 @@
 #+title: 关于一些链环的投影图的解纽数的研究
 #+author: 郑权
 #+BIBILOGRAPHY: library.bib
-#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+latex_compiler: xelatex
+#+latex_class: elegantpaper
 #+LaTeX_HEADER: \usepackage{breakcites}
-#+LaTeX_HEADER: \usepackage{mathscr}
 #+LaTeX_HEADER: \usepackage{apacite}
 #+LaTeX_HEADER: \usepackage{paralist}
 #+LaTeX_HEADER: \let\itemize\compactitem
 #+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \let\enumerate\compactenum
 #+LaTeX_HEADER: \usepackage{fontspec}
-#+LaTeX_HEADER: \setmainfont{Noto Serif CJK SC}
-
+#+latex_header: \usepackage{xeCJK}
+#+latex_header: \setCJKmainfont{Noto Serif CJK SC}
 #+BEGIN_ABSTRACT
 *Abstract*
 
@@ -42,23 +42,19 @@ Groups, topological vector spaces, local rings, etc. Most importantly, this gave
 isomorphism theory, in which we also consider continuous deformations of continuous functions
 continuous deformations of the function itself ("isomorphisms"). Topology itself has many ramifications, such as.
 low-dimensional topology or topological domain theory.
-** Knot Theory :ATTACH:
-:PROPERTIES:
-:ID:       d611f15a-84e2-4eec-b326-547f0a5a98cb
-:END:
+** Knot Theory
 *** Definition. Knot
 A *knot* is a smooth (or piecewise-linear) embedding of the circle \(S^{1}\) into \(\mathbb{R}^{3}\), or equivalently into the 3-sphere \(S^{3}\) (one can also consider knots in other 3-manifolds).
 
 The dimension of knot could be extended. That's to say, we define higher dimensional knots. n-dimensional knot is a smooth (or piecewise-linear) embedding of a n-dimensional closed manifold (usually an n-sphere) into the (n+2)-dimensional sphere \(\mathbb{S}^{n}\).
 
-
-[[attachment:_20210506_034957screenshot.png]]
+<image>
 
 * Section 2. Propaedeutics
 A knot invariant is map from isotopy equivalence classes of knots to any kind of structure you could imagine. These are helpful because it is often much easier to check that the structures one maps to (numbers, groups, etc.) are different than it is to check that knots are different. To define a knot invariant, it suffices to define its value on knot diagrams and check that this value is preserved under the Reidemeister moves (possibly with the exception of the first Reidemeister move, in the case of an invariant of framed knots).
 ** Knot Diagram
 In this article, we assume \(m, n, p, q, l\) are positive integers, \(I=[0,1]\) is the unit interval, \(D\) is the square \(I^{2}\) or 2-dimensional disk.
-
+cite:pretnarIntroductionAlgebraicEffects2015
 A link diagram is, roughly speaking, the combinatorial object obtained by projecting a link in ‘general position’ to a plane. Reidemeister's theorem establishes that one does not lose any essential information by passing from a link to its diagram, and thus it is possible to study knot theory in a way which takes link diagrams as primary.
 
 *** Definition. Connected Knot Diagram and Link Diagram
@@ -70,23 +66,29 @@ A connected link diagram is a connected (undirected) 4-valent plane graph \(G\) 
 A *link diagram* is a plannar graph such that each connected component satisfies either 1. or 2. below:
 1. It's (up to homeomorphism) a circle, disjoint from the rest of the link diagram.
 2. It is a connected link diagram in the sense of the Definition above.
-** Reidemeister Move :ATTACH:
+** Reidemeister Move
 :PROPERTIES:
 :ID:       5ca31ce0-780d-45d1-9bcf-1456d535bf9c
 :END:
 In the mathematical area of knot theory, a Reidemeister move is any of three local moves on a link diagram. Kurt Reidemeister (1927) and, independently, James Waddell Alexander and Garland Baird Briggs (1926), showing two differrent  knot diagrams could represent the same knot (up to planar isotopy), can be related by a sequence of the three Reidemeister moves.
 *** Definition 2.1 Reidemeister move \(R1\) :ATTACH:
 The first type of Reidemeister move, adds or reduce a circle to the knot diagram of a knot, like this:
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210529_165842screenshot.png]]
-*** Definiton 2.2 Reidemeister move \(R2\) :ATTACH:
+*** Definiton 2.2 Reidemeister move \(R2\)
 The second type of Reidemeister move, add or reduce a circle between two strand of line (locally) to a knot diagram, like this:
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210529_170248screenshot.png]]
 
 *** Definition 2.3 Reidemeister move \(R3\) :ATTACH:
 The third type of Reidemeister move, move a  line over a crossing, or under a crossing, like this:
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210529_170612screenshot.png]]
 
 No other part of the diagram is involved in the picture of a move, and a planar isotopy may distort the picture. The numbering for the types of moves corresponds to how many strands are involved, e.g. a type II move operates on two strands of the diagram.
@@ -123,7 +125,7 @@ From the rules, one can read off the relationships between the different formula
 1. $y = \alpha = a^{-1}$
 1. $x = - \alpha^{-1} = -a$
 1. $a = - i l$, $l = i a$
-1. $z = i m$, $m = - i z$.
+1. $z = i m, m = - i z$.
 
 
 **** Properties
@@ -141,16 +143,15 @@ The HOMFLY polynomial generalises both the Jones polynomial and the Alexander po
   1. $a = 1$, $z = q^{1/2} - q^{-1/2}$
   1. $\alpha = 1$, $z = q^{1/2} - q^{-1/2}$
   1. $l = i$, $m = i (q^{-1/2} - q^{1/2})$
-*** The Unknotting number :ATTACH:
-:PROPERTIES:
-:ID:       19db3c50-e66f-4bb3-8e37-34d23b1c32fd
-:END:
+*** The Unknotting number
 In the mathematical area of knot theory, the unknotting number of a knot is the minimum number of times the knot must be passed through itself (crossing switch) to untie it. If a knot has unknotting number n, then there exists a diagram of the knot which can be changed to unknot by switching n crossings.
 If you had a piece of string possibly tangled up, and could, at a crossing, pull one part of the string through the other, then, intuitively, repeating this enough times, the string would become unknotted. At the mathematical level, there is a corresponding notion of a crossing change on a diagram.
 
 *Definition*. A crossing change in a diagram exchanges an overpass and underpass at a crossing, as below:
-
-[[attachment:_20210522_023134screenshot.png]]
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
+<image>
 (The central arrow should be a left-right arrow, but the arrowheads do not come out!)
 Crossing changes will usually alter the isotopy type of the diagram.
 *Lemma*. Let \(D\) be a diagram with \(c\) crossings, then changing at most \(c/2\) crossings of D produces a diagram of the unknot.
@@ -165,44 +166,51 @@ The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomi
 :PROPERTIES:
 :ID:       4f7bf60b-78ae-4365-b59d-29b51ce88612
 :END:
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210523_133107screenshot.png]]
 
 The Kanenobu knot with parameter p, q is represented  by K(p,q). When p>0, the upper braid  has the right curve above. When p<0, the upper braid has the left curve above. When q>0, then lower braid has the left curve above. The q<0, the lower braid has the left curve above.
 
 *** Generalized Kanenobu Knot :ATTACH:
 The Kanenobu knot could be generalized by adding more parameters. After adding twisting between every crossing point of it, we get K(p, q, m, n):
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210523_135628screenshot.png]]
 
+cite:kanenobuInfinitelyManyKnots1986
 By adding parameters further, we get \(K(p, q, m, n, l\):
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
 [[attachment:_20210531_040613screenshot.png]]
 Which has all its crossing point be a crossing point family.
-*** Alternating Link :ATTACH:
+*** Alternating Link
 If in the diagram of a link, the crossings are alternating to each other, which means if one line in one crossing point is above, and in every neighbor crossing point it's below, we say this link is an alternating link.
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210531_033544screenshot.png]]
 
 * Section 3. Unknotting Number for Kanenobu Knot
 This section we will investagate the unknotting number for Kanenobu Knot.
 ** Theorem 3.1 Every alternating link is not an unknot.
 *Proof* We can't change any crossing for every crossing point is alternating. To change one crossing, we could impact Reidemester move R1 or R2 on the link. With the property of alternating, we could reduce any crossing point, thus it can't be an unknot.
-** Theorem 3.1: the unknotting number of Kanenobu knot K(0,0) is 2. :ATTACH:
-:PROPERTIES:
-:ID:       423645b7-8eb0-455c-a99b-a98adccb41ce
-:END:
+** Theorem 3.1: the unknotting number of Kanenobu knot K(0,0) is 2.
 *Proof* . When p = 0, q = 0, the Kanenobu knot is like:
-
-[[attachment:_20210520_032721screenshot.png]]
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
+<image>
 
 
 And we label the crossing point with numbers 1, 2, ... , 8.
 First, we show that after changing the crossing point 1 and 8, this Kanenobu knot K(0, 0) will be transformed into an unknot.
 1. After changing 1 and 8, the knot becomes:
-
-[[attachment:_20210520_034200screenshot.png]]
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+<image>
 2. Then we put a R2 move to the part between crossing point 1 and 2, and another R2 move to the part between crossing point 7 and 8, we get:
 
 3. put a R2 move to the part between crossing point 4 and 5, we get:
@@ -215,18 +223,13 @@ Second, we show that for any one change to the crossing point, the Kanenobu knot
 2. If we change the crossing point 2, we get an alternating knot, and alternating knot is not an unknot:
 ...
 
-All other circumstances could be applied to the same procedure. Thus the knot can't be untied by changing one crossing. Then we proved the unknotting number for Kanenobu knot K(0, 0) is 2.
+All other circumstances could apply the same procedure. Thus the knot can't be untied by changing one crossing. Then we proved the unknotting number for Kanenobu knot K(0, 0) is 2.
 * Section 4. Unknotting Number for Generalized Kanenobu Knot
 ** Lemma 4.1 The Generalized Kanenobu knot is not an unknot.
 *Proof* From Theorem 5 in [9], we have assertion about the Khovanov homology for generalized Kanenobu knot:
-\(Kh(K_{\beta}(p,q)) \cong K_{beta}(p+1, q-1)\) ,
-then the genalized Kanenobu knot has different Khovanov homology with unknot, which mease it is not an unknot.
-** Theorem 4.2 The unknotting number for Generalized Kanenobu knot K(p, q) is 2. :ATTACH:
-[[attachment:_20210524_050205screenshot.png]]
-:PROPERTIES:
-:ID:       9ec74676-f57c-4ea3-925f-a35960fc4e77
-:END:
-
+\(Kh(K_{\beta}(p,q)) \cong K_{\beta}(p+1, q-1)\) ,
+then the generalized Kanenobu knot has different Khovanov homology with unknot, which mease it is not an unknot.
+** Theorem 4.2 The unknotting number for Generalized Kanenobu knot K(p, q) is 2.
 *Proof*.
 Label the 12 crossing points (excluding the p, q, n crossing points) with number 1, 2, ..., 12.
 First, change crossing points 2, 9, then  we could untie all the crossing point between 6 and 12.
@@ -238,11 +241,10 @@ We could untie all the crossing points between 4 and 5, 10 and 11. Thus the all 
 Then we must prove changing points less than 2 we can not untie this knot.
 If we changes 0 crossing point, this problem is trivial: the Kanenobu knot K(p, q, n) remains not an unknot.
 If we changes only 1 crossing point:
-
-[[attachment:_20210523_154226screenshot.png]]
+<image>
 1. if we change the crossing point 1, the part between is alternating and the whole knot is not an unknot.
 2. if we change the crossing point 2, the knot will become:
-[[attachment:_20210524_020604screenshot.png]]
+   <image>
 And it is not an unknot because we can not untie the twist in the \(n\) part, for locally it is alternating.
 
 3. If we change any crossing point other than 1, 2, the situation are similar to thing above.
@@ -251,57 +253,56 @@ Thus we can't untie the knot with only 1 crossing point change. Then we proved t
 * Section 5. Unknotting Number for More Generalized Kanenobu Knot
 The more generalized Kanenobu knot is complex then we will break this problem into several situations.
 First, we introduce plat form for a surface-link to help solve this problem.
-** 5.1 a plat form for a surface-link :ATTACH:
-:PROPERTIES:
-:ID:       d74de9d6-b550-4038-a691-af57abb1d831
-:END:
+** 5.1 a plat form for a surface-link
+*** test image:
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
+[[https://gitee.com/Vitaly/img/raw/master/images/Pictures/anime/2021-10-05-15-05-31-20a0bded101e077be23a7ca35ed49b77-bf36.jpg]]
 In this section, we introduce a plat form for a surface-link.We assume \(D_{2}\subset \mathbb{R}^{2}\). Let \(N\) be a regular neighborhood of \(\partial D\) in \(\mathbb{R}^{2}\ Int D_{2}\), which is parameterized with \((t, x) \in * \times S^{1}\) such that \(\partial D_{2} ={0} \times S^{1} \) and \(y_{0}=(0,0) \in * \times S^{1}\), where \(S^{1} =\mathbb{R}/\mathbb{Z}\).
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
 [[attachment:_20210524_052044screenshot.png]]
 *** Definition 5.1.1 A surface A in \(D_{1} \times N\) is of m-wicket type (or simply of wicket type) if it is a properly embeded surface in \(D_{1} \times N\) satisfying the following conditions.
 (1) \(A \cap D_{1} \times (I \times {0})\) is the standard m-wicket system when we identify \(D_{1} \times (I \times {0})\) with \(D \times [0,1]\).
 (2) For each \(\theta \in S^{1}\),\(A \cap (D_{1}\times (*I \times {\theta}))\) is an m-wicket system.
 
 Definition 5.1.2 A braided surface \(S\) in \(D_{1} \times D_{2}\) is adequate if there exists a surface of m-wicket type, \(A\), in \(D_{1} \times N\) such that the boundaries of S and A coincide: \(\partial S = \partial A\).
+It's trivial that the degree of an adequate braided surface is even. Note that for each \(\theta \in S^{1}\), the seciton \(A \cap  D_{1} \times (*I \times {\theta})\)  is determined from the boundary of A and hence A is determined by \(\partial S\). Therefore, for an adequate braided surface \(S\), such a surface A of wicket is uniquely determined.
 
-It's tivial that the degree of an adequate braided surface is even. Note that for each \(\theta \in S^{1}\), the seciton \(A \cap  D_{1} \times (*I \times {\theta})\)  is determined from the boundary of A and hence A is determined by \(\partial S\). Therefore, for an adequate braided surface \(S\), such a surface A of wicket is uniquely determined.
-
-We consider a condition for a braided surface to admit the plat closure. For a
-braided surface \(S\) of degree n, let \(\beta_{S}\) be a geometric \(n\)-braided obtained by cutting the closed braid \(\partial S\) along \(\pi ^{-1}(y_{0})\). It is easy to say that \([\beta_{S}] = [\beta_{S^{'}}]\) in the braided group \(B_{n}\) if two braided surfaces \(S\) and \(S'\) are equivalent.
+We consider a condition for a braided surface to admit the plat closure. For a braided surface \(S\) of degree n, let \(\beta_{S}\) be a geometric \(n\)-braided obtained by cutting the closed braid \(\partial S\) along \(\pi ^{-1}(y_{0})\). It is easy to say that \([\beta_{S}] = [\beta_{S^{'}}]\) in the braided group \(B_{n}\) if two braided surfaces \(S\) and \(S'\) are equivalent.
 *** Theorem 5.1.2 A braided surface \(S\) is equivalent to an adequate one if and only if \({\rm deg} S = 2m\) for some \(m \in \mathbb{N}\) and the braid \([\beta_{S}]\) belongs to \(K_{2m}\).
 *Proof* . Let \(S\) be equivalent to an adequate braided surface \(S_{0}\), and let \(A_{0}\) be a surface of \(m\)-wrick type such that \(\partial S_{0} = \partial A_{0}\). Thus \({\rm deg} S = {\rm deg } S_{0} = 2m\) for some \(m \in \mathbb{N}\), and \([\beta_{S}]=[\beta_{S_{0}}]\). Let \(f:[0,1] -> \mathscr{W}_{m}\) be a map defined by \(f(t) = A_{0} \cap D_{1} \times (I \times {t})\). Then \(f \) is a loop in \(\mathscr{W}_{m}\)such that \(f(0) = f(1)\) is the standard m-wicket system. By the isomorphism, the element \([f] \in \mathscr{W}_{m}\) corresponds to the braid \([\beta_{f}] \in K_{2m}\). Since \(\partial S_{0} = \partial A_{0}\), we have \(\beta_{S_{0}} = \beta_{f}\). Thus, \(\beta_{S} \in K_{2m}\).
 
-The more generalized Kanenobu knot \(K(p, q, l, m, n\)is like:
+The more generalized Kanenobu knot \(K(p, q, l, m, n)\)is like:
 
-[[attachment:_20210531_040459screenshot.png]]
-
+<image>
 
 ** Theorem 5.1 The unknotting number for more generalized Kanenobu knot \(K(p, q, m, n, l)\) is:
 
 *** When \(n>m\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{n+l}{2}]\), where \([\frac{n+l}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
 
-*** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{m+l}{2}]\), where \([\frac{m+l}{2}]\) is the integer part of \(\frac{m+l}{2}\)
-*** When \(q + n < m + l\) and \(q + n < n + l\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{q+n}{2}]\), where \([\frac{q+n}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
-:PROPERTIES:
-:ID:       af1751e5-e917-47eb-a214-7839f043ee6c
-:END:
+*** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{m+l}{2}]\), where \([\frac{m +l}{2}]\) is the integer part of \(\frac{m +l}{2}\)
+*** When \(q + n < m + l\) and \(q + n < n + l\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{q+n}{2}]\), where \([\frac{q+n}{2}]\) is the integer part of \(\frac{n+l}{2}\).
 
 *Proof*. First we should show that with the numbers of crossing point changes, we can untie the knot.
 When \(m>n\), after changes the crossing points in the \(m\) and \(l\) part (do this by reduing \([\frac{m+l}{2}]\) crossing points), we get the knot like:
 
-[[attachment:_20210524_061818screenshot.png]]
-
+<image>
 We can untie this knot by twisting the \(q\) crossing numbers first, then the 2 \(n\) crossing points.
 
 When \(n>m\), after changing the crossing points in \(n\) and \(l\) part(do this by reducing \([\frac{n+l}{2}]\) crossing numbers), we get the knot like:
-
-[[attachment:_20210524_062635screenshot.png]]
-
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+#+attr_latex: :width 50% :height 50%
+<image>
 We can untie this knot by reducing the \(p\) part first, then \(l\) part.
 
 When \(q + n < m + l\) and \(q + n < n + l\), we would untie the \(q\) and \(n\) part with \(2[\frac{q+n}{2}]\) changes, and get this:
-
-[[attachment:_20210531_042805screenshot.png]]
+#+attr_org: :width 50% :height 50%
+#+attr_html: :width 50% :height 50%
+<image>
 Then we could untie the whole knot.
 
 Second, we must show we can not untie this knot with any other ways.
@@ -316,8 +317,6 @@ With theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\)
 
   In addition, I would like to thank to the Jike App, I had a group of online interesting friends to keep me company while I was writing the thesis. I would like to thank the Rust programming language which is elegant and powerful to write my toy projects. I would like to thank the Veloren game, which is a free voxel game and is developed in the Rust programming language. It is so relaxing where staying at the game world. I used Emacs and org-mode to produce all my papers, and then used Microsoft Word to format them according to the university's requirements. Thanks to the creator of GNU Emacs, Richard M. Stallman, the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
 
-bibliographystyle:apacite
-bibliography:library.bib
 ** [1] S.Fukuhara, Y.Matsumoto, O.Saeki, An estimate for the unknotting numbers of torus knots[J], Topology and its Applications, 1991, 38(3): 293-299
 ** [2] 姜伯驹，绳圈的数学，湖南教育出版社[M],1991
 ** [3] B. Owens, On slicing invariants of knots[J], Journal of Knot Theory and Its Ramifications, 2011, 14(01):3-8.
@@ -330,3 +329,6 @@ bibliography:library.bib
 ** [9] Kanenobu, T., Infinitely Many Knots with the Same Polynomial Invariant, Proceedings of the American Mathematical Society, 97(1), 158–162 (1986).  http://dx.doi.org/10.2307/2046099
 
 cite:kanenobuInfinitelyManyKnots1986
+
+bibliographystyle:apacite
+bibliography:library.bib

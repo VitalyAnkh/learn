@@ -1,4 +1,4 @@
-Base path: '/home/vitalyr/Unity/Hub/Editor/2020.3.17f1/Editor/Data', plugins path '/home/vitalyr/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines'
+Base path: '/home/vitalyr/Unity/Hub/Editor/2020.3.19f1/Editor/Data', plugins path '/home/vitalyr/Unity/Hub/Editor/2020.3.19f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
 Cmd: shutdown
