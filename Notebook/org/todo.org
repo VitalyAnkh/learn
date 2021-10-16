@@ -1,9 +1,9 @@
 * Inbox
+** [ ] doom的字体设置需要启动后重新执行一遍 ~config.el~ 才会生效，解决这个问题
 ** [ ] 解决emacs-client无法启动的问题
-** [ ] 把ElegantLaTeX项目的其他LaTeX模板配置一下，包括legantNote，ElegantBook
+** [ ] 把ElegantLaTeX项目的其他LaTeX模板配置一下，包括ElegantNote，ElegantBook
 配置方法类似ElegantPaper，在 ~config.org~ 里搜索elegantpaper
 ** [ ] 如何在org文件里插入images from URL，export to LaTeX or pdf 时链接转为图片
-
 ** [ ] 让org-mode中的\(\LaTeX\)支持Unicode
 具体来说，让下标可以用汉字
 ** [ ] 开发iPad app，使iPad上的zotero笔记与电脑上的zotero和Emacs笔记同步
@@ -481,7 +481,8 @@ SCHEDULED: <2020-07-12 日>
 ** TODO [#C] Book: Physics from Symmetry
 ** DONE [#C] 下一步让 fcitx5 在 emacs 中工作的实施计划：
 *** DONE [#C] 更改四个配置文件中的变量，从 wayland 切换到 x11<2020-07-06 一 15:00>
-**** 若试试成功，可再试试使用 i3 窗口管理器<2020-07-03 五>
+**** DONE 若尝试成功，可再试试使用 i3 窗口管理器<2020-07-03 五>
+CLOSED: [2021-10-13 三 14:22]
 *** DONE [#C] 安装 fcitx4 ，试试能否在 emacs 中使用
 不装了。fcitx5 可以在 emacs 中使用了。还是要学好基本功。以后学了 C++ 后参与开发 fcitx5 吧。
 

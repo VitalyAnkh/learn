@@ -1147,3 +1147,9 @@ fcitx5的问题果然在于系统用久了就会在wayland程序下卡顿。刚�
 今天把doom主题换成了 ~doom-solarized-light~ ，也是黄色的暖色調，但看起来更舒服一些。
 现在发现 ~doom-unicode-font~ 设置成的 ~Noto Serif CJK SC~ 不起作用了。总是把中文字体设置成 ~Noto Serif SCJ TC~ ，即用思源字体的繁体中文变体。
 不知道该如何解决这个问题。也许我应该放弃doom的unicode模块，转而自己设置字体？
+
+*** 2021-10-13 星期三
+**** [2021-10-13 三 12:50]
+The ' in Rust, which is to indicate lifetime, is pronounced as "tick".
+**** [2021-10-13 三 10:47]
+在lnx-search的基础上写一个linux上的everything，高性能的文件搜索工具
