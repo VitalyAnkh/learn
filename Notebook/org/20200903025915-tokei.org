@@ -1,6 +1,6 @@
 #+title: tokei
 * tokei
-#+BEGIN_SRC rust
+#+BEGIN_SRC bash
 cargo install tokei
 #+END_SRC
 用于描述项目的代码量。

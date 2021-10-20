@@ -2,7 +2,7 @@
 name = "base_convert"
 version = "0.1.0"
 authors = ["VitalyR <vitalyankh@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 structopt = "*"

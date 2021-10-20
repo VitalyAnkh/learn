@@ -283,7 +283,7 @@ The more generalized Kanenobu knot \(K(p, q, l, m, n)\)is like:
 
 *** When \(n>m\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{n+l}{2}]\), where \([\frac{n+l}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
 
-*** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{m+l}{2}]\), where \([\frac{m +l}{2}]\) is the integer part of \(\frac{m +l}{2}\)
+**** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{m+l}{2}]\), where \([\frac{m +l}{2}]\) is the integer part of \(\frac{m +l}{2}\)
 *** When \(q + n < m + l\) and \(q + n < n + l\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{q+n}{2}]\), where \([\frac{q+n}{2}]\) is the integer part of \(\frac{n+l}{2}\).
 
 *Proof*. First we should show that with the numbers of crossing point changes, we can untie the knot.
@@ -298,15 +298,16 @@ When \(n>m\), after changing the crossing points in \(n\) and \(l\) part(do this
 #+attr_latex: :width 50% :height 50%
 <image>
 We can untie this knot by reducing the \(p\) part first, then \(l\) part.
-
-When \(q + n < m + l\) and \(q + n < n + l\), we would untie the \(q\) and \(n\) part with \(2[\frac{q+n}{2}]\) changes, and get this:
+\(q+n<m+l\)
+When \(q + n < m + l \) and \(q + n < n + l\), we would untie the \(q\) and \(n\) part with \(2[\frac{q+n}{2}]\) changes, and get this:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
 <image>
 Then we could untie the whole knot.
 
-Second, we must show we can not untie this knot with any other ways.
-With theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\) part, they are the only two ways to untie this knot. This completes this proof.
+Second, we must show we can not untie this knot with any other ways. With
+theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\)
+part, they are the only two ways to untie this knot. This completes this proof.
 
 * Section 6. Acknowledgements
 　After more than five months of  work, I finally finished writing my thesis. During this time, I learned a lot and felt a lot. From knowing nothing, I read books of Professor Jiang, and GTM series. I look up every concept from various source: wikipedia, The KnotBook, etc. Every time I understood a new concept and new theorem was the gain of my study, and every successful proof of a theorem would make me happy for a few days.
@@ -315,7 +316,7 @@ With theorem 5.1.2, the \(m , l\) braid has the same plat form with the \(n, l\)
 
   June, it's always sunny. In June, it's always the end of the song. In June, we refuse to be sentimental. The flowers give up their fragrance and we welcome the fruits. Graduation brings farewell, and we are on our way to glory. As I finish my thesis, I want to express my deepest gratitude to my supervisor and my dear family! I would like to thank my supervisor, Ms. Wan. She has been a role model for me, a trusted mentor and friend, both as a person and in her studies. She cares about my study and research. From choosing a topic for my dissertation, writing the opening report, searching for information, to writing thesis, she gave me  useful guidance so that I could successfully complete my dissertation. She also often supervised and motivated the lazy me to finish my characters on time. Thank you, Ms Wan!
 
-  In addition, I would like to thank to the Jike App, I had a group of online interesting friends to keep me company while I was writing the thesis. I would like to thank the Rust programming language which is elegant and powerful to write my toy projects. I would like to thank the Veloren game, which is a free voxel game and is developed in the Rust programming language. It is so relaxing where staying at the game world. I used Emacs and org-mode to produce all my papers, and then used Microsoft Word to format them according to the university's requirements. Thanks to the creator of GNU Emacs, Richard M. Stallman, the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
+  In addition, I would like to thank to the Jike App where I had a group of online interesting friends to keep me company while I was writing the thesis. I would like to thank the Rust programming language which is elegant and powerful to write my toy projects. I would like to thank the Veloren game, which is a free voxel game and is developed in the Rust programming language. It is so relaxing where staying at the game world. I used Emacs and org-mode to produce all my papers, and then used Microsoft Word to format them according to the university's requirements. Thanks to the creator of GNU Emacs, Richard M. Stallman, the creator of org-mode Dominik and the current maintainer Bastien Guerry, and to everyone in the Emacs community.
 
 ** [1] S.Fukuhara, Y.Matsumoto, O.Saeki, An estimate for the unknotting numbers of torus knots[J], Topology and its Applications, 1991, 38(3): 293-299
 ** [2] 姜伯驹，绳圈的数学，湖南教育出版社[M],1991

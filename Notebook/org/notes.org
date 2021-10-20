@@ -25,9 +25,16 @@ https://steveklabnik.com/writing/thank-u-next
 https://steveklabnik.com/writing/i-m-joining-cloudflare
 
 **** Niko Matsakis
-Rust  core team
+Rust  core team leader. Always a reliable person.
 
 
 ** [2021-03-27 六]
 smart-inut-source 好爽！
 我也要好好学习 emacs lisp ，我也要写出这么好用的插件造福人类！
+
+a.
+   i. -2  ii. 2 iii. -2
+b
+   i. 28 ii. 20 iii. 4
+c
+   i. 0 ii. 2 iii. i (This ''i'' is the imaginary unit)

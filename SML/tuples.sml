@@ -11,5 +11,5 @@ fun div_mod (x : int, y : int) =
 
 fun sort_pair(p : (int * int)) =
     if (#1 p) < (#2 p)
-    then p                    
+    then p
     else (#2 p, #1 p)

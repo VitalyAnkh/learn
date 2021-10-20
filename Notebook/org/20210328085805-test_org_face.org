@@ -3,6 +3,7 @@
 #+latex_header: \usepackage{unicode-math}
 * Xah Lee
 ** Subsection
+CLOSED: [2021-10-19 二 08:33]
 Hello *there* this is /Emacs/ _org-mode_ *No markdown!*.
 
 #+begin_src rust
@@ -23,6 +24,7 @@ print("Hello!")
 : None
 
 我爱你。
+#+attr_org: :width 50% :height 50%
 [[https://gitee.com/Vitaly/img/raw/master/anime.jpg]]
 
 #+begin_src cpp
@@ -32,6 +34,7 @@ int main(){
     return 0;
 }
 #+end_src
+
 #+RESULTS:
 | Hello | Emacs! |
 
@@ -45,6 +48,12 @@ Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}} - 我\). 若\(f(1)=1\)，�
 有实根，求实数\(b\)的取值范围.
 
 \(f(b)=\sum_{i=1}^{\infty}\frac{1}{i_{i}}\)
+#+begin_src latex
+\sigma
+#+end_src
+
+#+RESULTS:
+: \sigma
 
 \(\sum_{5}^{6} \)
 \(f(x)-g(x)=\sum_{1}^{\infty}\)
@@ -58,6 +67,7 @@ Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}} - 我\). 若\(f(1)=1\)，�
 \(f(x)\)
 \(f(x)-g(x)\)
 
+\(lim_{x\to0}\frac{1}{x}=\infty\)
 \(f(x)g(x)\)  is good to use.
 This cpp code is bad. Aliasing is hard. Why?
 #+begin_src C++ :includes iostream string vector
@@ -69,5 +79,5 @@ This cpp code is bad. Aliasing is hard. Why?
   std::cout << x << std::endl;
   std::cout << v;
 #+end_src
-
+#+begin_src C++
 #+RESULTS:

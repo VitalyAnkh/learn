@@ -1153,3 +1153,24 @@ fcitx5的问题果然在于系统用久了就会在wayland程序下卡顿。刚�
 The ' in Rust, which is to indicate lifetime, is pronounced as "tick".
 **** [2021-10-13 三 10:47]
 在lnx-search的基础上写一个linux上的everything，高性能的文件搜索工具
+
+*** 2021-10-16 星期六
+**** [2021-10-16 六 15:22]
+***** TODO 使用thunderbird配置irc客户端，或者使用Emacs？然后连接到lobsters的irc
+
+*** 2021-10-17 星期日
+**** [2021-10-17 日 04:40]
+Sometimes (Maybe in most time?) English is more expressive than Chinese.
+For example,
+引用 ==> citation && reference
+版本 <==> version, edition
+
+*** 2021-10-18 星期一
+**** [2021-10-18 一 04:03]
+今天解决了org-mode里LaTeX fragment背景色不协调的问题：
+通过使用xenops这个包。
+这个包自动把所有LaTeX fragment的inline code的face替换了。
+
+*** 2021-10-19 星期二
+**** [2021-10-19 二 07:24]
+我好想要M1 Max啊...
