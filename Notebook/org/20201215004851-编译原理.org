@@ -1,3 +1,4 @@
 #+title: 编译原理
 * [[file:20201215004919-stanford_cs143.org][stanford cs143]]
 * [[file:20201215005008-engineering_a_compiler.org][Engineering a Compiler]]
+* [[id:255adb69-67a2-4eab-bc38-33ef8df8401b][《编译原理》- 中国大学mooc]]

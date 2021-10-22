@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       255adb69-67a2-4eab-bc38-33ef8df8401b
+:END:
+#+title: 《编译原理》- 中国大学mooc
+*  First集，Follow集和Select集
+2021年10月21日，今天学习了一些编译原理。
+打算把学到的每一个算法用代码实现一下。
+今天学习了First集，Follow集和Select集的概念。可以实现他们求这些集合的算法。

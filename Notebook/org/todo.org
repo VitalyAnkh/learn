@@ -1,4 +1,10 @@
 * Inbox
+** [ ] 学习如何给rustc写lint，然后给rustc贡献lint，作为contribute to rustc的开始
+1. 看rustc-dev-guide关于clippy的章节
+2. 看B站上rust-friday关于clippy的分享视频
+
+学习后从这个issue入手吧：https://github.com/rust-lang/rust/issues/90108
+** [ ] rust中的Vec可以转为Box，为什么呢
 ** [ ] doom的字体设置需要启动后重新执行一遍 ~config.el~ 才会生效，解决这个问题
 ** [ ] 解决emacs-client无法启动的问题
 ** [ ] 把ElegantLaTeX项目的其他LaTeX模板配置一下，包括ElegantNote，ElegantBook
