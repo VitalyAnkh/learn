@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6cb97983-3ce4-4b55-8539-ccfd7613364e
+:END:
 #+TITLE: system-programming
 * begin to use org mode
 It's really amazing?

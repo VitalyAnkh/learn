@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6e75a5f1-15d8-4394-a424-465f4f05d8ed
+:END:
 #+title: 我歌唱的理由
 #+tag: poemtry
 #+author: 谷川俊太郎

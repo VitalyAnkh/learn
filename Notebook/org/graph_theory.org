@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       8fb7dfae-97bd-4548-8db7-4942c789dd88
+:END:
 #+title: Graph Theory
-* [[file:20200907032815-connected_component.org][Connected Component]]
+* [[id:5bec11d9-6b1d-4300-86ce-d2bf0fe0a81d][Connected Component]]
 :PROPERTIES:
 :ID:       7e0ff5f7-774a-4f8a-b53e-8a6b0ea27ee2
 :END:

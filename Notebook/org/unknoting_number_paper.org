@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f907a9ed-7cf3-4441-a90b-f60d167395a3
+:END:
 #+title: 关于一些链环的投影图的解纽数的研究
 #+author: 郑权
 #+BIBILOGRAPHY: library.bib

@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       3898a138-92b7-42e0-8903-a3877138ed54
+:END:
 #+title: fontfinder
 A Google font browser for your GTK desktop, written in Rust.

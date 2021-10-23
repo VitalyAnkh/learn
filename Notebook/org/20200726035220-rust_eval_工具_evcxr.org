@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       425e4a43-b699-4226-9509-8ff73de13e64
+:END:
 #+title: Rust EVAL 工具 evcxr
 * Rust EVAL工具evcxr
 :PROPERTIES:

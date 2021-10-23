@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       aabe057d-2237-459b-a6a9-d5e109811fe5
+:END:
 #+title: 蔡加尼克效应
 #+attr_org: :width 5% :height 5%
 [[https://emacs-china.org/uploads/default/original/2X/d/d1eb2e7951678b54a51e27e02c067078c57168c5.png]]

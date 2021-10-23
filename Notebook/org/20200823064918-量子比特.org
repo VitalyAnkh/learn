@@ -1,1 +1,4 @@
+:PROPERTIES:
+:ID:       572f7543-b35e-4917-a69d-ab63fd1ebd3a
+:END:
 #+title: 量子比特

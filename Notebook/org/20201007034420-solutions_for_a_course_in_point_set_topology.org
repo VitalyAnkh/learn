@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       eebcc658-05b4-4ccf-b654-04b4fbe814e7
+:END:
 #+title: Solutions for a Course in Point Set Topology
 * Chapter 1. Metric Spaces
 ** Proposition 1.1.15 Let A be a subset of X.

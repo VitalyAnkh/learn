@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f9769013-1ccb-4249-b0bf-0cec717c9883
+:END:
 #+title: 如何实现DFA
 #+CAPTION: Weight space
 #+ATTR_HTML: :alt neural network :title Neural network representation :align right

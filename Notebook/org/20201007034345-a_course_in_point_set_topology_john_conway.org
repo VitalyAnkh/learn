@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       5c4cde0f-6e19-479b-8c4f-34a6addfa125
+:END:
 #+title: A Course in Point Set Topology - John Conway
-* [[file:20201007034420-solutions_for_a_course_in_point_set_topology.org][Solutions for a Course in Point Set Topology]]
+* [[id:eebcc658-05b4-4ccf-b654-04b4fbe814e7][Solutions for a Course in Point Set Topology]]

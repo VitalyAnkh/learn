@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6b82be5a-c69a-416f-9193-ad6d51b1f0e5
+:END:
 #+title: Rust 中的 mut 和 ref 关键字
 let ref x = y; 就相当于 let x = &y;
 let mut x = y; 就相当于 let x = mut y;

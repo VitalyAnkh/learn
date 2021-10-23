@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       88bda363-59ea-416f-82ec-6ced84409390
+:END:
 #+title: mpv
 good linux video player

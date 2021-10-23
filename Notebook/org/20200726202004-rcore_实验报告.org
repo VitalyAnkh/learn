@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e8e9e9be-ff8b-4f87-b712-31fbb8211911
+:END:
 #+title: rCore 实验报告
 * lab 0
 

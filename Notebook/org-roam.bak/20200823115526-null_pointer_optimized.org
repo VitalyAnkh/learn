@@ -1,0 +1,5 @@
+#+title: null-pointer-optimized
+读 Rust 标准库的 vec 文档时看到：
+The pointer (in a Vec) will never be null, so this type is null-pointer-optimized.
+
+null-pointer-optimized 是什么意思？

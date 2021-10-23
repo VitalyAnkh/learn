@@ -1,3 +1,0 @@
-= Dev Tips
-
-* 可以用docker模拟集群

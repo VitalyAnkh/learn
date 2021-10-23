@@ -1,4 +1,7 @@
+:PROPERTIES:
+:ID:       038feae6-410c-4ebd-965b-484d473f315b
+:END:
 #+title: 编译原理
-* [[file:20201215004919-stanford_cs143.org][stanford cs143]]
-* [[file:20201215005008-engineering_a_compiler.org][Engineering a Compiler]]
+* [[id:d89bc2c3-19ff-4658-a6da-51cac25ef0b5][stanford cs143]]
+* [[id:3194c8e9-80f6-418a-a460-8a1136e52dcb][Engineering a Compiler]]
 * [[id:255adb69-67a2-4eab-bc38-33ef8df8401b][《编译原理》- 中国大学mooc]]

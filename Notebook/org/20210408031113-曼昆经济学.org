@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3ef07193-9efd-44ca-96be-44d5893ec16a
+:END:
 #+title: 曼昆《经济学原理》
 
 \(\mathbb{R^{3}}\)

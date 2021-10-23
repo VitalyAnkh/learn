@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       4b475e4e-d3d0-4d2d-886b-627d7c79e5ed
+:END:
 #+title: Understanding Complexity
 斯科特 \cdot 佩奇 关于复杂系统的书。

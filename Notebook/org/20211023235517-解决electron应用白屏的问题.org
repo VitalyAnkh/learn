@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       eeb4b4c3-95ab-44fd-a030-bd53e79680db
+:END:
+#+title: 解决electron应用白屏的问题
+是electron应用在nvidia显卡与wayland协同时的问题。
+wordaround: 加上 ~--disable-gpu~ 这个flag来禁用gpu可以避免白屏。

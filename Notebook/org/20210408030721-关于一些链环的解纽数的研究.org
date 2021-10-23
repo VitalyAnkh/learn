@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       2780bbed-c7ca-4de8-9caf-01b3bddcb617
+:END:
 #+title: 关于一些链环的解纽数的研究
 #+author: 郑权
 #+email: 16271029@bjtu.edu.cn

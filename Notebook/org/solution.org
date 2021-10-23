@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       cc75694e-6943-49c9-a6fa-e10124d4d449
+:END:
 #+TITLE: solution
 * Essentials of Programming Language
 * 没必要在这里写 solutions ，在每个读书笔记下写吧

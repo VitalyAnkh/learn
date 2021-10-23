@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       723dec24-6371-4661-b8fb-d08ecbd5c5d1
+:END:
 #+title: ESCAPE 的ANSI code
 看这里： https://en.wikipedia.org/wiki/ANSI_escape_code
 所以说： CTRL + [ == ESC

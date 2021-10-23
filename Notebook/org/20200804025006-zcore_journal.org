@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       55859c5d-8268-4c07-8e2f-dc168ccde0af
+:END:
 #+title: zCore Journal
 * 2020 年 8 月 3 日
 今天是 zCore 实习的第一天。上午听报告，听到 rCore/zCore 的历史。下午老师和助教相信介绍了各项目。我选择了

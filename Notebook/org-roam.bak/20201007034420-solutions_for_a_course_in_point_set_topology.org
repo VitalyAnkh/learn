@@ -1,0 +1,6 @@
+#+title: Solutions for a Course in Point Set Topology
+* Chapter 1. Metric Spaces
+** Proposition 1.1.15 Let A be a subset of X.
+(a) A is closed if and only if A = cl A.
+(b) A is open if and only if \(\rm A = \rm int A\).
+(c) cl A = X \ [int (X \ A)], int A = X \ cl (X \ A), and \(\partial A = cl A \backslash \rm int A\).

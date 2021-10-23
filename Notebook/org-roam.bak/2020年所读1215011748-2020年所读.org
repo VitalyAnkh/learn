@@ -1,0 +1,7 @@
+#+title: 2020年所读
+* [[file:20201215011822-命运的内核.org][命运的内核]]
+* [[file:20201215013150-红拂夜奔.org][红拂夜奔]]
+* [[file:20200903053519-罗马人的故事.org][罗马人的故事]]
+* [[file:20201213193646-精力管理.org][精力管理]]
+* [[file:20201215013709-essentials_of_programming_languages.org][Essentials of Programming Languages]]
+* [[file:20201215023449-二十世纪西方文学理论.org][二十世纪西方文学理论]]

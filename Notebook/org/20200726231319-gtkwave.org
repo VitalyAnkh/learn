@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       586f3710-a0a0-42ff-990b-96d6672d607d
+:END:
 #+title: gtkwave
 Make sure you copy the /usr/share/gtkwave/examples/gtkwaverc file to your home directory (as .gtkwaverc) or to your VCD project directory.
 It contains the prefs for a good configuration that most people find ergonomic.  It is not strictly necessary however.

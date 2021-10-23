@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6f4ae096-0853-465b-92ed-4af0564fc893
+:END:
 #+title: Toby
 等待上架 Firefox 扩展商店。
 

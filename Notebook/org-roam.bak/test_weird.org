@@ -1,0 +1,29 @@
+#+title: How to Make America Great Again
+#+author: vitalyr
+#+BIBILOGRAPHY: library.bib
+#+latex_compiler: xelatex
+#+options: prop:t
+#+LaTeX_CLASS: elegantpaper
+#+LaTeX_HEADER: \usepackage{breakcites}
+#+LaTeX_HEADER: \usepackage{apacite}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LaTeX_HEADER: \let\itemize\compactitem
+#+LaTeX_HEADER: \let\description\compactdesc
+#+LaTeX_HEADER: \let\enumerate\compactenum
+#+LaTeX_HEADER: \usepackage{fontspec}
+#+latex_header: \usepackage{xeCJK}
+#+latex_header: \usepackage{abstract}
+#+LaTeX: \tableofcontents
+*Abstract*
+We calculate the unknoting number of Kanenobu knots, generalized Kanenobu knots and
+more generalized Kanenobu knots, then prove the result withe the method of extreme terms of
+Jones polynomial and plat form of plane links
+
+* Introduction
+I like ~org-mode~ and \(\LaTeX\). \(f(x)\)
+
+\(\frac{3}{4}\)
+
+\(2^2\)
+\(2 + 3 = 8\)
+Let use them to do great things!

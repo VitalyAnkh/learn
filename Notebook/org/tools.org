@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a0f3ffaf-b604-427e-b896-dceed7a73884
+:END:
 #+TITLE: Tools
 
 * Emacs Tips

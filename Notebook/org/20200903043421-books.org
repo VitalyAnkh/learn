@@ -1,6 +1,9 @@
+:PROPERTIES:
+:ID:       fadd21cd-63a0-4efd-8a4b-d67073f776e8
+:END:
 #+title: Books
-* [[file:20200903043450-understanding_complexity.org][Understanding Complexity]]
-* [[file:20200903220245-systems_performance_enterprise_and_the_cloud_2nd_edition.org][Systems Performance: Enterprise and the Cloud, 2nd Edition]]
-* [[file:2020年所读1215011748-2020年所读.org][2020年所读]]
-* [[file:20210101110746-2021年所读.org][2021年所读]]
+* [[id:4b475e4e-d3d0-4d2d-886b-627d7c79e5ed][Understanding Complexity]]
+* [[id:6c2a1693-035c-4c0b-8b2f-11ab256e640a][Systems Performance: Enterprise and the Cloud, 2nd Edition]]
+* [[id:f78a3970-9be6-439d-bea0-840cd70ca4ef][2020年所读]]
+* [[id:1683355d-cc4a-4db1-92c6-856f0bb9edd2][2021年所读]]
 * [[id:5720d9a7-ce16-480c-8fc1-6a974b09d5a7][2014年所读]]

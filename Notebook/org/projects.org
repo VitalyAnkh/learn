@@ -1,2 +1,5 @@
 * config
+:PROPERTIES:
+:ID:       bcdf11d6-9af5-4e68-90f6-7872a709e827
+:END:
 ** Tasks

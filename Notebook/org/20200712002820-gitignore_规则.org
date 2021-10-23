@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       94e4193e-e85c-4a42-bb61-836272a9ab80
+:END:
 #+title: gitignore 规则
 * gitignore 里用!表示排除文件的 ignore
 例如

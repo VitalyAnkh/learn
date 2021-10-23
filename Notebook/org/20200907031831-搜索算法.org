@@ -1,1 +1,4 @@
+:PROPERTIES:
+:ID:       318459d2-f641-4c0b-8b16-f7b6540f779c
+:END:
 #+title: 搜索算法

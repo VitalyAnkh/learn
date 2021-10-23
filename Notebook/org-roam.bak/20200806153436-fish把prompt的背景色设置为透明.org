@@ -1,0 +1,10 @@
+#+title: fish把prompt的背景色设置为透明
+把 .config/fish/function/prompt.fish 中的
+#+BEGIN_SRC fish
+setcolor -b black
+#+END_SRC
+
+改为
+#+BEGIN_SRC fish
+setcolor -b normal
+#+END_SRC

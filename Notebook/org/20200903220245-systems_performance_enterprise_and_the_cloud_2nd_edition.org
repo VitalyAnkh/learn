@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       6c2a1693-035c-4c0b-8b2f-11ab256e640a
+:END:
 #+title: Systems Performance: Enterprise and the Cloud, 2nd Edition
 Brendan Gregg 的新书

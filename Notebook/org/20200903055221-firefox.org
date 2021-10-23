@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       5c0e859e-59ff-487d-aa1e-b071e4e39c7e
+:END:
 #+title: Firefox
-* [[file:20200903055300-extension.org][Extension]]
+* [[id:59cc9c3b-4802-46cd-9891-1b7d79337448][Extension]]

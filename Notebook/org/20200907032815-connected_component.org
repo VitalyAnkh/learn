@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       5bec11d9-6b1d-4300-86ce-d2bf0fe0a81d
+:END:
 #+title: Connected Component
 Maximal set of objects that are mutually connected.

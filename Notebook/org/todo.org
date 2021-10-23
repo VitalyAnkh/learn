@@ -1,4 +1,10 @@
 * Inbox
+:PROPERTIES:
+:ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
+:END:
+** [ ] 玩rust的iterator trait
+** [ ] 学习smartparens，以及结构化编辑这种编程方法
+** [ ] 学习使用magit
 ** [ ] 学习如何给rustc写lint，然后给rustc贡献lint，作为contribute to rustc的开始
 1. 看rustc-dev-guide关于clippy的章节
 2. 看B站上rust-friday关于clippy的分享视频
@@ -334,7 +340,9 @@ QT_QPA_PLATFORM = ''
 ** [X] 配置 wanderlust
 CLOSED: [2021-04-18 日 16:58]
 不配置，不需要，我用thunderbird
-** [ ] eshell 是干嘛用的？
+** [X] eshell 是干嘛用的？
+CLOSED: [2021-10-23 六 17:56]
+类似vterm的emacs的终端/shell，把虚拟终端和shell混淆起来的东西？
 ** [ ] [#A] 学习 Elisp
 ** [ ] 配置 org-mode 里写 LaTeX 代码时的 snippet （这些都要有一定 ELisp 知识啊，快去学 ELisp ！）
 ** [ ] 如何让 Emacs 里的 flycheck 不检查中文（zh_CN) ?

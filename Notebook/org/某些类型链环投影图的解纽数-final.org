@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       cd60dad7-5aad-4160-b741-353439b669e5
+:END:
 #+title: 某些类型链环投影图解纽数
 #+author: 郑权
 #+email: 16271029@bjtu.edu.cn
@@ -25,9 +28,6 @@
 #+exclude_tags: noexport
 * 研究背景
 ** 通俗地说，纽结理论就是要研究三维空间中的绳圈。
-:PROPERTIES:
-:ID:       de157e3c-139b-4fb5-9c86-cd7b376ebc6c
-:END:
 
 #+reveal: split
 

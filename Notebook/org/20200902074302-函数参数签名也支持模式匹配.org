@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7bb41445-57da-45f1-be27-a2ab34622035
+:END:
 #+title: 函数参数签名也支持模式匹配
 函数参数签名也支持模式匹配，例如：
 #+BEGIN_SRC rust

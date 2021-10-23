@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       2f33834a-4c1a-40d5-b3ae-6116ef6c0a5e
+:END:
 #+title: Rust 的显式类型转换
 #+BEGIN_SRC rust
 fn main() {

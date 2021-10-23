@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       783b1d40-ae74-44ca-aa1c-b500a6151643
+:END:
 #+title: Emacs 中 OCaml 的配置
 * 使用 opam 安装 ocp-indent
 <><> ocp-indent.1.8.1 installed successfully ><><><><><><><><><><><><><><><><><>

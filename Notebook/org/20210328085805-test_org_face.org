@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       bfd7d280-d647-483b-a48c-97bdd50188b3
+:END:
 #+title: test-org-face
 #+latex_header: \usepackage{mathrsfs}
 #+latex_header: \usepackage{unicode-math}

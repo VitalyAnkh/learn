@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3f06d878-dd28-414b-ab8c-4e96b6afe197
+:END:
 #+title: 关于向量叉积的 Jacobi 等式
 * a ， b ， c 为三个向量，\(\times\) 表示向量叉积运算，则有等式：
 \(a \times (b \times c) + b \times (c \times a) + c \times ( a \times b ) = 0\)

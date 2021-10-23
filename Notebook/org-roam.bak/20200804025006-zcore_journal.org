@@ -1,0 +1,31 @@
+#+title: zCore Journal
+* 2020 年 8 月 3 日
+今天是 zCore 实习的第一天。上午听报告，听到 rCore/zCore 的历史。下午老师和助教相信介绍了各项目。我选择了
+* 2020 年 8 月 4 日
+zircon 的内核对象有一定的通用性，在上面再包一层，就可以成为 linux 内核看到的样子。
+zircon 强制所有的系统调用都走 vdso。
+async/await ：无栈协程，协作式调度
+* 2020 年 8 月 5 日
+参观清华-伯克利深圳学院。
+MaixPy 是什么？
+使用 MicroPython 语法，运行在 K210 开发板上的 AI 编程套件。
+
+
+* 2020 年 8 月 6 日
+** 讨论会结果：
+*** 目标
+1. 对接文件系统
+2. 解决 libos 的 linux 上 fork 系统调用无法使用的问题
+3. 完善 linux ipc 机制，抽象出 zircon 和 linux ipc 可以共用的 ipc 机制
+4. 建立完善的子系统机制，使不同内核上的应用（linux 和 zircon 上的应用）可以互相通信，调用
+** RVM 与 rCore
+** zCore 内核架构与驱动编程
+Futex： 用户态同步互斥机制， Fast User Mutex
+由 thread.start(.., spawn_fn) 开始运行线程
+spawn_fn 函数创建一个内核协程,用来执行此用户线程
+
+syscall ：什么都不管，从 ring 3 蹦到 ring 0
+现在的操作系统都使用 MMIO, x86 使用 PIO
+MMIO 是什么？
+* 2020 年 8 月 7 日
+** rust 中，对一个类型 T 使用 as *const T 或 as *mut T ，与调用 T 的 as_ptr 方法，得到的结果是不一样的。前者得到的是指向整个类型的指针，后者得到的是指向内部数据的指针。可对 String 和Vec<T> 验证。

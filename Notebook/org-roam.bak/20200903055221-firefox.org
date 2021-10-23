@@ -1,0 +1,2 @@
+#+title: Firefox
+* [[file:20200903055300-extension.org][Extension]]

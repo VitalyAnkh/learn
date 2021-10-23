@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       ce62261d-0d0c-4515-80fb-f4dede9e9158
+:END:
 #+title: Annie
 ;; I love you.
 

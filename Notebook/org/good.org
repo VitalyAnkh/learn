@@ -1,14 +1,17 @@
+:PROPERTIES:
+:ID:       90cec543-d4b6-4bcc-8b02-fa9d072984af
+:END:
 #+TITLE: Good
 
 * why Kattel note?
-[[file:system_programming.org][system-programming]] is a good note.
+[[id:6cb97983-3ce4-4b55-8539-ccfd7613364e][system-programming]] is a good note.
 我们太棒了哈哈哈喵喵喵
 
 Fuck you, Annie.
 
 有什么回答？哈哈哈哈
 * learn org mode
-[[file:misc.org][Misc]]
+[[id:6c3e989d-910d-44be-b7d1-d09fbad9dbe8][Misc]]
 * To read: http://noelwelsh.com/posts/2019-01-10-doom-emacs.html
   键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标 META 键（有时候用 EDIT 或 ALT 来标示）。
 * PROJ 学习数理逻辑

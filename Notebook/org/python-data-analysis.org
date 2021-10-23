@@ -1,4 +1,7 @@
 # Python 数据分析
+:PROPERTIES:
+:ID:       e8e536de-28cb-41f7-80a5-192c1815af71
+:END:
 尽管 pandas 采用了很多 numpy 的代码风格，但最大的不同在于 pandas 是用来处理表格型或异质型数据的。
 \(f(t) = \frac{KP_{0}e^{rt}}{K+P_{0}(e^{rt}-1)}\)
 

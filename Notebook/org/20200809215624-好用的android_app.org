@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       654f5357-1391-47ad-b775-0db0cc2bce67
+:END:
 #+title: 好用的Android app
 * CamScanner
 * 夸克浏览器

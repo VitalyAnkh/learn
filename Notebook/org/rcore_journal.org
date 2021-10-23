@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e10784ae-d694-42f0-a57e-9fef30459e1d
+:END:
 #+title: rCore Journal
 * 2020 年 7 月 10 日
 加入 rCore Summer of Code 的第一天。
@@ -90,7 +93,7 @@ Idx Name            Size     VMA              Type
 * 2020 年 7 月 16 日
 
 ** 今天知道实验报告跟每日学习记录是要分开的：
-[[file:20200726202004-rcore_实验报告.org][rCore 实验报告]]
+[[id:e8e9e9be-ff8b-4f87-b712-31fbb8211911][rCore 实验报告]]
 * 2020 年 7 月 17 日
 ** Rust 闭包
 Rust 中闭包是由一个匿名结构体和 trait 来组合实现的。
@@ -145,7 +148,7 @@ Rust 支持两种原生指针：不可变原生指针 *const T 和可变原生�
 很多 RISC-V 核都是用 chisel 写的。学学 chisel 可以深入 RISC-V 的真正底层实践，未来可期。
 不过，说是学习 chisel ，其实是学习 scala 。scala 果然不愧 jvm 上的 haskell 之称，幸好我有 haskell 基础。
 ** chisel 语言环境搭建
-在 arch linux 上很方便，安装 scala scala-resource scala-doc sbt [[file:20200726231319-gtkwave.org][gtkwave]]  和 varilator ，再安装 Quartus 或者 Vivado
+在 arch linux 上很方便，安装 scala scala-resource scala-doc sbt [[id:586f3710-a0a0-42ff-990b-96d6672d607d][gtkwave]]  和 varilator ，再安装 Quartus 或者 Vivado
 * 2020 年 7 月 22 日
 ** RISC-V 处理器核 r-hardcore
 开始写软核了（指新建了文件夹：）
@@ -162,4 +165,4 @@ Rust 的动态大小类型：编译时无法确定大小的类型，例如 trait
 2. 变量、参数和枚举变量不能使用动态大小类型。
 3. 结构体中只有最后一个字段可以使用动态大小类型，其他字段不可以。
 
-[[file:20200801083500-rust_的显式类型转换.org][Rust 的显式类型转换]]
+[[id:2f33834a-4c1a-40d5-b3ae-6116ef6c0a5e][Rust 的显式类型转换]]

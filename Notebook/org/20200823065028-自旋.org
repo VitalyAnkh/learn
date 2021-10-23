@@ -1,1 +1,4 @@
+:PROPERTIES:
+:ID:       f1d8490a-ae6b-4128-a192-f2c742e60901
+:END:
 #+title: 自旋

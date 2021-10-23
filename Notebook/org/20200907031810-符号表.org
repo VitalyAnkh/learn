@@ -1,1 +1,4 @@
+:PROPERTIES:
+:ID:       bf3c5136-e8e3-49f3-9d55-5af88cf3b200
+:END:
 #+title: 符号表

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       1d51911b-4cc6-4232-a863-ff6c0edb0fa6
+:END:
 #+title: How to Make America Great Again
 #+author: vitalyr
 #+BIBILOGRAPHY: library.bib

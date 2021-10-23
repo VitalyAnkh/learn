@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7c20bee3-7819-481e-b73b-9ff35206bac6
+:END:
 #+title: 号称比ripgrep 更快的ugrep
 | The ugrep command is for batch use, whereas the ug     |
 | command is intended for interactive searches using     |

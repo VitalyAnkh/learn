@@ -1,6 +1,9 @@
+:PROPERTIES:
+:ID:       64be8169-72c2-4bdc-8cff-71a6676129ba
+:END:
 #+title: Essentials of Programming Languages
 * 介绍
-Daniel P. Friedman 的又一力作，使用 scheme 式的语言，讲述编程语言（理论上）和解释器（实现上）的诸多概念。非常好读，比[[file:20201215013937-practical_foundations_for_programming_languages.org][Practical Foundations For Programming Languages]] practical 多了。
+Daniel P. Friedman 的又一力作，使用 scheme 式的语言，讲述编程语言（理论上）和解释器（实现上）的诸多概念。非常好读，比[[id:4273d69c-a19f-4855-98c7-1a579d6663dd][Practical Foundations For Programming Languages]] practical 多了。
 * 笔记
 ** ch1 Inductive Sets of Data
 #+begin_src racket

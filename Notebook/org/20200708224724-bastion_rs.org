@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       01bfd764-058e-4708-b1b4-52f023fd3228
+:END:
 #+title: bastion-rs
 [[http:bastion.rs][bastion-rs]] is Highly-available Distributed Fault-tolerant Runtime.

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       4a314d85-ac8b-4874-9bd9-212c1d7e980b
+:END:
 #+title: tokei
 * tokei
 #+BEGIN_SRC bash

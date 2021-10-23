@@ -1,0 +1,615 @@
+* Inbox
+** [ ] 玩rust的iterator trait
+** [ ] 学习smartparens，以及结构化编辑这种编程方法
+** [ ] 学习使用magit
+** [ ] 学习如何给rustc写lint，然后给rustc贡献lint，作为contribute to rustc的开始
+1. 看rustc-dev-guide关于clippy的章节
+2. 看B站上rust-friday关于clippy的分享视频
+
+学习后从这个issue入手吧：https://github.com/rust-lang/rust/issues/90108
+** [ ] rust中的Vec可以转为Box，为什么呢
+** [ ] doom的字体设置需要启动后重新执行一遍 ~config.el~ 才会生效，解决这个问题
+** [ ] 解决emacs-client无法启动的问题
+** [ ] 把ElegantLaTeX项目的其他LaTeX模板配置一下，包括ElegantNote，ElegantBook
+配置方法类似ElegantPaper，在 ~config.org~ 里搜索elegantpaper
+** [ ] 如何在org文件里插入images from URL，export to LaTeX or pdf 时链接转为图片
+** [ ] 让org-mode中的\(\LaTeX\)支持Unicode
+具体来说，让下标可以用汉字
+** [ ] 开发iPad app，使iPad上的zotero笔记与电脑上的zotero和Emacs笔记同步
+** [ ] fork 并扩展org-noter，配合Zotero for iOS，以此替代MarginNote
+** [ ] 解决设置Emacs全局image的attribute
+** [X] 解决博客无法插入图片的问题
+CLOSED: [2021-10-10 日 00:51]
+解决了，先把图片上传到gitee图床，然后在org文章里贴图片的链接
+** [ ] 写盘点Linux上开源免费好玩的游戏的文章
+** [ ] 解决org粘贴剪切板图片后产生链接的问题：
+1. 为什么有链接？
+2. 能否避免？
+** [X] 给paru提pr，反向排列搜索结果
+CLOSED: [2021-10-10 日 00:52]
+paru有这个功能
+** [ ] 学习tree-sitter
+** [ ] 配置arch-ansible
+** [ ] 每两个月给自己的桌面各种工作界面截屏存档
+** [ ] 解决yofi字体重叠（font kerning）的问题
+** [ ] 解决fcitx5在wayland程序下卡顿的问题（相比x11）
+** [ ] 设置org-shiftright (C-S-l) 切换的org TODO keyword，去掉无用的
+** [ ] 解决emacs的org-roam包开启org-roam-back-link的buffer时显示在窗口下方的问题
+我想要它显示在窗口右侧
+可能的解决方案：配置shackle?
+** [ ] 类似bevy_egui ，可否写一个bevy_tui ，集成bevy 和tui-rs ，使bevy 可以方便地开发控制台应用
+** [ ] 如何使用doom emacs 配置lean 4 mode
+** [ ] 解决vitalyr.com无法显示图片的问题
+** [ ] 配置Emacs的dap (debug adapter protocol)
+** [ ] 配置org-re-reveal或者org-reveal
+*** [X] 可以生成slide
+CLOSED: [2021-06-25 五 10:36]
+编译成single file，可以放到U盘里，很方便
+*** [ ] 可以放到网站上，（与hugo配合？）
+** [X] 解决emacs编译失败的问题
+把编译器从clang换到gcc就好了
+CLOSED: [2021-06-28 一 15:40]
+** [X] 解决系统的链接器/usr/bin/ld出问题导致gcc和clang编译cpp文件失败，并且无法编译emacs的问题
+CLOSED: [2021-04-16 五 23:30]
+并不是系统/usr/bin/ld的问题。编译cpp文件应该用g++或者clang++，而不是gcc或者clang
+至于emacs native-comp编译失败，是GNU Emacs的开发者都使用gcc编译器，gcc跟clang有一些差异导致编译失败
+** [ ] 看《电锯人》漫画
+** [ ] 看《异兽魔都》
+** [ ] 用doom emacs的discourse论坛上的方法，找出使emacs启动慢的配置，修改，加速启动
+** [ ] 学习rainbow-mode的代码
+** [X] 写Emacs包：可以根据RGB值inline显示颜色
+CLOSED: [2021-04-03 六 02:56]
+不需要了。已经有了rainbow-mode。可以看代码学习一下。
+** [ ] 配置org-mode 中latex的snippet
+** [X] 解决org-appear不起作用的问题
+CLOSED: [2021-04-02 五 18:47]
+解决了。
+是配置文件前面有问题，导致org-appear没有起作用。
+解决配置文件的问题即可。
+要是一时难以解决，手动M-x org-appear开启org-appear也行。
+** [ ] 给博客建rss订阅
+** [X] 解决Emacs中无法使用rustic的问题
+CLOSED: [2021-04-02 五 18:47]
+解决了。
+还是多运行几次pqd sync -u和pqd build -r。doom doctor也很有用。
+** [X] 设置 org-mode 中关掉 solaire-mode
+CLOSED: [2021-06-25 五 10:40]
+** [ ] alias "git st" to "git status" using ansible
+** [X] 配置 smart-input-source （或者其他类似工具？）
+CLOSED: [2021-04-02 五 19:09]
+配置完成
+** [X] 如何加速磁力下载？
+CLOSED: [2021-04-18 日 16:42]
+要添加tracker网站。
+有公网IP就更好了。
+** [X] 配置 fcitx5 的俄语输入
+CLOSED: [2021-06-28 一 15:38]
+** [X] 练习日语输入
+CLOSED: [2021-06-28 一 15:38]
+日语输入用romeji模式的花话跟汉语拼音差不多，不需要怎么练。还不如练习俄语输入。
+** [X] 练习德语输入
+CLOSED: [2021-06-28 一 15:38]
+** [X] 在fcitx5上配置日语输入
+CLOSED: [2021-06-28 一 15:39]
+** [X] 在fcitx5上配置德语输入
+CLOSED: [2021-06-28 一 15:39]
+** [X] 配置 wakatime
+CLOSED: [2021-06-25 五 12:32]
+*** [X] vscode wakatime
+CLOSED: [2021-06-25 五 11:09]
+Done! Install wakatime plugin.
+*** [X] emacs wakatime
+CLOSED: [2021-06-25 五 11:10]
+Done! Install ~wakatime-mode~, and edit ~config.org~.
+*** [X] intellij-idea wakatime
+CLOSED: [2021-06-25 五 11:13]
+Done! Install plugin following wakatime's documents.
+*** [X] pycharm-edu wakatime
+CLOSED: [2021-06-25 五 11:13]
+Done! Install plugin following wakatime's documents.
+*** [X] fish wakatime
+Done! Add some code to ~.config/fish/functionis/fish_prompt.fish~ following wakatime's documents.
+CLOSED: [2021-06-25 五 11:07]
+*** [X] blender wakatime
+CLOSED: [2021-06-25 五 11:09]
+Done! Install wakatime plugin.
+** [ ] 设置 auto refill mode
+** [ ] learn how to use Switcher ( a gnome plugin )
+** [ ] depot_tools is installed in =/opt/depot_tools/.
+This directory is not in $PATH by default, so make sure to export PATH=/opt/depot_tools:$PATH before using it.
+Also, this directory has root permissions, so either use it as root, or if you want to use it as your currect user:
+
+# groupadd depot_tools
+# gpasswd -a $(whoami) depot_tools
+# setfacl -m g:depot_tools:rwX /opt/depot_tools/
+
+Then re-login as your current user or log your terminal in to the newly created group:
+
+$ newgrp depot_tools
+depot-tools-git 的可选依赖
+    bash-completion: for bash completion
+
+** [ ] 如何自动开启 auto-fill-mode ？
+** [ ] 写一个 typed elisp 如何？像 typescript 对 javascript ，或 typed racket 对 racket 做的那样
+** [X] OS 里的 SMT 是什么意思
+CLOSED: [2021-04-02 五 19:10]
+super multi-threading
+超线程
+** [ ] Rust 里的 #[macro_export(local_inner_macros)] 是什么意思
+** [ ] Scheme 中 eq? equal? eqv? 的区别是什么？
+** [ ] 创建 AUR 包：libresprite-git ，参考 libresprite
+** [ ] 配置 Ulauncher
+支持 wayland ，可以启动应用，可以搜索文件，打开 URL ，不错
+** [ ] 解决 emacs 中保存 markdown 文件时，自动去掉一些换行符，从而使单行长度大于设置的 max_line_length ，不符合规范的问题
+
+[[file:~/projects/contribute/rustc-dev-guide/src/appendix/glossary.md::variant index]]
+** [ ] 写一个 MarginNote 插件，功能是自动把从 libgen 上下载的书籍文件名重命名为只书籍名，大概使用正则表达式就可以实现
+** [X] 解决 opam 安装 coq 中，安装 coq 依赖的 zarith 包时卡住的问题
+莫名奇妙地解决了
+** [ ] 用 Rust 写一个 prolog 编译器
+** [ ] 用 Rust 写一个 SMT Solver
+** [ ] 学习 youtube 上 Elena Lin 用电子笔记做日程和计划的教程
+** [ ] 找到适合自己的硬笔字帖，练之
+** [ ] 用 Rust 写一个 ECS ，参考 Bevy 改写过的 simple_ecs
+** [ ] 解决 redox 编译的问题，也许只需要重新运行一下 bootstrap.sh ？
+** [X] 给电脑清灰
+** [X] update chemacs
+CLOSED: [2021-04-18 日 16:44]
+** [ ] 写一个可以通过命令行把程序放到后台或者前台的软件
+例如：
+在软件 A 未运行在前台时，"$Mod a" 为把与 a 绑定的软件 A 放到前台，再按一下"$Mod a" 会把它放到后台
+
+情景：
+把 alacritty 绑定到 a ，于是 alacritty 就基本上拥有了类似 drop-down 终端的功能
+** [ ] pandas 把嵌套的字典转为 DataFrame 时，若是二重嵌套的字典，会把外层的键作为 DataFrame 的列索引，把内层的键作为 DataFrame 的行索引。那么，若是多于二重的嵌套字典，会如何转为 DataFrame 呢？
+** [ ] 设置 ANDROID_SDK_ROOT 环境变量
+** [ ] 如何在 org 文件中引用代码文件
+** [ ] 写替代 tabs-outliner 的浏览器插件
+** [ ] 学习 wireshark ，看 Linux 上的 microsoft-edge-dev 是如何不需要手动设置代理就可以访问墙外网站
+** [ ] 把 AUR 上的 uno-calculator 改写成 uno-calculator-git
+** [X] blender 编译错误
+[0/0] Generating filter_sm_30.cubin
+FAILED: intern/cycles/kernel/filter_sm_30.cubin
+cd /home/vitalyr/.cache/yay/blender-git/src/build/intern/cycles/kernel && /opt/cuda/bin/nvcc -arch=sm_30 --cubin /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/kernels/cuda/filter.cu --ptxas-options="-v" -D CCL_NAMESPACE_BEGIN= -D CCL_NAMESPACE_END= -D NVCC -m 64 -I /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/.. -I /home/vitalyr/.cache/yay/blender-git/src/blender/intern/cycles/kernel/kernels/cuda --use_fast_math -o /home/vitalyr/.cache/yay/blender-git/src/build/intern/cycles/kernel/filter_sm_30.cubin
+nvcc fatal   : Value 'sm_30' is not defined for option 'gpu-architecture'
+[0/0] Generating filter_sm_50.cubin
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+update in 2020-12: 这个我没必要管
+** [ ] 读 rust std doc 中关于迭代器的章节
+** [X] 在 Arch Linux 启用 nvidia proprietary driver 和 wayland
+CLOSED: [2021-04-18 日 16:44]
+2020 年 10 月 7 日，电脑合上后关机，然后开机无法进入桌面，发现它自动启用了 nvidia proprietary driver ，原因未知，可能是装了什么软件，自动重启导致软件设置的一些内容生效。无法进入桌面的原因是，/etc/gdm/custom.conf 中设置了一句：
+WaylandEnabled=false ，而我的 Arch 只能从 Wayland 启动，所以无法进入。我从另一个 tty 中进入 sway ，发现 sway 也感知到 nvidia proprietary driver 的存在，要如此启动：
+sway --my-next-gpu-wont-be-nvidia
+进入 sway 后，再进入另一个 tty ，发现可以启动 gnome-shell 。
+问题是：启用 nvidia proprietary driver 就会破坏 wayland ，但这次经历显示用一些手段可以使这两者共存，探索之。
+应注意的文件：/etc/gdm/* , /etc/mkinitramfs* , /etc/modprobe.d/*
+2021年4月18日：
+放弃，等到nvidia对wayland支持更好时再看
+Update in 2021.10.09: 现在nvidia对Wayland支持不错了，而且还在持续改进中
+** [ ] resolve this:
+Running darling-setup=ld-so
+/tmp/alpm_sxAdMv/.INSTALL:行 6: /usr/bin/darling-setup-ld-so: 没有那个文件或目录
+错误：命令未能被正确执行
+** [X] 为什么 emacs-pgtk-native-comp 中使用 pdf-tools 渲染 pdf 文件，这么模糊
+CLOSED: [2021-06-28 一 15:48]
+pdf-tools新的维护者和doom emacs作者联手解决了这个问题
+** [ ] 写一个浏览器插件，给 nLab wikipedia 这样的 wiki 网站添加一个 backlink 和 roam 式的链接图
+** [ ] 为什么 nvidia 这个内核模块没开？
+==> dkms remove --no-depmod -m nvidia -v 455.23.04 -k 5.8.10-arch1-1
+rmdir: 删除 '' 失败: 没有那个文件或目录
+rmdir: 删除 '' 失败: 没有那个文件或目录
+rmdir: 删除 '' 失败: 没有那个文件或目录
+解决这个问题
+
+使用 dkms 安装 nvidia 内核模块时的记录：
+==> dkms install --no-depmod -m nvidia -v 455.23.04 -k 5.8.12-arch1-1
+
+Good news! Module version 455.23.04 for nvidia.ko.xz
+exactly matches what is already found in kernel 5.8.12-arch1-1.
+DKMS will not replace this module.
+You may override by specifying --force.
+
+Good news! Module version 455.23.04 for nvidia-modeset.ko.xz
+exactly matches what is already found in kernel 5.8.12-arch1-1.
+DKMS will not replace this module.
+You may override by specifying --force.
+
+Good news! Module version 455.23.04 for nvidia-drm.ko.xz
+exactly matches what is already found in kernel 5.8.12-arch1-1.
+DKMS will not replace this module.
+You may override by specifying --force.
+** [ ] 学习英语单词的重音规律
+** [ ] 学习德语单词的重音规律
+** [X] 了解《爱斯维尔科学哲学手册》这套书
+** [ ] 读 pretty print 的论文
+** [ ] 学习 parser combinator
+** [ ] Rust 中变量是否可变的信息，是不是已经包含在类型里了？
+** [X] 把 termius 设置为 tty 字体
+update in 2020-12: 已设置。其实这个任务下达之前就已经设置了
+** [ ] 写替代 toby 的用于书签/标签页管理的浏览器插件
+** [ ] 使用 ansible 编写自动化任务：拉取~/projects/contribute 目录下的所有 git 仓库
+** [X] 解决密钥导入失败的问题
+CLOSED: [2021-10-10 日 00:46]
+** [ ] 写一个类似鸟群模拟的游戏：牧羊犬模拟器
+玩法：扮演牧羊犬，把羊群（牛群）赶进畜栏
+核心算法在于羊群（牛群）的模拟，可以参考 bevy 游戏引擎的一个 demo ，实现了鸟群的模拟
+** [ ] 更新 emacs-native-git-enhanced 和 doom emacs
+** [ ] 解决 android studio 中无法进行 flutter 的问题，主要原因在于无法正常使用代理，于是无法下载 android sdk
+** [X] 设置全局的 cargo 编译 target
+update in 2020-12: 设置了，但是妨碍开发，多个项目同时进行时，编译缓存总是被互相覆盖，总要重新编译，放弃设置
+** [X] cargo install the-way
+update in 2020-12: 没啥用
+彩蛋：用 ansible 安装？
+** [X] 学习 bevy engine
+** [X] 解决 man -k man 返回“没有合适结果”的问题
+update in 2020-12-15: -k 是正则表达式，所以没有何时结果了，运行
+"man man" 就会有结果的
++man-pages 的数据库没有生成？需要重启？+
+** [ ] Rust 中的 Mutex 和 RwLock 有什么区别
+** [X] 了解 doom emacs 的 custom.el 和 config.org 如何使用
+CLOSED: [2021-04-18 日 16:46]
+customl.el 是用于配置一些私人变量，以及custom-set-faces这种个性配置。
+config.org是用于配置的文学编程。
+** [X] [#B] 给 iPad Pro 贴钢化膜
+不贴了
+** [X] 解决使用 emacs-rime 后，切回 evil normal mode 再切回来，会进入英文而不是 emacs-rime 的中文的问题
+CLOSED: [2021-04-18 日 16:48]
+不用emacs-rime了
+** [ ] 搞清楚阶数在 20 以内的群的结构
+** [ ] 针对 emacs 开新 window 会卡顿的问题，使用 chemacs ，安装 spacemacs，然后看是否有这问题。来确定是 doom emacs 的问题，还是 emacs 本身的问题，还是 gnome 桌面的问题
+** [ ] actor 编程模型是什么样的 :programming:
+** [ ] 超线程 i.e. 处理器运行多于处理器核数的线程 的技术是如何实现的
+** [X] evil-mode 如何把光标置于屏幕中央
+z z
+类似的还有 z t, z b
+** [ ] racket-mode 如何 format 代码
+没有现成的解决方法。学习一下，然后给 racket-mode 添加这个功能吧
+** [ ] 备份手机数据，包括微信聊天记录、图片、下载的歌曲，记录好用的 APP ，然后恢复出厂设置
+** [ ] 写一个自动更新所有 aur git 包的软件（rust 来写？）
+思路：
+1. 使用 pacman -Q | rg git 找到所有 git 软件包，使用一些方法分割出软件包名字
+2. 使用 proxychains -q rua i 开逐个更新
+** [ ] Rust 的 drop-flag 是什么
+** [ ] 学习 condvar ，条件变量
+** [ ] 写类似 alfred 的启动器，使用 Rust iced 写
+** [ ] 验证《Rust 编程之道》书上介绍的字节对齐的例子时，解释是错误的
+** [ ] 通过预编译的方式，使 zCore 支持 rustc（在 zircon 中而不是 linux 中）：
+1. 下载 fuchsia 源码，编译，然后按照 fuchsia 文档，编译出 fuchsia 魔改过的可以运行在 fuchsia 的 rustc
+2. 把编译好的 rustc zbi 文件拷贝到 bootfs 的可执行文件所在的位置，尝试运行
+** [ ] 用过程宏重写 zCore 中为某个 struct 实现 KernelObject 的代码
+** [ ] zCore 中到处使用了内部可变性，把可变的数据部分抽出来做成一个独立的数据结构，然后用 Mutex 等包起来。问题是这样有些繁琐，可否用过程宏简化这些代码？
+** [X] 5 日上午：
+1. green thread in 200 lines of rust
+2. 文章：动手实现一个 zCore 系统调用
+3. Book: ostep 1 chapter
+4. rCore tutorial
+
+** [X] 询问“一生一心”和 zCore 项目介绍的 slides
+** [X] 用 org-mode 设置每周升级 emacs 定时任务
+** [ ] 给 zCore 的 Makefile 添加 clean 选项，清理编译生成的文件
+** [ ] 给 zCore 添加必要文档：
+1. 在# See template in zircon-user
+cd zircon-user && make zbi mode=release 之前要 rustup target add x86_64-fuchsia
+** [ ] xcb-imdkit 这个 aur 包是从 git 安装的，注意及时更新
+** [ ] 试用 python 包 lsp-pyright
+** [ ] 写一个 concat 函数，能把任意层的[T]压平
+** [ ] screen 和 tmux 这类终端复用器有什么用？该怎么用？
+** [ ] 让 fcitx5 支持 systemd，给它提交 pr
+** [ ] mlocate 是什么软件
+** [ ] 写一个 Windows 上 everything 的复刻：
+1. 使用 rust 语言，写成 systemd 服务，使用 iced 库写 gui
+2. 学习数据库 crud ，使用 sqlite
+3. 参考这个教程作为原型：https://mp.weixin.qq.com/s/kky4IO9gWOpN2yNQBv9E_A
+
+** [ ] 学习 rust 写的 find-fd 的用法
+** [ ] 写一个自动升级所有从 git 安装的 aur 软件包的程序
+** [ ] 阅读《记忆宫殿》
+** [ ]  尝试自动化博客：“我原先的博客在 WordPress 上，但是后来嫌麻烦需要管理服务器，保证服务器一直在线，所以转到了 Blogger，当然 Blogger 还一直在更新，只是从我 15 年开始，大部分的内容都属于转载了，原因归咎于我发现了 IFTTT 的神奇妙用，所以我以 Blogger 为中心，InoReader 中转播的内容自动转发到 Blogger 存档，而 Blogger 发布内容之后分享到各大社交网站，Twitter，Weibo，所以也挺好玩的，我看 RSS，然后整个服务就自动在背后执行了。”
+** [ ] 配置 rime emoji ，让它可以提示 emoji
+** [ ] 维数更高的世界里的人，智力会更高吗
+** [ ] 读 manage personal life in org-mode
+** [X] [#A] 解决一堆 Qt 5 应用无法在 Wayland 下运行的问题。都是说有 Wayland 插件但无法加载。是构建选项有问题，还是系统的问题，还是 Qt 5 的问题？
+编译时没有加入 Qt 5 plugin 的问题。
+如此解决：
+启动时设置环境变量：
+QT_QPA_PLATFORM = ''
+** [ ] 阅读 99 bottles of OOP
+** [ ] [#A] 解决一些 Java 的图形软件包，点开下拉菜单后，菜单立即消失的问题（例如 Digital ，类似 logisim 的数字逻辑仿真软件）
+** [ ] 写一个方便 Emacs 的 org-roam 用户分享笔记的网络平台
+** [ ] 阅读《vim 实用技巧》
+** [X] 解决 Emacs 中 kana 无法使用的问题
+不知道为什么就可以使用了。。。
+** [ ] 有没有在 FPGA 上运行的操作系统，可以动态配置硬件的各种特性
+** [ ] 给 rust-search-extension 提 pr ，让它可以搜索本地 doc 文档，即 rustup 安装的 std book nomicon 等文档
+** [ ] 了解 Rust 语言的内存布局，读博客 and google it
+** [ ] 了解 C 语言中数据结构的内存布局（例如，一个 struct 的各个 field 是如何排列的，二维数组的元素是如何排列的）
+** [ ] 领域设计模型 DCI 是什么
+** [ ] Emacs 的 awesome 插件是干嘛的
+** [ ] 阅读《普林斯顿数学分析读本》 the real analysis  lifesaver :read:
+** [ ] 看《猪猪侠》
+** [ ] 《洛洛历险记》有配套玩具吗
+** [ ] 查看 org-mode 的 Rust 源代码模式使用的是否是 rustic ，如果不是，改过来
+** [ ] 如何使用 doom emacs 的 bookmark 功能？
+** [ ] 如何让 doom emacs 有固定 10 个 workspace ，并且每个 workspace 的内容可以持久话存储，意即，重启 Emacs 后相应 workspace 的内容依旧和上次会话一样
+而且不需要新建 workspace （通过 SPC TAB n ），而是用 SPC TAB <N> 可以直接打开第 N 个 workspace
+** [X] 配置 wanderlust
+CLOSED: [2021-04-18 日 16:58]
+不配置，不需要，我用thunderbird
+** [X] eshell 是干嘛用的？
+CLOSED: [2021-10-23 六 17:56]
+类似vterm的emacs的终端/shell，把虚拟终端和shell混淆起来的东西？
+** [ ] [#A] 学习 Elisp
+** [ ] 配置 org-mode 里写 LaTeX 代码时的 snippet （这些都要有一定 ELisp 知识啊，快去学 ELisp ！）
+** [ ] 如何让 Emacs 里的 flycheck 不检查中文（zh_CN) ?
+** [ ] 看 SICP
+** [ ] 学习使用 unicode-font 这个包
+** [ ] 为什么在 Emacs 中开的终端下，无法搜索 AUR 软件包？
+大概是代理问题
+** [ ] 在 MarginNote 官方论坛上指出 MarginNote 在搜索方面的问题，请他们改善
+** [ ] 因为 MarginNote 增加了在笔记中的手写识别支持，尝试使用 MarginNote 作笔记
+** [ ] [#A] 学习搜索引擎技巧
+** [ ] ielm 是 emacs 的什么工具？
+** [ ] 学习使用 org-mode 的 tag 机制
+** [ ] 解决 visual 模式下，光标无法左右移动的问题
+** [ ] magit 怎么用
+** [ ] cask 是怎么用的
+** [ ] Emacs 中的 face 是什么？
+** [ ] 配置 smart-input-source 挂载 emacs-rime 和 fcitx5
+** [ ] 解决 emacs 编辑 org 文件时 minibuffer 显示一堆 eldoc 的错误的问题
+** [ ] 把 emacs 的中文字体让自己指定后（设置 doom-unicode-font 变量），编辑含有许多中文的文件后快了许多。为什么？
+** [ ] 用 Rust 语言写一个 cmatrix
+** [X] 解决 Emacs 中“音乐”显示为“音为”的问题
+解决了：安装字体后还是要重启啊！
+** [ ] 遇到了奇怪的错误：把 os.phip 的 post-02 中的 target-triple 命名为 x86_64-blog_os-vitalyr.json 而不是 x86_64-blog_os.json ，就会出现预期之外的错误：
+#+BEGIN_SRC shell
+❰vitalyr❙~/projects/learn/OS/blog_os_vitalyr(git:master)❱✘≻ cargo build --target x86_64-blog_os.json
+   Compiling blog_os_vitalyr v0.1.0 (/home/vitalyr/projects/learn/OS/blog_os_vitalyr)
+error[E0463]: can't find crate for `core`
+  |
+  = note: the `x86_64-blog_os-2070387654581237862` target may not be installed
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+error: could not compile `blog_os_vitalyr`.
+
+To learn more, run the command again with --verbose.
+#+END_SRC
+** [ ] 解决由于 Emacs 自动将一个 tab 转换成四个空格，导致 Makefile 格式不对的问题
+** [ ] 合理的配置备份与升级策略是：使用 mackup 进行备份，使用 ansible 进行升级
+** [ ] 学习使用 smart-input-source 挂载 emacs-rime
+** [ ] MetaPost 是什么？
+** [ ] 学习使用 inkscape
+** [ ] [#A] 使用 mackup https://github.com/lra/mackup https://sspai.com/post/32933 或 homemanager https://github.com/rycee/home-manager 备份软件配置
+** [ ] 如何使用 org-poromado
+** [ ] org-roam 如何设置任务提醒？
+** [ ] org-roam 如何设置循环任务？
+** [ ] [#C] 如何删掉一条 fish_history
+** [ ] 写有 wayland 支持的 emacs-anywhere
+- gnome下使用gnome-magic-window
+- sway下也有用于窗口切换的脚本，搜索之
+** DONE 看《隐秘的角落》
+** [ ] [#A] 读葫芦笔记的 org-roam 教程
+** [ ] [#A] 阅读 An Introduction to Mathematical Cryptography
+** [ ] [#A] 阅读《图解密码技术》
+** [ ] [#A] 学习 Prolog
+** [ ] 效用函数是什么
+** PROJ [#C] 看《完全音乐理论教程》 3rd edtion
+** [ ] learn how to swim
+** [X] 重构自己的 doom emacs 配置，分成模块。学习 google 可以搜到的不错的配置
+CLOSED: [2021-04-18 日 17:03]
+** [ ] [#A] 给 emacs 写个类似 vscode 上 code runner 的扩展
+好像已经有了， quick-run, maple-run
+** [ ] 学习 C 语言的可变参数表功能
+** [ ] 学习使用 iedit
+** [ ] 使用 ansible 安装各个语言的 language server
+** [X] [#A] 解决 emacs 在打开.rkt （racket 源文件）后，使用 scheme mode 而不是 racket-mode 的问题
+** [ ] [#C] 学习 google 搜到的他人的 doom emacs 配置
+** [ ] 解决 treemacs 的图标不使用 treemacs 自己的默认图标的问题
+** [ ] 如何使用 ctags
+** PROJ 好想成为一个电气工程师，日常鼓捣各种电器
+** [ ] 阅读 ice1000 写的 java 包管理的文章
+** [X] 解决 Emacs 中标题和 treemacs 中的英文字体与编程区的英文字体不一致的问题（具体来说，编程区中是 mononoki  ，另一个是 Noto Sans CJK Light 。或许，这不是问题，但应该找出导致这一现象的原因）
+CLOSED: [2021-04-18 日 17:23]
+这的确不是问题，这是face
+treemacs的face跟编程用的face是不同的
+看我配置文件里的custom-set-faces部分
+** PROJ [#C] 读《春夜十话：数学与情绪》
+** [ ] [#C] 整理语雀《21 世纪恋爱指南》
+** [ ] [#C] 当设置的字体中没有 nerd fonts 中的那些图标时（例如文件的图标，在 lsd -la 时会显示），系统会寻找其他字体中的图标，例如 sarasa nerd font ，但图标会显示得偏小。
+解决方法是把默认字体换成有 nerd font 字符的字体
+** [X] [#C] 记录解决 firefox 中字形错误的问题的方法
+
+[[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
+** DONE 在 emacs-china 论坛上求助 emacs 中“中”字和“言”字异形的问题
+解决了，设置了 doom-unicode-font
+
+[[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
+** [X] [#C] 解决 emacs 中指定更纱黑体、细字形但实际却使用宋体的问题，应该与/etc/fonts/conf.avail/64-language-selector-prefer.conf 有关
+
+[[file:~/projects/learn/Notebook/org/todo.org::*不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：][不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：]]
+** [X] 不知道是哪个措施使 firefox 中更纱黑体使用日文字形而不使用中文字形的问题解决了：
+1. https://tieba.baidu.com/p/4879946717?red_tag=2813770546&traceid=
+   添加了/etc/fonts/conf.avail/64-...
+2. 安装 noto-fonts-cjk ，然后 fc-cache -fv
+
+查明真相，然后解决上面那问题。
+Solution: 是第 2 个方法解决的。需要把那个方法记录一下。
+
+[[file:~/projects/learn/Notebook/org/todo.org::*解决 emacs 中使用 valign 来对齐 org mode 中的表格，但使每一列宽度过宽的问题][解决 emacs 中使用 valign 来对齐 org mode 中的表格，但使每一列宽度过宽的问题]]
+** [ ] rstudio 是否指定 lib 这个变量就可以指定包的安装位置？
+
+[[file:~/projects/learn/Notebook/org/todo.org::*看《R 语言实战》][看《R 语言实战》]]
+** PROJ [#C] 读《女士品茶》
+** [ ] [#C] 计量心理学是什么？
+** [X] 解决 emacs 中使用 valign 来对齐 org mode 中的表格，但使每一列宽度过宽的问题
+CLOSED: [2021-04-18 日 17:24]
+现在应该没有这个问题了
+
+[[file:~/projects/learn/Notebook/org/wiki.org::*doom-emacs shortcut:][doom-emacs shortcut:]]
+** [ ] 𝚅𝚒𝚝𝚊𝚕𝚢𝚁: In lsp-mode's rust-analyzer, bind commands like lsp-rust-analyzer-join-lines, lsp-extend-selection and lsp-rust-analyzer-expand-macro to keys.
+𝐌
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::setq lsp-rust-server 'rust-analyzer]]
+** [ ] 解决 visual 模式下，无法使用 h l 进行左右移动的问题
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::(rss +org) ; emacs as an RSS reader]]
+** [X] [#C] 在 emacs 中配置 twitter 客户端，见下面链接
+没用，不干
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::twitter ; twitter client https://twitter.com/vnought]]
+** [ ] [#C] 学习使用 projectile
+** [ ] [#C] doom emacs 中 tools 节的 editorconfig 扩展是做什么用的呢？
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/init.el::editorconfig ; let someone else argue about tabs vs spaces]]
+** [X] 禁用 nox 中的 rust-mode ，安装 rust-analyzer 的 emacs 扩展
+不用 nox 了
+** [ ] [#C] 安装，配置并学习使用 emacs 的 telegram 客户端 telega
+** [ ] 学习使用 magit
+** DONE 有人说 racket-mode 比 drracket 功能更强大，尝试
+已尝试
+** PROJ [#A] 学习 R 语言
+:LOGBOOK:
+CLOCK: [2020-07-03 五 01:13]--[2020-07-03 五 02:58] =>  1:45
+:END:
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2020-07-03 五 01:12]
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+*** TODO [#A] 看《R 语言实战》
+SCHEDULED: <2020-07-11 六>
+:LOGBOOK:
+CLOCK: [2020-07-04 六 02:46]
+:END:
+*** TODO [#A] 看《数据科学实战》
+SCHEDULED: <2020-07-12 日>
+*** TODO [#A] 看《R 数据科学》
+
+** TODO [#C] Book: Physics from Symmetry
+** DONE [#C] 下一步让 fcitx5 在 emacs 中工作的实施计划：
+*** DONE [#C] 更改四个配置文件中的变量，从 wayland 切换到 x11<2020-07-06 一 15:00>
+**** DONE 若尝试成功，可再试试使用 i3 窗口管理器<2020-07-03 五>
+CLOSED: [2021-10-13 三 14:22]
+*** DONE [#C] 安装 fcitx4 ，试试能否在 emacs 中使用
+不装了。fcitx5 可以在 emacs 中使用了。还是要学好基本功。以后学了 C++ 后参与开发 fcitx5 吧。
+
+** TODO [#C] 让 emacs 选择候选的快捷键是 Tab 而不是 Enter
+[[file:~/projects/learn/Notebook/org/wiki.org::*fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy][fcitx5 需要安装的包：fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-rime fcitx5-chinese-addons libime fcitx5-anthy]]
+** TODO [#B] 在 emacs 中无法使用 fcitx5 的关键在于，无论如何，fcitx5 在 emacs 中是 close 的，运行 fcitx5-remote 后可得知
+** TODO [#C] 改 emacs 中代码列宽度
+** TODO Why I don't like emacs-rime anymore: emacs-rime 在文件很大时（比如日记）性能不好，还有我使用 Agda，Agda 会把默认输入法设置为 Agda，再使用 emacs-rime 的话要重新设置变量
+** DONE 改环境变量信息来让 emacs 使用外部输入法，例如改/etc/profile ，~/.profile
+现在 Emacs 已经可以使用外部输入法，但我现在更喜欢使用 emacs-rime ，它与 emacs 集成度更高，使用起来更加方便。
+** TODO try this: https://github.com/abo-abo/org-download
+** DONE 上报 emacs-rime 中使用 posframe 时，第九个候选不显示的问题
+已上报
+** DONE 给 smart-os-input-method 添加 fcitx5 支持。 fcitx 的下一代 fcitx5 已经可用，在很多方面超越旧版，能否给一个配置变量让用户设置使用的是 fcitx5 还是 fcitx，并添加代码，以支持 fcitx5 。fcitx5 跟旧版的命令格式都基本一致，容易参照旧代码
+smart-input-source 本来就支持 fcitx5
+** DONE 回复 bjtu 邮件中的 good day
+不回
+** TODO 看https://plfa.github.io 上的指导，把 plfa 加到 Agda 使用的库中，这样来做 plfa 的习题
+** TODO 学习在 doom-emacs 中使用 manateelazycat 的 EAF
+** DONE 解决 emacs-rime 使用 posframe 却无候选框的问题
+正确的语句应该是：(setq rime-candidate 'posframe) 而不是(setq rime-candidate "posframe")
+** TODO 解决这个问题：编辑 agda 文件后，agda-mode 会把 default-input-method 这个变量设置为"Agda" ，导致 rime 输入法无法使用
+
+[[file:~/sdk/config/emacs/doom.d-vitalyr/config.el::shell-command-to-string "agda-mode locate"))]]
+** PROJ [#C] 看《西部世界》
+** DONE 半月板是什么？
+** DONE 出现使用回车键却无法换行的问题在于，org-roam 比 org-mode 先编译（貌似），所以要加上一个 unpin! org-roam
+在 packages.el 中添加了(unpin! org-roam) ，问题解决
+** DONE 写 Annie 可爱的地方：在夏日的午夜打电话，第一句话是“Baby~ ”
+** PROJ [#A] 阅读《经济学原理》 曼昆
+** PROJ [#A] 阅读《爱的艺术》 弗洛姆
+** TODO [#A] 设置定时任务，每小时备份 config 文件。使用 ansible 或者 crontab ？
+** PROJ [#A] 阅读《用 Python 进行数据分析》
+** TODO [#A] 完成 ansible 对个人桌面的配置，要求：可以使用 github 上的配置（spark ansible)来配置好想要的所有编程环境
+** TODO [#C] 在 iPad 上配置 org-mode 查看环境，使用 beorg
+** DONE 学习如何用 org-mode 计时
+<SPC m c i> org-clock-in
+** PROJ [#A] 读《Python 网络爬虫》崔庆才
+** PROJ [#A] 读《如何阅读一本书》艾德勒
+** PROJ [#A] 读《人生的智慧》叔本华
+** DONE 学习如何使用 emacs 浏览网页
+ewm 等软件都不堪大用，尝试使用 mateenalazycat 的 EAF
+** DONE [#C] 学习如何使用 Wanderlust 管理邮件
+CLOSED: [2021-04-18 日 17:26]
+** DONE 解决回车键无法新建一行的问题，详情见下
+https://github.com/hlissner/doom-emacs/issues/3172
+按照这个 issue 中说法，rm -rf .emacs.d/.local/build/org-* ，然后 doom sync ，解决了
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-19 五 08:55\] 终于修复了 Emacs][[2020-06-19 五 08:55] 终于修复了 Emacs]]
+** DONE 配置 org-mode 下，LaTeX 公式的即时预览和手动预览
+
+[[file:~/projects/learn/Notebook/org/journal.org::*For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).][For me the only XWayland apps that I want to use on the HiDPI display are Chromium and VSCode and both of them have options for scaling (e.g.: "--force-device-scale-factor=2" for Chromium; "window.zoomLevel" for VSCode).]]
+** TODO [#A] 在电脑上配置 zotero ，在 git 仓库中备份配置
+** TODO [#C] 配置 emacs-rime 输入特殊符号的功能（emoji, unicode character 等）
+
+[[file:~/projects/learn/Notebook/org/todo.org::*如何使用 emacs-rime 输入英文人名中的小圆点？][如何使用 emacs-rime 输入英文人名中的小圆点？]]
+** TODO [#C] 找回 gnome extension 网站上的帐号
+** WAIT [#C] 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+尝试了，privoxy 好像没起作用？还是我没配置好？还是本该如此？
+** TODO [#A] 备份 gnome 的设置，使用 dconf (just google it)
+** DONE 申请毕设服务接单系统，挣钱
+*** DONE 等待对方审核
+审核通过，可以去http:://bishefuwu.com 登录
+** TODO [#A] 快去学习 org capture
+** TODO [#A] 如何让 org capture 捕获的 todo 添加上时间
+** DONE [#A] 如何打开 emacs 内置的 reference manual ？
+C-h i
+
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 10:50\]][[2020-06-15 一 10:50]​]]
+** TODO 配置 emacs 的 upload 插件 org-upload ，做图床用
+** TODO 找到 gnome 壁纸的存放位置，设置同步
+** TODO 把 org-capture 中的 personal todo 模板创建的 todo 事项中的 status indicator 改为默认为 TODO ，而不是[ ]
+** TODO [#A] 同步和备份 rime 词库
+** DONE 如何使用 emacs-rime 输入英文人名中的小圆点？
+使用 emacs-rime 输入星号，然后在候选框中选择·
+更好的方法应该是配置 rime 输入特殊符号的功能，这列入下一个 todo 里
+
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-15 一 09:26\]][[2020-06-15 一 09:26]​]]
+** TODO 如何同步 emacs-rime 的词库？
+
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-14 日 00:20\]][[2020-06-14 日 00:20]​]]
+** WAIT learn from this config for org mode
+#+begin_src emacs-lisp
+(use-package! org
+  :init
+  (setq
+   org-directory "~/Dropbox/org"
+   diary-file (concat org-directory "/diary")))
+
+(use-package! org-agenda
+  :init
+  (setq
+    org-agenda-include-diary              nil
+    org-agenda-file-regexp                "\\`[^.].*\\.org'\\|[0-9]+\\.org$"
+    org-agenda-timegrid-use-ampm          t
+    org-journal-dir                       (concat org-directory "/journal")
+    org-journal-enable-agenda-integration t
+    org-journal-file-format               "%Y%m%d.org"
+    org-journal-time-format               "%l:%M%p")
+  (appendq! org-agenda-files (list org-journal-dir)))
+#+end_src
+** HOLD Read the **plain text guide**, then fill the table below
+
+[[file:~/projects/learn/Notebook/org/tools.org::*Emacs Tips][Emacs Tips]]
+** TODO 修正使用 org-capture 时自动链接到当前 buffer 这个特性
+应该给出是否链接的选项？
+不知道何时，org-capture 不会自动链接到当前 buffer 了。但我开始怀念这个特性。如何才能开启这个特性呢？如何控制这个特性呢？快去学习 ELisp 吧！
+[[file:~/projects/learn/Notebook/org/journal.org::*\[2020-06-12 五 19:29\]][[2020-06-12 五 19:29]​]]
+** DONE 学习如何用 org-mode 做 gtd
+** DONE 制定考研计划
+** DONE 所以，如何正确使用 org-mode 写日记呢？
+使用 org capture ，选择 journal ，完事。默认链接当前文档是一个特性，还挺好用，配合 org-roam 很棒。
+** TODO 要学习使用 org capture
+** TODO 学习使用 org template
+** TODO 学习 org-mode 的用法：这个<SPC + X> 的 org capture 的功能会默认链接当前打开的文档的嘛？
+是的，会默认链接当前文档。
+** DONE to learn and practise PaperWM
+CLOSED: [2021-06-28 一 15:49]
+不用了，太过辣鸡。等以后有闲心再来试试吧。
+最好到学习了 gnome 插件开发，可以修改 PaperWM 源代码后。

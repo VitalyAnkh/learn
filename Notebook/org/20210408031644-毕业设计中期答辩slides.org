@@ -1,1 +1,4 @@
+:PROPERTIES:
+:ID:       339b1cad-98d7-4e16-9ccd-0b65518a4265
+:END:
 #+title: 毕业设计中期答辩slides

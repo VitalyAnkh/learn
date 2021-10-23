@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       bfcd43dd-0fba-466f-a1c9-040e330bae44
+:END:
 #+title: Linux 固件升级
 安装 lfupd ，gnome-software 是它的前端之一。

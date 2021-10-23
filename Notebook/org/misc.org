@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6c3e989d-910d-44be-b7d1-d09fbad9dbe8
+:END:
 #+title: Misc
 
 * dictionary should be roam-like

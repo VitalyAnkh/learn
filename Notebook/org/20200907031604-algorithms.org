@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       61d7f8d8-e9a0-48a0-a37f-320793004b81
+:END:
 #+title: Algorithms
-* [[file:20200907031624-union_find.org][Union-Find]]
-* [[file:20201104110446-面向对象的思想.org][面向对象的思想]] 
+* [[id:8f078cfd-e089-452b-9354-2f4fb8ab7770][Union-Find]]
+* [[id:9c047df2-339d-47f1-a9f2-276c6d698d54][面向对象的思想]] 

@@ -1,0 +1,3 @@
+#+title: Emacs 中 window 和 buffer 的关系
+window 和 buffer 并不是等同的。
+一个 window 中 可以有多个 buffer ，一个 buffer 也可以出现在多个 window 中。

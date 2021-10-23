@@ -1,0 +1,5 @@
+#+title: Graph Theory
+* [[file:20200907032815-connected_component.org][Connected Component]]
+:PROPERTIES:
+:ID:       7e0ff5f7-774a-4f8a-b53e-8a6b0ea27ee2
+:END:

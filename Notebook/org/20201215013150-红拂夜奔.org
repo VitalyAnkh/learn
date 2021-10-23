@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f2aff967-e5d6-41a3-b3de-d13c966c8b1b
+:END:
 #+title: 红拂夜奔
 * 小说内容
 李靖和红拂逃出了洛阳城，李靖又建造了长安城。

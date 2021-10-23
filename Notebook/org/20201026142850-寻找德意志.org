@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       cc6ce089-6b88-4a5c-bf4b-84fdf9f1b175
+:END:
 #+title: 寻找德意志
 * 第一章
 王二是当代中国的一个大学生，他做着去德国学数学的梦。

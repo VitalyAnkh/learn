@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e901eaa8-8b3a-492d-878f-83cd381bc615
+:END:
 #+title: vulkano
 类似 gfx-rs 的图形 API 抽象库，unlike  gfx-rs  ，只把 vulkan 作为后端。gfx-rs 提供 vulkan ， metal ， DX12 和 openGL 后端。
 
