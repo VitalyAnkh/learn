@@ -7,6 +7,23 @@
   keywords = {Researcher App}
 }
 
+@incollection{dolanConcurrentSystemProgramming2018,
+  title = {Concurrent {{System Programming}} with {{Effect Handlers}}},
+  booktitle = {Trends in {{Functional Programming}}},
+  author = {Dolan, Stephen and Eliopoulos, Spiros and Hillerstr{\"o}m, Daniel and Madhavapeddy, Anil and Sivaramakrishnan, K. C. and White, Leo},
+  editor = {Wang, Meng and Owens, Scott},
+  year = {2018},
+  volume = {10788},
+  pages = {98--117},
+  publisher = {{Springer International Publishing}},
+  address = {{Cham}},
+  doi = {10.1007/978-3-319-89719-6_6},
+  abstract = {Algebraic effects and their handlers have been steadily gaining attention as a programming language feature for composably expressing user-defined computational effects. While several prototype implementations of languages incorporating algebraic effects exist, Multicore OCaml incorporates effect handlers as the primary means of expressing concurrency in the language. In this paper, we make the observation that effect handlers can elegantly express particularly difficult programs that combine system programming and concurrency without compromising performance. Our experimental results on a highly concurrent and scalable web server demonstrate that effect handlers perform on par with highly optimised monadic concurrency libraries, while retaining the simplicity of direct-style code.},
+  isbn = {978-3-319-89718-9 978-3-319-89719-6},
+  langid = {english},
+  file = {/home/vitalyr/Zotero/storage/4CQBKK9J/Dolan 等。 - 2018 - Concurrent System Programming with Effect Handlers.pdf}
+}
+
 @article{kanenobuInfinitelyManyKnots1986,
   title = {Infinitely {{Many Knots}} with the {{Same Polynomial Invariant}}},
   author = {Kanenobu, Taizo},
@@ -104,6 +121,22 @@
   howpublished = {https://bjpsbooks.wordpress.com/2018/09/18/elaine-landry-categories-for-the-working-philosopher/\#more-1440},
   langid = {english},
   file = {/home/vitalyr/Zotero/storage/22VLVG7M/Teh 和 Kapulkin - 2018 - BJPS Book Review of Categories for the Working Ph.pdf;/home/vitalyr/Zotero/storage/CUJLTJ2K/15047.html}
+}
+
+@article{weissOxideEssenceRust2021,
+  title = {Oxide: The {{Essence}} of {{Rust}}},
+  shorttitle = {Oxide},
+  author = {Weiss, Aaron and Gierczak, Olek and Patterson, Daniel and Ahmed, Amal},
+  year = {2021},
+  month = oct,
+  journal = {arXiv:1903.00982 [cs]},
+  eprint = {1903.00982},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  abstract = {Rust claims to advance industrial programming by bridging the gap between low-level systems programming and high-level application programming. At the heart of the argument that this enables programmers to build more reliable and efficient software is the borrow checker - a novel approach to ownership that aims to balance type system expressivity with usability. And yet, to date there is no core type system that captures Rust's notion of ownership and borrowing, and hence no foundation for research on Rust to build upon. In this work, we set out to capture the essence of this model of ownership by developing a type systems account of Rust's borrow checker. We present Oxide, a formalized programming language close to source-level Rust (but with fully-annotated types). This presentation takes a new view of lifetimes as an approximation of the provenances of references, and our type system is able to automatically compute this information through a substructural typing judgment. We provide the first syntactic proof of type safety for borrow checking using progress and preservation. Oxide is a simpler formulation of borrow checking - including recent features such as non-lexical lifetimes - that we hope researchers will be able to use as the basis for work on Rust.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Programming Languages},
+  file = {/home/vitalyr/Zotero/storage/LUS7GTKZ/Weiss 等。 - 2021 - Oxide The Essence of Rust.pdf;/home/vitalyr/Zotero/storage/HAK9CXGV/1903.html}
 }
 
 

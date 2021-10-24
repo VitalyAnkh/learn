@@ -2,6 +2,7 @@
 :PROPERTIES:
 :ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
 :END:
+** [ ] 备份微信聊天记录，重置手机，把微信聊天记录存到百度网盘和阿里云盘
 ** [ ] 玩rust的iterator trait
 ** [ ] 学习smartparens，以及结构化编辑这种编程方法
 ** [ ] 学习使用magit

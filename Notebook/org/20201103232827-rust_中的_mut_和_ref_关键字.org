@@ -6,3 +6,9 @@ let ref x = y; 就相当于 let x = &y;
 let mut x = y; 就相当于 let x = mut y;
 这两个关键词常用于传递函数参数时重新绑定一个变量。
 这么理解对吗？
+
+update in 2021-10-24:
+这么理解不对。
+~let~ 后面是pattern，let是要进行pattern matching.
+~ref x~ 与 ~y~ match，then ~x =&y~.
+~mut x~ pattern matchs ~y~, then ~x~ has ~y~'s value, and ~x~ is mutable. As for whether ~y~ is valid or not, it depends whether ~y~ has ~Copy~ semantic, i.e. whether ~y~ impls ~Copy~ trait.

@@ -70,11 +70,8 @@ A *link diagram* is a plannar graph such that each connected component satisfies
 1. It's (up to homeomorphism) a circle, disjoint from the rest of the link diagram.
 2. It is a connected link diagram in the sense of the Definition above.
 ** Reidemeister Move
-:PROPERTIES:
-:ID:       5ca31ce0-780d-45d1-9bcf-1456d535bf9c
-:END:
 In the mathematical area of knot theory, a Reidemeister move is any of three local moves on a link diagram. Kurt Reidemeister (1927) and, independently, James Waddell Alexander and Garland Baird Briggs (1926), showing two differrent  knot diagrams could represent the same knot (up to planar isotopy), can be related by a sequence of the three Reidemeister moves.
-*** Definition 2.1 Reidemeister move \(R1\) :ATTACH:
+*** Definition 2.1 Reidemeister move \(R1\)
 The first type of Reidemeister move, adds or reduce a circle to the knot diagram of a knot, like this:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
@@ -87,7 +84,7 @@ The second type of Reidemeister move, add or reduce a circle between two strand 
 #+attr_latex: :width 50% :height 50%
 [[attachment:_20210529_170248screenshot.png]]
 
-*** Definition 2.3 Reidemeister move \(R3\) :ATTACH:
+*** Definition 2.3 Reidemeister move \(R3\)
 The third type of Reidemeister move, move a  line over a crossing, or under a crossing, like this:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
@@ -161,10 +158,7 @@ Crossing changes will usually alter the isotopy type of the diagram.
 *Proof*. After changing a crossing of \(D\), we could reduce at lease one crossing with a R1 move.
 *Definition*. The unknotting number, \(u(K)\), is the smallest number of crossing changes required to obtain the unknot from some diagram of the knot \(K\).
 
-** Kanenobu Knot, Generalized Kanenobu Knot and Alternating Link :ATTACH:
-:PROPERTIES:
-:ID:       575a3ce3-c2d4-4d15-874f-4054cf3c0acc
-:END:
+** Kanenobu Knot, Generalized Kanenobu Knot and Alternating Link
 The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomial invariant, cite:kanenobuInfinitelyManyKnots1986 , are knots like following:
 :PROPERTIES:
 :ID:       4f7bf60b-78ae-4365-b59d-29b51ce88612

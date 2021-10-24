@@ -25,10 +25,7 @@
 #+reveal_init_options: slideNumber:true
 #+reveal_hlevel: 2
 * 研究背景
-** 通俗地说，纽结理论就是要研究三维空间中的绳圈。 :ATTACH:
-:PROPERTIES:
-:ID:       de157e3c-139b-4fb5-9c86-cd7b376ebc6c
-:END:
+** 通俗地说，纽结理论就是要研究三维空间中的绳圈。
 
 #+attr_html: :width 50% :height 50%
 #+attr_org: :width 50% :height 50%
@@ -41,9 +38,6 @@
 *** 平面上的没有交叉点的简单闭曲线称为平凡纽结（unknot）
 #+reveal: split
 ** 链环\(K\)用投影图来表示，投影图中的交叉点数记作\(c(K)\)   :ATTACH:
-:PROPERTIES:
-:ID:       9e0ba749-6979-40c8-943d-f4d86b9b56aa
-:END:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
 
@@ -52,9 +46,6 @@
 
 #+reveal: split
 ** 纽结理论的中心问题是对纽结进行分类（up to homeomorphism) :ATTACH:
-:PROPERTIES:
-:ID:       cf4784d6-58d1-470f-b28e-8cda4a59f4c6
-:END:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
 [[attachment:_20210411_205917screenshot.png]]
@@ -73,10 +64,7 @@
 *** 2016年获得诺贝尔物理学奖的三位教授把拓扑和凝聚态物理结合起来，发现了物质的拓扑相变和拓扑相
 * 研究内容
 ** 纽结或链环的解纽数（unknotting number)
-*** 把一个链环\(K\)变换成平凡链环时所改变的交叉点的最小数，一般记作\(u(K)\)      :ATTACH:
-:PROPERTIES:
-:ID:       72d84080-51b9-4c1c-824b-8a0910c6e6a6
-:END:
+*** 把一个链环\(K\)变换成平凡链环时所改变的交叉点的最小数，一般记作\(u(K)\)
 
 #+reveal: split
 [[attachment:_20210411_213150screenshot.png]]
@@ -93,10 +81,7 @@
 ** 2004年，Owens给出了所有交叉点小于等于9的纽结的解纽数.[3]
 ** 2014年，V. Siwach, P. Madeti给出了多于700种交叉点数在10-16的torus纽结的解纽数.[4]
 * 进展
-** 求出了Kanenobu纽结K(p,q)的解纽数是2，与p，q无关 :ATTACH:
-:PROPERTIES:
-:ID:       d61e5672-ac65-45fd-a753-d8d787bb16df
-:END:
+** 求出了Kanenobu纽结K(p,q)的解纽数是2，与p，q无关
 先证明K(p,q)的交叉点任取一个都无法使之成为平凡纽结，然后说明改变最左和最右的这
 两个交叉点可以使之成为平凡纽结
 #+reveal: split
@@ -105,10 +90,7 @@
 
 
 #+reveal: split
-** 求出推广的Kanenobu纽结K(p,q,n)的解纽数也都是2，与p，q，n无关 :ATTACH:
-:PROPERTIES:
-:ID:       ccf8be78-efa6-49ff-ab4c-46f3934e4317
-:END:
+** 求出推广的Kanenobu纽结K(p,q,n)的解纽数也都是2，与p，q，n无关
 先证明K(p,q,n)的交叉点任取一个都无法使之成为平凡纽结，然后说明改变图中标注的
 两个交叉点可以使之成为平凡纽结：
 #+reveal: split
@@ -118,11 +100,7 @@
 * 存在的问题
 ** 研究出的结果太过平凡，应该以更复杂的纽结作为研究对象，寻求更有趣的结果
 * 后续计划
-** 4月10日-20日，推广Kanenobu纽结，在下列画圈处添加一列交叉点作为研究对象： :ATTACH:
-:PROPERTIES:
-:ID:       bab073bc-26d0-4729-b585-cb1577040d9c
-:END:
-
+** 4月10日-20日，推广Kanenobu纽结，在下列画圈处添加一列交叉点作为研究对象:
 [[attachment:_20210411_223720screenshot.png]]
 #+reveal: split
 ** 4月21日-30日，研究其他一些链环类的解纽数

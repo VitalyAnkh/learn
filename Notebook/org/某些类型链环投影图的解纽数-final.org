@@ -40,9 +40,6 @@
 *** 平面上的没有交叉点的简单闭曲线称为平凡纽结（unknot）
 #+reveal: split
 ** 链环\(K\)用投影图来表示，投影图中的交叉点数记作\(c(K)\)
-:PROPERTIES:
-:ID:       9e0ba749-6979-40c8-943d-f4d86b9b56aa
-:END:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
 [[attachment:_20210411_211308screenshot.png]]
@@ -116,19 +113,13 @@
 ** 1984年，Beiler给出了一个奇妙的例子：对于一个纽结，它的极小投影图有10个交叉点，它不可能用少于三个交叉点的改变来变成平凡纽结，但它有个14个交叉点的投影图，与之同痕，但可以用两个交叉点的改变来变为平凡纽结
 ** 2014年，V. Siwach, P. Madeti给出了多于700种交叉点数在10-16的torus纽结的解纽数.[4]
 * 研究成果
-** 求出Kanenobu纽结\(K(0, 0)\)的解纽数是2 :ATTACH:
-:PROPERTIES:
-:ID:       3e0d404b-0b10-45ad-8da1-9b6b25beacf6
-:END:
+** 求出Kanenobu纽结\(K(0, 0)\)的解纽数是2
 #+reveal: split
-:PROPERTIES:
-:ID:       cbef0049-b628-4f6d-8671-a3b10a2d8ce7
-:END:
 #+attr_html: :width 50% :height 50%
 #+attr_org: :width 50% :height 50%
 [[attachment:_20210625_084436screenshot.png]]
 #+reveal: split
-** 求出了推广的Kanenobu纽结\(K(p, q, n)\)的解纽数是2，与\(p, q, n\)无关: :my_org_tag:
+** 求出了推广的Kanenobu纽结\(K(p, q, n)\)的解纽数是2，与\(p, q, n\)无关:
 *** 首先说明\(K(p, q, n)\)是非平凡的，这由参考文献[8]里的定理5保证：
 The Khovanov homology for generalized Kanenobu knot:
 \(Kh(K_{\beta}(p,q)) \cong Kh(K_{\beta}(p+1, q-1))\)
@@ -137,9 +128,6 @@ The Khovanov homology for generalized Kanenobu knot:
 
 
 ** 在进一步推广Kanenobu纽结\(K(p, q, m, n, l)\)非平凡的前提下，得到它的解纽数
-:PROPERTIES:
-:ID:       66a09525-7b6b-41b8-b11a-fac7dcd37c33
-:END:
 #+attr_html: :width 50% :height 50%
 [[attachment:_20210605_070844screenshot.png]]
 #+reveal: split

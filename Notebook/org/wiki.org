@@ -66,6 +66,7 @@ java 程序中的 ~public static void main(String[] args)~ 中，main 不是 key
 *** [[id:4a314d85-ac8b-4874-9bd9-212c1d7e980b][tokei]]
 *** [[id:6b82be5a-c69a-416f-9193-ad6d51b1f0e5][Rust 中的 mut 和 ref 关键字]]
 *** [[id:dbcac832-7a20-4ce9-a418-35d0f17c842f][Rust中的object safe]]
+*** [[id:460c2787-2059-4bf4-84b0-930fa664d9c4][Rust中的自动解引用]]
 ** Android
 *** [[id:654f5357-1391-47ad-b775-0db0cc2bce67][好用的Android app]]
 ** [[id:5c0e859e-59ff-487d-aa1e-b071e4e39c7e][Firefox]]
@@ -110,7 +111,7 @@ CLOSED: [2021-10-24 日 01:08]
 
 ** Setup New Desktop Tips
 
-*** 运行 ln -sf ~/sdk/config/private-data/zlua ~/.zlua ，把 zlua 的配置文件~/.zlua 软链接到 ~/sdk/config/private-data/zlua 上
+*** 运行 =ln -sf ~/sdk/config/private-data/zlua ~/.zlua= ，把 zlua 的配置文件~/.zlua 软链接到 ~/sdk/config/private-data/zlua 上
 \begin{equation}
 a^{2}+b^{2}=c^{2}
 \end{equation}
