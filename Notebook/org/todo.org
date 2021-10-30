@@ -2,6 +2,13 @@
 :PROPERTIES:
 :ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
 :END:
+** [ ] 学习emacs-lisp：
+*** [ ] 看 introduction to emacs lisp
+*** [ ] 学习emacs-lisp的debug技巧
+*** [ ] 开发emacs包，例如，自己写一个编程语言然后写一个emacs包支持它
+** [ ] 合并 =~/sdk/config= 和 =~/.config= ，同步到github
+** [ ] remove =org-re-reveal= from config file
+移除了，但 =org-re-reveal= 还是会被clone下来。fix it
 ** [ ] 备份微信聊天记录，重置手机，把微信聊天记录存到百度网盘和阿里云盘
 ** [ ] 玩rust的iterator trait
 ** [ ] 学习smartparens，以及结构化编辑这种编程方法
@@ -13,7 +20,10 @@
 学习后从这个issue入手吧：https://github.com/rust-lang/rust/issues/90108
 ** [ ] rust中的Vec可以转为Box，为什么呢
 ** [ ] doom的字体设置需要启动后重新执行一遍 ~config.el~ 才会生效，解决这个问题
-** [ ] 解决emacs-client无法启动的问题
+** [X] 解决emacs-client无法启动的问题
+貌似解决了。好像这个问题是和emacs启动后不出现gui界面同时出现的。
+在doom没有保存 =.local/etc/workspace= 文件启动emacs就会有gui界面，使用emacs-client也没问题。
+CLOSED: [2021-10-30 六 17:25]
 ** [ ] 把ElegantLaTeX项目的其他LaTeX模板配置一下，包括ElegantNote，ElegantBook
 配置方法类似ElegantPaper，在 ~config.org~ 里搜索elegantpaper
 ** [ ] 如何在org文件里插入images from URL，export to LaTeX or pdf 时链接转为图片
@@ -38,18 +48,25 @@ paru有这个功能
 ** [ ] 解决yofi字体重叠（font kerning）的问题
 ** [ ] 解决fcitx5在wayland程序下卡顿的问题（相比x11）
 ** [ ] 设置org-shiftright (C-S-l) 切换的org TODO keyword，去掉无用的
-** [ ] 解决emacs的org-roam包开启org-roam-back-link的buffer时显示在窗口下方的问题
+** [X] 解决emacs的org-roam包开启org-roam-back-link的buffer时显示在窗口下方的问题
+CLOSED: [2021-10-30 六 17:30]
 我想要它显示在窗口右侧
 可能的解决方案：配置shackle?
+update on 2021-10-30: 现在会自动在窗口右侧显示org-roam-ui的buffer了
 ** [ ] 类似bevy_egui ，可否写一个bevy_tui ，集成bevy 和tui-rs ，使bevy 可以方便地开发控制台应用
-** [ ] 如何使用doom emacs 配置lean 4 mode
-** [ ] 解决vitalyr.com无法显示图片的问题
+** [X] 如何使用doom emacs 配置lean 4 mode
+CLOSED: [2021-10-30 六 17:31]
+** [X] 解决 =vitalyr.com= 无法显示图片的问题
+CLOSED: [2021-10-30 六 17:31]
+已解决，插入图片时使用gitee图床
 ** [ ] 配置Emacs的dap (debug adapter protocol)
-** [ ] 配置org-re-reveal或者org-reveal
+** [?] 配置org-re-reveal或者org-reveal
 *** [X] 可以生成slide
 CLOSED: [2021-06-25 五 10:36]
 编译成single file，可以放到U盘里，很方便
+update on 2021-10-30: org-reveal很好用
 *** [ ] 可以放到网站上，（与hugo配合？）
+可以直接把生成的html文件到博客上？
 ** [X] 解决emacs编译失败的问题
 把编译器从clang换到gcc就好了
 CLOSED: [2021-06-28 一 15:40]
@@ -119,7 +136,8 @@ CLOSED: [2021-06-25 五 11:09]
 Done! Install wakatime plugin.
 ** [ ] 设置 auto refill mode
 ** [ ] learn how to use Switcher ( a gnome plugin )
-** [ ] depot_tools is installed in =/opt/depot_tools/.
+** [X] depot_tools is installed in =/opt/depot_tools/.
+CLOSED: [2021-10-30 六 17:34]
 This directory is not in $PATH by default, so make sure to export PATH=/opt/depot_tools:$PATH before using it.
 Also, this directory has root permissions, so either use it as root, or if you want to use it as your currect user:
 
@@ -145,16 +163,17 @@ super multi-threading
 ** [ ] 配置 Ulauncher
 支持 wayland ，可以启动应用，可以搜索文件，打开 URL ，不错
 ** [ ] 解决 emacs 中保存 markdown 文件时，自动去掉一些换行符，从而使单行长度大于设置的 max_line_length ，不符合规范的问题
-
-[[file:~/projects/contribute/rustc-dev-guide/src/appendix/glossary.md::variant index]]
 ** [ ] 写一个 MarginNote 插件，功能是自动把从 libgen 上下载的书籍文件名重命名为只书籍名，大概使用正则表达式就可以实现
+update on 2021-10-30: 写成命令行程序吧，使用rust，应该是个不错的联系项目
 ** [X] 解决 opam 安装 coq 中，安装 coq 依赖的 zarith 包时卡住的问题
 莫名奇妙地解决了
+update in 2021-10-30: 使用opam更新包时不要使用proxychains-ng给它挂代理
 ** [ ] 用 Rust 写一个 prolog 编译器
 ** [ ] 用 Rust 写一个 SMT Solver
 ** [ ] 学习 youtube 上 Elena Lin 用电子笔记做日程和计划的教程
 ** [ ] 找到适合自己的硬笔字帖，练之
 ** [ ] 用 Rust 写一个 ECS ，参考 Bevy 改写过的 simple_ecs
+update: 不如直接读 =bevy_ecs= 的代码
 ** [ ] 解决 redox 编译的问题，也许只需要重新运行一下 bootstrap.sh ？
 ** [X] 给电脑清灰
 ** [X] update chemacs
@@ -192,7 +211,10 @@ sway --my-next-gpu-wont-be-nvidia
 2021年4月18日：
 放弃，等到nvidia对wayland支持更好时再看
 Update in 2021.10.09: 现在nvidia对Wayland支持不错了，而且还在持续改进中
-** [ ] resolve this:
+** [X] resolve this:
+CLOSED: [2021-10-30 六 17:37]
+update on 2021-10-30: 不用darling了
+
 Running darling-setup=ld-so
 /tmp/alpm_sxAdMv/.INSTALL:行 6: /usr/bin/darling-setup-ld-so: 没有那个文件或目录
 错误：命令未能被正确执行
@@ -200,7 +222,8 @@ Running darling-setup=ld-so
 CLOSED: [2021-06-28 一 15:48]
 pdf-tools新的维护者和doom emacs作者联手解决了这个问题
 ** [ ] 写一个浏览器插件，给 nLab wikipedia 这样的 wiki 网站添加一个 backlink 和 roam 式的链接图
-** [ ] 为什么 nvidia 这个内核模块没开？
+** [X] 为什么 nvidia 这个内核模块没开？
+CLOSED: [2021-10-30 六 17:38]
 ==> dkms remove --no-depmod -m nvidia -v 455.23.04 -k 5.8.10-arch1-1
 rmdir: 删除 '' 失败: 没有那个文件或目录
 rmdir: 删除 '' 失败: 没有那个文件或目录
@@ -239,8 +262,10 @@ CLOSED: [2021-10-10 日 00:46]
 ** [ ] 写一个类似鸟群模拟的游戏：牧羊犬模拟器
 玩法：扮演牧羊犬，把羊群（牛群）赶进畜栏
 核心算法在于羊群（牛群）的模拟，可以参考 bevy 游戏引擎的一个 demo ，实现了鸟群的模拟
-** [ ] 更新 emacs-native-git-enhanced 和 doom emacs
-** [ ] 解决 android studio 中无法进行 flutter 的问题，主要原因在于无法正常使用代理，于是无法下载 android sdk
+** [X] 更新 emacs-native-git-enhanced 和 doom emacs
+CLOSED: [2021-10-30 六 17:38]
+** [X] 解决 android studio 中无法进行 flutter 的问题，主要原因在于无法正常使用代理，于是无法下载 android sdk
+CLOSED: [2021-10-30 六 17:38]
 ** [X] 设置全局的 cargo 编译 target
 update in 2020-12: 设置了，但是妨碍开发，多个项目同时进行时，编译缓存总是被互相覆盖，总要重新编译，放弃设置
 ** [X] cargo install the-way

@@ -23,6 +23,13 @@ head' xs = case xs of
   [] -> error "Error: empty list!"
   x : _ -> x
 
+roots :: (Double, Double, Double) -> (Double, Double)
+roots (a, b, c)
+  | d >= 0 = ((-b + sqrt (d)) / 2 * a, (-b - sqrt (d)) / 2 * a)
+  | otherwise = error "roots don't exist"
+  where
+    d = b * b - 4 * a * c
+
 describeList :: [a] -> String --这里[a]代表任意列表，这里的a是一个type variable
 describeList xs = case xs of
   [] -> "Empty!"

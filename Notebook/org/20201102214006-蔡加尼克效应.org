@@ -11,3 +11,5 @@
 
 #+attr_org: :width 20% :height 20%
 [[file:/home/vitalyr/nutstore_files/Pictures/beauty/caqI8oq.jpg]]
+
+\(f(x)\)

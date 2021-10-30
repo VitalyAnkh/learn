@@ -70,7 +70,7 @@ java 程序中的 ~public static void main(String[] args)~ 中，main 不是 key
 ** Android
 *** [[id:654f5357-1391-47ad-b775-0db0cc2bce67][好用的Android app]]
 ** [[id:5c0e859e-59ff-487d-aa1e-b071e4e39c7e][Firefox]]
-
+** [[id:736892dc-9b17-4e5a-b589-9c2c4bb8524f][Haskell]]
 ** Linux Tips
 
 *** [X] 使用 Pop!_OS 的 system76-power 电源管理模块替换系统自己的电源管理，以解决风扇轰鸣问题
@@ -134,3 +134,5 @@ a^{2}+b^{2}=c^{2}
 \(\int_a^bf(x)dx\)
 * [[id:cc6ce089-6b88-4a5c-bf4b-84fdf9f1b175][寻找德意志]]
 * [[id:038feae6-410c-4ebd-965b-484d473f315b][编译原理]]
+* [[id:dd141bb5-e62f-41d3-a522-5f1d1e216c77][Gnome]]
+* [[id:a23c87f2-8107-4dc9-9756-f6d1c36560aa][Golang]]

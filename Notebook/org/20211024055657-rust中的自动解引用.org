@@ -7,4 +7,4 @@ Rust automatically dereferences types when:
 2. they're returned from a function
 3. thery're used as part of a method call.
 
-This is the reason why we can pass ~&String~ and ~&Vec<T>~ to functions expecting ~&str~ and ~[&T]~ because ~String~ impls ~Deref<Target = str>~ and ~Vec<T>~ impls ~Deref<Target = [T]>~.
+This is the reason why we can pass ~&String~ and ~&Vec<T>~ to functions expecting ~&str~ and ~&[T]~ because ~String~ impls ~Deref<Target = str>~ and ~Vec<T>~ impls ~Deref<Target = [T]>~.

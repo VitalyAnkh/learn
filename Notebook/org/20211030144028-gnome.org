@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       dd141bb5-e62f-41d3-a522-5f1d1e216c77
+:END:
+#+title: Gnome
+* [[id:cce8b895-e1c3-4d41-a406-ed59c39ad55e][gdm no gnome on wayland option on startup]]
