@@ -1,2 +1,0 @@
-#+title: Connected Component
-Maximal set of objects that are mutually connected.

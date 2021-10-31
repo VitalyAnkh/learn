@@ -1,8 +1,0 @@
-#+title: 集合的交并运算与求内部求闭包运算，何时是可交换的
-* 问题：集合的交 \(\cap\) 运算，并\(\cup\) 运算，与在一个拓扑下时，求内部（ int ），求闭包（ cl ），何时是可交换的。具体一些， 如果 \(A_{1}\) ， \(A_{2}\) ，... ，\(A_{n}\)  是 \(X\) 的子集，那么是否有
-1. \({\rm int} \ [\bigcup_{k=1}^{n}A_{k}]=\bigcup_{k=1}^{n}[{\rm int} \ A]\)
-2. \({\rm int} \  [\bigcap_{k=1}^{n}A_{k}] = \bigcap_{k=1}^{n}[ {\rm int} A]\)
-3. \({\rm cl} \ [\bigcup_{k=1}^{n}A_{k}]=\bigcup_{k=1}^{n}[{\rm cl} \ A_{k}]\)
-4. \({\rm cl} \ [\bigcap_{k=1}^{n}A_{k}]=\bigcap_{k=1}^{n}[{\rm cl} \ A_{k}]\)
-* 解答 那就分四种情况了
-** 1. \({\rm int} \ [\bigcup_{k=1}^{n}A_{k}]=\bigcup_{k=1}^{n}{\rm int} \ A\)

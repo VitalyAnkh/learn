@@ -1,2 +1,0 @@
-#+title: SMPlayer
-a GUI front end for mpv

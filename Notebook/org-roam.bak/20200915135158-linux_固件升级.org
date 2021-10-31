@@ -1,2 +1,0 @@
-#+title: Linux 固件升级
-安装 lfupd ，gnome-software 是它的前端之一。

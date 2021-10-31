@@ -1,1 +1,0 @@
-/home/vitalyr/projects/contribute/latex/ElegantPaper/elegantpaper.cls

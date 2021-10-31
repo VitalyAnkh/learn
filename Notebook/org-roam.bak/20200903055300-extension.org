@@ -1,2 +1,0 @@
-#+title: Extension
-* [[file:20200903055308-toby.org][Toby]]

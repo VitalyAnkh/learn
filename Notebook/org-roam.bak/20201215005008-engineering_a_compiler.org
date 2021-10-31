@@ -1,2 +1,0 @@
-#+title: Engineering a Compiler
-*

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       c2c611f5-2c40-4b65-81c3-14111588cb60
+:END:
+#+title: fcitx5 problems
+1. 如果经典用户界面卡顿，那就开了gnome的input-method-panel插件来用

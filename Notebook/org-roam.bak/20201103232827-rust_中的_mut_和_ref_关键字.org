@@ -1,5 +1,0 @@
-#+title: Rust 中的 mut 和 ref 关键字
-let ref x = y; 就相当于 let x = &y;
-let mut x = y; 就相当于 let x = mut y;
-这两个关键词常用于传递函数参数时重新绑定一个变量。
-这么理解对吗？

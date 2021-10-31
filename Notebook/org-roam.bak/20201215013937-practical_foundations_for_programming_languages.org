@@ -1,3 +1,0 @@
-#+title: Practical Foundations For Programming Languages
-* 介绍
-Book by Robert Harper.

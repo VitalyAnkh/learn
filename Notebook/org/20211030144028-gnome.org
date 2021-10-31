@@ -3,3 +3,4 @@
 :END:
 #+title: Gnome
 * [[id:cce8b895-e1c3-4d41-a406-ed59c39ad55e][gdm no gnome on wayland option on startup]]
+* [[id:c2c611f5-2c40-4b65-81c3-14111588cb60][fcitx5 problems]]

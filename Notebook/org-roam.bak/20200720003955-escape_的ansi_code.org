@@ -1,7 +1,0 @@
-#+title: ESCAPE 的ANSI code
-看这里： https://en.wikipedia.org/wiki/ANSI_escape_code
-所以说： CTRL + [ == ESC
-
-另外输入映射也是这样的，Ctrl + A 映射到 0x01 ，Ctrl + B 映射到 0x02
-ESC 是 0x1B ，A + 0x1B - 1 = 0x41 + 0x1B - 1 = 0x5B = [
-所以 Ctrl + [ = 0x1B = ASCII ESC

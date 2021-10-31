@@ -1,2 +1,0 @@
-#+title: Wolfram Language
-* [[file:20200915061026-range_的用法.org][Range 的用法]]

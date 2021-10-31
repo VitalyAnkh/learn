@@ -1,2 +1,0 @@
-#+title: mpv
-good linux video player

@@ -1,7 +1,0 @@
-#+title: Rust EVAL 工具 evcxr
-* Rust EVAL工具evcxr
-:PROPERTIES:
-:ID:       ca3c63a7-2723-42b0-82a4-de49eeaf2cba
-:END:
-** 安装
-cargo install evcxr

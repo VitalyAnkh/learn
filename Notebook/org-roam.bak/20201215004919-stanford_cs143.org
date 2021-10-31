@@ -1,3 +1,0 @@
-#+title: stanford cs143
-* [[file:20210108161635-如何实现dfa.org][如何实现DFA]]
-*  Programming Assignment 1

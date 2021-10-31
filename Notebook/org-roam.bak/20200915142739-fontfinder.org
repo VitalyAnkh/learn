@@ -1,2 +1,0 @@
-#+title: fontfinder
-A Google font browser for your GTK desktop, written in Rust.

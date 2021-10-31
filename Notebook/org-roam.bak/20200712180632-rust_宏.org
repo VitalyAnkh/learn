@@ -1,2 +1,0 @@
-#+title: Rust 宏
-* Rust 宏与普通代码的对比：While functions and types abstact over code, macros abstract at a syntactic level.

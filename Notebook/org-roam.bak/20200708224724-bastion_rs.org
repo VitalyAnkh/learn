@@ -1,2 +1,0 @@
-#+title: bastion-rs
-[[http:bastion.rs][bastion-rs]] is Highly-available Distributed Fault-tolerant Runtime.

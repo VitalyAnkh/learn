@@ -2,6 +2,14 @@
 :PROPERTIES:
 :ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
 :END:
+** [X] setup OCaml development tools, for example, fix =utop= not functioning well
+CLOSED: [2021-10-31 日 07:24]
+just add =eval (opam env)= to =~/.config/fish/config.fish=
+** [ ] 如何把某些emasc加入native compile黑名单
+** [ ] 给doom的cli添加检查拼写错误并给出建议的功能，使用edit-distance算法，参考下面文章：
+https://rustmagazine.github.io/rust_magazine_2021/chapter_4/rustc_edit_distance_and_typo_checker.html
+*** [ ] 给 =strsim= 这个crate实现rustc里复杂度更低的edit-distance算法，参看上面文章
+** [ ] 整理doom emacs配置，放到博客上
 ** [ ] 学习emacs-lisp：
 *** [ ] 看 introduction to emacs lisp
 *** [ ] 学习emacs-lisp的debug技巧
