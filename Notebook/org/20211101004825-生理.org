@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       bd2afd5b-130c-4fba-8c73-4269c7ac3bca
+:END:
+#+title: 生理
+* [[id:96684b12-d873-4403-925d-7b22391625b5][睡眠]]

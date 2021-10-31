@@ -33,12 +33,13 @@
 *** [[id:bfd7d280-d647-483b-a48c-97bdd50188b3][test-org-face]]
 *** [[id:783b1d40-ae74-44ca-aa1c-b500a6151643][Emacs 中 OCaml 的配置]]
 *** doom-emacs shortcut:
-| 快捷键        | 功能                                   | 备注                            |
-|---------------+----------------------------------------+---------------------------------|
-| <SPC m p>     | 设置一个任务的优先级，接着按 A, B 或 C | 在一个任务的上下文中起作用      |
-| <C-c C-p C-p> | 在 TeX mode 下预览当前 segment 的公式    | 其他<C-c C-p xxx> 键也是 amazing |
-|               |                                        |                                 |
-|               |                                        |                                 |
+| 快捷键        | 功能                                   | 备注                             |
+|---------------+----------------------------------------+----------------------------------|
+| <SPC m p>     | 设置一个任务的优先级，接着按 A, B 或 C | 在一个任务的上下文中起作用       |
+| <C-c C-p C-p> | 在 TeX mode 下预览当前 segment 的公式  | 其他<C-c C-p xxx> 键也是 amazing |
+| <q Tab        | 插入quoto block                        |                                  |
+| C-c C-x C-v   | toggle inline images                   |                                  |
+|               |                                        |                                  |
 *** [[id:eff775e2-e413-4ce6-9ac1-e7d67b8aca4f][让人动心的快捷键]]
 *** [[id:98e6fcc3-3e55-4e1d-8769-463b4345209d][Emacs 中 window 和 buffer 的关系]]
 
@@ -47,9 +48,11 @@
 *** [[id:1a3cb12c-5c87-4eec-a0c4-af8e0eec7762][工作流]]
 《被掩埋的巨人》借奇幻史诗的外衣探讨了一个沉重的话题：民族与个人面对历史宿怨时应当如何在记忆与宽恕间做出抉择，而这个问题恰恰出人意料地紧扣中国当下的社会现实与民众思潮。中国读者甚至能够比英语世界的一般读者更能感同身受地理解、思考作品文字背后的深意。
 ** C++
-*** TODO 问题：C++ 中如何改变一个引用指向的对象？
+*** DONE 问题：C++ 中如何改变一个引用指向的对象？
+CLOSED: [2021-11-01 一 01:27]
 C++ 程序员经常把“对 const 的引用”简称为“常量引用”，这一简称还是挺靠谱的，不过前提是你得时刻记得这只是个简称而已。
 严格来说，并不存在常量引用。因为引用不是一个对象，所以我们没法让引用自身恒定不变。事实上，由于 C++ 语言并不允许随便改变引用所绑定的对象，所以从这层意义上理解，所有引用又都算是常量。引用的对象是常量还是非常量可以决定其能参与的操作，却无论如何都不会影响到引用和对象的绑定关系本身。
+对于此问题，不是const引用就可以改变引用指向的对象。
 *** [[id:80788105-400e-488d-9e3a-57d294793ea3][C++的const int *和int const *]]
 ** *[[id:4f6e7e55-ac60-4885-b22c-f09a67317c1b][Wolfram Language]]
 ** Java
@@ -109,12 +112,9 @@ CLOSED: [2021-10-24 日 01:08]
 *** [[id:3898a138-92b7-42e0-8903-a3877138ed54][fontfinder]]
 *** [[id:2dec73fa-81a1-4458-9904-da324769c325][ArchLinux 中配置 latexindent]]
 
-** Setup New Desktop Tips
+** Personal Computer Tips
 
 *** 运行 =ln -sf ~/sdk/config/private-data/zlua ~/.zlua= ，把 zlua 的配置文件~/.zlua 软链接到 ~/sdk/config/private-data/zlua 上
-\begin{equation}
-a^{2}+b^{2}=c^{2}
-\end{equation}
 *** [[id:2bb83c15-db3d-450b-8c11-458d96e53527][fish把prompt的背景色设置为透明]]
 ** Journal
 *** [[id:e10784ae-d694-42f0-a57e-9fef30459e1d][rCore Journal]]
@@ -136,3 +136,5 @@ a^{2}+b^{2}=c^{2}
 * [[id:038feae6-410c-4ebd-965b-484d473f315b][编译原理]]
 * [[id:dd141bb5-e62f-41d3-a522-5f1d1e216c77][Gnome]]
 * [[id:a23c87f2-8107-4dc9-9756-f6d1c36560aa][Golang]]
+* [[id:cb26828d-817d-434c-a9fd-40963df73002][Programming]]
+* [[id:bd2afd5b-130c-4fba-8c73-4269c7ac3bca][生理]]

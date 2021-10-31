@@ -3,8 +3,9 @@
 :END:
 #+title: C++的const int *和int const *
 指针可变还是不可变，指针指向的内容是否可变，这是如何声明的？这在C++中太令人疑惑了。
-看下面的知乎回答：不管const写成如何，读懂别人写的const和*满天飞的类型的金科玉律是const默认作用于其左边的东西，否则作用于其右边的东西。
+看下面的知乎回答：不管const写成如何，读懂别人写的const和*满天飞的类型的金科玉律是const默认作用于其左边的东西，若左边没有东西，则作用于其右边的东西。
 
+#+begin_quote
 作者：王国潇
 链接：https://www.zhihu.com/question/443195492/answer/1723886545
 
@@ -24,3 +25,4 @@ int const * const * const
 再扯两句，因为const的作用机理和阅读习惯，码农之间产生了两种写const的流派，一个是所谓的western const style也即把const写在西边（左边），例如const int，符合人类语言习惯；另一个流派叫eastern const style，遵照上边的规则把const写在东边（右边），例如int const。从代码可读性易维护性出发，强烈推荐把const写在右边（包括自己学的时候老师如是安利。。。），可以跟指针的作用范围很好地统一起来不至于混乱。
 
 credit: https://stackoverflow.com/questions/5503352/const-before-or-const-after
+#+end_quote

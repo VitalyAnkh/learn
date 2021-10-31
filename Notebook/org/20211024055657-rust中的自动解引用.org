@@ -2,6 +2,7 @@
 :ID:       460c2787-2059-4bf4-84b0-930fa664d9c4
 :END:
 #+title: Rust中的自动解引用
+=Deref= trait
 Rust automatically dereferences types when:
 1. they're being passed as function arguments
 2. they're returned from a function
