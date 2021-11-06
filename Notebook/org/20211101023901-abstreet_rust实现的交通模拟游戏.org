@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       7ed7d9e2-e740-4691-b0e6-e5faac64c126
+:END:
+#+title: abstreet: rust实现的交通模拟游戏
+Looks interesting. But due to nvidia and =winit= bug, it runs very slowly.

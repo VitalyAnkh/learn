@@ -53,8 +53,9 @@ CLOSED: [2021-11-01 一 01:27]
 C++ 程序员经常把“对 const 的引用”简称为“常量引用”，这一简称还是挺靠谱的，不过前提是你得时刻记得这只是个简称而已。
 严格来说，并不存在常量引用。因为引用不是一个对象，所以我们没法让引用自身恒定不变。事实上，由于 C++ 语言并不允许随便改变引用所绑定的对象，所以从这层意义上理解，所有引用又都算是常量。引用的对象是常量还是非常量可以决定其能参与的操作，却无论如何都不会影响到引用和对象的绑定关系本身。
 对于此问题，不是const引用就可以改变引用指向的对象。
-*** [[id:80788105-400e-488d-9e3a-57d294793ea3][C++的const int *和int const *]]
-** *[[id:4f6e7e55-ac60-4885-b22c-f09a67317c1b][Wolfram Language]]
+*** [[id:80788105-400e-488d-9e3a-57d294793ea3][C++的const int *和int const *]]*
+*** [[id:20211102T153607.197808][C语言中的复杂变量声明]]
+** [[id:4f6e7e55-ac60-4885-b22c-f09a67317c1b][Wolfram Language]]
 ** Java
 *** Java basics
 java 程序中的 ~public static void main(String[] args)~ 中，main 不是 keyword ，只是一个 name/identifier 。
@@ -114,7 +115,7 @@ CLOSED: [2021-10-24 日 01:08]
 
 ** Personal Computer Tips
 
-*** 运行 =ln -sf ~/sdk/config/private-data/zlua ~/.zlua= ，把 zlua 的配置文件~/.zlua 软链接到 ~/sdk/config/private-data/zlua 上
+*** 运行 =ln -sf ~/sdk/config/private-data/zlua ~/.zlua= ，把 zlua 的配置文件 =~/.zlua= 软链接到  =~/sdk/config/private-data/zlua= 上
 *** [[id:2bb83c15-db3d-450b-8c11-458d96e53527][fish把prompt的背景色设置为透明]]
 ** Journal
 *** [[id:e10784ae-d694-42f0-a57e-9fef30459e1d][rCore Journal]]
@@ -129,6 +130,7 @@ CLOSED: [2021-10-24 日 01:08]
 ** [[id:5c4cde0f-6e19-479b-8c4f-34a6addfa125][A Course in Point Set Topology - John Conway]]
 ** [[id:3f06d878-dd28-414b-ab8c-4e96b6afe197][关于向量叉积的 Jacobi 等式]]
 ** [[id:d201f651-fba0-4e6d-8a08-8bdd886ee6ab][单核工作法]]
+** [[id:20211105T191411.112298][Visual Differential Geometry and Forms]]
 * [[id:61d7f8d8-e9a0-48a0-a37f-320793004b81][Algorithms]]
 \(\mathbb R \backslash A\)
 \(\int_a^bf(x)dx\)
@@ -138,3 +140,4 @@ CLOSED: [2021-10-24 日 01:08]
 * [[id:a23c87f2-8107-4dc9-9756-f6d1c36560aa][Golang]]
 * [[id:cb26828d-817d-434c-a9fd-40963df73002][Programming]]
 * [[id:bd2afd5b-130c-4fba-8c73-4269c7ac3bca][生理]]
+* [[id:8032a555-8505-4001-abfc-6a87e5ab4bbb][Games]]

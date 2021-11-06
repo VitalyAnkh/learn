@@ -170,7 +170,7 @@ The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomi
 
 The Kanenobu knot with parameter p, q is represented  by K(p,q). When p>0, the upper braid  has the right curve above. When p<0, the upper braid has the left curve above. When q>0, then lower braid has the left curve above. The q<0, the lower braid has the left curve above.
 
-*** Generalized Kanenobu Knot :ATTACH:
+*** Generalized Kanenobu Knot
 The Kanenobu knot could be generalized by adding more parameters. After adding twisting between every crossing point of it, we get K(p, q, m, n):
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%

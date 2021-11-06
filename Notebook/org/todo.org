@@ -2,6 +2,9 @@
 :PROPERTIES:
 :ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
 :END:
+** [ ] 配置 =org-transclusion=
+** [ ] 制作MIT出版社计算机科学和数学下的RSS
+** [ ] 把emacs配置里的 =org-xournal= 替换成 =org-sketch=
 ** [X] setup OCaml development tools, for example, fix =utop= not functioning well
 CLOSED: [2021-10-31 日 07:24]
 just add =eval (opam env)= to =~/.config/fish/config.fish=
@@ -14,7 +17,10 @@ https://rustmagazine.github.io/rust_magazine_2021/chapter_4/rustc_edit_distance_
 *** [ ] 看 introduction to emacs lisp
 *** [ ] 学习emacs-lisp的debug技巧
 *** [ ] 开发emacs包，例如，自己写一个编程语言然后写一个emacs包支持它
-** [ ] 合并 =~/sdk/config= 和 =~/.config= ，同步到github
+** [X] 合并 =~/sdk/config= 和 =~/.config= ，同步到github
+干完了。使用 =.gitignore= 来决定同步哪些文件。
+CLOSED: [2021-11-01 一 01:43]
+
 ** [ ] remove =org-re-reveal= from config file
 移除了，但 =org-re-reveal= 还是会被clone下来。fix it
 ** [ ] 备份微信聊天记录，重置手机，把微信聊天记录存到百度网盘和阿里云盘
@@ -587,7 +593,9 @@ https://github.com/hlissner/doom-emacs/issues/3172
 
 [[file:~/projects/learn/Notebook/org/todo.org::*如何使用 emacs-rime 输入英文人名中的小圆点？][如何使用 emacs-rime 输入英文人名中的小圆点？]]
 ** TODO [#C] 找回 gnome extension 网站上的帐号
-** WAIT [#C] 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+** DONE [#C] 使用 manateelazycat 博客上的方法，把 socks 代理转换成 http 代理，然后在 android studio 中设置
+CLOSED: [2021-11-02 二 13:05]
+不尝试了，现在用 =clash-for-window= 配合机场挺好。
 尝试了，privoxy 好像没起作用？还是我没配置好？还是本该如此？
 ** TODO [#A] 备份 gnome 的设置，使用 dconf (just google it)
 ** DONE 申请毕设服务接单系统，挣钱

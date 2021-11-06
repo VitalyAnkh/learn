@@ -2,7 +2,7 @@
 name = "bevy_app"
 version = "0.1.0"
 authors = []
-edition = "2018"
+edition = "2021"
 repository = "https://github.com/mrk-its/bevy_webgl2_app_template"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -27,7 +27,7 @@ bevy = {version="0.5.0", features = ["dynamic"]}
 bevy_webgl2 = {version="0.5.0", optional=true}
 
 winit = "*"
-rand = "0.7"
+rand = "*"
 getrandom = {version="0.1", features=["wasm-bindgen"]}
 
 # [patch.'https://github.com/bevyengine/bevy']

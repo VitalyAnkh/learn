@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       20211105T191411.112298
+:END:
+#+title: Visual Differential Geometry and Forms
+* [[id:20211105T191439.335939][Further Reading]]
