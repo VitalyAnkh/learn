@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       20211107T230749.935567
+:END:
+#+title: notify-send
+=notify-send= 可以给用户发送桌面通知：
+#+begin_src bash
+notify-send "Hello"
+#+end_src

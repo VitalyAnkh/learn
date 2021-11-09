@@ -1195,3 +1195,9 @@ An amzaing fact:
 **** [2021-11-01 一 01:27]
 开始读crafting interpreters.
 不再是灰暗的人生。
+
+*** 2021-11-08 星期一
+**** [2021-11-08 一 04:29]
+TIL:
+stationary adj. 静止的
+stationery n. 文具

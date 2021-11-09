@@ -131,6 +131,7 @@ CLOSED: [2021-10-24 日 01:08]
 ** [[id:3f06d878-dd28-414b-ab8c-4e96b6afe197][关于向量叉积的 Jacobi 等式]]
 ** [[id:d201f651-fba0-4e6d-8a08-8bdd886ee6ab][单核工作法]]
 ** [[id:20211105T191411.112298][Visual Differential Geometry and Forms]]
+** [[id:20211107T040027.617648][词典]]
 * [[id:61d7f8d8-e9a0-48a0-a37f-320793004b81][Algorithms]]
 \(\mathbb R \backslash A\)
 \(\int_a^bf(x)dx\)
@@ -141,3 +142,5 @@ CLOSED: [2021-10-24 日 01:08]
 * [[id:cb26828d-817d-434c-a9fd-40963df73002][Programming]]
 * [[id:bd2afd5b-130c-4fba-8c73-4269c7ac3bca][生理]]
 * [[id:8032a555-8505-4001-abfc-6a87e5ab4bbb][Games]]
+* [[id:20211107T230749.935567][notify-send]]
+* [[id:20211109T133455.475903][未归类]]

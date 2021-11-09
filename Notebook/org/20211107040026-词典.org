@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       20211107T040027.617648
+:END:
+#+title: 词典
+今天在 https:forum.freemdict.com 上了解了一些词典的知识。
+mdx/mdd 文件是Mdict软件的的词典文件格式，mdd格式还支持嵌入音频，被很多词典软件采
+用。
+goldendict是一个免费开源的词典软件，代码仓库在github，GUI基于Qt5，不过目前在
+Wayland下会闪退，env QT_QPA_PLATFORM=''来使用吧。
+我的老朋友欧陆词典也支持mdx，但是我已经不喜欢他了。快用免费开源功能强大的
+goldendict！
+OALD是指牛津高阶学习词典，ODE是牛津英语词典，COD是简明牛津词典，NOD是新牛津词典。
+有人说OALD已经和开创者的理念背离了。最推荐的是新牛津词典。
