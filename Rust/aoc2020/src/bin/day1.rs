@@ -6,7 +6,7 @@ use std::path::Path;
 fn main() {
     let file = File::open("day1_input.txt").unwrap();
     let reader = BufReader::new(file);
-    let mut numbers: Vec<i32> = reader
+    let numbers: Vec<i32> = reader
         .lines()
         .map(|num| num.ok().unwrap().parse::<i32>().expect("parse error!"))
         .collect();

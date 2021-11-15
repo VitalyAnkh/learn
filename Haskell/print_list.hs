@@ -42,11 +42,20 @@ duplicate n x
 
 -- data Spec = And Spec Spec | Or Spec Spec | Not Spec | HasCup Int Ingredient deriving (Show, Eq)
 
-sieve :: [Bool]
-sieve = undefined
+sum' :: (Num a) => [a] -> a
+sum' = foldl (+) 0
 
 cross :: Int -> [Bool] -> [Bool]
 cross n xs = [if (index + 1) `mod` n == 0 then not (xs !! index) else xs !! index | index <- [0, 1 ..]]
 
+sieveFrom :: Int -> [Bool] -> [Bool]
+sieveFrom n xs = sieveFrom (n + 1) (cross n xs)
+
 sequenceFrom :: Int -> [Bool] -> [Int]
 sequenceFrom n xs = [i | i <- [n ..], xs !! (i - n)]
+
+sieve :: [Bool]
+sieve = sieveFrom 2 (repeat True)
+
+primes :: [Int]
+primes = sequenceFrom 2 sieve

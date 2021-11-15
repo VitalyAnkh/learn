@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       20211115T202741.786774
+:END:
+#+title: partial function和partial application
+partial function和partial application是两个概念。
+前者指在定义域上的一部分值上有定义的函数，后者是部分参数赋予值后得到的新函数。
+例如 =(+ 3)= 在haskell里是个部分应用。
+前者应该翻译成偏函数？

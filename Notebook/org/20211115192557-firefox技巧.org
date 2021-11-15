@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       20211115T192557.991045
+:END:
+#+title: firefox技巧
+不打开firefox而改变firefox中的 =about:config= 选项，去 =~/.mozilla/firefox= 里修改 =prefs.js= 里相关选项。
