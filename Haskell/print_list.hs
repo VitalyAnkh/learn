@@ -23,3 +23,30 @@ listToTree :: [a] -> BinTree a
 listToTree [] = Empty
 listToTree [x] = Node Empty x Empty
 listToTree (x1 : xs) = Node (Node Empty x1 (rightTree (listToTree (init xs)))) (middleNode (listToTree (init xs))) (Node (rightTree (listToTree (init xs))) (last xs) Empty)
+
+length' :: [a] -> Int
+length' [] = 0
+length' (x : xs) = 1 + length xs
+
+mySum :: [Int] -> Int
+mySum = sum
+
+-- n must >= 0
+duplicate :: Int -> a -> [a]
+duplicate n x
+  | n == 0 = []
+  | n > 0 = x : duplicate (n - 1) x
+  | n < 0 = error "n must be not negtive!"
+
+-- type Tin = [Recipe]
+
+-- data Spec = And Spec Spec | Or Spec Spec | Not Spec | HasCup Int Ingredient deriving (Show, Eq)
+
+sieve :: [Bool]
+sieve = undefined
+
+cross :: Int -> [Bool] -> [Bool]
+cross n xs = [if (index + 1) `mod` n == 0 then not (xs !! index) else xs !! index | index <- [0, 1 ..]]
+
+sequenceFrom :: Int -> [Bool] -> [Int]
+sequenceFrom n xs = [i | i <- [n ..], xs !! (i - n)]

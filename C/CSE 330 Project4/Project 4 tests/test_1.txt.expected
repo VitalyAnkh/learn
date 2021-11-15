@@ -1,0 +1,28 @@
+
+ This is the 1 th reader reading value i = 0 for the first time 
+
+ This is the 2 th reader reading value i = 0 for the first time 
+
+ This is the 1 th reader reading value i = 0 for the second time 
+
+ This is the 2 th reader reading value i = 0 for the second time 
+
+ This is the 1 th writer writing value i = 1 
+
+ This is the 1 th writer verifying value i = 1 
+
+ This is the 3 th reader reading value i = 1 for the first time 
+
+ This is the 4 th reader reading value i = 1 for the first time 
+
+ This is the 3 th reader reading value i = 1 for the second time 
+
+ This is the 4 th reader reading value i = 1 for the second time 
+
+ This is the 2 th writer writing value i = 2 
+
+ This is the 2 th writer verifying value i = 2 
+
+ This is the 3 th writer writing value i = 3 
+
+ This is the 3 th writer verifying value i = 3 
