@@ -2,6 +2,7 @@
 :PROPERTIES:
 :ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
 :END:
+** [ ] 配置chezmoi
 ** [ ] =&mut &str= 这样的类型是如何改变字符串的？ =&str= 不是不可变的吗？
 ** [ ] 配置 =org-transclusion=
 ** [ ] 制作MIT出版社计算机科学和数学下的RSS

@@ -45,7 +45,7 @@ int P(semaphore* s)
 void V(semaphore* s)
 {
 	s->value++;
-	if (s->q != NULL)	//Check if there are any threads waiting in the semaphore¡¯s queue
+	if (s->q != NULL)	//Check if there are any threads waiting in the semaphoreï¿½ï¿½s queue
 	{		
 		TCB_t* t = DelQ(s->q);	//delete head from s->q
 		AddQ(ReadyQ, t);	//unblock

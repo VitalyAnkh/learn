@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       20211117T233345.774188
+:END:
+#+title: gnome的磁盘使用情况分析器baobab
+Gnome的磁盘使用情况分析器叫baobab.
