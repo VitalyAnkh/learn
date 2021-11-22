@@ -71,6 +71,7 @@ java 程序中的 ~public static void main(String[] args)~ 中，main 不是 key
 *** [[id:6b82be5a-c69a-416f-9193-ad6d51b1f0e5][Rust 中的 mut 和 ref 关键字]]
 *** [[id:dbcac832-7a20-4ce9-a418-35d0f17c842f][Rust中的object safe]]
 *** [[id:460c2787-2059-4bf4-84b0-930fa664d9c4][Rust中的自动解引用]]
+***
 ** Android
 *** [[id:654f5357-1391-47ad-b775-0db0cc2bce67][好用的Android app]]
 ** [[id:5c0e859e-59ff-487d-aa1e-b071e4e39c7e][Firefox]]
@@ -144,3 +145,4 @@ CLOSED: [2021-10-24 日 01:08]
 * [[id:8032a555-8505-4001-abfc-6a87e5ab4bbb][Games]]
 * [[id:20211107T230749.935567][notify-send]]
 * [[id:20211109T133455.475903][未归类]]
+* [[id:20211120T160127.036484][idea]]

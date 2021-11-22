@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       20211120T170601.102350
+:END:
+#+title: RCU
+Read-Copy Update
+learn it, and implement it (in rust?) for zcore and redox
