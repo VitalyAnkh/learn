@@ -1,0 +1,26 @@
+Vitaly Ankh\today\documentclass[12pt,a4paper,oneside]{scrbook}
+\tracinglostchars=2
+\usepackage[match]{luatexja-fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=american]{english}
+\usepackage{csquotes}
+%\setotherlanguage{chinese}
+\usepackage{xstring}
+
+\defaultfontfeatures{ Ligatures=TeX,
+                      Scale=MatchUppercase }
+
+\setmainfont{Latin Modern Roman}[Scale=1.0]
+\setmainjfont{AR PL UMing TW}[Renderer=HarfBuzz]
+\(f(x)_{i} \)
+tectonic -X compile /tmp/8d0429d611b937833d6e38e373a09194e1a943da.tex -Z shell-escape --outfmt xdv --outdir /tmp/
+
+\begin{document}
+
+
+The common transliteration of 易经 is {\enquote{I Ching,}}
+following the now-obsolete Wade-Giles system: modern Romanization
+of almost all modern Chinese texts follows the Hanyu Pinyin standard used here.
+See [huang].
+
+\end{document}

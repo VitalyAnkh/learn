@@ -2,11 +2,9 @@
 :ID:       bfd7d280-d647-483b-a48c-97bdd50188b3
 :END:
 #+title: test-org-face
-#+latex_header: \usepackage{mathrsfs}
-#+latex_header: \usepackage{unicode-math}
+#+cite_export: csl
 * Xah Lee
 ** Subsection
-CLOSED: [2021-10-19 二 08:33]
 Hello *there* this is /Emacs/ _org-mode_ *No markdown!*.
 
 #+begin_src rust
@@ -42,26 +40,26 @@ int main(){
 | Hello | Emacs! |
 
 \(D = {B \times C E \ | \ B  \in \mathscr{B} \ and \ C \in \ \mathscr{C} }\)
-
+\(\forall \)
 [[https://gitee.com/Vitaly/img/raw/master/images/habitica.png]]
 
 Theorem 15.1 If \(\mathscr{C}\\}\) is a basis for the topology of \(X\) and
 
 Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}} - 我\). 若\(f(1)=1\)，且方程\(f(x)=12\)在区间\((0,1)\) 内
 有实根，求实数\(b\)的取值范围.
+\(\forall x\)
+\(f(x) = \frac{ax^{x}+bx+1}{e^{2}}\)
 
 \(f(b)=\sum_{i=1}^{\infty}\frac{1}{i_{i}}\)
 #+begin_src latex
 \sigma
 #+end_src
 
-#+RESULTS:
-: \sigma
 
 \(\sum_{5}^{6} \)
 \(f(x)-g(x)=\sum_{1}^{\infty}\)
 \(5^2\)
-
+\(\forall i\)
 \(\mathbb{W}\)
 \(\langle a\rangle\)
 \(\bm{fdsa}\)
@@ -69,7 +67,7 @@ Problem 已知函数\(f(x)=\frac{ax^{3}+bx+1}{e^{2}} - 我\). 若\(f(1)=1\)，�
 \(f^{-1}=g(x)\)
 \(f(x)\)
 \(f(x)-g(x)\)
-
+\(lim_{x \to 0}\)
 \(lim_{x\to0}\frac{1}{x}=\infty\)
 \(f(x)g(x)\)  is good to use.
 This cpp code is bad. Aliasing is hard. Why?
@@ -82,5 +80,24 @@ This cpp code is bad. Aliasing is hard. Why?
   std::cout << x << std::endl;
   std::cout << v;
 #+end_src
-#+begin_src C++
-#+RESULTS:
+
+
+\(\forall x\)
+\(f(x) - g(x)\)
+Give me a citation:
+
+[cite:see @portaDerivedComplexAnalytic2015]
+\(\bigcup\)
+\(\forall x \in A\)
+\(afdsa s fsa\)
+
+\(\cup\)
+
+\(f(x)_{我们}\)
+
+\(n_i\)
+* References
+  :PROPERTIES:
+  :UNNUMBERED: t
+  :END:
+#+LaTeX: \printbibliography[heading=none]

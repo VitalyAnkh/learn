@@ -13,8 +13,6 @@
 #+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \let\enumerate\compactenum
 #+LaTeX_HEADER: \usepackage{fontspec}
-#+latex_header: \usepackage{xeCJK}
-#+latex_header: \setCJKmainfont{Noto Serif CJK SC}
 #+BEGIN_ABSTRACT
 *Abstract*
 
@@ -134,9 +132,9 @@ The HOMFLY polynomial generalises both the Jones polynomial and the Alexander po
 
 ***** To get the Jones polynomial, make one of the following substitutions:
 
-  1. $a = q^{-1}$ and $z = q^{1/2} - q^{-1/2}$
   1. $\alpha = q$ and $z = q^{1/2} - q^{-1/2}$
-  1. $l = i q^{-1}$ and $m = i (q^{-1/2} - q^{1/2})$
+  2. $a = q^{-1}$ and $z = q^{1/2} - q^{-1/2}$
+  3. $l = i q^{-1}$ and $m = i (q^{-1/2} - q^{1/2})$
 
 ***** To get the Alexander polynomial, make one of the following substitutions:
 
@@ -168,7 +166,7 @@ The  Kanenobu Knots, which are infinitely many knots with the same knot ploynomi
 #+attr_latex: :width 50% :height 50%
 [[attachment:_20210523_133107screenshot.png]]
 
-The Kanenobu knot with parameter p, q is represented  by K(p,q). When p>0, the upper braid  has the right curve above. When p<0, the upper braid has the left curve above. When q>0, then lower braid has the left curve above. The q<0, the lower braid has the left curve above.
+The Kanenobu knot with parameter p, q is represented  by \(K(p,q)\). When p>0, the upper braid  has the right curve above. When p<0, the upper braid has the left curve above. When \(q<0\), then lower braid has the left curve above. The q<0, the lower braid has the left curve above.
 
 *** Generalized Kanenobu Knot
 The Kanenobu knot could be generalized by adding more parameters. After adding twisting between every crossing point of it, we get K(p, q, m, n):
@@ -178,11 +176,17 @@ The Kanenobu knot could be generalized by adding more parameters. After adding t
 [[attachment:_20210523_135628screenshot.png]]
 
 cite:kanenobuInfinitelyManyKnots1986
-By adding parameters further, we get \(K(p, q, m, n, l\):
+By adding parameters further, we get \(K(p, q, m, n, l)\):
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
 [[attachment:_20210531_040613screenshot.png]]
 Which has all its crossing point be a crossing point family.
+\(\forall a\)
+\(a^{2}\)
+\(\forall\)
+\(good\)
+\(\frac{a}{w}\)
+
 *** Alternating Link
 If in the diagram of a link, the crossings are alternating to each other, which means if one line in one crossing point is above, and in every neighbor crossing point it's below, we say this link is an alternating link.
 #+attr_org: :width 50% :height 50%
@@ -208,12 +212,13 @@ First, we show that after changing the crossing point 1 and 8, this Kanenobu kno
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%
 <image>
-2. Then we put a R2 move to the part between crossing point 1 and 2, and another R2 move to the part between crossing point 7 and 8, we get:
-
+2. Then we put a \(R_2\) move to the part between crossing point 1 and 2, and another R2 move to the part between crossing point 7 and 8, we get:
+   tectonic -X compile /tmp/90a10b3354c1730ba33363855f8ae914bd012bae.tex --outfmt xdv --outdir /tmp/
+tectonic -X compile /tmp/90a10b3354c1730ba33363855f8ae914bd012bae.tex --outfmt xdv --outdir /tmp/
 3. put a R2 move to the part between crossing point 4 and 5, we get:
 
 4. put a R2 move to the part between crossing point 3 and 4, and another R2 move to the part between crossing point 5 and 6, we get the unknot.
-
+tectonic /tmp/90a10b3354c1730ba33363855f8ae914bd012bae.tex --outfmt xdv --outdir /tmp/
 Second, we show that for any one change to the crossing point, the Kanenobu knot won't be transformed to the unknot.
 1. If we change the crossing point 1, we get an alternating knot, and alternating knot is not an unknot:
 
@@ -231,9 +236,6 @@ then the generalized Kanenobu knot has different Khovanov homology with unknot, 
 Label the 12 crossing points (excluding the p, q, n crossing points) with number 1, 2, ..., 12.
 First, change crossing points 2, 9, then  we could untie all the crossing point between 6 and 12.
 We could untie all the crossing points between 4 and 5, 10 and 11. Thus the all the points
-:PROPERTIES:
-:ID:       23575a83-0649-48c0-ad07-54b2c55a79b9
-:END:
 
 Then we must prove changing points less than 2 we can not untie this knot.
 If we changes 0 crossing point, this problem is trivial: the Kanenobu knot K(p, q, n) remains not an unknot.
@@ -246,6 +248,14 @@ And it is not an unknot because we can not untie the twist in the \(n\) part, fo
 
 3. If we change any crossing point other than 1, 2, the situation are similar to thing above.
 
+\(\forall x \in A\)
+
+\(f(x) - g(x)\)
+xelatex -no-pdf -interaction nonstopmode -shell-escape -output-directory /tmp/ /tmp/3aac37c4ec8045bd918e692e53acdbcd61e3cc80.tex
+lualatex --interaction=nonstopmode --shell-escape --output-format=dvi --output-directory=/tmp/ /tmp/a8e5e09da9474413140577d8829c25f4d68272f6.tex
+\(f(x)\)
+\(x\)
+[cite:@portaDerivedComplexAnalytic2015]
 Thus we can't untie the knot with only 1 crossing point change. Then we proved the unknotting number for generalized Kanenobu knot is 2.
 * Section 5. Unknotting Number for More Generalized Kanenobu Knot
 The more generalized Kanenobu knot is complex then we will break this problem into several situations.
@@ -265,20 +275,29 @@ In this section, we introduce a plat form for a surface-link.We assume \(D_{2}\s
 (1) \(A \cap D_{1} \times (I \times {0})\) is the standard m-wicket system when we identify \(D_{1} \times (I \times {0})\) with \(D \times [0,1]\).
 (2) For each \(\theta \in S^{1}\),\(A \cap (D_{1}\times (*I \times {\theta}))\) is an m-wicket system.
 
+\(\forall x \in A B\)
+\( \forall_{我们}  a\)
+
+\(\forall x\)
+\(\forall\)
 Definition 5.1.2 A braided surface \(S\) in \(D_{1} \times D_{2}\) is adequate if there exists a surface of m-wicket type, \(A\), in \(D_{1} \times N\) such that the boundaries of S and A coincide: \(\partial S = \partial A\).
 It's trivial that the degree of an adequate braided surface is even. Note that for each \(\theta \in S^{1}\), the seciton \(A \cap  D_{1} \times (*I \times {\theta})\)  is determined from the boundary of A and hence A is determined by \(\partial S\). Therefore, for an adequate braided surface \(S\), such a surface A of wicket is uniquely determined.
+\(\frac{1}{3}\)
 
 We consider a condition for a braided surface to admit the plat closure. For a braided surface \(S\) of degree n, let \(\beta_{S}\) be a geometric \(n\)-braided obtained by cutting the closed braid \(\partial S\) along \(\pi ^{-1}(y_{0})\). It is easy to say that \([\beta_{S}] = [\beta_{S^{'}}]\) in the braided group \(B_{n}\) if two braided surfaces \(S\) and \(S'\) are equivalent.
 *** Theorem 5.1.2 A braided surface \(S\) is equivalent to an adequate one if and only if \({\rm deg} S = 2m\) for some \(m \in \mathbb{N}\) and the braid \([\beta_{S}]\) belongs to \(K_{2m}\).
-*Proof* . Let \(S\) be equivalent to an adequate braided surface \(S_{0}\), and let \(A_{0}\) be a surface of \(m\)-wrick type such that \(\partial S_{0} = \partial A_{0}\). Thus \({\rm deg} S = {\rm deg } S_{0} = 2m\) for some \(m \in \mathbb{N}\), and \([\beta_{S}]=[\beta_{S_{0}}]\). Let \(f:[0,1] -> \mathscr{W}_{m}\) be a map defined by \(f(t) = A_{0} \cap D_{1} \times (I \times {t})\). Then \(f \) is a loop in \(\mathscr{W}_{m}\)such that \(f(0) = f(1)\) is the standard m-wicket system. By the isomorphism, the element \([f] \in \mathscr{W}_{m}\) corresponds to the braid \([\beta_{f}] \in K_{2m}\). Since \(\partial S_{0} = \partial A_{0}\), we have \(\beta_{S_{0}} = \beta_{f}\). Thus, \(\beta_{S} \in K_{2m}\).
+*Proof* . Let \(S\) be equivalent to an adequate braided surface \(S_{0}\), and let \(A_{0}\) be a surface of \(m\)-wrick type such that \(\partial S_{0} = \partial A_{0}\). Thus \({\mathrm{deg} deg} S = {\rm deg } S_{0} = 2m\) for some \(m \in \mathbb{N}\), and \([\beta_{S}]=[\beta_{S_{0}}]\). Let \(f:[0,1] -> \mathscr{W}_{m}\) be a map defined by \(f(t) = A_{0} \cap D_{1} \times (I \times {t})\). Then \(f \) is a loop in \(\mathscr{W}_{m}\)such that \(f(0) = f(1)\) is the standard m-wicket system. By the isomorphism, the element \([f] \in \mathscr{W}_{m}\) corresponds to the braid \([\beta_{f}] \in K_{2m}\). Since \(\partial S_{0} = \partial A_{0}\), we have \(\beta_{S_{0}} = \beta_{f}\). Thus, \(\beta_{S} \in K_{2m}\).
 
 The more generalized Kanenobu knot \(K(p, q, l, m, n)\)is like:
 
 <image>
 
+\(\forall x \in A\)
+\(\rm{R}\)
+
 ** Theorem 5.1 The unknotting number for more generalized Kanenobu knot \(K(p, q, m, n, l)\) is:
 
-*** When \(n>m\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{n+l}{2}]\), where \([\frac{n+l}{2}]\) is the integer part of \(\frac{n+l}{2}\) :ATTACH:
+*** When \(n>m\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{n+l}{2}]\), where \([\frac{n+l}{2}]\) is the integer part of \(\frac{n+l}{2}\)
 
 **** When \(m>n\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{m+l}{2}]\), where \([\frac{m +l}{2}]\) is the integer part of \(\frac{m +l}{2}\)
 *** When \(q + n < m + l\) and \(q + n < n + l\), the unknotting number for \(K(p, q, m, n, l)\) is \(2[\frac{q+n}{2}]\), where \([\frac{q+n}{2}]\) is the integer part of \(\frac{n+l}{2}\).
@@ -288,7 +307,7 @@ When \(m>n\), after changes the crossing points in the \(m\) and \(l\) part (do 
 
 <image>
 We can untie this knot by twisting the \(q\) crossing numbers first, then the 2 \(n\) crossing points.
-
+\(\forall\)
 When \(n>m\), after changing the crossing points in \(n\) and \(l\) part(do this by reducing \([\frac{n+l}{2}]\) crossing numbers), we get the knot like:
 #+attr_org: :width 50% :height 50%
 #+attr_html: :width 50% :height 50%

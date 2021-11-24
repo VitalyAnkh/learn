@@ -1,0 +1,19 @@
+# Fdb version 3
+["pdflatex"] 1637704036 "/home/vitalyr/projects/learn/Notebook/tex/test_lualatex/test_lualatex.tex" "/home/vitalyr/projects/learn/Notebook/tex/test_lualatex/test_lualatex.pdf" "test_lualatex" 1637704036
+  "/home/vitalyr/projects/learn/Notebook/tex/test_lualatex/test_lualatex.aux" 1637704036 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/vitalyr/projects/learn/Notebook/tex/test_lualatex/test_lualatex.tex" 1637704035 110 9da7f3ce04a387a7d6cd53211c0f9c32 ""
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1617738065 20145 aad8c3dd3bc36e260347b84002182bc2 ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1617738065 8449 a72d5d4e612221b46000c3d71724e0ef ""
+  "/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty" 1617738065 1655 a1ec6f2670a260de25415d37e9c60e97 ""
+  "/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1617738065 27164 3d5f7887a89df4eb2f6e86ba26ef3254 ""
+  "/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty" 1617738065 6208 7497703c7e95fb22a69d3ed6f9024046 ""
+  "/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty" 1617738065 6195 8bc989fdf3bb45de5ab646a95bf3352b ""
+  "/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex" 1617738065 80141 dd4859747b9d959c1acfee24fd462951 ""
+  "/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1617738065 6289 682e18a28ebd34b27d72772c8a4cedcb ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1617738065 39911 2da6c67557ec033436fe5418a70a8a61 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1621785070 2812673 a7d0dd03d87e8c2f0b11e6439c74e51c ""
+  "test_lualatex.tex" 1637704035 110 9da7f3ce04a387a7d6cd53211c0f9c32 ""
+  (generated)
+  "test_lualatex.log"
+  "/home/vitalyr/projects/learn/Notebook/tex/test_lualatex/test_lualatex.pdf"
+  "/home/vitalyr/projects/learn/Notebook/tex/test_lualatex/test_lualatex.log"

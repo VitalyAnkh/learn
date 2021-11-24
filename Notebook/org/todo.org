@@ -2,6 +2,11 @@
 :PROPERTIES:
 :ID:       8ff11bb0-f6e8-4560-a64d-ff1788cc7818
 :END:
+** [ ] 提问如何把org mode里用citar插入的的citation，在导出到pdf时导出为bibliography
+** [ ] 写在Emacs中使用tectonic和xenops编写org-mode和LaTeX的文章
+** [ ] 写用emacs的org-mode写论文和配置xenops的文章
+** [ ] 写作《从naive set theory到伴随函子和米田引理》，记得看nLab上的interactions of images and pre-images with unions and intersections
+** [ ] 配置editorconfig，解决Makefile中tab和空格的问题
 ** [ ] 配置chezmoi
 ** [ ] =&mut &str= 这样的类型是如何改变字符串的？ =&str= 不是不可变的吗？
 ** [ ] 配置 =org-transclusion=
