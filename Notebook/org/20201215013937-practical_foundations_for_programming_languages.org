@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       4273d69c-a19f-4855-98c7-1a579d6663dd
-:END:
-#+title: Practical Foundations For Programming Languages
-* 介绍
-Book by Robert Harper.

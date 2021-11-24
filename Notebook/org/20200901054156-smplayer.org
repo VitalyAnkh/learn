@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       f7088e83-e52a-4113-9184-2bc5c111036e
-:END:
-#+title: SMPlayer
-a GUI front end for mpv

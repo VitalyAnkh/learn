@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       736892dc-9b17-4e5a-b589-9c2c4bb8524f
-:END:
-#+title: Haskell
-* [[id:b5c47168-2b8e-4ecc-adcf-88cc004bad82][Haskell开发环境配置]]

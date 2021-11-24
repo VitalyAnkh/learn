@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       e2fe7e71-7459-4d0b-87d6-c0df63cea4b8
-:END:
-#+title: wiremock-rs
-一个 rust 实现的 mock 库。

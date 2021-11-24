@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       3867ca56-214f-486c-a5a5-5c858920325b
-:END:
-#+title: 稀缺
-《稀缺》这本书有些意思。打算读完[[id:3ef07193-9efd-44ca-96be-44d5893ec16a][曼昆经济学]] 后读一下。
-
-\(\int\frac{1-2t}{e^{t}(e^{t}+\sqrt{t})}dt\)

@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       cb26828d-817d-434c-a9fd-40963df73002
-:END:
-#+title: Programming
-All things about programming.
-* [[id:d5f9818d-e48f-4e83-a38f-5b527f35716d][关于二进制文件格式]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       20211109T133455.475903
-:END:
-#+title: 未归类
-* [[id:20211109T150958.626635][英语单词]]
-* [[id:20211115T192557.991045][firefox技巧]]
-* [[id:20211115T202741.786774][partial function和partial application]]
-* [[id:20211117T233345.774188][gnome的磁盘使用情况分析器baobab]]
-* [[id:20211119T000249.712106][math advice]]

@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       d89bc2c3-19ff-4658-a6da-51cac25ef0b5
-:END:
-#+title: stanford cs143
-* [[id:f9769013-1ccb-4249-b0bf-0cec717c9883][如何实现DFA]]
-*  Programming Assignment 1

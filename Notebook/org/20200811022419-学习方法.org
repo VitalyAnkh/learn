@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       97e3ddde-cff1-41d7-ba1c-b081d917021d
-:END:
-#+title: 学习方法
-* [[id:8ebb111e-d3be-456c-b5ec-7b3008d7874a][思维导图]]

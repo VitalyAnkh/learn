@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       1a3cb12c-5c87-4eec-a0c4-af8e0eec7762
-:END:
-#+title: 工作流
-1. 使用git提交doom emacs配置时，先运行 ~doom doctor~ 看配置是否有错误。

@@ -1,5 +1,0 @@
-* config
-:PROPERTIES:
-:ID:       46f1bbac-e185-4bae-a841-0ea5aa433cda
-:END:
-** Tasks

@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       4f6e7e55-ac60-4885-b22c-f09a67317c1b
-:END:
-#+title: Wolfram Language
-* [[id:211e5e12-0ee4-4324-ade8-97b6a5cee25a][Range 的用法]]

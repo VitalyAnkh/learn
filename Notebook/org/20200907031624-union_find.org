@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       8f078cfd-e089-452b-9354-2f4fb8ab7770
-:END:
-#+title: Union-Find
-把对象映射到 0 到 n 的整数的做法，是[[id:bf3c5136-e8e3-49f3-9d55-5af88cf3b200][符号表]]或[[id:318459d2-f641-4c0b-8b16-f7b6540f779c][搜索算法]]的漂亮应用。

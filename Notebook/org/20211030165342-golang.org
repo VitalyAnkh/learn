@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       a23c87f2-8107-4dc9-9756-f6d1c36560aa
-:END:
-#+title: Golang
-* [[id:4d7bea31-10a2-4729-b396-ddafa7eb7fd6][Golang配置开发环境]]

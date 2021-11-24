@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       cce8b895-e1c3-4d41-a406-ed59c39ad55e
-:END:
-#+title: gdm no gnome on wayland option on startup
-The computer must connect to a display to make wayland option appear.

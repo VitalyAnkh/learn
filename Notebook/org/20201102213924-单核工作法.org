@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       d201f651-fba0-4e6d-8a08-8bdd886ee6ab
-:END:
-#+title: 单核工作法
-* [[id:aabe057d-2237-459b-a6a9-d5e109811fe5][蔡加尼克效应]] 
-

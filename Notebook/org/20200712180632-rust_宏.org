@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       5c3011eb-d659-4ed6-83b1-42c3d280aa29
-:END:
-#+title: Rust 宏
-* Rust 宏与普通代码的对比：While functions and types abstact over code, macros abstract at a syntactic level.

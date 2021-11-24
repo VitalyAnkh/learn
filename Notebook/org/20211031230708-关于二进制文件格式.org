@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       d5f9818d-e48f-4e83-a38f-5b527f35716d
-:END:
-#+title: 关于二进制文件格式
-读这篇文章： [[https://news.ycombinator.com/item?id=27925393][how not to design a file format]]
-讲了二进制文件格式，尤其是zip的格式的有趣之处。
-读完之后，用rust的nom写个zip解析器？
