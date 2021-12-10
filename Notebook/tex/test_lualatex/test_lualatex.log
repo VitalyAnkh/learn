@@ -1,54 +1,16 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.5.23)  24 NOV 2021 05:47
- restricted system commands enabled.
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.11.24)  28 NOV 2021 00:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **test_lualatex.tex
 (./test_lualatex.tex
 LaTeX2e <2020-10-01> patch level 4
-Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
-Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
-ollection.
-luaotfload | conf : Root cache directory is "/home/vitalyr/.texlive/texmf-var/lu
-atex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
-olved path "/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2021-01-07.lu
-a".
-Lua-only attribute luaotfload@noligature = 1
-Lua-only attribute luaotfload@syllabe = 2
-luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
-Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
-Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua-only attribute luaotfload_color_attribute = 3
-luaotfload | conf : Root cache directory is "/home/vitalyr/.texlive/texmf-var/lu
-atex-cache/generic/names".
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
-Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
-er'.
-Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
-Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
-Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
-Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
-Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
-t'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
-t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
-Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2021-02-18>
+L3 programming layer <2021-02-18>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /home/vitalyr/.texlive/texmf-v
-ar/luatex-cache/generic/names/luaotfload-names.luc)
+)
 \c@part=\count175
 \c@section=\count176
 \c@subsection=\count177
@@ -66,29 +28,37 @@ ar/luatex-cache/generic/names/luaotfload-names.luc)
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-02-18 L3 programming layer (loader) 
 
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2021-03-18 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count183
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
+
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count183
+\l__color_backend_stack_int=\count184
+\g__color_backend_stack_int=\count185
+\g__graphics_track_int=\count186
 \l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count187
+\g__pdf_backend_annotation_int=\count188
+\g__pdf_backend_link_int=\count189
 ))
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX
-(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
-Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaT
-eX
-\l__fontspec_script_int=\count184
-\l__fontspec_language_int=\count185
-\l__fontspec_strnum_int=\count186
-\l__fontspec_tmp_int=\count187
-\l__fontspec_tmpa_int=\count188
-\l__fontspec_tmpb_int=\count189
-\l__fontspec_tmpc_int=\count190
-\l__fontspec_em_int=\count191
-\l__fontspec_emdef_int=\count192
-\l__fontspec_strong_int=\count193
-\l__fontspec_strongdef_int=\count194
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count190
+\l__fontspec_language_int=\count191
+\l__fontspec_strnum_int=\count192
+\l__fontspec_tmp_int=\count193
+\l__fontspec_tmpa_int=\count194
+\l__fontspec_tmpb_int=\count195
+\l__fontspec_tmpc_int=\count196
+\l__fontspec_em_int=\count197
+\l__fontspec_emdef_int=\count198
+\l__fontspec_strong_int=\count199
+\l__fontspec_strongdef_int=\count266
 \l__fontspec_tmpa_dim=\dimen139
 \l__fontspec_tmpb_dim=\dimen140
 \l__fontspec_tmpc_dim=\dimen141
@@ -97,63 +67,168 @@ eX
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-luaotfload | cache : Lookup cache loaded from /home/vitalyr/.texlive/texmf-var/l
-uatex-cache/generic/names/luaotfload-lookup-cache.luc.
-luaotfload | aux : font no 31 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : font no 32 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : font no 33 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : font no 34 (nil) does not define feature smcp for script latn
- with language dflt
+(/usr/share/texmf-dist/tex/latex/ctex/ctex.sty
+Package: ctex 2021/03/14 v2.5.6 Chinese adapter in LaTeX (CTEX)
 
-Package fontspec Info: Font family 'SourceCodePro(0)' created for font 'Source
-(fontspec)             Code Pro' with options
-(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
-Space].
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2021/03/14 v2.5.6 Document and package hooks (CTEX)
+)
+(/usr/share/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2021/03/14 v2.5.6 Patching commands (CTEX)
+)
+(/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+(/usr/share/texmf-dist/tex/latex/everysel/everysel.sty
+Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
+
+(/usr/share/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
+\l__ctex_tmp_int=\count267
+\l__ctex_tmp_box=\box48
+\l__ctex_tmp_dim=\dimen142
+\g__ctex_section_depth_int=\count268
+\g__ctex_font_size_int=\count269
+
+(/usr/share/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2021/03/14 v2.5.6 Option configuration file (CTEX)
+)
+(/usr/share/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2021/03/14 v2.5.6 XeLaTeX adapter (CTEX)
+
+(/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2020/10/19 v3.8.6 Typesetting CJK scripts with XeLaTeX
+
+(/usr/share/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2021-03-12 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen143
+\l__xtemplate_tmp_int=\count270
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip49
+)
+\l__xeCJK_tmp_int=\count271
+\l__xeCJK_tmp_box=\box49
+\l__xeCJK_tmp_dim=\dimen144
+\l__xeCJK_tmp_skip=\skip50
+\g__xeCJK_space_factor_int=\count272
+\l__xeCJK_begin_int=\count273
+\l__xeCJK_end_int=\count274
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip51
+\g__xeCJK_node_int=\count275
+\c__xeCJK_CJK_node_dim=\dimen145
+\c__xeCJK_CJK-space_node_dim=\dimen146
+\c__xeCJK_default_node_dim=\dimen147
+\c__xeCJK_default-space_node_dim=\dimen148
+\c__xeCJK_CJK-widow_node_dim=\dimen149
+\c__xeCJK_normalspace_node_dim=\dimen150
+\l__xeCJK_ccglue_skip=\skip52
+\l__xeCJK_ecglue_skip=\skip53
+\l__xeCJK_punct_kern_skip=\skip54
+\l__xeCJK_last_penalty_int=\count276
+\l__xeCJK_last_bound_dim=\dimen151
+\l__xeCJK_last_kern_dim=\dimen152
+\l__xeCJK_widow_penalty_int=\count277
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2341.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen153
+\l__xeCJK_mixed_punct_width_dim=\dimen154
+\l__xeCJK_middle_punct_width_dim=\dimen155
+\l__xeCJK_fixed_margin_width_dim=\dimen156
+\l__xeCJK_mixed_margin_width_dim=\dimen157
+\l__xeCJK_middle_margin_width_dim=\dimen158
+\l__xeCJK_bound_punct_width_dim=\dimen159
+\l__xeCJK_bound_margin_width_dim=\dimen160
+\l__xeCJK_margin_minimum_dim=\dimen161
+\l__xeCJK_kerning_total_width_dim=\dimen162
+\l__xeCJK_same_align_margin_dim=\dimen163
+\l__xeCJK_different_align_margin_dim=\dimen164
+\l__xeCJK_kerning_margin_width_dim=\dimen165
+\l__xeCJK_kerning_margin_minimum_dim=\dimen166
+\l__xeCJK_bound_dim=\dimen167
+\l__xeCJK_reverse_bound_dim=\dimen168
+\l__xeCJK_margin_dim=\dimen169
+\l__xeCJK_minimum_bound_dim=\dimen170
+\l__xeCJK_kerning_margin_dim=\dimen171
+\g__xeCJK_family_int=\count278
+\l__xeCJK_fam_int=\count279
+\g__xeCJK_fam_allocation_int=\count280
+\l__xeCJK_verb_case_int=\count281
+\l__xeCJK_verb_exspace_skip=\skip55
+
+(/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2020/10/19 v3.8.6 Configuration file for xeCJK package
+))
+\ccwd=\dimen172
+\l__ctex_ccglue_skip=\skip56
+)
+\l__ctex_ziju_dim=\dimen173
+
+(/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count282
+
+(/usr/share/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
+))
+(/usr/share/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
+File: ctex-scheme-chinese.def 2021/03/14 v2.5.6 Chinese scheme for generic (CTE
+X)
+
+(/usr/share/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2021/03/14 v2.5.6 Caption with encoding UTF-8 (CTEX)
+))
+(/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+File: ctex-c5size.clo 2021/03/14 v2.5.6 c5size option (CTEX)
+)
+(/usr/share/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+File: ctex-fontset-fandol.def 2021/03/14 v2.5.6 Fandol fonts definition (CTEX)
+
+
+Package fontspec Warning: Font "FandolSong-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
+(fontspec)             'FandolSong-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold
+},ItalicFont={FandolKai-Regular}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"SourceCodePro:mode=node;script=latn;language=dflt;"
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
-(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
-(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
-(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"SourceCodePro/B:mode=node;script=latn;language=dflt;
-"
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
-(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
-(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
-(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"SourceCodePro/I:mode=node;script=latn;language=dflt;
-"
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
-(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
-(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
-(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"SourceCodePro/BI:mode=node;script=latn;language=dflt
-;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
-(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
-(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
-(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
- (./test_lualatex.aux)
-\openout1 = test_lualatex.aux
+)) (/usr/share/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2021/03/14 v2.5.6 Configuration file (CTEX)
+) (./test_lualatex.aux)
+\openout1 = `test_lualatex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -164,11 +239,6 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-.
-(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -224,8 +294,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/SourceCodePro(0)/m/n on input line 
-4.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 4.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
@@ -233,27 +302,51 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/SourceCodePro(0)/b/n on input line 
-4.
- [1
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 4.
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 4.
+Missing character: There is no ф (U+0444) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ф (U+0444) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no д (U+0434) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no с (U+0441) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no а (U+0430) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no и (U+0438) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no в (U+0432) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no о (U+043E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no й (U+0439) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no з (U+0437) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no Ш (U+0428) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no О (U+041E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no Ш (U+0428) in font [lmroman10-regular]:mapping=t
+ex-text;!
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./test_lualatex.aux))
+Overfull \hbox (15.46727pt too wide) in paragraph at lines 5--13
+[]\TU/lmr/m/n/10.53937 gh \TU/FandolSong-Regular(0)/m/n/10.53937 我 们 さ け あ さ き 
+た な い や さ い わ た し し き う ぃ ん ん ん を き \TU/lmr/m/n/10.53937 ффдсаивойзШОШſfdsa
+ []
 
-Here is how much of LuaTeX's memory you used:
- 2700 strings out of 478531
- 100000,552014 words of node,token memory allocated
- 406 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 4 attribute, 48 glue_spec,
- 4 attribute_list, 1 write nodes
-   avail lists: 2:17,3:4,4:1,5:21,6:2,7:32,9:14
- 22664 multiletter control sequences out of 65536+600000
- 34 fonts using 5103663 bytes
- 81i,4n,85p,243b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/fonts/OTF/lmroman10-regular.otf>
-Output written on test_lualatex.pdf (1 page, 2845 bytes).
+[1
 
-PDF statistics: 15 PDF objects out of 1000 (max. 8388607)
- 8 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+] (./test_lualatex.aux) ) 
+Here is how much of TeX's memory you used:
+ 5618 strings out of 476919
+ 167367 string characters out of 5827673
+ 496660 words of memory out of 5000000
+ 25591 multiletter control sequences out of 15000+600000
+ 403510 words of font info for 37 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 81i,4n,104p,369b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on test_lualatex.pdf (1 page).

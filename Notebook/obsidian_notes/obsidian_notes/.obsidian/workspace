@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "1bd3a00a1c56d112",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3152acc8ef23424",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Test Obsidian.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "446afb0cdd97907d",
+    "type": "split",
+    "children": [
+      {
+        "id": "1095e54fd6567309",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1095d9bf598bb1b7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a3e4bd2ead98261e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "21bec26c938f241f",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b64b6075a360381",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f2f0cba07fc0226e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Test Obsidian.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f3152acc8ef23424",
+  "lastOpenFiles": [
+    "Test Obsidian.md",
+    "Untitled.md"
+  ]
+}

@@ -1,6 +1,6 @@
 use std::cmp::Ordering;
 
-struct Point{
+struct Point {
     x: i32,
     y: i32,
 }
@@ -28,4 +28,4 @@ impl PartialEq for Point {
 
 impl Eq for Point {}
 
-fn main(){}
+fn main() {}

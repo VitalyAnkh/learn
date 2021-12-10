@@ -1,0 +1,11 @@
+[package]
+name = "paly_lalrpop"
+version = "0.1.0"
+edition = "2021"
+authors = "VitalyR"
+
+[build-dependencies]
+lalrpop="*"
+[dependencies]
+lalrpop-util="*"
+regex="*"
