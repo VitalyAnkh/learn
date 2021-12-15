@@ -159,3 +159,6 @@ isSublist xs ys = isSubtree (listToTree xs) (listToTree ys)
 --+--Get function list---+--
 --+----------------------+-}
 isSublistFn xs ys = isSubtreeFn (listToTree xs) (listToTree ys) ["id"]
+
+mySum :: Int -> Int -> Int
+mySum a b = a + b

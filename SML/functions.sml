@@ -10,4 +10,4 @@ fun pow(x: int, y: int ) =
 fun cube(x: int) =
     pow(x, 3)
 
-val sixtyfour = cube(4)       
+val sixtyfour = cube(4)

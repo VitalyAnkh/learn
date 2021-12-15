@@ -32,7 +32,7 @@ compare' (Just x) (Just y) = case checkAllLetter x of
     True -> compare' Nothing (Just y)
     False -> True
 
-sumString :: String -> Int
+sumString :: String ->Int
 sumString = sum . fmap ord . fmap toUpper
 
 checkAllLetter :: String -> Bool
