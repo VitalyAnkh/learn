@@ -7,6 +7,7 @@ struct Foo {
 fn main() {
     let a = String::from("a");
     let b = format!("{a}");
+    println!("{}", b);
     println!("{a}");
-    println!("{b}");
+    println!("{b} {a}");
 }
