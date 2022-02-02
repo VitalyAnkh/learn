@@ -1,3 +1,5 @@
+#![feature(format_args_capture)]
+
 struct Bar;
 
 struct Foo {
@@ -6,8 +8,13 @@ struct Foo {
 
 fn main() {
     let a = String::from("a");
-    let b = format!("{a}");
+    let but = format!("{a}");
+    let b = 2;
     println!("{}", b);
+    format_args!("{}", but);
+    println!("{}", but);
     println!("{a}");
     println!("{b} {a}");
+    dbg!(a);
+    dbg!(but);
 }

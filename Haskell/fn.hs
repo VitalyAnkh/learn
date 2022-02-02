@@ -162,3 +162,19 @@ isSublistFn xs ys = isSubtreeFn (listToTree xs) (listToTree ys) ["id"]
 
 mySum :: Int -> Int -> Int
 mySum a b = a + b
+
+replicate' :: Int -> a -> [a]
+replicate' 0 _ = []
+replicate' n x = x : replicate' (n - 1) x
+
+triplePlus :: Num a => [a] -> [a]
+triplePlus xs = [3 * x + 1 | x <- xs]
+
+factor :: Int -> [Int]
+factor n = [i | i <- [1 .. n], n `mod` i == 0]
+
+isPrime :: Int -> Bool
+isPrime n = factor n == [1, n]
+
+list1 :: [Int]
+list1 = [x | x <- [2022 .. 2422], x `mod` 5 == 1, x `mod` 7 == 3, x `mod` 9 == 5]

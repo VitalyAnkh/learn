@@ -5,4 +5,4 @@ authors = ["VitalyR <vitalyankh@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-clap="3.0.0-bata.5"
+clap="3"

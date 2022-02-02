@@ -1,9 +1,9 @@
 [package]
-name = "bevy_app"
-version = "0.1.0"
 authors = []
 edition = "2021"
+name = "bevy_app"
 repository = "https://github.com/mrk-its/bevy_webgl2_app_template"
+version = "0.1.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
@@ -19,16 +19,16 @@ repository = "https://github.com/mrk-its/bevy_webgl2_app_template"
 # ]
 
 web = [
-  "bevy_webgl2"
+  "bevy_webgl2",
 ]
 
 [dependencies]
-bevy = {version="0.5.0", features = ["dynamic"]}
-bevy_webgl2 = {version="0.5.0", optional=true}
+bevy = {version = "0.5.0", features = ["dynamic", "wayland"]}
+bevy_webgl2 = {version = "0.5.0", optional = true}
 
-winit = "*"
+getrandom = {version = "0.1", features = ["wasm-bindgen"]}
 rand = "*"
-getrandom = {version="0.1", features=["wasm-bindgen"]}
+winit = "*"
 
 # [patch.'https://github.com/bevyengine/bevy']
 # bevy = {git = "https://github.com/bevyengine/bevy//", rev="841755aaf23acfd55b375c37390daeb302c5b30b", default-features=false}

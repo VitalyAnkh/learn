@@ -1,8 +1,12 @@
 [package]
+authors = ["VitalyR <vitalyankh@gmail.com>"]
+edition = "2021"
 name = "rustua"
 version = "0.1.0"
-authors = ["VitalyR <vitalyankh@gmail.com>"]
-edition = "2018"
-
 [dependencies]
-bevy={version="0.5",features=["wayland"]}
+serde = "*"
+serde_json = "*"
+
+[dependencies.bevy]
+features = ["wayland"]
+version = "0.5"
