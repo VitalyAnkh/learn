@@ -26,3 +26,12 @@ VitalyAnkh/mandelbrot
 VitalyAnkh/my-config
 VitalyAnkh/tesseract
 VitalyAnkh/org-noter
+VitalyAnkh/tutor_maker
+VitalyAnkh/vitalyankh.github.io
+VitalyAnkh/Solutions_to_Stochastic_Process_Ross
+VitalyAnkh/Network-Intrusion-Detection
+VitalyAnkh/wechat_jump_game
+VitalyAnkh/cplusplus-_Implementation_Of_Introduction_to_Algorithms
+VitalyAnkh/bustub-vitalyr
+VitalyAnkh/electron-ssr
+VitalyAnkh/tutor_maker

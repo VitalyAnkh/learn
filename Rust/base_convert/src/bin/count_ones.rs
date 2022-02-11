@@ -9,4 +9,5 @@ fn count_ones(mut n: i64) -> usize {
 fn main() {
     let number = 3;
     println!("{}", count_ones(number));
+    println!("{number}");
 }

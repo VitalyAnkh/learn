@@ -3,7 +3,7 @@ import requests
 
 headers = {
     "Accept": "application/vnd.github.v3+json",
-    "Authorization": "token XXXXXX",  # 填入token
+    "Authorization": "token xxxxx",  # 填入token
     "X-OAuth-Scopes": "repo",
 }
 

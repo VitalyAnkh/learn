@@ -11,4 +11,12 @@ val l = List(1, 2, 3, 4, 5)
 
 val list2 = List(List(1, 2), List(3, 4, 5))
 
+enum Expr:
+  case Var(s:String)
+  case Number(n:Int)
+  case Sum(e1:Expr, e2:Expr)
+  case Prod(e1:Expr, e2:Expr)
+
+def show(e: Expr)
+
 
