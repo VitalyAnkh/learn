@@ -1,5 +1,4 @@
 package recfun
-
 class RecFunSuite extends munit.FunSuite:
   import RecFun.*
 
@@ -10,7 +9,11 @@ class RecFunSuite extends munit.FunSuite:
   }
 
   test("balance: 'I told him ...' is balanced") {
-    assert(balance("I told him (that it's not (yet) done).\n(But he wasn't listening)".toList))
+    assert(
+      balance(
+        "I told him (that it's not (yet) done).\n(But he wasn't listening)".toList
+      )
+    )
   }
 
   test("balance: ':-)' is unbalanced") {
@@ -24,19 +27,19 @@ class RecFunSuite extends munit.FunSuite:
   // ------ countChange tests -------------------------------------------------
 
   test("countChange: example given in instructions") {
-    assertEquals(countChange(4,List(1,2)), 3)
+    assertEquals(countChange(4, List(1, 2)), 3)
   }
 
   test("countChange: sorted CHF") {
-    assertEquals(countChange(300,List(5,10,20,50,100,200,500)), 1022)
+    assertEquals(countChange(300, List(5, 10, 20, 50, 100, 200, 500)), 1022)
   }
 
   test("countChange: no pennies") {
-    assertEquals(countChange(301,List(5,10,20,50,100,200,500)), 0)
+    assertEquals(countChange(301, List(5, 10, 20, 50, 100, 200, 500)), 0)
   }
 
   test("countChange: unsorted CHF") {
-    assertEquals(countChange(300,List(500,5,50,100,20,200,10)), 1022)
+    assertEquals(countChange(300, List(500, 5, 50, 100, 20, 200, 10)), 1022)
   }
 
   // ------ pascal tests ------------------------------------------------------
