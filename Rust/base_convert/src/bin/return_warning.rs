@@ -1,13 +1,6 @@
 #![allow(unused_variables)]
-#![deny(unreachable_code)]
 
-fn main() {
-    let x = loop {
-        continue;
-        println!("hi");
-        //~^ ERROR unreachable statement
-    };
-}
+fn main() {}
 fn a() {
     // the `2` is unreachable:
     let x: (usize, usize) = (return, 2); //~ ERROR unreachable

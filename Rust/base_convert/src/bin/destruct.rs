@@ -13,5 +13,4 @@ impl Point {
 }
 fn main() {
     let p = Point::default();
-    dbg!(p.add_one());
 }
