@@ -1,0 +1,46 @@
+
+
+## ch 3
+```
+  	fn main() {
+  	    let mut spaces = "   ";
+  	    spaces = spaces.len();
+  	}
+```
+	
+changes to spaces mutate the original var, hence type err - cant turn string to an int
+ 
+```
+Length	Signed	Unsigned
+8-bit	i8	u8
+16-bit	i16	u16
+32-bit	i32	u32
+64-bit	i64	u64
+128-bit	i128	u128
+arch	isize	usize
+```
+
+has UTF8 pog
+
+compound types - tuples and arrays
+
+
+unwrapping uses let
+
+uses `.` for tuple indexing
+
+array type declaration: 
+```
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+```
+
+multiple elements same val: 
+```
+let a = [3; 5];
+```
+
+cant do variable indexing of a tuple
+
+lists are fixed size
+
+vectors are akin to py lists

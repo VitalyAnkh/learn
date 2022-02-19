@@ -87,3 +87,9 @@ def myLength[T](xs: List[T]): Int =
   xs.foldRight(0)((x, length) => length + 1)
 myMap(l1, _ + 10)
 myLength(l1)
+
+def squareSum(xs: List[Int]): Int =
+  xs.foldLeft(0)((x: Int, y: Int) => (x + y * y))
+
+squareSum(l1)
+l1.map(x => x * x).sum

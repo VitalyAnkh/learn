@@ -121,3 +121,11 @@ testInorder =
 foldTree :: (a -> b -> b) -> b -> BinaryTree a -> b
 foldTree _ b Leaf = b
 foldTree f acc tree = foldr f acc (preorder tree)
+
+uniqueInOrder :: Eq a => [a] -> [a]
+uniqueInOrder [] = []
+uniqueInOrder xs =
+  foldr
+    (\x xs -> if x == (head xs) then xs else x : xs)
+    ([last xs])
+    xs
