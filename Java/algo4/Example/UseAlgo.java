@@ -3,6 +3,7 @@ package Example;
 import edu.princeton.cs.algs4.MinPQ;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
 public class UseAlgo {
@@ -13,13 +14,13 @@ public class UseAlgo {
         StdOut.println();
         StdOut.printf("%10d\n", 100);
         StdOut.printf("Pi is approximately %.4f\n", Math.PI);
-        double sum=0.0;
-        int count=0;
+        double sum = 0.0;
+        int count = 0;
         while (!StdIn.isEmpty()) {
-            sum+=StdIn.readDouble();
+            sum += StdIn.readDouble();
             count++;
         }
-        double avg=sum/count;
+        double avg = sum / count;
         StdOut.printf("Average is %.2f\n", avg);
     }
 }

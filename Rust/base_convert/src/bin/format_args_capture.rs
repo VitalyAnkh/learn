@@ -1,7 +1,7 @@
-#![feature(format_args_capture)]
-
+#[derive(Debug)]
 struct Bar;
 
+#[derive(Debug)]
 struct Foo {
     bar: Bar,
 }
@@ -17,4 +17,9 @@ fn main() {
     println!("{b} {a}");
     dbg!(a);
     dbg!(but);
+    let bar = Bar;
+    let f = Foo { bar };
+    let rf = &f;
+    // BOOM! move out from shared ptr.
+    let &own_f = rf;
 }

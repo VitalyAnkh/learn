@@ -89,7 +89,60 @@ myMap(l1, _ + 10)
 myLength(l1)
 
 def squareSum(xs: List[Int]): Int =
-  xs.foldLeft(0)((x: Int, y: Int) => (x + y * y))
+  xs.foldLeft(0)((x, y) => x + y * y)
 
 squareSum(l1)
 l1.map(x => x * x).sum
+
+val v = (1 to 5).flatMap(n => Vector(n, n, n, n, n).zip(Vector(6, 7, 8, 9, 10)))
+v
+
+def isPrime(n: Int): Boolean =
+  (2 until n).forall(n % _ != 0)
+
+def filterPrimeFromSum(
+    xs: Vector[Int],
+    ys: Vector[Int]
+): Vector[Tuple2[Int, Int]] =
+  xs.flatMap(x => ys.map(y => (x, y))).filter((x, y) => isPrime(x + y))
+
+isPrime(4)
+
+filterPrimeFromSum(Vector(1, 2, 3, 4), Vector(5, 6, 7, 8))
+
+def scalarProduct(xs: Vector[Int], ys: Vector[Int]): Int =
+  (for (x, y) <- xs.zip(ys) yield x * y).sum
+
+def scalarProduct2(xs: Vector[Int], ys: Vector[Int]): Int =
+  (for x <- xs; y <- ys yield x * y).sum
+val v1 = Vector(1, 2, 3, 4)
+val v2 = Vector(5, 6, 7, 8)
+
+scalarProduct(v1, v2)
+scalarProduct2(v1, v2)
+
+val m1 = Map("red" -> 1, "green" -> 2)
+val m2 = m1 + ("green" -> 3)
+m2
+m1
+m1 ++ m2
+m1
+
+val fruit = List("apple", "orange", "banana", "pear", "watermelon")
+fruit.sortWith(_.length < _.length)
+
+class Polynom(nonZeroTerms: Map[Int, Double]):
+  def terms = nonZeroTerms.withDefaultValue(0.0)
+  def +(other: Polynom) = ???
+  override def toString =
+    val termString =
+      for (exp, coeff) <- terms.toList.sorted.reverse
+      yield
+        val exponent = if exp == 0 then "" else s"x^$exp"
+        if coeff < 0 then s"($coeff$exponent)" else s"$coeff$exponent"
+    if termString.isEmpty then "0" else termString.mkString(" + ")
+
+val polynom1 = Polynom(Map(3 -> 3, 1 -> -1, 0 -> 1))
+polynom1.toString
+val polynom2 = Polynom(Map())
+polynom2.toString

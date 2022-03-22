@@ -1,3 +1,5 @@
+import Data.List
+
 maximum' :: (Ord a) => [a] -> a
 maximum' [] = error "maximun of empty list"
 maximum' [x] = x
@@ -129,3 +131,6 @@ uniqueInOrder xs =
     (\x xs -> if x == (head xs) then xs else x : xs)
     ([last xs])
     xs
+
+uniqueInOrder' :: Eq a => [a] -> [a]
+uniqueInOrder' = map head . group

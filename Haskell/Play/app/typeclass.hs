@@ -1,8 +1,5 @@
 aList = ["cat", "dog", "mouse"]
 
-f :: Integer -> Integer
-f x = 3 * x + 1
-
 convert :: Read a => String -> [a]
 convert = map read . words
 
@@ -15,7 +12,5 @@ primes = filterPrime [2 ..]
     filterPrime (p : xs) =
       p : filterPrime [x | x <- xs, x `mod` p /= 0]
 
-
-foo :: Int -> Int
-foo =\n -> length [x|x<-[1..n], n `mod` x==0]
-
+-- foo :: Int -> Int
+-- foo =\n -> length [x | x<-[1..n], n `mod` x==0]

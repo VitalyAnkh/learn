@@ -1,12 +1,12 @@
-cabal-version:      3.6
-name:               Play
+cabal-version:      2.4
+name:               my-foo
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
--- synopsis: For play
+-- synopsis:
 
 -- A longer description of the package.
--- description: 
+-- description:
 
 -- A URL where users can report bugs.
 -- bug-reports:
@@ -21,7 +21,7 @@ maintainer:         vitalyankh@gmail.com
 -- category:
 extra-source-files: CHANGELOG.md
 
-executable Play
+executable my-foo
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
@@ -29,6 +29,6 @@ executable Play
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base, regex-applicative
+    build-depends:    base ^>=4.16.0.0
     hs-source-dirs:   app
     default-language: Haskell2010

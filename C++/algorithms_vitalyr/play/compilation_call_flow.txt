@@ -1,0 +1,130 @@
+ #0 0x0000557424fbb27f PrintStackTraceSignalHandler(void*) Signals.cpp:0:0
+ #1 0x0000557424fb9150 llvm::sys::CleanupOnSignal(unsigned long) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x35b9150)
+ #2 0x0000557424ef2ed8 CrashRecoverySignalHandler(int) CrashRecoveryContext.cpp:0:0
+ #3 0x00007fc70ca033c0 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x153c0)
+ #4 0x000055742477ee02 llvm::PointerType::get(llvm::Type*, unsigned int) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x2d7ee02)
+ #5 0x000055742549b577 clang::CodeGen::CGBuilderTy::CreateStructGEP(clang::CodeGen::Address, unsigned int, llvm::Twine const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a9b577)
+ #6 0x00005574255caf8d clang::CodeGen::CodeGenFunction::EmitAggregateStore(llvm::Value*, clang::CodeGen::Address, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bcaf8d)
+ #7 0x00005574256509f1 (anonymous namespace)::AggExprEmitter::VisitConstantExpr(clang::ConstantExpr*) CGExprAgg.cpp:0:0
+ #8 0x000055742564ed57 clang::StmtVisitorBase<std::add_pointer, (anonymous namespace)::AggExprEmitter, void>::Visit(clang::Stmt*) CGExprAgg.cpp:0:0
+ #9 0x0000557425650bc1 clang::CodeGen::CodeGenFunction::EmitAggExpr(clang::Expr const*, clang::CodeGen::AggValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c50bc1)
+#10 0x0000557425643111 clang::CodeGen::CodeGenFunction::EmitAnyExprToMem(clang::Expr const*, clang::CodeGen::Address, clang::Qualifiers, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c43111)
+#11 0x00005574256476e6 clang::CodeGen::CodeGenFunction::EmitMaterializeTemporaryExpr(clang::MaterializeTemporaryExpr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c476e6)
+#12 0x000055742563ea5e clang::CodeGen::CodeGenFunction::EmitLValue(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c3ea5e)
+#13 0x000055742564731d clang::CodeGen::CodeGenFunction::EmitReferenceBindingToExpr(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c4731d)
+#14 0x00005574255d7b74 clang::CodeGen::CodeGenFunction::EmitCallArg(clang::CodeGen::CallArgList&, clang::Expr const*, clang::QualType) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd7b74)
+#15 0x00005574255d92bf clang::CodeGen::CodeGenFunction::EmitCallArgs(clang::CodeGen::CallArgList&, clang::CodeGen::CodeGenFunction::PrototypeWrapper, llvm::iterator_range<clang::Stmt::CastIterator<clang::Expr, clang::Expr const* const, clang::Stmt const* const> >, clang::CodeGen::CodeGenFunction::AbstractCallee, unsigned int, clang::CodeGen::CodeGenFunction::EvaluationOrder) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd92bf)
+#16 0x000055742563ccf3 clang::CodeGen::CodeGenFunction::EmitCall(clang::QualType, clang::CodeGen::CGCallee const&, clang::CallExpr const*, clang::CodeGen::ReturnValueSlot, llvm::Value*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c3ccf3)
+#17 0x0000557425648ae8 clang::CodeGen::CodeGenFunction::EmitCallExpr(clang::CallExpr const*, clang::CodeGen::ReturnValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c48ae8)
+#18 0x0000557425649fcb clang::CodeGen::RValue llvm::function_ref<clang::CodeGen::RValue (clang::CodeGen::ReturnValueSlot)>::callback_fn<(anonymous namespace)::AggExprEmitter::VisitCallExpr(clang::CallExpr const*)::'lambda'(clang::CodeGen::ReturnValueSlot)>(long, clang::CodeGen::ReturnValueSlot) CGExprAgg.cpp:0:0
+#19 0x000055742564d49b (anonymous namespace)::AggExprEmitter::withReturnValueSlot(clang::Expr const*, llvm::function_ref<clang::CodeGen::RValue (clang::CodeGen::ReturnValueSlot)>) CGExprAgg.cpp:0:0
+#20 0x000055742564d873 (anonymous namespace)::AggExprEmitter::VisitCallExpr(clang::CallExpr const*) CGExprAgg.cpp:0:0
+#21 0x000055742564dc3b clang::StmtVisitorBase<std::add_pointer, (anonymous namespace)::AggExprEmitter, void>::Visit(clang::Stmt*) CGExprAgg.cpp:0:0
+#22 0x0000557425650bc1 clang::CodeGen::CodeGenFunction::EmitAggExpr(clang::Expr const*, clang::CodeGen::AggValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c50bc1)
+#23 0x000055742562f1fe clang::CodeGen::CodeGenFunction::EmitAnyExpr(clang::Expr const*, clang::CodeGen::AggValueSlot, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c2f1fe)
+#24 0x000055742562f8c9 clang::CodeGen::CodeGenFunction::EmitAnyExprToTemp(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c2f8c9)
+#25 0x00005574255d7c5b clang::CodeGen::CodeGenFunction::EmitCallArg(clang::CodeGen::CallArgList&, clang::Expr const*, clang::QualType) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd7c5b)
+#26 0x00005574255d92bf clang::CodeGen::CodeGenFunction::EmitCallArgs(clang::CodeGen::CallArgList&, clang::CodeGen::CodeGenFunction::PrototypeWrapper, llvm::iterator_range<clang::Stmt::CastIterator<clang::Expr, clang::Expr const* const, clang::Stmt const* const> >, clang::CodeGen::CodeGenFunction::AbstractCallee, unsigned int, clang::CodeGen::CodeGenFunction::EvaluationOrder) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd92bf)
+#27 0x000055742563ccf3 clang::CodeGen::CodeGenFunction::EmitCall(clang::QualType, clang::CodeGen::CGCallee const&, clang::CallExpr const*, clang::CodeGen::ReturnValueSlot, llvm::Value*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c3ccf3)
+#28 0x0000557425648ae8 clang::CodeGen::CodeGenFunction::EmitCallExpr(clang::CallExpr const*, clang::CodeGen::ReturnValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c48ae8)
+#29 0x0000557425685250 (anonymous namespace)::ScalarExprEmitter::VisitCallExpr(clang::CallExpr const*) CGExprScalar.cpp:0:0
+#30 0x0000557425679bf3 (anonymous namespace)::ScalarExprEmitter::Visit(clang::Expr*) CGExprScalar.cpp:0:0
+#31 0x0000557425679bdc (anonymous namespace)::ScalarExprEmitter::Visit(clang::Expr*) CGExprScalar.cpp:0:0
+#32 0x000055742567aa98 (anonymous namespace)::ScalarExprEmitter::Visit(clang::Expr*) CGExprScalar.cpp:0:0
+#33 0x000055742567c2a3 clang::CodeGen::CodeGenFunction::EmitScalarExpr(clang::Expr const*, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c7c2a3)
+#34 0x0000557425635315 clang::CodeGen::CodeGenFunction::EvaluateExprAsBool(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c35315)
+#35 0x00005574253c7fb8 clang::CodeGen::CodeGenFunction::EmitBranchOnBoolExpr(clang::Expr const*, llvm::BasicBlock*, llvm::BasicBlock*, unsigned long, clang::Stmt::Likelihood) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39c7fb8)
+#36 0x00005574253780d1 clang::CodeGen::CodeGenFunction::EmitIfStmt(clang::IfStmt const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39780d1)
+#37 0x0000557425372ad9 clang::CodeGen::CodeGenFunction::EmitStmt(clang::Stmt const*, llvm::ArrayRef<clang::Attr const*>) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3972ad9)
+#38 0x000055742537820e clang::CodeGen::CodeGenFunction::EmitIfStmt(clang::IfStmt const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x397820e)
+#39 0x0000557425372ad9 clang::CodeGen::CodeGenFunction::EmitStmt(clang::Stmt const*, llvm::ArrayRef<clang::Attr const*>) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3972ad9)
+#40 0x000055742537852c clang::CodeGen::CodeGenFunction::EmitCompoundStmtWithoutScope(clang::CompoundStmt const&, bool, clang::CodeGen::AggValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x397852c)
+#41 0x00005574253c8c43 clang::CodeGen::CodeGenFunction::EmitFunctionBody(clang::Stmt const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39c8c43)
+#42 0x00005574253d273a clang::CodeGen::CodeGenFunction::GenerateCode(clang::GlobalDecl, llvm::Function*, clang::CodeGen::CGFunctionInfo const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39d273a)
+#43 0x0000557425419198 clang::CodeGen::CodeGenModule::EmitGlobalFunctionDefinition(clang::GlobalDecl, llvm::GlobalValue*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a19198)
+#44 0x00005574254162d5 clang::CodeGen::CodeGenModule::EmitGlobalDefinition(clang::GlobalDecl, llvm::GlobalValue*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a162d5)
+#45 0x0000557425416a13 clang::CodeGen::CodeGenModule::EmitGlobal(clang::GlobalDecl) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a16a13)
+#46 0x000055742541cdb1 clang::CodeGen::CodeGenModule::EmitTopLevelDecl(clang::Decl*) (.part.5387) CodeGenModule.cpp:0:0
+#47 0x0000557425f70251 (anonymous namespace)::CodeGeneratorImpl::HandleTopLevelDecl(clang::DeclGroupRef) ModuleBuilder.cpp:0:0
+#48 0x0000557425f64ef2 clang::BackendConsumer::HandleTopLevelDecl(clang::DeclGroupRef) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x4564ef2)
+#49 0x0000557426de41cc clang::ParseAST(clang::Sema&, bool, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x53e41cc)
+#50 0x0000557425f6e1f2 clang::CodeGenAction::ExecuteAction() (/opt/compiler-explorer/clang-trunk/bin/clang+++0x456e1f2)
+#51 0x000055742596ac41 clang::FrontendAction::Execute() (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3f6ac41)
+#52 0x00005574259053e2 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3f053e2)
+#53 0x0000557425a37013 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x4037013)
+#54 0x0000557422bafca4 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x11afca4)
+#55 0x0000557422babc5d ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&) driver.cpp:0:0
+#56 0x00005574257a19f5 void llvm::function_ref<void ()>::callback_fn<clang::driver::CC1Command::Execute(llvm::ArrayRef<llvm::Optional<llvm::StringRef> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, bool*) const::'lambda'()>(long) Job.cpp:0:0
+#57 0x0000557424ef34c3 llvm::CrashRecoveryContext::RunSafely(llvm::function_ref<void ()>) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x34f34c3)
+#58 0x00005574257a3ac8 clang::driver::CC1Command::Execute(llvm::ArrayRef<llvm::Optional<llvm::StringRef> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, bool*) const (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3da3ac8)
+#59 0x0000557425776efa clang::driver::Compilation::ExecuteCommand(clang::driver::Command const&, clang::driver::Command const*&) const (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3d76efa)
+#60 0x0000557425777a3f clang::driver::Compilation::ExecuteJobs(clang::driver::JobList const&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*> >&) const (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3d77a3f)
+#61 0x0000557425780405 clang::driver::Driver::ExecuteCompilation(clang::driver::Compilation&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*> >&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3d80405)
+#62 0x0000557422abb752 main (/opt/compiler-explorer/clang-trunk/bin/clang+++0x10bb752)
+#63 0x00007fc70c4b30b3 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b3)
+#64 0x0000557422bab7da _start (/opt/compiler-explorer/clang-trunk/bin/clang+++0x11ab7da)
+#64 0x0000557422bab7da _start (/opt/compiler-explorer/clang-trunk/bin/clang+++0x11ab7da)
+#63 0x00007fc70c4b30b3 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b3)
+#62 0x0000557422abb752 main (/opt/compiler-explorer/clang-trunk/bin/clang+++0x10bb752)
+#61 0x0000557425780405 clang::driver::Driver::ExecuteCompilation(clang::driver::Compilation&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*> >&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3d80405)
+#60 0x0000557425777a3f clang::driver::Compilation::ExecuteJobs(clang::driver::JobList const&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*> >&) const (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3d77a3f)
+#59 0x0000557425776efa clang::driver::Compilation::ExecuteCommand(clang::driver::Command const&, clang::driver::Command const*&) const (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3d76efa)
+#58 0x00005574257a3ac8 clang::driver::CC1Command::Execute(llvm::ArrayRef<llvm::Optional<llvm::StringRef> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, bool*) const (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3da3ac8)
+#57 0x0000557424ef34c3 llvm::CrashRecoveryContext::RunSafely(llvm::function_ref<void ()>) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x34f34c3)
+#56 0x00005574257a19f5 void llvm::function_ref<void ()>::callback_fn<clang::driver::CC1Command::Execute(llvm::ArrayRef<llvm::Optional<llvm::StringRef> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, bool*) const::'lambda'()>(long) Job.cpp:0:0
+#55 0x0000557422babc5d ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&) driver.cpp:0:0
+#54 0x0000557422bafca4 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x11afca4)
+#53 0x0000557425a37013 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x4037013)
+#52 0x00005574259053e2 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3f053e2)
+#51 0x000055742596ac41 clang::FrontendAction::Execute() (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3f6ac41)
+#50 0x0000557425f6e1f2 clang::CodeGenAction::ExecuteAction() (/opt/compiler-explorer/clang-trunk/bin/clang+++0x456e1f2)
+#49 0x0000557426de41cc clang::ParseAST(clang::Sema&, bool, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x53e41cc)
+#48 0x0000557425f64ef2 clang::BackendConsumer::HandleTopLevelDecl(clang::DeclGroupRef) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x4564ef2)
+#47 0x0000557425f70251 (anonymous namespace)::CodeGeneratorImpl::HandleTopLevelDecl(clang::DeclGroupRef) ModuleBuilder.cpp:0:0
+#46 0x000055742541cdb1 clang::CodeGen::CodeGenModule::EmitTopLevelDecl(clang::Decl*) (.part.5387) CodeGenModule.cpp:0:0
+#45 0x0000557425416a13 clang::CodeGen::CodeGenModule::EmitGlobal(clang::GlobalDecl) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a16a13)
+#44 0x00005574254162d5 clang::CodeGen::CodeGenModule::EmitGlobalDefinition(clang::GlobalDecl, llvm::GlobalValue*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a162d5)
+#43 0x0000557425419198 clang::CodeGen::CodeGenModule::EmitGlobalFunctionDefinition(clang::GlobalDecl, llvm::GlobalValue*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a19198)
+#42 0x00005574253d273a clang::CodeGen::CodeGenFunction::GenerateCode(clang::GlobalDecl, llvm::Function*, clang::CodeGen::CGFunctionInfo const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39d273a)
+#41 0x00005574253c8c43 clang::CodeGen::CodeGenFunction::EmitFunctionBody(clang::Stmt const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39c8c43)
+#40 0x000055742537852c clang::CodeGen::CodeGenFunction::EmitCompoundStmtWithoutScope(clang::CompoundStmt const&, bool, clang::CodeGen::AggValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x397852c)
+#39 0x0000557425372ad9 clang::CodeGen::CodeGenFunction::EmitStmt(clang::Stmt const*, llvm::ArrayRef<clang::Attr const*>) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3972ad9)
+#38 0x000055742537820e clang::CodeGen::CodeGenFunction::EmitIfStmt(clang::IfStmt const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x397820e)
+#37 0x0000557425372ad9 clang::CodeGen::CodeGenFunction::EmitStmt(clang::Stmt const*, llvm::ArrayRef<clang::Attr const*>) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3972ad9)
+#36 0x00005574253780d1 clang::CodeGen::CodeGenFunction::EmitIfStmt(clang::IfStmt const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39780d1)
+#35 0x00005574253c7fb8 clang::CodeGen::CodeGenFunction::EmitBranchOnBoolExpr(clang::Expr const*, llvm::BasicBlock*, llvm::BasicBlock*, unsigned long, clang::Stmt::Likelihood) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x39c7fb8)
+#34 0x0000557425635315 clang::CodeGen::CodeGenFunction::EvaluateExprAsBool(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c35315)
+#33 0x000055742567c2a3 clang::CodeGen::CodeGenFunction::EmitScalarExpr(clang::Expr const*, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c7c2a3)
+#32 0x000055742567aa98 (anonymous namespace)::ScalarExprEmitter::Visit(clang::Expr*) CGExprScalar.cpp:0:0
+#31 0x0000557425679bdc (anonymous namespace)::ScalarExprEmitter::Visit(clang::Expr*) CGExprScalar.cpp:0:0
+#30 0x0000557425679bf3 (anonymous namespace)::ScalarExprEmitter::Visit(clang::Expr*) CGExprScalar.cpp:0:0
+#29 0x0000557425685250 (anonymous namespace)::ScalarExprEmitter::VisitCallExpr(clang::CallExpr const*) CGExprScalar.cpp:0:0
+#28 0x0000557425648ae8 clang::CodeGen::CodeGenFunction::EmitCallExpr(clang::CallExpr const*, clang::CodeGen::ReturnValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c48ae8)
+#27 0x000055742563ccf3 clang::CodeGen::CodeGenFunction::EmitCall(clang::QualType, clang::CodeGen::CGCallee const&, clang::CallExpr const*, clang::CodeGen::ReturnValueSlot, llvm::Value*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c3ccf3)
+#26 0x00005574255d92bf clang::CodeGen::CodeGenFunction::EmitCallArgs(clang::CodeGen::CallArgList&, clang::CodeGen::CodeGenFunction::PrototypeWrapper, llvm::iterator_range<clang::Stmt::CastIterator<clang::Expr, clang::Expr const* const, clang::Stmt const* const> >, clang::CodeGen::CodeGenFunction::AbstractCallee, unsigned int, clang::CodeGen::CodeGenFunction::EvaluationOrder) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd92bf)
+#25 0x00005574255d7c5b clang::CodeGen::CodeGenFunction::EmitCallArg(clang::CodeGen::CallArgList&, clang::Expr const*, clang::QualType) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd7c5b)
+#24 0x000055742562f8c9 clang::CodeGen::CodeGenFunction::EmitAnyExprToTemp(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c2f8c9)
+#23 0x000055742562f1fe clang::CodeGen::CodeGenFunction::EmitAnyExpr(clang::Expr const*, clang::CodeGen::AggValueSlot, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c2f1fe)
+#22 0x0000557425650bc1 clang::CodeGen::CodeGenFunction::EmitAggExpr(clang::Expr const*, clang::CodeGen::AggValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c50bc1)
+#21 0x000055742564dc3b clang::StmtVisitorBase<std::add_pointer, (anonymous namespace)::AggExprEmitter, void>::Visit(clang::Stmt*) CGExprAgg.cpp:0:0
+#20 0x000055742564d873 (anonymous namespace)::AggExprEmitter::VisitCallExpr(clang::CallExpr const*) CGExprAgg.cpp:0:0
+#19 0x000055742564d49b (anonymous namespace)::AggExprEmitter::withReturnValueSlot(clang::Expr const*, llvm::function_ref<clang::CodeGen::RValue (clang::CodeGen::ReturnValueSlot)>) CGExprAgg.cpp:0:0
+#18 0x0000557425649fcb clang::CodeGen::RValue llvm::function_ref<clang::CodeGen::RValue (clang::CodeGen::ReturnValueSlot)>::callback_fn<(anonymous namespace)::AggExprEmitter::VisitCallExpr(clang::CallExpr const*)::'lambda'(clang::CodeGen::ReturnValueSlot)>(long, clang::CodeGen::ReturnValueSlot) CGExprAgg.cpp:0:0
+#17 0x0000557425648ae8 clang::CodeGen::CodeGenFunction::EmitCallExpr(clang::CallExpr const*, clang::CodeGen::ReturnValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c48ae8)
+#16 0x000055742563ccf3 clang::CodeGen::CodeGenFunction::EmitCall(clang::QualType, clang::CodeGen::CGCallee const&, clang::CallExpr const*, clang::CodeGen::ReturnValueSlot, llvm::Value*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c3ccf3)
+#15 0x00005574255d92bf clang::CodeGen::CodeGenFunction::EmitCallArgs(clang::CodeGen::CallArgList&, clang::CodeGen::CodeGenFunction::PrototypeWrapper, llvm::iterator_range<clang::Stmt::CastIterator<clang::Expr, clang::Expr const* const, clang::Stmt const* const> >, clang::CodeGen::CodeGenFunction::AbstractCallee, unsigned int, clang::CodeGen::CodeGenFunction::EvaluationOrder) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd92bf)
+#14 0x00005574255d7b74 clang::CodeGen::CodeGenFunction::EmitCallArg(clang::CodeGen::CallArgList&, clang::Expr const*, clang::QualType) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bd7b74)
+#13 0x000055742564731d clang::CodeGen::CodeGenFunction::EmitReferenceBindingToExpr(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c4731d)
+#12 0x000055742563ea5e clang::CodeGen::CodeGenFunction::EmitLValue(clang::Expr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c3ea5e)
+#11 0x00005574256476e6 clang::CodeGen::CodeGenFunction::EmitMaterializeTemporaryExpr(clang::MaterializeTemporaryExpr const*) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c476e6)
+#10 0x0000557425643111 clang::CodeGen::CodeGenFunction::EmitAnyExprToMem(clang::Expr const*, clang::CodeGen::Address, clang::Qualifiers, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c43111)
+ #9 0x0000557425650bc1 clang::CodeGen::CodeGenFunction::EmitAggExpr(clang::Expr const*, clang::CodeGen::AggValueSlot) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3c50bc1)
+ #8 0x000055742564ed57 clang::StmtVisitorBase<std::add_pointer, (anonymous namespace)::AggExprEmitter, void>::Visit(clang::Stmt*) CGExprAgg.cpp:0:0
+ #7 0x00005574256509f1 (anonymous namespace)::AggExprEmitter::VisitConstantExpr(clang::ConstantExpr*) CGExprAgg.cpp:0:0
+ #6 0x00005574255caf8d clang::CodeGen::CodeGenFunction::EmitAggregateStore(llvm::Value*, clang::CodeGen::Address, bool) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3bcaf8d)
+ #5 0x000055742549b577 clang::CodeGen::CGBuilderTy::CreateStructGEP(clang::CodeGen::Address, unsigned int, llvm::Twine const&) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x3a9b577)
+ #4 0x000055742477ee02 llvm::PointerType::get(llvm::Type*, unsigned int) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x2d7ee02)
+ #3 0x00007fc70ca033c0 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x153c0)
+ #2 0x0000557424ef2ed8 CrashRecoverySignalHandler(int) CrashRecoveryContext.cpp:0:0
+ #1 0x0000557424fb9150 llvm::sys::CleanupOnSignal(unsigned long) (/opt/compiler-explorer/clang-trunk/bin/clang+++0x35b9150)
+ #0 0x0000557424fbb27f PrintStackTraceSignalHandler(void*) Signals.cpp:0:0
