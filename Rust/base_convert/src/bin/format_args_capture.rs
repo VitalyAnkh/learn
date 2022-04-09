@@ -11,6 +11,7 @@ fn main() {
     let but = format!("{a}");
     let b = 2;
     println!("{}", b);
+    // could we look up format arguments's definitions?
     format_args!("{}", but);
     println!("{}", but);
     println!("{a}");

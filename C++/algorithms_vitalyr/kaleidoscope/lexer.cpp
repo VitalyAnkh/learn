@@ -11,7 +11,7 @@ enum Token {
 
     // primary
     TokIdent = -4,
-    TokNumber = -5,
+    TokNum = -5,
 };
 
 // global static variable
@@ -38,7 +38,33 @@ static int get_tok() {
             return TokExtern;
         }
         return TokIdent;
-
     }
 
+    if (isdigit(last_char) || last_char == '.') { // Number: [0-9.]+
+        std::string num_str;
+        do {
+            num_str += last_char;
+            last_char = getchar();
+        } while (isdigit(last_char) || last_char == '.');
+        num_val = strtod(num_str.c_str(), 0);
+        return TokNum;
+    }
+
+    if (last_char == '#') {
+        // comment until end of line
+        do {
+            last_char == getchar();
+        } while (last_char != EOF || last_char != '\n' || last_char != '\r');
+        if (last_char != EOF) {
+            return get_tok();
+        }
+    }
+
+    if (last_char == EOF) {
+        return TokEof;
+    }
+    // otherwise, just return the character as its ascii value
+    int this_char = last_char;
+    last_char = getchar();
+    return this_char;
 }

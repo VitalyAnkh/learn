@@ -14,6 +14,13 @@ target/
 **.hi
 *.hi
 
+.cache
+**/.cache/**
+
+
+**a.out
+*a.out
+
 # don't track any zip file
 *.zip
 **.zip

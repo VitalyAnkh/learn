@@ -3,3 +3,5 @@
 //
 
 #include "kaleidoscope.h"
+
+int main(){}
