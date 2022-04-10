@@ -53,3 +53,5 @@ val y =
     "The Answer"
   else
     "Something else"
+
+val countryOfCaptial = Map("France" -> "Paris", "Japan" -> "Tokyo")

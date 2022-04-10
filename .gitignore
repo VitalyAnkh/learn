@@ -17,6 +17,8 @@ target/
 .cache
 **/.cache/**
 
+subprojects
+**/subprojects/**
 
 **a.out
 *a.out
