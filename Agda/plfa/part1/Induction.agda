@@ -1,4 +1,4 @@
-module plfa.part1.Induction where
+module vitalyr.plfa.part1.Induction where
 
 import Relation.Binary.PropositionalEquality as Eq
 open Eq using (_≡_; refl; cong; sym)
