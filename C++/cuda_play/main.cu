@@ -5,7 +5,6 @@ __global__ void vec_add_kernel(float *a, float *b, float *c, int n) {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
     if (i < n) { c[i] = a[i] + b[i]; }
 }
-
 void vec_add(float *a, float *b, float *c, int n) {
     float *d_a, *d_b, *d_c;
     int size = n * sizeof(float);
@@ -33,7 +32,6 @@ int main() {
         a[i] = i;
         b[i] = 2 * i + 1;
     }
-
     vec_add(a, b, c, N);
     for (int i = 0; i < N; i++) {
         std::cout << c[i] << " ";
