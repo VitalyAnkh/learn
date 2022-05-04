@@ -19,6 +19,10 @@ target/
 *.pyc
 **.pyc
 
+# for haskell
+**/dist/**
+**/dist-newstyle/**
+
 .cache
 **/.cache/**
 
@@ -128,4 +132,10 @@ CTestTestfile.cmake
 # Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
 # More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
 # Cargo.lock
-/build
+**/_build/**
+
+# for OCaml
+*.mli
+**.mli
+
+**.o

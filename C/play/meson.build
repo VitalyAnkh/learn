@@ -1,4 +1,4 @@
-project('play', 'c', default_options: 'default_library = static')
+project('play', 'c')
 sdl2_dep = dependency('sdl2')
 wayland_dep = [dependency('wayland-client'),dependency('wayland-server')]
 executable('demo', 'main.c', dependencies: [wayland_dep, sdl2_dep])
