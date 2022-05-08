@@ -8,6 +8,5 @@ int main() {
 
   v.push_back(" world!");
   std::cout << x << std::endl;
-
   return 0;
 }
