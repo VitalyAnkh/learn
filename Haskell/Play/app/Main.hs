@@ -1,5 +1,7 @@
 module Main where
 
+import Data.List
+import Data.Maybe
 import Text.Regex.Applicative
 
 main :: IO ()
@@ -34,3 +36,10 @@ my_tree = Branch (Branch (Branch Nil Nil) Nil) Nil
 --                      }
 
 data Day = Mon | Tue | Wed | Thu | Fri | Sat | Sun deriving (Show, Read)
+
+xs = [(Just 1, "a"), (Just 2, "b"), (Just 3, "c"), (Nothing :: Maybe Int, "d")]
+
+f :: [(Maybe Int, String)] -> [(Int, String)]
+f xs = map (\(x, y) -> (fromJust x, y)) $ (filter (isJust . fst) xs)
+
+ys = filter (isJust . fst) $ xs

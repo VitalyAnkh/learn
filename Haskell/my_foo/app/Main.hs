@@ -1,7 +1,10 @@
+{-# LANGUAGE DataKinds #-}
+
 module Main where
 
 import Data.Char (intToDigit)
 import Data.List
+import Data.List.Extra
 
 main :: IO ()
 main = putStrLn "Hello,GHC2021!"
@@ -47,3 +50,51 @@ count n (x : xs) = if x == n then 1 + count n xs else count n xs
 
 findOdd :: [Int] -> Int
 findOdd xs = head $ filter (\x -> (count x xs) `mod` 2 /= 0) xs
+
+tribonacci :: Num a => (a, a, a) -> Int -> [a]
+tribonacci xs@(a, b, c) n = take n $ a : (b : (c : (reverse $ tribIter xs [] n)))
+
+tribIter :: Num a => (a, a, a) -> [a] -> Int -> [a]
+tribIter (a, b, c) xs n = case n of
+  0 -> xs
+  otherwise -> tribIter (b, c, d) (d : xs) (n - 1) where d = a + b + c
+
+anagrams :: String -> [String] -> [String]
+anagrams w ws = filter (\x -> y == sort w) ws where y = sort w
+
+-- reverseEveryOther :: String -> String
+-- reverseEveryOther = unwords . map (\x -> (x !! 0) :: ((reverse (x !! 1)) :: [])) . chunksOf 2 . words
+data SuperA = A | B
+
+data SuperB = SuperA | C
+
+data BinaryTree a = Leaf | Node (BinaryTree a) a (BinaryTree a)
+
+data MyList a = Nil | Cons a (MyList a)
+
+mySum :: Num a => MyList a -> a
+mySum Nil = 0
+mySum (Cons x xs) = x + mySum xs
+
+reduceMyList :: (a -> a -> a) -> a -> MyList a -> a
+reduceMyList f x Nil = x
+reduceMyList f x (Cons y ys) = reduceMyList f (f x y) ys
+
+sumMyList :: Num a => MyList a -> a
+sumMyList = reduceMyList (+) 0
+
+mulMyList :: Num a => MyList a -> a
+mulMyList = reduceMyList (*) 1
+
+anyTrue :: MyList Bool -> Bool
+anyTrue = reduceMyList (||) False
+
+allTrue :: MyList Bool -> Bool
+allTrue = reduceMyList (&&) True
+
+myCons :: MyList a -> a -> MyList a
+myCons Nil x = Cons x Nil
+myCons (Cons y ys) x = Cons x (Cons y ys)
+
+appendMyList :: MyList a -> MyList a -> MyList a
+appendMyList xs ys = reduceMyList (myCons ys) xs

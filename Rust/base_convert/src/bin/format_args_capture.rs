@@ -14,13 +14,15 @@ fn main() {
     // could we look up format arguments's definitions?
     format_args!("{}", but);
     println!("{}", but);
-    println!("{a}");
+    println!("{a}"); // () () error: `a` is not a formatting directive
     println!("{b} {a}");
     dbg!(a);
     dbg!(but);
     let bar = Bar;
     let f = Foo { bar };
     let rf = &f;
+    dbg!(rf);
+    dbg!(f);
     // BOOM! move out from shared ptr.
     let &own_f = rf;
 }

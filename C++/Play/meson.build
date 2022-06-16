@@ -1,5 +1,6 @@
 project('Play', 'cpp')
 fmt_dep=dependency('fmt')
 glfw3_dep=dependency('glfw3')
+executable('test_float', 'test_float.cpp')
 executable('hello', 'hello.cpp', dependencies: fmt_dep)
 executable('gl', 'gl.cpp', dependencies: glfw3_dep)

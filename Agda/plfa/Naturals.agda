@@ -13,9 +13,13 @@ data ℕ : Set where
 _+_ : ℕ → ℕ → ℕ
 zero + n = n
 suc n + m = suc (n + m)
+
 _*_ : ℕ → ℕ → ℕ
 zero * n = zero
 (suc m) * n = n + (m * n)
+
+-- _-_ : ℕ → ℕ → ℕ
+-- n - m = n + (zero - m)
 
 _ : 2 + 3 ≡ 5
 _ =

@@ -13,3 +13,4 @@ add_executable(play_cpp play/cpp.cpp play/SalesData.cpp play/SalesData.h play/Pe
 add_executable(play_nothing play/play_nothing.cpp)
 add_executable(kaleidoscope kaleidoscope/kaleidoscope.cpp kaleidoscope/kaleidoscope.h kaleidoscope/lexer.cpp)
 add_executable(vec_add cuda_play/vec_add.cpp)
+add_executable(test_clang play/test_clang.cpp)

@@ -297,14 +297,62 @@ __global__ void test_int_type_cast(int a) {
     printf("cuda __int_as_float() is: ");
     b_float = __int_as_float(a);
     show_bytes((unsigned char *) (&b_float), sizeof(float));
+
+    float b_float_2 = -1.5;
+    printf("original value is %f\n", b_float_2);
+    printf("original bit pattern is: ");
+    show_bytes((unsigned char *) (&b_float_2), sizeof(float));
+
+    int c_int = __float2int_rn(b_float_2);
+    printf("cuda __float2int_rn(): value: %d, ", c_int);
+    show_bytes((unsigned char *) (&c_int), sizeof(int));
+
+    c_int = __float2int_ru(b_float_2);
+    printf("cuda __float2int_ru(): value: %d, ", c_int);
+    show_bytes((unsigned char *) (&c_int), sizeof(int));
+
+    c_int = __float2int_rd(b_float_2);
+    printf("cuda __float2int_rd(): value: %d, ", c_int);
+    show_bytes((unsigned char *) (&c_int), sizeof(int));
+
+    c_int = __float2int_rz(b_float_2);
+    printf("cuda __float2int_rz(): value: %d, ", c_int);
+    show_bytes((unsigned char *) (&c_int), sizeof(int));
+
+    int d_longlong = 123456789;
+    printf("original value is %lld\n", d_longlong);
+    printf("original bit pattern is: ");
+    show_bytes((unsigned char *) (&d_longlong), sizeof(long long));
+    float e_float = __int2float_rn(d_longlong);
+    printf("cuda __int2float_rn(): value: %f, \n", e_float);
+
+    e_float = __int2float_ru(d_longlong);
+    printf("cuda __int2float_ru(): value: %f, \n", e_float);
+
+    e_float = __int2float_rd(d_longlong);
+    printf("cuda __int2float_rd(): value: %f, \n", e_float);
+
+    e_float = __int2float_rz(d_longlong);
+    printf("cuda __int2float_rz(): value: %f, \n", e_float);
+    printf("=========================================================\n");
+
+    float sample_nan = 0.0/0.0;
+    unsigned long long ull = __float2ull_rn(sample_nan);
+    show_bytes((unsigned char *)&ull, sizeof(unsigned long long));
+    printf("TEST NAN cuda __float2ull_rn(): value: %llx, \n", ull);
+    printf("=========================================================\n");
+
+    unsigned long long ui = __float2uint_rn(sample_nan);
+    show_bytes((unsigned char *)&ui, sizeof(unsigned long long));
+    printf("TEST NAN cuda __float2uint_rn(): value: %llx, \n", ui);
     printf("=========================================================\n");
 }
 
 int main() {
     test_double_type_cast<<<1, 1>>>(0.123456789123456789);
-    test_double_type_cast<<<1,1>>>(123.123456789123456789);
+    test_double_type_cast<<<1, 1>>>(123.123456789123456789);
     test_float_type_cast<<<1, 1>>>(0.123456789123456789);
-    test_float_type_cast<<<1,1>>>(123.123456789123456789);
+    test_float_type_cast<<<1, 1>>>(123.123456789123456789);
     test_int_type_cast<<<1, 1>>>(2);
     cudaDeviceSynchronize();
     return 0;
