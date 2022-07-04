@@ -5,3 +5,5 @@ int main() {
 
   return 0;
 }
+
+int foo(int c) { return c + 1; }

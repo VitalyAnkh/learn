@@ -24,7 +24,6 @@ int main(int argc, char *argv[]) {
     return 1;
   }
   fprintf(stderr, "Established server display\n");
-
   const char *socket =
       wl_display_add_socket(server_display, "my_wayland_socket");
   if (!socket) {

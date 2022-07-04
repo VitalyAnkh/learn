@@ -5,6 +5,6 @@ set(CMAKE_CUDA_STANDARD 23)
 
 add_executable(cuda_play main.cu)
 add_executable(test_round test_round.cu)
-
+add_executable(add_sync add_sync.cu)
 set_target_properties(cuda_play PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)

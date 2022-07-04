@@ -9,3 +9,7 @@ data ℕ : Set where
   suc : ℕ → ℕ
 
 -- zero : ℕ
+
+_+_ : ℕ → ℕ → ℕ
+zero + n = n
+(suc m) + n = suc (m + n)

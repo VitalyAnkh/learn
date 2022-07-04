@@ -1,6 +1,7 @@
 #include <cfloat>
 #include <cmath>
 #include <iostream>
+#include <limits.h>
 int double2int_rn(double x) {
 
   if (std::isnan(x)) {
@@ -47,7 +48,18 @@ int main() {
   std::cout << "double2int_r(2.0/0.0) is " << double2int_rn(0.0 / 0.0) << '\n';
   std::cout << "double2int_rn(0x7FE000000000001) is " << double2int_rn(x)
             << '\n';
+  std::cout << "isinf(trunc(INFINITY)) is " << std::isinf(trunc(-INFINITY))
+            << '\n';
+  std::cout << "trunc(-INFINITY) < 0 is " << (trunc(-INFINITY) < 0) << '\n';
+  std::cout << "trunc(INFINITY) > 0 is " << (trunc(INFINITY) > 0) << '\n';
+  std::cout << "rint(-INFINITY) < 0 is " << (rint(-INFINITY) < 0) << '\n';
+  std::cout << "rint(INFINITY) > 0 is " << (rint(INFINITY) > 0) << '\n';
+  std::cout << "ceil(-INFINITY) < 0 is " << (ceil(-INFINITY) < 0) << '\n';
+  std::cout << "ceil(INFINITY) > 0 is " << (ceil(INFINITY) > 0) << '\n';
+  std::cout << "floor(-INFINITY) < 0 is " << (floor(-INFINITY) < 0) << '\n';
+  std::cout << "floor(INFINITY) > 0 is " << (floor(INFINITY) > 0) << '\n';
+  std::cout << "INFINITY > INT_MAX is " << (INFINITY > INT_MAX) << '\n';
 
-  test_rint_isnan_isinf();
+  // test_rint_isnan_isinf();
   return 0;
 }
