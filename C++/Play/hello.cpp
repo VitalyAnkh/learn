@@ -2,7 +2,6 @@
 
 int main() {
   fmt::print("Hello, world!\n");
-
   return 0;
 }
 enum Kind {

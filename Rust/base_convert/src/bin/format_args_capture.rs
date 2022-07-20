@@ -16,13 +16,13 @@ fn main() {
     println!("{}", but);
     println!("{a}"); // () () error: `a` is not a formatting directive
     println!("{b} {a}");
-    dbg!(a);
-    dbg!(but);
+    // dbg!(a);
+    // dbg!(but);
     let bar = Bar;
     let f = Foo { bar };
     let rf = &f;
-    dbg!(rf);
-    dbg!(f);
+    // dbg!(rf);
+    // dbg!(f);
     // BOOM! move out from shared ptr.
-    let &own_f = rf;
+    // let &own_f = rf;
 }
