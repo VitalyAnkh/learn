@@ -46,14 +46,14 @@ SalesData &SalesData::combine(SalesData const &rhs) {
 
 std::istream &read(std::istream &is, SalesData &item) {
   double price = 0;
-  is >> item.book_number >> item.units_sold >> price;
-  item.revenue = price * item.units_sold;
+  // is >> item.book_number >> item.units_sold >> price;
+  // item.revenue = price * item.units_sold;
   return is;
 }
 
 std::ostream &print(std::ostream &os, SalesData &item) {
-  os << item.isbn() << " " << item.units_sold << " " << item.revenue << " "
-     << item.average_price();
+  // os << item.isbn() << " " << item.units_sold << " " << item.revenue << " "
+  //    << item.average_price();
   return os;
 }
 

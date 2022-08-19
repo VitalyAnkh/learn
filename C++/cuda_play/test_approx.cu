@@ -16,7 +16,24 @@ __global__ void test_approx(float f) {
     printf("sqrt_d: %f\n", sqrt_d);
 }
 
+// use this function to test nvcc --ftz=true behaviour
+__global__ void test_ftz(float f){
+    float small = 8.668306183451529e-40 ;
+    printf("small: %f\n", small);
+    printf("small: %a\n", small);
+    f = f + small;
+    printf("f: %f\n", f);
+    printf("f: %a\n", f);
+    printf("f + small: %2a\n", f);
+    float a = 0.00000114514;
+    a = a + f;
+    printf("a + f: %f\n", a);
+}
+
 int main(){
   test_approx<<<1,1>>>(4.5);
+  test_ftz<<<1,1>>>(4.5);
   cudaDeviceSynchronize();
+  float i = INFINITY;
+  printf("INFINITY: %f\n", i);
 }
