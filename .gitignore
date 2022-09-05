@@ -147,3 +147,10 @@ CTestTestfile.cmake
 **.mli
 
 **.o
+
+# for unity
+**/PackageCache/**
+**/StateCache/**
+**/ShaderCache/**
+**/Artifacts/**
+**/Logs/**
