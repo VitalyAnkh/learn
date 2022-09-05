@@ -16,11 +16,14 @@ target/
 
 # for verilator
 **/obj_dir/**
+*.vcd
+**.vcd
 
 *.agdai
 **.agdai
 *.pyc
 **.pyc
+
 
 # for haskell
 **/dist/**
