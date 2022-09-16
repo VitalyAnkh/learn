@@ -2,9 +2,10 @@
 
 module Main where
 
-import Data.Char (intToDigit)
-import Data.List
-import Data.List.Extra
+import           Data.Char       (intToDigit)
+import           Data.Either     (either)
+import           Data.List
+import           Data.List.Extra
 
 main :: IO ()
 main = putStrLn "Hello,GHC2021!"
@@ -30,13 +31,13 @@ digits = map (read . return) . show
 toDigits :: Integer -> [Int]
 toDigits n
   | n < 0 = []
-  | otherwise = numToDigits ((fromInteger n) `mod` 10) ((fromInteger n) `div` 10) []
+  | otherwise = numToDigits (fromInteger n `mod` 10) (fromInteger n `div` 10) []
   where
     numToDigits a 0 ls = a : ls
     numToDigits a b ls = numToDigits (b `mod` 10) (b `div` 10) (a : ls)
 
 descendingOrder :: Integer -> Integer
-descendingOrder = read . reverse . sort . (map intToDigit) . toDigits
+descendingOrder = read . reverse . sort . map intToDigit . toDigits
 
 -- descendingOrder :: Integer -> Integer
 -- descendingOrder = read . reverse . show
@@ -45,7 +46,7 @@ descendingOrder = read . reverse . sort . (map intToDigit) . toDigits
 -- equal sides of an array
 
 count :: Int -> [Int] -> Int
-count _ [] = 0
+count _ []       = 0
 count n (x : xs) = if x == n then 1 + count n xs else count n xs
 
 findOdd :: [Int] -> Int
@@ -56,7 +57,7 @@ tribonacci xs@(a, b, c) n = take n $ a : (b : (c : (reverse $ tribIter xs [] n))
 
 tribIter :: Num a => (a, a, a) -> [a] -> Int -> [a]
 tribIter (a, b, c) xs n = case n of
-  0 -> xs
+  0         -> xs
   otherwise -> tribIter (b, c, d) (d : xs) (n - 1) where d = a + b + c
 
 anagrams :: String -> [String] -> [String]
@@ -73,11 +74,11 @@ data BinaryTree a = Leaf | Node (BinaryTree a) a (BinaryTree a)
 data MyList a = Nil | Cons a (MyList a)
 
 mySum :: Num a => MyList a -> a
-mySum Nil = 0
+mySum Nil         = 0
 mySum (Cons x xs) = x + mySum xs
 
 reduceMyList :: (a -> a -> a) -> a -> MyList a -> a
-reduceMyList f x Nil = x
+reduceMyList f x Nil         = x
 reduceMyList f x (Cons y ys) = reduceMyList f (f x y) ys
 
 sumMyList :: Num a => MyList a -> a
@@ -93,8 +94,20 @@ allTrue :: MyList Bool -> Bool
 allTrue = reduceMyList (&&) True
 
 myCons :: MyList a -> a -> MyList a
-myCons Nil x = Cons x Nil
+myCons Nil x         = Cons x Nil
 myCons (Cons y ys) x = Cons x (Cons y ys)
 
-appendMyList :: MyList a -> MyList a -> MyList a
-appendMyList xs ys = reduceMyList (myCons ys) xs
+type Author = String
+type Name = String
+type ISBN = String
+type Price = Double
+
+data Book = Book { name :: Name, author :: Author, isbn :: ISBN, price :: Price }
+
+increasePrice :: ([Book], [Book]) -> Book -> Price ->([Book], [Book])
+increasePrice (b1, b2) book price' = (book: b1, book{price = price' + (price book)} : b2)
+-- appendMyList :: MyList a -> MyList a -> MyList a
+-- appendMyList xs ys = reduceMyList (myCons ys) xs
+
+myDisjoint :: [a] -> [b] -> [Either a b]
+myDisjoint as bs = map Left as ++ map Right bs
