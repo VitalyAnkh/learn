@@ -163,7 +163,6 @@ infixl 7 _*_
 {-# BUILTIN NATTIMES _*_ #-}
 {-# BUILTIN NATMINUS _∸_ #-}
 
-
 data Bin : Set where
   ⟨⟩ : Bin
   _O : Bin -> Bin

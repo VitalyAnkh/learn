@@ -1,4 +1,4 @@
-void hello();
+extern void hello();
 
 int main(){
     hello();

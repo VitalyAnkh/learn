@@ -32,9 +32,9 @@ toDigits :: Integer -> [Int]
 toDigits n
   | n < 0 = []
   | otherwise = numToDigits (fromInteger n `mod` 10) (fromInteger n `div` 10) []
-  where
-    numToDigits a 0 ls = a : ls
-    numToDigits a b ls = numToDigits (b `mod` 10) (b `div` 10) (a : ls)
+ where
+  numToDigits a 0 ls = a : ls
+  numToDigits a b ls = numToDigits (b `mod` 10) (b `div` 10) (a : ls)
 
 descendingOrder :: Integer -> Integer
 descendingOrder = read . reverse . sort . map intToDigit . toDigits
@@ -108,7 +108,7 @@ type Price = Double
 data Book = Book {name :: Name, author :: Author, isbn :: ISBN, price :: Price}
 
 increasePrice :: ([Book], [Book]) -> Book -> Price -> ([Book], [Book])
-increasePrice (b1, b2) book price' = (book : b1, book {price = price' + (price book)} : b2)
+increasePrice (b1, b2) book price' = (book : b1, book{price = price' + (price book)} : b2)
 
 -- appendMyList :: MyList a -> MyList a -> MyList a
 -- appendMyList xs ys = reduceMyList (myCons ys) xs
