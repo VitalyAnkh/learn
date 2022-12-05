@@ -1,7 +1,7 @@
 use nom::{
     branch::alt,
     bytes::complete::{tag, tag_no_case, take},
-    character::complete::{alpha1, alphanumeric1},
+    character::complete::{alpha1, alphanumeric1, char, digit1},
     combinator::opt,
     error::{context, ErrorKind, VerboseError, VerboseErrorKind},
     multi::{many1, many_m_n},
@@ -54,7 +54,7 @@ impl From<&str> for Scheme {
     }
 }
 
-type Res<T, U> = IResult<T, U, VerboseError<T>>;
+type Res<I, O> = IResult<I, O, VerboseError<I>>;
 
 // the first parser combinator
 fn scheme(input: &str) -> Res<&str, Scheme> {
@@ -102,4 +102,12 @@ where
         },
         ErrorKind::AlphaNumeric,
     )
+}
+
+fn left_paren(s: &str) -> IResult<&str, &str> {
+    tag("(")(s)
+}
+
+fn parse_separated_pair(s: &str) -> IResult<&str, (&str, &str)> {
+    separated_pair(digit1, char(','), digit1)(s)
 }

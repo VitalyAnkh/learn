@@ -45,3 +45,16 @@ fn test_host() {
         Ok((":8080", Host::HOST("subtitle.example.org".to_string())))
     );
 }
+
+#[test]
+fn test_right_paren() {
+    assert_eq!(left_paren("((()))"), Ok(("(()))", "(")));
+}
+
+#[test]
+fn test_separated_pair() {
+    assert_eq!(
+        parse_separated_pair("1,2 -> 3,4"),
+        Ok((" -> 3,4", ("1", "2")))
+    );
+}
