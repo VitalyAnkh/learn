@@ -25,3 +25,5 @@ inline const Screen &Screen::display(std::ostream &os) const {
   do_display(os);
   return *this;
 }
+
+Pos Screen::size() const { return height * width; }

@@ -6,5 +6,5 @@
 ;; empty-env : () -> Env
 (define empty-env
   (lambda ()
-    (list 'empty-env)))
-
+    (list 'empty-env))
+  )

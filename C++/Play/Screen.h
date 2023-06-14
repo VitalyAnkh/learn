@@ -56,3 +56,33 @@ inline const Screen &Screen::display(std::ostream &os) const {
   do_display(os);
   return *this;
 }
+
+// test if names which represent types can be redefined in a new class scope
+typedef double Money;
+
+class Account {
+public:
+  Money balance() { return bal; }
+
+private:
+  // typedef double Money;
+  //错误：declaration of ‘typedef double Account::Money’ changes meaning of
+  //‘Money’ [-fpermissive]
+  Money bal;
+};
+
+class TestBase {
+protected:
+  int value;
+
+public:
+  TestBase(int value) : value(value) {}
+  int getValue() { return value; }
+  void showValue() { std::cout << "The value is " << value << std::endl; }
+};
+
+class Derived : TestBase {
+public:
+  using TestBase::showValue;
+  using TestBase::value;
+};
