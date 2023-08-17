@@ -1,4 +1,4 @@
-#lang eopl
+#lang racket
 
 (define zero (lambda () '()))
 (define is-zero? (lambda (n) (null? n)))

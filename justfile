@@ -19,4 +19,6 @@ config_apue:
     -DCMAKE_BUILD_TYPE=Debug \
     -DCMAKE_CXX_STANDARD=23 \
     -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$LD_LIBRARY_PATH"
+  cd build
+  ninja -j10
   echo "==== config APUE done ===="

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+grader=".ppc/grader.py"
+
+if [ -x "$grader" ]
+then
+    exec "$grader" "$@"
+elif [ -f "$grader" ]
+then
+    echo "error: No permission to run '$grader'. Try extracting the template archive with another program."
+elif [ "$0" != "./grading" ]
+then
+    echo "error: Cannot find file '$grader'. This script should be run from the same directory it is located in, as './grading'."
+else
+    echo "error: Missing file '$grader'. Make sure to extract the template archive in its entirety."
+fi
+
+exit 1
