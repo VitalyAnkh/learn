@@ -196,7 +196,7 @@ binaryToNatural ⟨⟩ = zero
 binaryToNatural (x O) = 2 * (binaryToNatural x)
 binaryToNatural (x I) = 1 + 2 * (binaryToNatural x)
 
-binToNatural : Bin -> ℕ
-binToNatural ⟨⟩ = zero
-binToNatural (x 0) = 2 * (binToNatural x)
-binToNatural (x I) = 1 +2
+-- binToNatural : Bin -> ℕ
+-- binToNatural ⟨⟩ = zero
+-- binToNatural (x 0) = 2 * (binToNatural x)
+-- binToNatural (x I) = 1 +2

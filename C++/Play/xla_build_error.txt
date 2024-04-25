@@ -1,0 +1,185 @@
+ERROR: /home/vitalyr/projects/dev/cpp/xla/xla/service/gpu/kernels/BUILD:291:10: Linking xla/service/gpu/kernels/cutlass_gemm_custom_kernel_benchmarks failed: (Exit 1): crosstool_wrapper_driver_is_not_gcc failed: error executing command (from target //xla/service/gpu/kernels:cutlass_gemm_custom_kernel_benchmarks) external/local_config_cuda/crosstool/clang/bin/crosstool_wrapper_driver_is_not_gcc @bazel-out/k8-opt/bin/xla/service/gpu/kernels/cutlass_gemm_custom_kernel_benchmarks-2.params
+ld.lld: error: undefined symbol: stream_executor::Kernel::Create(stream_executor::StreamExecutor*, stream_executor::MultiKernelLoaderSpec const&)
+>>> referenced by cutlass_gemm_custom_kernel_benchmarks.cc
+>>>               bazel-out/k8-opt/bin/xla/service/gpu/kernels/_objs/cutlass_gemm_custom_kernel_benchmarks/cutlass_gemm_custom_kernel_benchmarks.o:(xla::gpu::kernel::gemm_universal::BM_RowMajorGemm(benchmark::State&))
+>>> referenced by buffer_comparator.cc
+>>>               buffer_comparator.o:(stream_executor::TypedKernel<stream_executor::DeviceMemory<ml_dtypes::float8_internal::float8_e4m3fn>, stream_executor::DeviceMemory<ml_dtypes::float8_internal::float8_e4m3fn>, float, unsigned long, stream_executor::DeviceMemory<unsigned long>>::Create(stream_executor::StreamExecutor*, stream_executor::MultiKernelLoaderSpec const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libbuffer_comparator.a
+>>> referenced by buffer_comparator.cc
+>>>               buffer_comparator.o:(stream_executor::TypedKernel<stream_executor::DeviceMemory<ml_dtypes::float8_internal::float8_e5m2>, stream_executor::DeviceMemory<ml_dtypes::float8_internal::float8_e5m2>, float, unsigned long, stream_executor::DeviceMemory<unsigned long>>::Create(stream_executor::StreamExecutor*, stream_executor::MultiKernelLoaderSpec const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libbuffer_comparator.a
+>>> referenced 17 more times
+
+ld.lld: error: undefined symbol: xla::HloProto::~HloProto()
+>>> referenced by service.cc
+>>>               service.o:(std::unique_ptr<xla::HloProto, std::default_delete<xla::HloProto>>::~unique_ptr()) in archive bazel-out/k8-opt/bin/xla/service/libservice.lo
+>>> referenced by gpu_compiler.cc
+>>>               gpu_compiler.o:(xla::gpu::GpuCompiler::RunBackend(std::unique_ptr<xla::HloModule, std::default_delete<xla::HloModule>>, stream_executor::StreamExecutor*, xla::Compiler::CompileOptions const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libgpu_compiler.a
+>>> referenced by hlo_proto_util.cc
+>>>               hlo_proto_util.o:(xla::MakeHloProto(xla::HloModule const&, xla::BufferAssignment const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_proto_util.a
+>>> referenced 4 more times
+
+ld.lld: error: undefined symbol: tsl::profiler::AnnotationStack::generation_
+>>> referenced by service.cc
+>>>               service.o:(tsl::profiler::ScopedAnnotation::~ScopedAnnotation()) in archive bazel-out/k8-opt/bin/xla/service/libservice.lo
+>>> referenced by hlo_pass_pipeline.cc
+>>>               hlo_pass_pipeline.o:(absl::lts_20230802::StatusOr<bool> xla::HloPassPipeline::RunPassesInternal<xla::HloModule>(xla::HloModule*, xla::DebugOptions const&, absl::lts_20230802::flat_hash_set<std::basic_string_view<char, std::char_traits<char>>, absl::lts_20230802::container_internal::StringHash, absl::lts_20230802::container_internal::StringEq, std::allocator<std::basic_string_view<char, std::char_traits<char>>>> const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_pass_pipeline.a
+>>> referenced by hlo_pass_pipeline.cc
+>>>               hlo_pass_pipeline.o:(absl::lts_20230802::StatusOr<bool> xla::HloPassPipeline::RunPassesInternal<xla::HloModule>(xla::HloModule*, xla::DebugOptions const&, absl::lts_20230802::flat_hash_set<std::basic_string_view<char, std::char_traits<char>>, absl::lts_20230802::container_internal::StringHash, absl::lts_20230802::container_internal::StringEq, std::allocator<std::basic_string_view<char, std::char_traits<char>>>> const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_pass_pipeline.a
+>>> referenced 18 more times
+
+ld.lld: error: undefined symbol: tsl::profiler::AnnotationStack::PopAnnotation()
+>>> referenced by service.cc
+>>>               service.o:(tsl::profiler::ScopedAnnotation::~ScopedAnnotation()) in archive bazel-out/k8-opt/bin/xla/service/libservice.lo
+>>> referenced by hlo_pass_pipeline.cc
+>>>               hlo_pass_pipeline.o:(absl::lts_20230802::StatusOr<bool> xla::HloPassPipeline::RunPassesInternal<xla::HloModule>(xla::HloModule*, xla::DebugOptions const&, absl::lts_20230802::flat_hash_set<std::basic_string_view<char, std::char_traits<char>>, absl::lts_20230802::container_internal::StringHash, absl::lts_20230802::container_internal::StringEq, std::allocator<std::basic_string_view<char, std::char_traits<char>>>> const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_pass_pipeline.a
+>>> referenced by hlo_pass_pipeline.cc
+>>>               hlo_pass_pipeline.o:(absl::lts_20230802::StatusOr<bool> xla::HloPassPipeline::RunPassesInternal<xla::HloModule>(xla::HloModule*, xla::DebugOptions const&, absl::lts_20230802::flat_hash_set<std::basic_string_view<char, std::char_traits<char>>, absl::lts_20230802::container_internal::StringHash, absl::lts_20230802::container_internal::StringEq, std::allocator<std::basic_string_view<char, std::char_traits<char>>>> const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_pass_pipeline.a
+>>> referenced 11 more times
+
+ld.lld: error: undefined symbol: xla::DebugOptions::DebugOptions(xla::DebugOptions const&)
+>>> referenced by hlo_module_util.cc
+>>>               hlo_module_util.o:(xla::HloModuleConfig::HloModuleConfig(xla::HloModuleConfig const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_util.a
+>>> referenced by autotuner_compile_util.cc
+>>>               autotuner_compile_util.o:(xla::gpu::AutotunerCompileUtil::AutotunerCompileUtil(xla::gpu::AutotuneConfig const&, xla::Compiler*, stream_executor::StreamExecutor&, stream_executor::Stream&, stream_executor::DeviceMemoryAllocator&, xla::DebugOptions const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libautotuner_compile_util.a
+>>> referenced by gemm_fusion_autotuner.cc
+>>>               gemm_fusion_autotuner.o:(xla::gpu::GemmFusionAutotuner::Run(xla::HloModule*, absl::lts_20230802::flat_hash_set<std::basic_string_view<char, std::char_traits<char>>, absl::lts_20230802::container_internal::StringHash, absl::lts_20230802::container_internal::StringEq, std::allocator<std::basic_string_view<char, std::char_traits<char>>>> const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libgemm_fusion_autotuner.a
+>>> referenced 3 more times
+
+ld.lld: error: undefined symbol: xla::DebugOptions::~DebugOptions()
+>>> referenced by hlo_module_util.cc
+>>>               hlo_module_util.o:(xla::HloModuleConfig::HloModuleConfig(xla::HloModuleConfig const&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_util.a
+>>> referenced by hlo_module_util.cc
+>>>               hlo_module_util.o:(xla::HloModuleConfig::HloModuleConfig(xla::HloModuleConfig&&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_util.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 28 more times
+
+ld.lld: error: undefined symbol: xla::DebugOptions::DebugOptions(google::protobuf::Arena*, bool)
+>>> referenced by hlo_module_util.cc
+>>>               hlo_module_util.o:(xla::DebugOptions::DebugOptions(xla::DebugOptions&&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_util.a
+>>> referenced by debug_options_flags.cc
+>>>               debug_options_flags.o:(xla::DefaultDebugOptionsIgnoringFlags()) in archive bazel-out/k8-opt/bin/xla/libdebug_options_flags.a
+>>> referenced by hlo_module_config.cc
+>>>               hlo_module_config.o:(xla::HloModuleConfig::HloModuleConfig(xla::ProgramShape const&, bool)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_config.a
+>>> referenced 1 more times
+
+ld.lld: error: undefined symbol: xla::DebugOptions::CopyFrom(xla::DebugOptions const&)
+>>> referenced by hlo_module_util.cc
+>>>               hlo_module_util.o:(xla::DebugOptions::DebugOptions(xla::DebugOptions&&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_util.a
+>>> referenced by gemm_fusion_autotuner.cc
+>>>               gemm_fusion_autotuner.o:(xla::gpu::(anonymous namespace)::TritonGemmAutotuneExtractor(xla::gpu::TritonGemmConfig const&, stream_executor::DeviceDescription const&, xla::HloFusionInstruction const*, xla::DebugOptions, bool)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libgemm_fusion_autotuner.a
+>>> referenced by gemm_fusion_autotuner.cc
+>>>               gemm_fusion_autotuner.o:(xla::gpu::(anonymous namespace)::CudnnGemmAutotuneExtractor(xla::gpu::AutotuneConfig const&, xla::HloFusionInstruction const*, xla::DebugOptions const&, int)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libgemm_fusion_autotuner.a
+>>> referenced 5 more times
+
+ld.lld: error: undefined symbol: xla::DebugOptions::InternalSwap(xla::DebugOptions*)
+>>> referenced by hlo_module_util.cc
+>>>               hlo_module_util.o:(xla::DebugOptions::DebugOptions(xla::DebugOptions&&)) in archive bazel-out/k8-opt/bin/xla/service/libhlo_module_util.a
+>>> referenced by spmd_partitioner.cc
+>>>               spmd_partitioner.o:(xla::HloModuleConfig::operator=(xla::HloModuleConfig&&)) in archive bazel-out/k8-opt/bin/xla/service/spmd/libspmd_partitioner.a
+>>> referenced by while_loop_analysis.cc
+>>>               while_loop_analysis.o:(xla::HloModuleConfig::HloModuleConfig()) in archive bazel-out/k8-opt/bin/xla/service/libwhile_loop_analysis.a
+
+ld.lld: error: undefined symbol: xla::AutotuneResult::AutotuneResult(google::protobuf::Arena*, bool)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCache(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 20 more times
+
+ld.lld: error: undefined symbol: xla::AutotuneResult::clear_key()
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCache(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 9 more times
+
+ld.lld: error: undefined symbol: stream_executor::dnn::AlgorithmProto* google::protobuf::Arena::CreateMaybeMessage<stream_executor::dnn::AlgorithmProto>(google::protobuf::Arena*)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCache(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 10 more times
+
+ld.lld: error: undefined symbol: xla::AutotuneResult::~AutotuneResult()
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCache(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCache(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCache(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 82 more times
+
+ld.lld: error: undefined symbol: stream_executor::dnn::AlgorithmProto::AlgorithmProto(stream_executor::dnn::AlgorithmProto const&)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 97 more times
+
+ld.lld: error: undefined symbol: stream_executor::dnn::AlgorithmProto::~AlgorithmProto()
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 325 more times
+
+ld.lld: error: undefined symbol: stream_executor::dnn::AlgorithmProto::CopyFrom(stream_executor::dnn::AlgorithmProto const&)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 28 more times
+
+ld.lld: error: undefined symbol: stream_executor::dnn::AlgorithmProto::InternalSwap(stream_executor::dnn::AlgorithmProto*)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)::$_2::operator()(xla::AutotuneResult_FailureKind, std::basic_string_view<char, std::char_traits<char>>) const) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 25 more times
+
+ld.lld: error: undefined symbol: google::protobuf::Duration::Duration(google::protobuf::Arena*, bool)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 4 more times
+
+ld.lld: error: undefined symbol: google::protobuf::Duration* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::Duration>(google::protobuf::Arena*)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 8 more times
+
+ld.lld: error: undefined symbol: google::protobuf::Duration::CopyFrom(google::protobuf::Duration const&)
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::PickBestAlgorithmNoCacheRocm(xla::HloCustomCallInstruction const*)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced by conv_algorithm_picker.cc
+>>>               conv_algorithm_picker.o:(xla::gpu::GpuConvAlgorithmPicker::AutotuneOneConvRunner(xla::gpu::GenericConvRunner*, std::optional<xla::gpu::GpuConvAlgorithmPicker::ReferenceResult>*, absl::lts_20230802::Span<stream_executor::dnn::AlgorithmDesc const>, std::optional<xla::gpu::AutotuneCacheKey>, xla::gpu::GpuConvAlgorithmPicker::AutotuneRuntimeArguments const&)) in archive bazel-out/k8-opt/bin/xla/service/gpu/libconv_algorithm_picker.a
+>>> referenced 4 more times
+
+ld.lld: error: too many errors emitted, stopping now (use --error-limit=0 to see all errors)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+INFO: Elapsed time: 2.295s, Critical Path: 1.69s
+INFO: 21 processes: 21 internal.
+FAILED: Build did NOT complete successfully

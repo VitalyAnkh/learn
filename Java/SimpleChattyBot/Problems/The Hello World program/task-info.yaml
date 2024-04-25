@@ -1,16 +1,16 @@
 type: code
 files:
-- name: src/Main.java
-  visible: true
-  text: |-
-    class Main {
-
-    }
-  learner_created: false
-feedback_link: https://hyperskill.org/learn/step/3233
+  - name: src/Main.java
+    visible: true
+    text: |-
+      class Main {
+      
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3233#comment
 status: Solved
 feedback:
   message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/3233">JetBrains
     Academy</a></html>
-  time: Wed, 01 Jul 2020 10:05:46 UTC
+  time: "Wed, 01 Jul 2020 10:05:46 UTC"
 record: -1
