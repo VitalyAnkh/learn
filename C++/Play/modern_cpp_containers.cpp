@@ -12,6 +12,7 @@
 //      return std::tie(n, s, f) < std::tie(rhs.s, rhs.s, rhs.f);
 //    }
 //  }
+
 using IntFloatStr = std::variant<int, float, std::string>;
 
 int main() {
