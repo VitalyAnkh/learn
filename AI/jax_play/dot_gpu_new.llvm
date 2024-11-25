@@ -1,0 +1,37 @@
+module @jit_dot_product attributes {jax.uses_shape_polymorphism = false, llvm.data_layout = "", mhlo.num_partitions = 1 : i32, mhlo.num_replicas = 1 : i32} {
+  llvm.func @malloc(i64) -> !llvm.ptr
+  llvm.func @main(%arg0: !llvm.ptr, %arg1: !llvm.ptr, %arg2: i64, %arg3: !llvm.ptr, %arg4: !llvm.ptr, %arg5: i64) -> (!llvm.struct<(ptr, ptr, i64)> {jax.result_info = "", mhlo.layout_mode = "default"}) attributes {sym_visibility = "public"} {
+    %0 = llvm.mlir.undef : !llvm.struct<(ptr, ptr, i64)>
+    %1 = llvm.insertvalue %arg0, %0[0] : !llvm.struct<(ptr, ptr, i64)> 
+    %2 = llvm.insertvalue %arg1, %1[1] : !llvm.struct<(ptr, ptr, i64)> 
+    %3 = llvm.insertvalue %arg2, %2[2] : !llvm.struct<(ptr, ptr, i64)> 
+    %4 = llvm.mlir.undef : !llvm.struct<(ptr, ptr, i64)>
+    %5 = llvm.insertvalue %arg3, %4[0] : !llvm.struct<(ptr, ptr, i64)> 
+    %6 = llvm.insertvalue %arg4, %5[1] : !llvm.struct<(ptr, ptr, i64)> 
+    %7 = llvm.insertvalue %arg5, %6[2] : !llvm.struct<(ptr, ptr, i64)> 
+    %8 = llvm.mlir.constant(0 : index) : i64
+    %9 = llvm.mlir.constant(64 : index) : i64
+    %10 = llvm.mlir.constant(1 : index) : i64
+    %11 = llvm.mlir.null : !llvm.ptr
+    %12 = llvm.getelementptr %11[1] : (!llvm.ptr) -> !llvm.ptr, i32
+    %13 = llvm.ptrtoint %12 : !llvm.ptr to i64
+    %14 = llvm.add %13, %9  : i64
+    %15 = llvm.call @malloc(%14) : (i64) -> !llvm.ptr
+    %16 = llvm.ptrtoint %15 : !llvm.ptr to i64
+    %17 = llvm.sub %9, %10  : i64
+    %18 = llvm.add %16, %17  : i64
+    %19 = llvm.urem %18, %9  : i64
+    %20 = llvm.sub %18, %19  : i64
+    %21 = llvm.inttoptr %20 : i64 to !llvm.ptr
+    %22 = llvm.mlir.undef : !llvm.struct<(ptr, ptr, i64)>
+    %23 = llvm.insertvalue %15, %22[0] : !llvm.struct<(ptr, ptr, i64)> 
+    %24 = llvm.insertvalue %21, %23[1] : !llvm.struct<(ptr, ptr, i64)> 
+    %25 = llvm.insertvalue %8, %24[2] : !llvm.struct<(ptr, ptr, i64)> 
+    %26 = llvm.load %arg1 : !llvm.ptr -> i32
+    %27 = llvm.load %arg4 : !llvm.ptr -> i32
+    %28 = llvm.mul %26, %27  : i32
+    llvm.store %28, %21 : i32, !llvm.ptr
+    llvm.return %25 : !llvm.struct<(ptr, ptr, i64)>
+  }
+}
+

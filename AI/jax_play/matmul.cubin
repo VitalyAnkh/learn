@@ -1,0 +1,52 @@
+#map = affine_map<(d0, d1, d2) -> (d0, d1 - d2)>
+module @jit_matmul attributes {mhlo.num_partitions = 1 : i32, mhlo.num_replicas = 1 : i32} {
+  func.func public @main(%arg0: tensor<1000x1000xf32> {mhlo.layout_mode = "default"}, %arg1: tensor<1000x1000xf32> {mhlo.layout_mode = "default"}) -> (tensor<1000x1000xf32> {jax.result_info = "", mhlo.layout_mode = "default"}) {
+    %c1 = arith.constant 1 : index
+    %c1000 = arith.constant 1000 : index
+    %c0 = arith.constant 0 : index
+    %cst = arith.constant 0.000000e+00 : f32
+    %0 = bufferization.to_memref %arg1 : memref<1000x1000xf32, strided<[?, ?], offset: ?>>
+    %1 = bufferization.to_memref %arg0 : memref<1000x1000xf32, strided<[?, ?], offset: ?>>
+    %alloc = memref.alloc() {alignment = 64 : i64} : memref<1000x1000xf32>
+    %c0_0 = arith.constant 0 : index
+    %c100 = arith.constant 100 : index
+    %c7 = arith.constant 7 : index
+    %2 = arith.muli %c1, %c100 : index
+    %3 = arith.muli %c1, %c7 : index
+    scf.parallel (%arg2, %arg3) = (%c0, %c0) to (%c1000, %c1000) step (%2, %3) {
+      %7 = affine.min #map(%3, %c1000, %arg3)
+      scf.parallel (%arg4, %arg5) = (%c0_0, %c0_0) to (%2, %7) step (%c1, %c1) {
+        %8 = arith.addi %arg4, %arg2 : index
+        %9 = arith.addi %arg5, %arg3 : index
+        memref.store %cst, %alloc[%8, %9] : memref<1000x1000xf32>
+        scf.reduce 
+      } {mapping = [#gpu.loop_dim_map<processor = thread_x, map = (d0) -> (d0), bound = (d0) -> (d0)>, #gpu.loop_dim_map<processor = thread_y, map = (d0) -> (d0), bound = (d0) -> (d0)>]}
+      scf.reduce 
+    } {mapping = [#gpu.loop_dim_map<processor = block_x, map = (d0) -> (d0), bound = (d0) -> (d0)>, #gpu.loop_dim_map<processor = block_y, map = (d0) -> (d0), bound = (d0) -> (d0)>]}
+    %c0_1 = arith.constant 0 : index
+    %c100_2 = arith.constant 100 : index
+    %c7_3 = arith.constant 7 : index
+    %4 = arith.muli %c1, %c100_2 : index
+    %5 = arith.muli %c1, %c7_3 : index
+    scf.parallel (%arg2, %arg3) = (%c0, %c0) to (%c1000, %c1000) step (%4, %5) {
+      %7 = affine.min #map(%5, %c1000, %arg3)
+      scf.parallel (%arg4, %arg5) = (%c0_1, %c0_1) to (%4, %7) step (%c1, %c1) {
+        %8 = arith.addi %arg4, %arg2 : index
+        %9 = arith.addi %arg5, %arg3 : index
+        scf.for %arg6 = %c0 to %c1000 step %c1 {
+          %10 = memref.load %1[%8, %arg6] : memref<1000x1000xf32, strided<[?, ?], offset: ?>>
+          %11 = memref.load %0[%arg6, %9] : memref<1000x1000xf32, strided<[?, ?], offset: ?>>
+          %12 = memref.load %alloc[%8, %9] : memref<1000x1000xf32>
+          %13 = arith.mulf %10, %11 : f32
+          %14 = arith.addf %12, %13 : f32
+          memref.store %14, %alloc[%8, %9] : memref<1000x1000xf32>
+        }
+        scf.reduce 
+      } {mapping = [#gpu.loop_dim_map<processor = thread_x, map = (d0) -> (d0), bound = (d0) -> (d0)>, #gpu.loop_dim_map<processor = thread_y, map = (d0) -> (d0), bound = (d0) -> (d0)>]}
+      scf.reduce 
+    } {mapping = [#gpu.loop_dim_map<processor = block_x, map = (d0) -> (d0), bound = (d0) -> (d0)>, #gpu.loop_dim_map<processor = block_y, map = (d0) -> (d0), bound = (d0) -> (d0)>]}
+    %6 = bufferization.to_tensor %alloc : memref<1000x1000xf32>
+    return %6 : tensor<1000x1000xf32>
+  }
+}
+

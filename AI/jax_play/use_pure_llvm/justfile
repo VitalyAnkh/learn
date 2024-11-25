@@ -1,0 +1,23 @@
+linalg-to-gpu:
+  #/usr/bin/env bash
+  mlir-opt matmul-linalg.mlir -one-shot-bufferize="bufferize-function-boundaries=1 function-boundary-type-conversion=identity-layout-map" \
+    -convert-linalg-to-parallel-loops \
+    -canonicalize \
+    -gpu-map-parallel-loops \
+    -convert-parallel-loops-to-gpu \
+    -gpu-kernel-outlining \
+    -canonicalize -cse \
+    --gpu-lower-to-nvvm-pipeline="cubin-format=fatbin" -o gpu-lowered.mlir
+  mlir-opt matmul-linalg.mlir -one-shot-bufferize="bufferize-function-boundaries=1 function-boundary-type-conversion=identity-layout-map" \
+    -convert-linalg-to-parallel-loops \
+    -canonicalize \
+    -gpu-map-parallel-loops \
+    -convert-parallel-loops-to-gpu \
+    -gpu-kernel-outlining \
+    -o linalg-memref.mlir
+  mlir-opt linalg-memref-custom.mlir -canonicalize -cse \
+    --gpu-lower-to-nvvm-pipeline="cubin-format=fatbin" -o gpu-lowered-custom.mlir
+  mlir-translate --mlir-to-llvmir gpu-lowered-custom.mlir -o gpu.ll
+  clang -c gpu.ll -o gpu.o
+  clang gpu.o -o gpu.out -L/home/vitalyr/projects/dev/cpp/llvm-project/build/lib/ -lmlir_cuda_runtime -lmlir_runner_utils
+  ./gpu.out

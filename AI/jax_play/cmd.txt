@@ -1,0 +1,67 @@
+OVERVIEW: MLIR Translation Testing Tool
+USAGE: mlir-translate [options] <input file>
+
+OPTIONS:
+
+Color Options:
+
+  --color                                                    - Use colors in output (default=autodetect)
+
+General options:
+
+  --allow-unregistered-dialect                               - Allow operation with no registered dialects (discouraged: testing only!)
+  --declare-variables-at-top                                 - Declare variables at top when emitting C/C++
+  --disable-auto-upgrade-debug-info                          - Disable autoupgrade of debug info
+  --disable-i2p-p2i-opt                                      - Disables inttoptr/ptrtoint roundtrip optimization
+  --dot-cfg-mssa=<file name for generated dot file>          - file name for generated dot file
+  --drop-di-composite-type-elements                          - Avoid translating the elements of DICompositeTypes during the LLVM IR import (discouraged: testing only!)
+  --emit-expensive-warnings                                  - Emit expensive warnings during LLVM IR import (discouraged: testing only!)
+  --error-diagnostics-only                                   - Filter all non-error diagnostics (discouraged: testing only!)
+  --experimental-debuginfo-iterators                         - Enable communicating debuginfo positions through iterators, eliminating intrinsics. Has no effect if --preserve-input-debuginfo-format=true.
+  --generate-merged-base-profiles                            - When generating nested context-sensitive profiles, always generate extra base profile for function with all its context profiles merged into it.
+  --mlir-disable-threading                                   - Disable multi-threading within MLIR, overrides any further call to MLIRContext::enableMultiThreading()
+  --mlir-elide-elementsattrs-if-larger=<uint>                - Elide ElementsAttrs with "..." that have more elements than the given upper limit
+  --mlir-elide-resource-strings-if-larger=<uint>             - Elide printing value of resources if string is too long in chars.
+  --mlir-output-format=<value>                               - Output format for timing data
+    =text                                                    -   display the results in text format
+    =json                                                    -   display the results in JSON format
+  --mlir-pretty-debuginfo                                    - Print pretty debug info in MLIR output
+  --mlir-print-debuginfo                                     - Print debug info in MLIR output
+  --mlir-print-elementsattrs-with-hex-if-larger=<long>       - Print DenseElementsAttrs with a hex string that have more elements than the given upper limit (use -1 to disable)
+  --mlir-print-local-scope                                   - Print with local scope and inline information (eliding aliases for attributes, types, and locations
+  --mlir-print-op-on-diagnostic                              - When a diagnostic is emitted on an operation, also print the operation as an attached note
+  --mlir-print-skip-regions                                  - Skip regions when printing ops.
+  --mlir-print-stacktrace-on-diagnostic                      - When a diagnostic is emitted, also print the stack trace as an attached note
+  --mlir-print-unique-ssa-ids                                - Print unique SSA ID numbers for values, block arguments and naming conflicts across all regions
+  --mlir-print-value-users                                   - Print users of operation results and block arguments as a comment
+  --mlir-timing                                              - Display execution times
+  --mlir-timing-display=<value>                              - Display method for timing data
+    =list                                                    -   display the results in a list sorted by total time
+    =tree                                                    -   display the results ina with a nested tree view
+  --no-implicit-module                                       - Disable the parsing of an implicit top-level module op
+  -o <filename>                                              - Output filename
+  --object-size-offset-visitor-max-visit-instructions=<uint> - Maximum number of instructions for ObjectSizeOffsetVisitor to look at
+  --output-split-marker=<string>                             - Split marker to use for merging the ouput
+  Translations to perform
+      --deserialize-spirv                                       - deserializes the SPIR-V module
+      --import-llvm                                             - Translate LLVMIR to MLIR
+      --mlir-to-cpp                                             - translate from mlir to cpp
+      --mlir-to-llvmir                                          - Translate MLIR to LLVMIR
+      --serialize-spirv                                         - serialize SPIR-V dialect
+      --test-import-llvmir                                      - test dialect from LLVM IR
+      --test-spirv-roundtrip                                    - test roundtrip in SPIR-V dialect
+      --test-spirv-roundtrip-debug                              - test roundtrip debug in SPIR-V
+      --test-to-llvmir                                          - test dialect to LLVM IR
+  --split-input-file[=<string>]                                - Split the input file into chunks using the given or default marker and process each chunk independently
+  --test-legalize-mode=<value>                               - The legalization mode to use with the test driver
+    =analysis                                                -   Perform an analysis conversion
+    =full                                                    -   Perform a full conversion
+    =partial                                                 -   Perform a partial conversion
+  --verify-diagnostics                                       - Check that emitted diagnostics match expected-* lines on the corresponding line
+  --write-experimental-debuginfo                             - Write debug info in the new non-intrinsic format. Has no effect if --preserve-input-debuginfo-format=true.
+
+Generic Options:
+
+  --help                                                     - Display available options (--help-hidden for more)
+  --help-list                                                - Display list of available options (--help-list-hidden for more)
+  --version                                                  - Display the version of this program

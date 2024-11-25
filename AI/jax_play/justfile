@@ -1,0 +1,174 @@
+linalg-to-gpu:
+  #/usr/bin/env bash
+  # /usr/local/opt/llvm@17/bin/mlir-opt dot.linalg -allow-unregistered-dialect --linalg-bufferize --scf-bufferize --func-bufferize --finalizing-bufferize --buffer-deallocation --convert-linalg-to-parallel-loops > dot_memref.linalg    
+  mlir-opt dot.linalg \
+      --convert-linalg-to-parallel-loops \
+      --convert-parallel-loops-to-gpu \
+      --gpu-kernel-outlining \
+      --lower-affine \
+      --convert-scf-to-cf \
+      --convert-cf-to-llvm \
+      --canonicalize \
+      --test-lower-to-llvm \
+      --gpu-to-llvm > dot_gpu.linalg
+  /usr/local/opt/llvm@17/bin/mlir-opt dot.linalg -linalg-bufferize -scf-bufferize --tensor-bufferize --func-bufferize --finalizing-bufferize --buffer-deallocation --convert-linalg-to-loops > dot_memref_new.linalg
+  /usr/local/opt/llvm@17/bin/mlir-opt dot_memref_new.linalg \
+    --convert-parallel-loops-to-gpu \
+    --gpu-kernel-outlining \
+    --lower-affine \
+    --convert-scf-to-cf \
+    --convert-cf-to-llvm \
+    --canonicalize \
+    --test-lower-to-llvm \
+    --gpu-to-llvm > dot_gpu_new.llvm
+  mlir-opt dot.linalg -allow-unregistered-dialect -pass-pipeline="builtin.module(func.func(linalg-detensorize))" > dot_detensorize.linalg
+  /usr/local/opt/llvm@17/bin/mlir-opt dot.linalg --convert-linalg-to-parallel-loops  > dot_scf.linalg
+  # matmul
+  mlir-opt matmul.mlir \
+  -allow-unregistered-dialect \
+  --one-shot-bufferize \
+  --convert-linalg-to-parallel-loops \
+  --scf-parallel-loop-tiling="parallel-loop-tile-sizes=100,7" \
+  --gpu-map-parallel-loops \
+  --gpu-kernel-outlining \
+  --convert-parallel-loops-to-gpu \
+  --mlir-print-ir-after-all \
+  -o matmul.cubin
+  # --gpu-lower-to-nvvm-pipeline="cubin-format=fatbin" \
+  #--mlir-print-ir-after-all \
+
+  mlir-opt matmul-clean.mlir \
+  -allow-unregistered-dialect \
+  --one-shot-bufferize="bufferize-function-boundaries" \
+  --buffer-hoisting \
+  --buffer-loop-hoisting \
+  --buffer-results-to-out-params \
+  --drop-equivalent-buffer-results \
+  --promote-buffers-to-stack \
+  --convert-linalg-to-parallel-loops \
+  --scf-parallel-loop-tiling="parallel-loop-tile-sizes=32,16" \
+  --gpu-map-parallel-loops \
+  --convert-parallel-loops-to-gpu \
+  --gpu-kernel-outlining \
+  --convert-cf-to-llvm \
+  --memref-expand \
+  --expand-strided-metadata \
+  --finalize-memref-to-llvm \
+  --convert-func-to-llvm \
+  --reconcile-unrealized-casts \
+  --convert-to-llvm \
+  -one-shot-bufferize="bufferize-function-boundaries" \
+  -finalizing-bufferize -buffer-deallocation-pipeline -convert-bufferization-to-memref -convert-linalg-to-loops \
+  -convert-arith-to-llvm -convert-scf-to-cf -convert-cf-to-llvm --finalize-memref-to-llvm -convert-func-to-llvm -reconcile-unrealized-casts \
+  --mlir-print-ir-after-all \
+  -o matmul-clean-gpu.mlir
+
+  mlir-opt matmul-clean.mlir -o matmul-memref.mlir \
+  -one-shot-bufferize="bufferize-function-boundaries" \
+  -finalizing-bufferize -buffer-deallocation-pipeline -convert-bufferization-to-memref
+
+  mlir-opt matmul-memref.mlir -o matmul-gpu4.mlir \
+   -convert-linalg-to-parallel-loops \
+   -async-parallel-for          \
+   -async-to-async-runtime              \
+   -async-runtime-ref-counting                              \
+   -async-runtime-ref-counting-opt                          \
+  --scf-parallel-loop-tiling="parallel-loop-tile-sizes=32,16" \
+  --gpu-map-parallel-loops \
+  --convert-parallel-loops-to-gpu \
+  --gpu-kernel-outlining \
+   -convert-async-to-llvm                                   \
+   -convert-scf-to-cf                                      \
+   -arith-expand                                            \
+   -memref-expand                                              \
+   -convert-vector-to-llvm                                  \
+   -finalize-memref-to-llvm                                  \
+   -convert-arith-to-llvm -convert-scf-to-cf -convert-cf-to-llvm --finalize-memref-to-llvm -convert-func-to-llvm -reconcile-unrealized-casts \
+   -convert-func-to-llvm         \
+   -reconcile-unrealized-casts
+  mlir-opt matmul-clean.mlir -o matmul-gpu3.mlir \
+  -one-shot-bufferize="bufferize-function-boundaries" \
+  -finalizing-bufferize -buffer-deallocation-pipeline -convert-bufferization-to-memref \
+  -convert-linalg-to-loops \
+  --scf-parallel-loop-tiling="parallel-loop-tile-sizes=32,16" \
+  --gpu-map-parallel-loops \
+  --convert-parallel-loops-to-gpu \
+  --gpu-kernel-outlining \
+  -convert-arith-to-llvm \
+  -convert-scf-to-cf \
+  -convert-cf-to-llvm --finalize-memref-to-llvm -convert-func-to-llvm -reconcile-unrealized-casts \
+  -convert-scf-to-cf                                      \
+  -arith-expand                                            \
+  -memref-expand                                              \
+  -convert-vector-to-llvm                                  \
+  -finalize-memref-to-llvm                                  \
+  -convert-arith-to-llvm -convert-scf-to-cf -convert-cf-to-llvm --finalize-memref-to-llvm -convert-func-to-llvm -reconcile-unrealized-casts \
+  -convert-func-to-llvm         \
+  -reconcile-unrealized-casts
+
+  mlir-opt linalg_matmul_memref.mlir -o matmul-gpu5.mlir \
+    --mlir-print-ir-after-all \
+    --convert-linalg-to-parallel-loops \
+    --scf-parallel-loop-tiling="parallel-loop-tile-sizes=32,16" \
+    --gpu-map-parallel-loops \
+    --convert-parallel-loops-to-gpu \
+    --convert-scf-to-cf \
+    --expand-strided-metadata \
+    --convert-cf-to-llvm \
+    --gpu-kernel-outlining \
+    -reconcile-unrealized-casts \
+    --llvm-request-c-wrappers
+  # mlir-opt matmul-gpu5.mlir -o matmul-gpu6-llvm.mlir \
+  #   --mlir-print-ir-after-all \
+  #   -reconcile-unrealized-casts \
+  #   --gpu-to-llvm \
+  #   --llvm-request-c-wrappers
+  mlir-opt matmul-gpu5.mlir -o matmul-gpu6-llvm.mlir &> out.txt \
+  --mlir-print-ir-after-all -pass-pipeline='builtin.module(reconcile-unrealized-casts, gpu.module(gpu.func(expand-strided-metadata, reconcile-unrealized-casts)),func.func(llvm-request-c-wrappers),canonicalize{test-convergence},lower-affine,convert-scf-to-cf,convert-cf-to-llvm,convert-arith-to-llvm,convert-math-to-llvm,normalize-memrefs, memref-expand,gpu-decompose-memrefs,convert-func-to-llvm{index-bitwidth=64},reconcile-unrealized-casts,test-legalize-type-conversion,canonicalize{test-convergence},gpu-lower-to-nvvm-pipeline{cubin-chip=sm_80 index-bitwidth=64 cubin-triple=nvptx-nvidia-cuda host-bare-ptr-calling-convention=1},gpu-to-llvm{use-bare-pointers-for-kernels=true},reconcile-unrealized-casts,expand-strided-metadata,lower-affine,finalize-memref-to-llvm,reconcile-unrealized-casts)'
+  mlir-opt matmul-memref.mlir -o matmul-gpu6.mlir \
+  -pass-pipeline='builtin.module(spirv-attach-target{ver=v1.0 caps=Addresses,Int64,Kernel},convert-gpu-to-spirv{use-64bit-index=true},gpu.module(spirv.module(spirv-lower-abi-attrs,spirv-update-vce)),func.func(llvm-request-c-wrappers),convert-scf-to-cf,convert-cf-to-llvm,convert-arith-to-llvm,convert-math-to-llvm,convert-func-to-llvm,gpu-to-llvm{use-bare-pointers-for-kernels=true},gpu-module-to-binary,expand-strided-metadata,lower-affine,finalize-memref-to-llvm,reconcile-unrealized-casts)'
+
+  #--test-lower-to-llvm \
+  # --gpu-to-llvm="use-bare-pointers-for-kernels=1" \
+  # -convert-linalg-to-parallel-loops \
+  # mlir-opt matmul-clean.mlir -o matmul-clean-gpu2.mlir \
+  #   --pass-pipeline='builtin.module(func.func(convert-linalg-to-loops, lower-affine, convert-math-to-llvm, convert-scf-to-cf, arith-expand, memref-expand), convert-vector-to-llvm, finalize-memref-to-llvm, convert-func-to-llvm, reconcile-unrealized-casts)'
+  # pm = PassManager("builtin.module")
+  # pm.add("func.func(convert-linalg-to-loops)")
+  # pm.add("func.func(lower-affine)")
+  # pm.add("func.func(convert-math-to-llvm)")
+  # pm.add("func.func(convert-scf-to-cf)")
+  # pm.add("func.func(arith-expand)")
+  # pm.add("func.func(memref-expand)")
+  # pm.add("convert-vector-to-llvm")
+  # pm.add("finalize-memref-to-llvm")
+  # pm.add("convert-func-to-llvm")
+  # pm.add("reconcile-unrealized-casts")
+  # --gpu-lower-to-nvvm-pipeline="cubin-format=offloading" \
+  mlir-opt matmul-clean.mlir \
+  -allow-unregistered-dialect \
+  -eliminate-empty-tensors \
+  --one-shot-bufferize \
+  --buffer-hoisting \
+  --buffer-loop-hoisting \
+  --buffer-results-to-out-params \
+  --drop-equivalent-buffer-results \
+  --promote-buffers-to-stack \
+  --convert-linalg-to-parallel-loops \
+  --scf-parallel-loop-tiling="parallel-loop-tile-sizes=32,16" \
+  --gpu-map-parallel-loops \
+  --convert-parallel-loops-to-gpu \
+  --gpu-kernel-outlining \
+  --convert-gpu-to-rocdl \
+  --mlir-print-ir-after-all \
+  -o matmul-clean-llvm2.mlir
+  # --gpu-lower-to-nvvm-pipeline="cubin-format=fatbin" \
+  #--mlir-print-ir-after-all \
+  # --linalg-bufferize --tensor-bufferize --one-shot-bufferize
+  # --gpu-to-llvm 2>&1 > mlir_linalg_to_gpu.mlir
+  #mlir-translate mlir_linalg_to_gpu.mlir.out --mlir-to-llvmir | opt -O3 -S | llc -O3 | as - -o matmul-gpu-02.mlir.o
+  # --pass-pipeline="gpu.module(strip-debuginfo, convert-gpu-to-nvvm, gpu-to-cubin)" \
+  # clang++ mlir_linalg_to_gpu.mlir.o -lcuda \
+  #   /usr/local/opt/llvm@latest/lib/libmlir_cuda_runtime.so \
+  #   /usr/local/opt/llvm@latest/lib/libmlir_runner_utils.so \
+  #   -o linalg_dot_product

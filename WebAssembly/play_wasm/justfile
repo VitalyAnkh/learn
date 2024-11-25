@@ -1,0 +1,5 @@
+wasm:
+  #!/usr/bin/env bash
+  wat2wasm add.wat -o add.wasm
+  wasmtime add.wasm --ivoke add 1 2
+  wat2wasm memory.wat -o memory.wasm

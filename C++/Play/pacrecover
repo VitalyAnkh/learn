@@ -1,0 +1,27 @@
+#!/bin/bash -e
+
+# load configuration settings from the makepkg configuration file
+. /etc/makepkg.conf
+
+# determine the cache directory from pacman configuration, defaulting to /var/cache/pacman/pkg, remove prefix with sed
+PKGCACHE=$( (grep -m 1 '^CacheDir' /etc/pacman.conf || echo 'CacheDir = /var/cache/pacman/pkg') | sed 's/CacheDir = //')
+
+# define directories to search for package files
+pkgdirs=("$@" "$PKGDEST" "$PKGCACHE")
+
+# read package name and version from input and construct a search pattern for package files
+while read -r -a parampart; do
+
+        # loop through each directory to search for matching package files
+        for pkgdir in "${pkgdirs[@]}"; do
+
+                # check each file matching the pattern in the current directory
+                for i in "$pkgdir"/"${parampart[0]}"-"${parampart[1]}"-*.pkg.tar.{xz,zst} ; do
+
+                        # if a file exists, print its path and stop checking further
+                        [ -f "${i}" ] && { echo "${i}" ; break; };
+                done
+
+                # If no file is found, output the package name to stderr
+        done || echo "${parampart[0]}" 1>&2
+done

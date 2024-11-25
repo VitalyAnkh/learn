@@ -1,0 +1,11 @@
+module @jit_dot_product attributes {jax.uses_shape_polymorphism = false, mhlo.num_partitions = 1 : i32, mhlo.num_replicas = 1 : i32} {
+  func.func public @main(%arg0: memref<i32> {mhlo.layout_mode = "default"}, %arg1: memref<i32> {mhlo.layout_mode = "default"}) -> (memref<i32> {jax.result_info = "", mhlo.layout_mode = "default"}) {
+    %alloc = memref.alloc() {alignment = 64 : i64} : memref<i32>
+    %0 = memref.load %arg0[] : memref<i32>
+    %1 = memref.load %arg1[] : memref<i32>
+    %2 = arith.muli %0, %1 : i32
+    memref.store %2, %alloc[] : memref<i32>
+    return %alloc : memref<i32>
+  }
+}
+

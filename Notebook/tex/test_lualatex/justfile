@@ -1,0 +1,7 @@
+clean:
+  #/usr/bin/env bash
+  cd /home/vitalyr/projects/learn/Notebook/tex/test_lualatex
+  trash-put *aux
+  trash-put *pdf
+  trash-put *log
+  trash-put *fdb_latexmk

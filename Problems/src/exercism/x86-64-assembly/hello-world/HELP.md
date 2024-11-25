@@ -32,7 +32,8 @@ It's possible to submit an incomplete solution which allows you to:
 If you'd like help solving the exercise, check the following pages:
 
 - The [x86-64 Assembly track's documentation](https://exercism.org/docs/tracks/x86-64-assembly)
-- [Exercism's support channel on gitter](https://gitter.im/exercism/support)
+- The [x86-64 Assembly track's programming category on the forum](https://forum.exercism.org/c/programming/x86-64-assembly)
+- [Exercism's programming category on the forum](https://forum.exercism.org/c/programming/5)
 - The [Frequently Asked Questions](https://exercism.org/docs/using/faqs)
 
 Should those resources not suffice, you could submit your (incomplete) solution to request mentoring.
