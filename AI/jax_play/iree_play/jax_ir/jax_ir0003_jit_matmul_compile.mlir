@@ -1,0 +1,15 @@
+#loc1 = loc("A")
+#loc2 = loc("B")
+module @jit_matmul attributes {mhlo.num_partitions = 1 : i32, mhlo.num_replicas = 1 : i32} {
+  func.func public @main(%arg0: tensor<4096x4096xf16> loc("A"), %arg1: tensor<4096x4096xf16> loc("B")) -> (tensor<4096x4096xf16> {jax.result_info = ""}) {
+    %0 = stablehlo.dot_general %arg0, %arg1, contracting_dims = [1] x [0], precision = [DEFAULT, DEFAULT] : (tensor<4096x4096xf16>, tensor<4096x4096xf16>) -> tensor<4096x4096xf16> loc(#loc8)
+    return %0 : tensor<4096x4096xf16> loc(#loc)
+  } loc(#loc)
+} loc(#loc)
+#loc = loc(unknown)
+#loc3 = loc("/home/vitalyr/projects/learn/AI/jax_play/iree_play/jax_matmul_mma.py":16:11)
+#loc4 = loc("/home/vitalyr/projects/learn/AI/jax_play/iree_play/jax_matmul_mma.py":20:4)
+#loc5 = loc("matmul"(#loc3))
+#loc6 = loc("<module>"(#loc4))
+#loc7 = loc(callsite(#loc5 at #loc6))
+#loc8 = loc("jit(matmul)/jit(main)/dot_general"(#loc7))

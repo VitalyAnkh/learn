@@ -12,7 +12,8 @@ export JUST_LOG := log
 config_apue:
   #!/usr/bin/env bash
   echo "==== config APUE ===="
-  cd $HOME/projects/learn/Notebook/apue
+  export LEARN_ROOT=$HOME/projects/learn/Notebook/apue
+  cd $LEARN_ROOT
   trash-put build
   cmake ./ -B build -G "Ninja" \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
