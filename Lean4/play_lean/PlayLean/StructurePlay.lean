@@ -42,3 +42,31 @@ def p1 : Point := { x := 3.0, y := 4.0}
 
 #eval Point.modifyBoth addOne ({x := 0.0, y := 1.0} : Point)
 #eval p1.modifyBoth Float.floor
+
+structure RectangularPrism where
+  height : Float
+  width : Float
+  depth : Float
+deriving Repr
+
+def volumn (rp: RectangularPrism) : Float :=
+  rp.height * rp.width * rp.depth
+
+structure Segment where
+  initial : Point
+  final : Point
+deriving Repr
+
+def Segment.length (s: Segment) : Float :=
+  ((s.final.x - s.initial.x) ^ 2 + (s.final.y - s.initial.y) ^ 2) ^ 0.5
+
+def s1 : Segment := { initial := { x := 0.0, y := 0.0}, final := { x := 1.0, y := 1.0} }
+
+#eval s1.length
+
+structure Book where
+  mkBook ::
+  title : String
+  author : String
+  price : Float
+deriving Repr
