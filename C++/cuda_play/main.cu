@@ -1,5 +1,5 @@
 #include <cuda.h>
-#include<iostream>
+#include <iostream>
 
 __global__ void vec_add_kernel(float *a, float *b, float *c, int n) {
     int i = blockDim.x * blockIdx.x + threadIdx.x;

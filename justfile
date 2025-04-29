@@ -23,3 +23,18 @@ config_apue:
   cd build
   ninja -j10
   echo "==== config APUE done ===="
+
+cuda_play:
+  #!/usr/bin/env bash
+  echo "==== config CUDA play ===="
+  cd $HOME/projects/dev/learn/C++/cuda_play
+  trash-put build
+  mkdir -p build
+  cd build
+  cmake -G "Ninja" \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_CXX_STANDARD=23 \
+    -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$LD_LIBRARY_PATH" ../
+  time ninja all -j$(nproc)
+  echo "==== config CUDA play done ===="

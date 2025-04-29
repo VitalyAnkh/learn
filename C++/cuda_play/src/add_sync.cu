@@ -2,6 +2,7 @@
 #include <cuda_runtime.h>
 #include <stdio.h>
 
+// _Float32 f;
 __global__ void add_sync() {
     int a = 1;
     int b = 2;
