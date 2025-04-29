@@ -88,3 +88,5 @@ set_target_properties(only_host_register PROPERTIES CUDA_SEPARABLE_COMPILATION
 add_executable(simple_host_register src/simple_host_register.cu)
 
 add_executable(cuda_fp8_cvt src/cuda_fp8_cvt.cu)
+
+add_executable(cuda_printf src/cuda_printf.cu)
