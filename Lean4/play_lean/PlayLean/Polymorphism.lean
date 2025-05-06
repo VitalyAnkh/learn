@@ -80,4 +80,11 @@ def last_entry? {α : Type} (xs : List α) : Option α :=
 -- Write a function that finds the first entry in a list that satisfies a given predicate. Start the definition with def List.findFirst? {α : Type} (xs : List α) (predicate : α → Bool) : Option α :=
 
 def List.findFirst? {α : Type} (xs : List α) (predicate : α → Bool) : Option α :=
-  sorry
+  match xs with
+  | [] => Option.none
+  | x :: xs' => if predicate x then Option.some x else List.findFirst? xs' predicate
+
+def l : List Int := [1, 2, 5, 8, 3]
+
+def biggerThanTwo (n: Int) : Bool := n > 2 
+#eval l.findFirst? biggerThanTwo

@@ -11,6 +11,13 @@ export JUST_LOG := log
 
 all: config_apue cuda_play cpp23_book
 
+automate_boring_stuff:
+   #!/usr/bin/env bash
+   echo "==== automate boring stuff ===="
+   export AUTOMATE_BORING_STUFF_PATH=$HOME/projects/dev/learn/Python/automate_boring_stuff
+   cd $AUTOMATE_BORING_STUFF_PATH
+   uv run main.py
+
 cpp23_book:
    #!/usr/bin/env bash
    echo "==== cpp23 book ===="

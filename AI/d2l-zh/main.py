@@ -5,6 +5,5 @@ def main():
     print("Hello from d2l-zh!")
     section_3_1_linear_regression.vr_print()
 
-
 if __name__ == "__main__":
     main()
