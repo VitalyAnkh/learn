@@ -4,7 +4,7 @@ rec {
   three = two + 1;
 }
 
-let
-  a = 1;
-in
-a + a;
+# let
+#   a = 1;
+# in
+# a + a;
