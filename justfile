@@ -18,6 +18,64 @@ automate_boring_stuff:
    cd $AUTOMATE_BORING_STUFF_PATH
    uv run main.py
 
+ray_tracing:
+   #!/usr/bin/env bash
+   echo "==== ray tracing ===="
+   export RAY_TRACING_PATH=$HOME/projects/dev/learn/C++/RayTracingInOneWeekend
+   cd $RAY_TRACING_PATH
+   meson setup build --reconfigure
+   cd build
+   meson compile
+   ./build/src/rt_one/first_image > image.ppm
+
+iree:
+  #!/usr/bin/env bash
+  echo "==== config iree ===="
+  export IREE_SRC_PATH=$HOME/projects/dev/cpp/iree
+  cd $IREE_SRC_PATH
+  export IREE_HAL_DRIVER_CUDA=ON
+  export IREE_HAL_DRIVER_HIP=ON
+  export IREE_TARGET_BACKEND_CUDA=ON
+  export IREE_TARGET_BACKEND_ROCM=ON
+  export IREE_TARGET_BACKEND_WEBGPU_SPIRV=ON
+  export CMAKE_BUILD_TYPE=RelWithDebInfo
+  export IREE_ENABLE_ASSERTIONS=ON
+  git checkout main
+  git submodule update --init
+  git pull --recurse-submodules
+  rm build/CMakeCache.txt
+  rm build/NATIVE/CMakeCache.txt
+  # Recommended development options using clang and mold:
+  # Use conda environment before this command!
+  # conda activate py3.11
+  # proxychains -q pip install -r runtime/bindings/python/iree/runtime/build_requirements.txt
+  bash build_tools/cmake/build_all.sh
+  # cmake -G Ninja -B build -S . \
+  #   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  #   -DIREE_ENABLE_WERROR_FLAG=OFF \
+  #   -DIREE_ENABLE_ASSERTIONS=ON \
+  #   -DIREE_ENABLE_SPLIT_DWARF=ON \
+  #   -DIREE_ENABLE_RUNTIME_TRACING=ON \
+  #   -DIREE_ENABLE_THIN_ARCHIVES=ON \
+  #   -DIREE_HAL_DRIVER_CUDA=ON \
+  #   -DIREE_HAL_DRIVER_VULKAN=ON \
+  #   -DIREE_TARGET_BACKEND_DEFAULTS=ON \
+  #   -DIREE_TARGET_BACKEND_WEBGPU_SPIRV=ON \
+  #   -DIREE_INPUT_STABLEHLO=ON \
+  #   -DCMAKE_C_COMPILER=clang \
+  #   -DCMAKE_CXX_COMPILER=clang++ \
+  #   -DCMAKE_C_COMPILER_LAUNCHER=sccache \
+  #   -DCMAKE_CXX_COMPILER_LAUNCHER=sccache \
+  #   -DIREE_BUILD_PYTHON_BINDINGS=ON  \
+  #   -DPython3_EXECUTABLE="$(which python)" \
+  #   -DCMAKE_EXE_LINKER_FLAGS_INIT="-fuse-ld=mold" \
+  #   -DCMAKE_MODULE_LINKER_FLAGS_INIT="-fuse-ld=mold" \
+  #   -DCMAKE_SHARED_LINKER_FLAGS_INIT="-fuse-ld=mold"
+  # cmake --build build
+  cmake --build build --target iree-test-deps
+  ctest -R build/tests/e2e/linalg/conv2d.mlir
+  echo "==== config iree done ===="
+
 cpp23_book:
    #!/usr/bin/env bash
    echo "==== cpp23 book ===="

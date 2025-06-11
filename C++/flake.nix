@@ -38,6 +38,7 @@
           stdenv.cc
           binutils
           uv
+
         ];
 
         shellHook = ''
