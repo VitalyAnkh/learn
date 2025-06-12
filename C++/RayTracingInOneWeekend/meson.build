@@ -1,5 +1,5 @@
 project('RayTracingInOneWeekend', 'cpp', default_options : ['c_std=c11', 'cpp_std=c++26'])
-inc = include_directories('include')
+inc_root = include_directories('include')
 
 subdir('include')
 subdir('test')

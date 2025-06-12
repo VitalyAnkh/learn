@@ -26,7 +26,6 @@ ray_tracing:
    meson setup build --reconfigure
    cd build
    meson compile
-   ./build/src/rt_one/first_image > image.ppm
 
 iree:
   #!/usr/bin/env bash
@@ -40,6 +39,7 @@ iree:
   export IREE_TARGET_BACKEND_WEBGPU_SPIRV=ON
   export CMAKE_BUILD_TYPE=RelWithDebInfo
   export IREE_ENABLE_ASSERTIONS=ON
+  export IREE_ENABLE_LLD=OFF
   git checkout main
   git submodule update --init
   git pull --recurse-submodules
