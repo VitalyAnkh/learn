@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <cuda_fp16.h>
-  __shared__ alignas(alignof(half)) half h;
+#include <stdio.h>
+__shared__ alignas(alignof(half)) half h;
 __global__ void vec_add_kernel(float *a, float *b, float *c, int n) {
   int i = blockDim.x * blockIdx.x + threadIdx.x;
   if (i < n) {
