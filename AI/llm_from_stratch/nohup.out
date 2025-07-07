@@ -1,0 +1,77 @@
+[I 2025-07-07 11:16:55.882 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-07-07 11:16:55.884 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-07-07 11:16:55.887 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-07-07 11:16:55.888 ServerApp] Writing Jupyter server cookie secret to /home/qzheng/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2025-07-07 11:16:56.044 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-07-07 11:16:56.056 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-07-07 11:16:56.057 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-07-07 11:16:56.058 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-07-07 11:16:56.059 LabApp] JupyterLab extension loaded from /home/qzheng/miniforge3/lib/python3.12/site-packages/jupyterlab
+[I 2025-07-07 11:16:56.059 LabApp] JupyterLab application directory is /home/qzheng/miniforge3/share/jupyter/lab
+[I 2025-07-07 11:16:56.059 LabApp] Extension Manager is 'pypi'.
+[I 2025-07-07 11:16:56.098 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-07-07 11:16:56.098 ServerApp] Serving notebooks from local directory: /local/qzheng/projects/dev/learn/AI/llm_from_stratch
+[I 2025-07-07 11:16:56.098 ServerApp] Jupyter Server 2.16.0 is running at:
+[I 2025-07-07 11:16:56.098 ServerApp] http://localhost:114514/lab?token=662dc5c8f47c27f75b186835d990e9fe17d52e142ed0e82d
+[I 2025-07-07 11:16:56.098 ServerApp]     http://127.0.0.1:114514/lab?token=662dc5c8f47c27f75b186835d990e9fe17d52e142ed0e82d
+[I 2025-07-07 11:16:56.098 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-07-07 11:16:56.100 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/qzheng/.local/share/jupyter/runtime/jpserver-2392981-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:114514/lab?token=662dc5c8f47c27f75b186835d990e9fe17d52e142ed0e82d
+        http://127.0.0.1:114514/lab?token=662dc5c8f47c27f75b186835d990e9fe17d52e142ed0e82d
+[I 2025-07-07 11:16:56.561 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-07-07 11:17:31.329 ServerApp] Interrupted...
+[I 2025-07-07 11:17:38.291 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-07-07 11:17:38.293 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-07-07 11:17:38.296 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-07-07 11:17:38.453 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-07-07 11:17:38.464 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-07-07 11:17:38.465 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-07-07 11:17:38.466 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-07-07 11:17:38.467 LabApp] JupyterLab extension loaded from /home/qzheng/miniforge3/lib/python3.12/site-packages/jupyterlab
+[I 2025-07-07 11:17:38.467 LabApp] JupyterLab application directory is /home/qzheng/miniforge3/share/jupyter/lab
+[I 2025-07-07 11:17:38.467 LabApp] Extension Manager is 'pypi'.
+[I 2025-07-07 11:17:38.496 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-07-07 11:17:38.497 ServerApp] The port 8888 is already in use, trying another port.
+[I 2025-07-07 11:17:38.497 ServerApp] Serving notebooks from local directory: /local/qzheng/projects/dev/learn/AI/llm_from_stratch
+[I 2025-07-07 11:17:38.497 ServerApp] Jupyter Server 2.16.0 is running at:
+[I 2025-07-07 11:17:38.497 ServerApp] http://localhost:8889/lab?token=c453ae25fcaa7e74bedcd445a429e399ccd069bf8abdf2e9
+[I 2025-07-07 11:17:38.497 ServerApp]     http://127.0.0.1:8889/lab?token=c453ae25fcaa7e74bedcd445a429e399ccd069bf8abdf2e9
+[I 2025-07-07 11:17:38.497 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-07-07 11:17:38.499 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/qzheng/.local/share/jupyter/runtime/jpserver-2393022-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8889/lab?token=c453ae25fcaa7e74bedcd445a429e399ccd069bf8abdf2e9
+        http://127.0.0.1:8889/lab?token=c453ae25fcaa7e74bedcd445a429e399ccd069bf8abdf2e9
+[I 2025-07-07 11:17:38.675 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-07-07 11:19:22.896 ServerApp] Interrupted...
+[I 2025-07-07 11:19:40.969 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-07-07 11:19:40.972 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-07-07 11:19:40.974 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-07-07 11:19:41.133 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-07-07 11:19:41.145 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-07-07 11:19:41.147 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-07-07 11:19:41.147 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-07-07 11:19:41.148 LabApp] JupyterLab extension loaded from /home/qzheng/miniforge3/lib/python3.12/site-packages/jupyterlab
+[I 2025-07-07 11:19:41.148 LabApp] JupyterLab application directory is /home/qzheng/miniforge3/share/jupyter/lab
+[I 2025-07-07 11:19:41.149 LabApp] Extension Manager is 'pypi'.
+[I 2025-07-07 11:19:41.178 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-07-07 11:19:41.178 ServerApp] Serving notebooks from local directory: /local/qzheng/projects/dev/learn/AI/llm_from_stratch
+[I 2025-07-07 11:19:41.178 ServerApp] Jupyter Server 2.16.0 is running at:
+[I 2025-07-07 11:19:41.178 ServerApp] http://localhost:12306/lab?token=59c03c0612fcacb77ba8eaf944c39d1c7f9d510ad07d403a
+[I 2025-07-07 11:19:41.179 ServerApp]     http://127.0.0.1:12306/lab?token=59c03c0612fcacb77ba8eaf944c39d1c7f9d510ad07d403a
+[I 2025-07-07 11:19:41.179 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-07-07 11:19:41.180 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/qzheng/.local/share/jupyter/runtime/jpserver-2393174-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:12306/lab?token=59c03c0612fcacb77ba8eaf944c39d1c7f9d510ad07d403a
+        http://127.0.0.1:12306/lab?token=59c03c0612fcacb77ba8eaf944c39d1c7f9d510ad07d403a
+[I 2025-07-07 11:19:41.358 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-07-07 11:19:56.963 ServerApp] Interrupted...

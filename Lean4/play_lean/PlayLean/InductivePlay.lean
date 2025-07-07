@@ -48,10 +48,14 @@ def minus (m : Nat) (n : Nat) : Nat :=
 --     Nat.succ (div (m - n) n)
   
 
-def use_if (n : Nat) : IO Unit :=
+def use_if (n : Int) : IO Unit :=
   if n < 0 then
     IO.println "negative!"
   else
     IO.println "not negative!"
 
+#eval use_if (-1)
+
 #eval use_if 0
+
+#eval use_if 1

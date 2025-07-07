@@ -1,6 +1,6 @@
 name = "play_lean"
 version = "0.1.0"
-defaultTargets = ["play_lean"]
+defaultTargets = ["play_lean", "feline"]
 
 [[lean_lib]]
 name = "PlayLean"
@@ -8,3 +8,7 @@ name = "PlayLean"
 [[lean_exe]]
 name = "play_lean"
 root = "Main"
+
+[[lean_exe]]
+name = "feline"
+root = "feline"
