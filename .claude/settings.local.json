@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nix develop:*)",
+      "Bash(just cuda_play:*)",
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(rm:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:discourse.llvm.org)",
+      "Bash(git --git-dir=/home/vitalyr/projects/dev/cpp/llvm-project/.git --work-tree=/home/vitalyr/projects/dev/cpp/llvm-project log --oneline --since=\"2024-01-01\" --grep=\"RegionBuilderFn\")",
+      "Bash(git --git-dir=/home/vitalyr/projects/dev/cpp/llvm-project/.git --work-tree=/home/vitalyr/projects/dev/cpp/llvm-project log --oneline --since=\"2024-06-01\" -- mlir/lib/Dialect/Linalg/IR/LinalgOps.cpp)",
+      "Bash(git --git-dir=/home/vitalyr/projects/dev/cpp/llvm-project/.git --work-tree=/home/vitalyr/projects/dev/cpp/llvm-project show ff0dcc461474)",
+      "Bash(git --git-dir=/home/vitalyr/projects/dev/cpp/llvm-project/.git --work-tree=/home/vitalyr/projects/dev/cpp/llvm-project show ff0dcc461474 -- mlir/lib/Dialect/Linalg/IR/LinalgOps.cpp)",
+      "Bash(git --git-dir=/home/vitalyr/projects/dev/cpp/llvm-project/.git --work-tree=/home/vitalyr/projects/dev/cpp/llvm-project show ff0dcc461474 -- mlir/tools/mlir-linalg-ods-gen/mlir-linalg-ods-yaml-gen.cpp)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:www.ashermancinelli.com)",
+      "WebFetch(domain:wiki.nixos.org)",
+      "Bash(cat:*)",
+      "Bash(journalctl:*)",
+      "Bash(ninja:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:aur.archlinux.org)",
+      "WebFetch(domain:discourse.nixos.org)",
+      "Bash(bash:*)",
+      "Bash(timeout:*)",
+      "Bash(true)"
+    ],
+    "deny": []
+  }
+}

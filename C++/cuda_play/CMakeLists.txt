@@ -1,4 +1,16 @@
 cmake_minimum_required(VERSION 3.30)
+
+# Use environment variables to set compilers if available
+if(DEFINED ENV{CMAKE_C_COMPILER})
+    set(CMAKE_C_COMPILER $ENV{CMAKE_C_COMPILER})
+endif()
+if(DEFINED ENV{CMAKE_CXX_COMPILER})
+    set(CMAKE_CXX_COMPILER $ENV{CMAKE_CXX_COMPILER})
+endif()
+if(DEFINED ENV{CMAKE_CUDA_COMPILER})
+    set(CMAKE_CUDA_COMPILER $ENV{CMAKE_CUDA_COMPILER})
+endif()
+
 project(cuda_play LANGUAGES C CXX CUDA)
 
 # setting clang causing error like this: FAILED: regex : && clang++ -g
