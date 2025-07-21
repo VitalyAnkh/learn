@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
 
-import sys
-if sys.version_info < (3, 6):
-    sys.exit('Expected Python version 3.6 or later.')
-
-from typing import List
-
-import ppcgrader
+from ppcgrader.cli import cli
 import ppcprereq
 
 if __name__ == "__main__":
-    ppcgrader.cli(ppcprereq.Config())
+    cli(ppcprereq.Config(code='prereq'))

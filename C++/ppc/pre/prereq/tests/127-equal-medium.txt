@@ -1,1 +1,2 @@
+timeout 0.5
 all_equal 100 2 -1 -1

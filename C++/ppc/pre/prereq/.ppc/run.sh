@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 cat > /box/prereq.cc
 chmod a-w /box/prereq.cc

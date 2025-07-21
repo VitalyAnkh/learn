@@ -2,51 +2,51 @@ from collections import OrderedDict
 from typing import Any, List, Dict, Optional, Union
 import json
 import sys
+import platform
 
+from ppcgrader import BOX_PATH
 from ppcgrader.config import Config
-from ppcgrader.compiler import Compiler, CompilerOutput
+from ppcgrader.compiler import Compiler, CompilerOutput, analyze_compile_errors
+from ppcgrader.doc_builder import TerminalPrinter, generate_term
 from ppcgrader.runner import RunnerOutput, AsanRunnerOutput, MemcheckRunnerOutput, NvprofRunnerOutput
+from ppcgrader.profile import generate_derived_statistics, explain_profiling
 
 MAX_RUN_JSON_OUTPUT = 30000  # Characters
 
+WVLA_ERROR = """
+  It seems you tried to use Variable Length Arrays. These can lead to crashes
+  if the allocated data exceeds the stack size. We have therefore disabled
+  them for this course. Consider using a std::vector instead."""[1:]
 
-def statistics_terminal(output):
-    stat = output.statistics
-    if stat is None:
-        return None
-    wallclock = stat.get('perf_wall_clock_ns', None)
-    cputime = stat.get('perf_cpu_time_ns', None)
-    instrs = stat.get('perf_instructions', None)
-    cycles = stat.get('perf_cycles', None)
-    branches = stat.get('perf_branches', None)
-    branch_misses = stat.get('perf_branch_misses', None)
-    if not wallclock:
-        return None
-    if wallclock < 1e7:
-        return None
-    r = ""
-    if cputime:
-        r += f'  Your code used {wallclock/1e9:.3f} sec of wallclock time, and {cputime/1e9:.3f} sec of CPU time\n'
-        r += f'  ≈ you used {cputime/wallclock:.1f} simultaneous hardware threads on average\n\n'
-    if cycles:
-        r += f'  The total number of clock cycles was {cycles/1e9:.1f} billion\n'
-        r += f'  ≈ CPU was running at {cycles/cputime:.1f} GHz\n\n'
-    if instrs:
-        r += f'  The CPU executed {instrs/1e9:.2f} billion machine-language instructions\n'
-        r += f'  ≈ {instrs/wallclock:.2f} instructions per nanosecond\n'
-        if cycles:
-            r += f'  ≈ {instrs/cycles:.2f} instructions per clock cycle\n'
-        r += '\n'
-    if branches:
-        r += f'  {branches/instrs*100:.1f}% of the instructions were branches\n'
-        if branch_misses:
-            r += f'  and {branch_misses/branches*100:.1f}% of them were mispredicted\n'
-        r += '\n'
-    r = r.rstrip()
-    if len(r):
-        return r
+OMP_TRUE_ERROR = """
+  This omp pragma was ignored. Check it for typos if it was meant to be used."""[
+    1:]
+
+OMP_FALSE_ERROR = """
+  Openmp is disabled for this exercise. The exercise templates for the
+  different tasks (e.g CP2a, CP2b CP2c) are different. If you are working on a
+  task that requires Openmp, be sure to download the correct exercise
+  template: for example CP2b or MF2."""[1:]
+
+ASAN_ASLR_BUG = """
+Note: You might have encountered a bug in address sanitizer. You can
+try disabling address space layout randomization by running with
+
+setarch -R ./grading ...
+
+More information: https://github.com/google/sanitizers/issues/1614"""[1:]
+
+# TODO use the actual cache line size of the cpu
+CACHE_LINE = 64
+
+
+def bin_fmt(num: int):
+    if num < 2 * 1024:
+        return f'{num:.2f} '
+    elif num < 2 * 1024 * 1024:
+        return f'{num/1024/1024:.2f} M'
     else:
-        return None
+        return f'{num/1024/1024/1024:.2f} G'
 
 
 def table(data: List[Dict[str, Any]], keys: List[str]):
@@ -83,20 +83,23 @@ def _safe_json_dump(data):
 
 
 class Reporter:
-    class TestGroup:
+    class RunGroup:
+        """
+        RunGroup collects the result of a test/benchmark/profile run
+        """
+        def __init__(self, kind: str):
+            assert kind in {"test", "benchmark", "profile"}
+            self._kind = kind
+
+        @property
+        def kind(self) -> str:
+            return self._kind
+
         def compilation(self,
                         compiler: Compiler) -> 'Reporter.CompilationProxy':
             raise NotImplementedError()
 
-        def test(self, test: str, output: RunnerOutput):
-            raise NotImplementedError()
-
-    class BenchmarkGroup:
-        def compilation(self,
-                        compiler: Compiler) -> 'Reporter.CompilationProxy':
-            raise NotImplementedError()
-
-        def benchmark(self, test: str, output: RunnerOutput):
+        def result(self, test: str, output: RunnerOutput):
             raise NotImplementedError()
 
     class AnalysisGroup:
@@ -114,10 +117,10 @@ class Reporter:
     def __init__(self, config: Config):
         self.config = config
 
-    def test_group(self, name: str, tests: List[str]) -> 'TestGroup':
+    def test_group(self, name: str, tests: List[str]) -> 'RunGroup':
         raise NotImplementedError()
 
-    def benchmark_group(self, name: str, tests: List[str]) -> 'BenchmarkGroup':
+    def benchmark_group(self, name: str, tests: List[str]) -> 'RunGroup':
         raise NotImplementedError()
 
     def analysis_group(self, name: str) -> 'AnalysisGroup':
@@ -126,78 +129,173 @@ class Reporter:
     def log(self, msg: str, kind=None):
         raise NotImplementedError()
 
+    def log_sep(self):
+        raise NotImplementedError()
+
     def finalize(self):
         raise NotImplementedError()
 
 
 class TerminalReporter(Reporter):
-    class TestGroup(Reporter.TestGroup):
-        def __init__(self, reporter: 'TerminalReporter', tests: List[str]):
+    def check_timeout(self, output: RunnerOutput):
+        if not output.is_success():
+            self.log_sep()
+            if output.is_timed_out():
+                self.log('It seems that your program timed out.')
+                self.log(
+                    f'The test should have ran in less than {output.timeout} seconds.'
+                )
+                self.log(
+                    'You can override allowed running time with --timeout [timeout in seconds] or disable running time checks with --no-timeout.'
+                )
+            else:
+                self.log('It seems that your program crashed unexpectedly.')
+            self.log_sep()
+
+    def _simplify_name(self, test: str):
+        if self.config.on_remote and test.startswith(BOX_PATH):
+            return test[len(BOX_PATH):]
+        return test
+
+    def log_nvprof_output(self: 'TerminalReporter',
+                          output: NvprofRunnerOutput):
+        if output.nvprof:
+            if output.nvprof.get('gpu_trace') is not None:
+
+                def safe_scale(value, scale):
+                    if value is not None:
+                        return value * scale
+                    return value
+
+                # Pick and format relevant columns for printing
+                t = []
+                for row in output.nvprof['gpu_trace']:
+                    d = OrderedDict()
+
+                    d['Start (s)'] = row['Start s']
+                    d['Duration (s)'] = row['Duration s']
+                    if row['Grid X'] and row['Grid Y'] and row['Grid Z']:
+                        d['Grid Size'] = f"{row['Grid X']}, {row['Grid Y']}, {row['Grid Z']}"
+                    else:
+                        d['Grid Size'] = ''
+                    if row['Block X'] and row['Block Y'] and row['Block Z']:
+                        d['Block Size'] = f"{row['Block X']}, {row['Block Y']}, {row['Block Z']}"
+                    else:
+                        d['Block Size'] = ''
+                    d['Regs'] = row['Registers Per Thread']
+                    d['SMem (B)'] = row['Static SMem bytes']
+                    d['DMem (B)'] = row['Dynamic SMem bytes']
+                    d['Size (MB)'] = safe_scale(row['Size bytes'], 1e-6)
+                    d['Throughput (GB/s)'] = safe_scale(
+                        row['Throughput bytes/s'], 1e-9)
+                    d['Name'] = row['Name']
+
+                    t.append(d)
+
+                if t:
+                    self.log_sep()
+                    self.log('Nvprof GPU trace:')
+                    self.log(table(t, t[0].keys()), 'output')
+                    self.log_sep()
+
+            if output.nvprof.get('gpu_trace_message') is not None:
+                self.log_sep()
+                self.log(output.nvprof['gpu_trace_message'])
+                self.log_sep()
+
+        elif output.nvprof_raw:
+            self.log_sep()
+            self.log('Failed to parse nvprof output. Here it is in raw form:')
+            self.log(output.nvprof_raw, 'output')
+            self.log_sep()
+        else:
+            self.log_sep()
+            self.log('No output from nvprof')
+            self.log_sep()
+
+    def log_asan_output(self: 'TerminalReporter', output: AsanRunnerOutput):
+        if output.asanoutput:
+            self.log_sep()
+            self.log('AddressSanitizer reported the following errors:')
+            self.log(output.asanoutput, 'output')
+            self.log_sep()
+
+        if platform.system() == 'Linux' and not output.run_successful:
+            # Check for ASAN bug with ASLR vm.mmap_rnd_bits=32
+            # See https://github.com/google/sanitizers/issues/1614
+            # A common symptom seems to be that we get multiple lines of AddressSanitizer:DEADLYSIGNAL
+            if "AddressSanitizer:DEADLYSIGNAL\nAddressSanitizer:DEADLYSIGNAL" in output.stderr:
+                self.log_sep()
+                self.log(ASAN_ASLR_BUG)
+                self.log_sep()
+
+    def log_memcheck_output(self: 'TerminalReporter',
+                            output: MemcheckRunnerOutput):
+        if output.memcheckoutput:
+            self.log_sep()
+            self.log('Memcheck reported the following errors:')
+            self.log(output.memcheckoutput, 'output')
+            self.log_sep()
+
+    def print_test_case(self, group: 'RunGroupBase', test: str,
+                        output: RunnerOutput):
+        width = group.test_name_width
+        if not group.header_printed:
+            self.log(f'{"test":<{width}}  {"time":>9}  {"result":6}',
+                     'heading')
+            group.header_printed = True
+        if output.is_success():
+            msg = "errors" if output.errors else "pass"
+            self.log(
+                f'{self._simplify_name(test):<{width}}  {output.time:>8.3f}s  {msg:6}',
+                'error' if output.errors else 'pass')
+        else:
+            self.log(f'{self._simplify_name(test):<{width}}  [failed]',
+                     'error')
+
+        if output.stdout:
+            self.log_sep()
+            self.log('Standard output:')
+            self.log(output.stdout, 'output')
+            self.log_sep()
+
+        if output.stderr:
+            self.log_sep()
+            self.log('Standard error:')
+            self.log(output.stderr, 'output')
+            self.log_sep()
+
+        self.check_timeout(output)
+
+    class RunGroupBase(Reporter.RunGroup):
+        def __init__(self, reporter: 'TerminalReporter', kind: str,
+                     tests: List[str]):
+            super().__init__(kind=kind)
             self.reporter = reporter
             self.header_printed = False
             self.test_name_width = max(
-                4, max(len(self._simplify_name(test)) for test in tests))
+                4,
+                max(len(self.reporter._simplify_name(test)) for test in tests))
 
         def compilation(self,
                         compiler: Compiler) -> 'Reporter.CompilationProxy':
             return TerminalReporter.CompilationProxy(self.reporter, compiler)
 
-        def test(self, test: str, output: RunnerOutput):
-            if not self.header_printed:
-                self.header_printed = True
-                self.reporter.log(
-                    f'{"test":<{self.test_name_width}}  {"time":>9}  {"result":6}',
-                    'heading')
-            if output.is_success():
-                msg = "errors" if output.errors else "pass"
-                self.reporter.log(
-                    f'{self._simplify_name(test):<{self.test_name_width}}  {output.time:>8.3f}s  {msg:6}',
-                    'error' if output.errors else 'pass')
-            else:
-                self.reporter.log(
-                    f'{self._simplify_name(test):<{self.test_name_width}}  [failed]',
-                    'error')
+        def _handle_result(self, test: str, output: RunnerOutput):
+            raise NotImplementedError()
 
-            if output.stdout:
-                self.reporter.log_sep()
-                self.reporter.log('Standard output:')
-                self.reporter.log(output.stdout, 'output')
-                self.reporter.log_sep()
+        def result(self, test: str, output: RunnerOutput):
+            self.reporter.print_test_case(self, test, output)
+            self.header_printed = True
+            self._handle_result(test, output)
 
-            if output.stderr:
-                self.reporter.log_sep()
-                self.reporter.log('Standard error:')
-                self.reporter.log(output.stderr, 'output')
-                self.reporter.log_sep()
+    class TestGroup(RunGroupBase):
+        def _handle_result(self, test: str, output: RunnerOutput):
+            if isinstance(output, AsanRunnerOutput):
+                self.reporter.log_asan_output(output)
 
-            if not output.is_success():
-                self.reporter.log_sep()
-                if output.is_timed_out():
-                    self.reporter.log('It seems that your program timed out.')
-                    self.reporter.log(
-                        f'The test should have ran in less than {output.timeout} seconds.'
-                    )
-                    self.reporter.log(
-                        'You can override allowed running time with --timeout [timeout in seconds]'
-                    )
-                else:
-                    self.reporter.log(
-                        'It seems that your program crashed unexpectedly.')
-                self.reporter.log_sep()
-
-            if isinstance(output, AsanRunnerOutput) and output.asanoutput:
-                self.reporter.log_sep()
-                self.reporter.log(
-                    'AddressSanitizer reported the following errors:')
-                self.reporter.log(output.asanoutput, 'output')
-                self.reporter.log_sep()
-
-            if isinstance(output,
-                          MemcheckRunnerOutput) and output.memcheckoutput:
-                self.reporter.log_sep()
-                self.reporter.log('Memcheck reported the following errors:')
-                self.reporter.log(output.memcheckoutput, 'output')
-                self.reporter.log_sep()
+            if isinstance(output, MemcheckRunnerOutput):
+                self.reporter.log_memcheck_output(output)
 
             if output.errors and not self.reporter.config.ignore_errors:
                 human_readable = self.reporter.config.explain_terminal(
@@ -207,121 +305,20 @@ class TerminalReporter(Reporter):
                     self.reporter.log(human_readable, 'preformatted')
                     self.reporter.log_sep()
 
-        def _simplify_name(self, test: str):
-            # return os.path.basename(test)
-            return test
-
-    class BenchmarkGroup(Reporter.BenchmarkGroup):
-        def __init__(self, reporter: 'TerminalReporter', tests: List[str]):
-            self.reporter = reporter
-            self.header_printed = False
-            self.test_name_width = max(
-                4, max(len(self._simplify_name(test)) for test in tests))
-
-        def compilation(self,
-                        compiler: Compiler) -> 'Reporter.CompilationProxy':
-            return TerminalReporter.CompilationProxy(self.reporter, compiler)
-
-        def benchmark(self, test: str, output: RunnerOutput):
-            if not self.header_printed:
-                self.header_printed = True
-                self.reporter.log(
-                    f'{"test":<{self.test_name_width}}  {"time":>9}  {"result":6}',
-                    'heading')
-            if output.is_success():
-                msg = "errors" if output.errors else "pass"
-                self.reporter.log(
-                    f'{self._simplify_name(test):<{self.test_name_width}}  {output.time:>8.3f}s  {msg:6}',
-                    'error' if output.errors else 'pass')
-            else:
-                self.reporter.log(
-                    f'{self._simplify_name(test):<{self.test_name_width}}  [failed]',
-                    'error')
-
-            if output.stdout:
-                self.reporter.log_sep()
-                self.reporter.log('Standard output:')
-                self.reporter.log(output.stdout, 'output')
-                self.reporter.log_sep()
-
-            if output.stderr:
-                self.reporter.log_sep()
-                self.reporter.log('Standard error:')
-                self.reporter.log(output.stderr, 'output')
-                self.reporter.log_sep()
-
+    class BenchmarkGroup(RunGroupBase):
+        def _handle_result(self, test: str, output: RunnerOutput):
             if output.is_success() and not output.errors:
-                human_readable = statistics_terminal(output)
-                if human_readable is not None:
-                    self.reporter.log_sep()
-                    self.reporter.log(human_readable, 'preformatted')
-                    self.reporter.log_sep()
+                profiling_data = explain_profiling(generate_derived_statistics(
+                    output.statistics),
+                                                   mode="term")
+                simple_printer = TerminalPrinter(color=False)
+                human_readable = generate_term(profiling_data, simple_printer)
+                self.reporter.log_sep()
+                self.reporter.log(human_readable, 'preformatted')
+                self.reporter.log_sep()
 
                 if isinstance(output, NvprofRunnerOutput):
-                    if output.nvprof:
-                        if output.nvprof.get('gpu_trace') is not None:
-
-                            def safe_scale(value, scale):
-                                if value is not None:
-                                    return value * scale
-                                return value
-
-                            # Pick and format relevant columns for printing
-                            t = []
-                            for row in output.nvprof['gpu_trace']:
-                                d = OrderedDict()
-
-                                d['Start (s)'] = row['Start s']
-                                d['Duration (s)'] = row['Duration s']
-                                if row['Grid X'] and row['Grid Y'] and row[
-                                        'Grid Z']:
-                                    d['Grid Size'] = f"{row['Grid X']}, {row['Grid Y']}, {row['Grid Z']}"
-                                else:
-                                    d['Grid Size'] = ''
-                                if row['Block X'] and row['Block Y'] and row[
-                                        'Block Z']:
-                                    d['Block Size'] = f"{row['Block X']}, {row['Block Y']}, {row['Block Z']}"
-                                else:
-                                    d['Block Size'] = ''
-                                d['Regs'] = row['Registers Per Thread']
-                                d['SMem (B)'] = row['Static SMem bytes']
-                                d['DMem (B)'] = row['Dynamic SMem bytes']
-                                d['Size (MB)'] = safe_scale(
-                                    row['Size bytes'], 1e-6)
-                                d['Throughput (GB/s)'] = safe_scale(
-                                    row['Throughput bytes/s'], 1e-9)
-                                d['Name'] = row['Name']
-
-                                t.append(d)
-
-                            if t:
-                                self.reporter.log_sep()
-                                self.reporter.log('Nvprof GPU trace:')
-                                self.reporter.log(table(t, t[0].keys()),
-                                                  'output')
-                                self.reporter.log_sep()
-
-                        if output.nvprof.get('gpu_trace_message') is not None:
-                            self.reporter.log_sep()
-                            self.reporter.log(
-                                output.nvprof['gpu_trace_message'])
-                            self.reporter.log_sep()
-
-                    elif output.nvprof_raw:
-                        self.reporter.log_sep()
-                        self.reporter.log(
-                            'Failed to parse nvprof output. Here it is in raw form:'
-                        )
-                        self.reporter.log(output.nvprof_raw, 'output')
-                        self.reporter.log_sep()
-                    else:
-                        self.reporter.log_sep()
-                        self.reporter.log('No output from nvprof')
-                        self.reporter.log_sep()
-
-        def _simplify_name(self, test: str):
-            # return os.path.basename(test)
-            return test
+                    self.reporter.log_nvprof_output(output)
 
     class AnalysisGroup(Reporter.AnalysisGroup):
         def __init__(self, name: str, reporter: 'TerminalReporter'):
@@ -358,18 +355,59 @@ class TerminalReporter(Reporter):
                 self.reporter.log('Compiled')
             else:
                 self.reporter.log('Compilation failed!', 'error')
+                self.reporter.log_sep()
+
+            self.print_errors(result.stderr)
+
             return result
 
-    def __init__(self, config: Config):
+        def print_errors(self, stderr: str):
+            errors = analyze_compile_errors(stderr)
+            lines = stderr.splitlines()
+            for error in errors:
+                if error['type'] == "Wvla":
+                    self.reporter.log(lines[error['line']], 'error')
+                    self.print_context(lines, error['line'])
+                    self.reporter.log_sep()
+                    self.reporter.log(WVLA_ERROR, 'output')
+                    self.reporter.log_sep()
+                elif error['type'] == "omp":
+                    self.reporter.log(lines[error['line']], 'error')
+                    self.print_context(lines, error['line'])
+                    self.reporter.log_sep()
+                    if self.reporter.config.openmp:
+                        self.reporter.log(OMP_TRUE_ERROR, 'output')
+                    else:
+                        self.reporter.log(OMP_FALSE_ERROR, 'output')
+                    self.reporter.log_sep()
+
+        def print_context(self, error_lines: List[str], error_index: int):
+            """
+            Given a list of lines that are the output of the compiler, and
+            an index into this list that points to the start of a specific error
+            message, this function attempts to print the entire context of the
+            error, i.e., it will print the lines *following* `error_index`
+            until it reaches a line that does not start with whitespace, i.e.
+            is not indented.
+            :param error_lines: List of lines in the compiler output
+            :param error_index: Index into that list
+            """
+            for i in range(error_index + 1, len(error_lines)):
+                if error_lines[i][0].isspace():
+                    self.reporter.log(error_lines[i], 'output')
+                else:
+                    break
+
+    def __init__(self, config: Config, color: Optional[bool] = None):
         super().__init__(config)
-        self.color = sys.stdout.isatty()
+        self.color = sys.stdout.isatty() if color is None else color
         self.sep_printed = False
 
     def test_group(self, name: str, tests: List[str]) -> 'TestGroup':
-        return TerminalReporter.TestGroup(self, tests)
+        return TerminalReporter.TestGroup(self, 'test', tests)
 
     def benchmark_group(self, name: str, tests: List[str]) -> 'BenchmarkGroup':
-        return TerminalReporter.BenchmarkGroup(self, tests)
+        return TerminalReporter.BenchmarkGroup(self, 'benchmark', tests)
 
     def analysis_group(self, name: str) -> 'AnalysisGroup':
         return TerminalReporter.AnalysisGroup(name, self)
@@ -399,6 +437,30 @@ class TerminalReporter(Reporter):
         pass
 
 
+def limit_output_for_json(output: Optional[str]) -> Optional[str]:
+    """Limit the output to roughly MAX_RUN_JSON_OUTPUT characters.
+
+    Note that the output may be up to 3 characters or 7 bytes longer than the
+    limit because of the added ellipsis."""
+    if output is None:
+        return None
+    if len(output) < MAX_RUN_JSON_OUTPUT:
+        return output
+    # Output too long. Try to cut it at a line break
+    output = output[:MAX_RUN_JSON_OUTPUT]
+    last_line_break = output.rfind("\n")
+    if last_line_break == -1:
+        # Output doesn't contain any line breaks. So just add ellipsis
+        # at the end, and another on the next line
+        return output + "…\n…"
+    if last_line_break < MAX_RUN_JSON_OUTPUT - MAX_RUN_JSON_OUTPUT / 10:
+        # Let's not remove over 10% of the students output. Again,
+        # just add the ellipsis at the end of the line
+        return output + "…\n…"
+    # Okay, found a sensible place to add a break.
+    return output[:last_line_break] + "\n…"
+
+
 def output_to_json(test: str, output: RunnerOutput, benchmark: bool,
                    export_streams: bool) -> Dict[str, str]:
     result = {
@@ -418,81 +480,80 @@ def output_to_json(test: str, output: RunnerOutput, benchmark: bool,
     else:
         result['timed_out'] = output.is_timed_out()
     if isinstance(output, AsanRunnerOutput):
-        result['asanoutput'] = output.asanoutput
+        result['asanoutput'] = limit_output_for_json(output.asanoutput)
     if isinstance(output, MemcheckRunnerOutput):
-        result['memcheckoutput'] = output.memcheckoutput
+        result['memcheckoutput'] = limit_output_for_json(output.memcheckoutput)
     if isinstance(output, NvprofRunnerOutput):
         result['nvprof'] = output.nvprof
     if export_streams:
-        result['stdout'] = output.stdout[:MAX_RUN_JSON_OUTPUT]
-        result['stderr'] = output.stderr[:MAX_RUN_JSON_OUTPUT]
+        result['stdout'] = limit_output_for_json(output.stdout)
+        result['stderr'] = limit_output_for_json(output.stderr)
     return result
 
 
+def json_to_output(raw: dict):
+    cls = RunnerOutput
+    args = {}
+    if 'asanoutput' in raw:
+        cls = AsanRunnerOutput
+        args['asanoutput'] = raw['asanoutput']
+    if 'memcheckoutput' in raw:
+        cls = MemcheckRunnerOutput
+        args['memcheckoutput'] = raw['memcheckoutput']
+    if 'nvprof' in raw:
+        cls = NvprofRunnerOutput
+        args['nvprof_raw'] = ''
+        args['nvprof'] = raw['nvprof']
+
+    return cls(run_successful=raw['success'],
+               timed_out=raw.get('timed_out', False),
+               stdout=raw.get('stdout', ''),
+               stderr=raw.get('stderr', ''),
+               time=raw.get('time', None),
+               timeout=None,
+               errors=raw.get('errors', None),
+               input_data=raw.get('input', None),
+               output_data=raw.get('output', None),
+               output_errors=raw.get('output_errors', None),
+               statistics=raw.get('statistics', None),
+               **args)
+
+
 class JsonReporter(Reporter):
-    class TestGroup(Reporter.TestGroup):
-        def __init__(self, reporter: 'JsonReporter', name: str):
+    class RunGroup(Reporter.RunGroup):
+        def __init__(self, reporter: 'JsonReporter', kind: str, name: str):
+            super().__init__(kind=kind)
             self.reporter = reporter
             self.name = name
             self.compiler_output = None
-            self.tests = []
+            self.outputs = []
 
         def compilation(self,
                         compiler: Compiler) -> 'Reporter.CompilationProxy':
             if self.compiler_output is not None:
-                raise RuntimeError(
-                    'Must not compiler code twice in test group')
+                raise RuntimeError('Must not compiler code twice in group')
             self.compiler_output = {}
             return JsonReporter.CompilationProxy(self.compiler_output,
                                                  compiler)
 
-        def test(self, test: str, output: RunnerOutput):
-            self.tests.append(
-                output_to_json(test, output, False,
+        def result(self, test: str, output: RunnerOutput):
+            self.outputs.append(
+                output_to_json(test, output, self.kind == "benchmark",
                                self.reporter.config.export_streams))
 
         def is_success(self):
+            if not self.compiler_output:
+                return False
+
             return self.compiler_output['status'] == 0 and all(
-                test['success'] and test['errors'] == 0 for test in self.tests)
+                test['success'] and test['errors'] == 0
+                for test in self.outputs)
 
         def to_json(self):
             return {
                 'name': self.name,
                 'compiler_output': self.compiler_output,
-                'tests': self.tests,
-            }
-
-    class BenchmarkGroup(Reporter.BenchmarkGroup):
-        def __init__(self, reporter: 'JsonReporter', name: str):
-            self.reporter = reporter
-            self.name = name
-            self.compiler_output = None
-            self.benchmarks = []
-
-        def compilation(self,
-                        compiler: Compiler) -> 'Reporter.CompilationProxy':
-            if self.compiler_output is not None:
-                raise RuntimeError(
-                    'Must not compiler code twice in benchmark group')
-            self.compiler_output = {}
-            return JsonReporter.CompilationProxy(self.compiler_output,
-                                                 compiler)
-
-        def benchmark(self, test: str, output: RunnerOutput):
-            self.benchmarks.append(
-                output_to_json(test, output, True,
-                               self.reporter.config.export_streams))
-
-        def is_success(self):
-            return self.compiler_output['status'] == 0 and all(
-                benchmark['success'] and benchmark['errors'] == 0
-                for benchmark in self.benchmarks)
-
-        def to_json(self):
-            return {
-                'name': self.name,
-                'compiler_output': self.compiler_output,
-                'benchmarks': self.benchmarks,
+                f'{self.kind}s': self.outputs,
             }
 
     class AnalysisGroup(Reporter.AnalysisGroup):
@@ -528,7 +589,7 @@ class JsonReporter(Reporter):
             }
 
     class CompilationProxy(Reporter.CompilationProxy):
-        def __init__(self, output: Dict[str, Union[str, int]],
+        def __init__(self, output: Dict[str, Union[str, int, list]],
                      compiler: Compiler):
             self.output = output
             self.compiler = compiler
@@ -538,6 +599,8 @@ class JsonReporter(Reporter):
             self.output['status'] = result.returncode
             self.output['stdout'] = result.stdout
             self.output['stderr'] = result.stderr
+            errors = analyze_compile_errors(result.stderr)
+            self.output['errors'] = errors
             return result
 
     def __init__(self, config: Config):
@@ -546,13 +609,13 @@ class JsonReporter(Reporter):
         self.benchmark_groups = []
         self.analysis_groups = []
 
-    def test_group(self, name: str, tests: List[str]) -> 'TestGroup':
-        group = JsonReporter.TestGroup(self, name)
+    def test_group(self, name: str, tests: List[str]) -> 'RunGroup':
+        group = JsonReporter.RunGroup(self, 'test', name)
         self.test_groups.append(group)
         return group
 
-    def benchmark_group(self, name: str, tests: List[str]) -> 'BenchmarkGroup':
-        group = JsonReporter.BenchmarkGroup(self, name)
+    def benchmark_group(self, name: str, tests: List[str]) -> 'RunGroup':
+        group = JsonReporter.RunGroup(self, 'benchmark', name)
         self.benchmark_groups.append(group)
         return group
 
@@ -562,6 +625,9 @@ class JsonReporter(Reporter):
         return group
 
     def log(self, msg: str, kind=None):
+        pass  # No logging with json output
+
+    def log_sep(self):
         pass  # No logging with json output
 
     def finalize(self):

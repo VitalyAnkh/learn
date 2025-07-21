@@ -1,3 +1,6 @@
+#ifndef PPC_PPC_H
+#define PPC_PPC_H
+
 #include <algorithm>
 #include <cassert>
 #include <chrono>
@@ -19,10 +22,28 @@
 #include <cuda_runtime.h>
 #endif
 
-#ifdef __linux__
-#include <asm/unistd.h>
-#include <linux/perf_event.h>
-#include <sys/ioctl.h>
+#include "perf.h"
+
+// utility macros used in the testers
+#define CHECK_READ(x)     \
+    do {                  \
+        if (!(x)) {       \
+            std::exit(1); \
+        }                 \
+    } while (false)
+
+#define CHECK_END(x)      \
+    do {                  \
+        std::string _tmp; \
+        if (x >> _tmp) {  \
+            std::exit(1); \
+        }                 \
+    } while (false)
+
+#ifdef __clang__
+typedef long double pfloat;
+#else
+typedef __float128 pfloat;
 #endif
 
 namespace ppc {
@@ -202,211 +223,29 @@ inline std::ostream &operator<<(std::ostream &out, const ppc::timer &timer) {
     return out;
 }
 
-#ifdef __linux__
-namespace {
-int perf_event_open(struct perf_event_attr *hw_event, pid_t pid,
-                    int cpu, int group_fd, unsigned long flags) {
-    return syscall(__NR_perf_event_open, hw_event, pid, cpu, group_fd, flags);
-}
-
-struct read_format {
-    long long value;        /* The value of the event */
-    long long time_enabled; /* if PERF_FORMAT_TOTAL_TIME_ENABLED */
-    long long time_running; /* if PERF_FORMAT_TOTAL_TIME_RUNNING */
-};
-} // namespace
-#endif
-
-class perf {
-  private:
-    bool running;
-    std::chrono::nanoseconds elapsed;
-    std::chrono::nanoseconds elapsed_cputime;
-    std::chrono::time_point<std::chrono::steady_clock> begin;
-    std::chrono::nanoseconds begin_cputime;
-
-#ifdef __linux__
-
-    // helper class to manage file handles
-    class FD {
-      public:
-        int fd;
-
-        FD() {
-            fd = -1;
-        }
-
-        ~FD() {
-            if (fd != -1) {
-                close(fd);
-            }
-        }
-
-        FD(const FD &other) = delete;
-        FD(FD &&other)
-        noexcept {
-            fd = other.fd;
-            other.fd = -1;
-        }
-        FD &operator=(const FD &other) = delete;
-        FD &operator=(FD &&other) noexcept {
-            if (fd != -1) {
-                close(fd);
-            }
-            fd = other.fd;
-            other.fd = -1;
-            return *this;
-        }
-    };
-
-    FD inst;
-    FD cycles;
-    FD branches;
-    FD branch_misses;
-
-#endif // __linux__
-
-    std::chrono::nanoseconds get_cputime() {
-        using namespace std::chrono;
-        struct rusage ru;
-        getrusage(RUSAGE_SELF, &ru);
-        auto dur = seconds(ru.ru_utime.tv_sec) + microseconds(ru.ru_utime.tv_usec);
-        return duration_cast<nanoseconds>(dur);
-    }
-
-  public:
-    perf() {
-        running = false;
-        elapsed = std::chrono::nanoseconds::zero();
-        elapsed_cputime = std::chrono::nanoseconds::zero();
-
-#ifdef __linux__
-
-        char *cfg = std::getenv("PPC_PERF");
-        if (!cfg || strcmp(cfg, "") == 0)
-            return;
-
-        struct perf_event_attr pe;
-
-        memset(&pe, 0, sizeof(pe));
-        //attributes for all events
-        pe.size = sizeof(pe);
-        pe.exclude_kernel = 1;
-        pe.exclude_hv = 1;
-        pe.inherit = 1;
-
-        // specific to group leader (created first)
-        pe.pinned = 1;
-        pe.disabled = 1;
-        pe.read_format = PERF_FORMAT_TOTAL_TIME_ENABLED | PERF_FORMAT_TOTAL_TIME_RUNNING;
-        pe.type = PERF_TYPE_HARDWARE;
-        pe.config = PERF_COUNT_HW_INSTRUCTIONS;
-
-        inst.fd = perf_event_open(&pe, 0, -1, -1, 0);
-
-        // others will pass the group leader's fd to be part of the same group
-        int group_fd = inst.fd;
-        pe.disabled = 0;
-        pe.pinned = 0;
-        pe.read_format = 0;
-
-        pe.type = PERF_TYPE_HARDWARE;
-        pe.config = PERF_COUNT_HW_CPU_CYCLES;
-        cycles.fd = perf_event_open(&pe, 0, -1, group_fd, 0);
-
-        pe.type = PERF_TYPE_HARDWARE;
-        pe.config = PERF_COUNT_HW_BRANCH_INSTRUCTIONS;
-        branches.fd = perf_event_open(&pe, 0, -1, group_fd, 0);
-
-        pe.type = PERF_TYPE_HARDWARE;
-        pe.config = PERF_COUNT_HW_BRANCH_MISSES;
-        branch_misses.fd = perf_event_open(&pe, 0, -1, group_fd, 0);
-
-#endif // __linux__
-    }
-
-    void start() {
-        if (running)
-            return;
-        running = true;
-        begin_cputime = get_cputime();
-        begin = std::chrono::steady_clock::now();
-
-#ifdef __linux__
-        if (inst.fd != -1) {
-            ioctl(inst.fd, PERF_EVENT_IOC_ENABLE, 0);
-        }
-#endif
-    }
-
-    void stop() {
-        if (!running)
-            return;
-
-#ifdef __linux__
-        if (inst.fd != -1) {
-            ioctl(inst.fd, PERF_EVENT_IOC_DISABLE, 0);
-        }
-#endif
-
-        auto end = std::chrono::steady_clock::now();
-        auto end_cputime = get_cputime();
-        elapsed += end - begin;
-        elapsed_cputime += end_cputime - begin_cputime;
-        running = false;
-    }
-
-    void print_to(std::ostream &stream) {
-        bool resume = running;
-        if (running) {
-            stop();
-        }
-
-        stream << "perf_wall_clock_ns\t" << elapsed.count() << '\n';
-
-        bool got_cpu_time = false;
-
-#ifdef __linux__
-        struct read_format buf;
-        if (inst.fd != -1 && read(inst.fd, &buf, 24) == 24) {
-            got_cpu_time = true;
-            stream << "perf_cpu_time_ns\t" << buf.time_enabled << '\n';
-            stream << "perf_instructions\t" << buf.value << '\n';
-            if (cycles.fd != -1 && read(cycles.fd, &buf.value, 8) == 8) {
-                stream << "perf_cycles\t" << buf.value << '\n';
-            }
-            if (branches.fd != -1 && read(branches.fd, &buf.value, 8) == 8) {
-                stream << "perf_branches\t" << buf.value << '\n';
-            }
-            if (branch_misses.fd != -1 && read(branch_misses.fd, &buf.value, 8) == 8) {
-                stream << "perf_branch_misses\t" << buf.value << '\n';
-            }
-        }
-#endif // __linux__
-
-        if (!got_cpu_time) {
-            stream << "perf_cpu_time_ns\t" << elapsed_cputime.count() << '\n';
-        }
-
-        if (resume) {
-            start();
-        }
-    }
-};
-
 template <typename T>
 inline void print_matrix(int ny, int nx, T *data, std::unique_ptr<ppc::fdostream> &stream) {
-    *stream << "[";
-    for (int i = 0; i < ny - 1; ++i) {
-        for (int j = 0; j < nx; ++j)
-            *stream << " " << std::scientific << data[j + i * nx];
-        *stream << ";";
+    // https://stackoverflow.com/a/25942843
+    std::ios old_format(nullptr);
+    old_format.copyfmt(*stream);
+
+    if constexpr (std::is_floating_point_v<T>) {
+        *stream << std::scientific;
     }
 
-    for (int j = 0; j < nx; ++j)
-        *stream << " " << std::scientific << data[j + (ny - 1) * nx];
+    *stream << "[";
+    for (int i = 0; i < ny; ++i) {
+        for (int j = 0; j < nx; ++j) {
+            // The plus operator ensures that chars are also printed as numbers
+            *stream << " " << +data[j + i * nx];
+        }
+        if (i != ny - 1) {
+            *stream << ";";
+        }
+    }
 
     *stream << " ]";
+    stream->copyfmt(old_format);
 }
 
 #ifdef __NVCC__
@@ -425,6 +264,15 @@ inline void reset_cuda_device() {
         std::exit(EXIT_FAILURE);
     }
 }
+inline void cuda_check(cudaError_t err, const char *file, int line, const char *message) {
+    if (err != cudaSuccess) {
+        std::cerr << file << ":" << line << ":\n"
+                  << message << ": "
+                  << cudaGetErrorString(err) << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+}
+#define PPC_CUDA_CHECK(status, message) ppc::cuda_check(status, __FILE__, __LINE__, message)
 #else
 inline void setup_cuda_device() {
     // Nothing to do without cuda
@@ -433,5 +281,8 @@ inline void setup_cuda_device() {
 inline void reset_cuda_device() {
     // Nothing to do without cuda
 }
+#define PPC_CUDA_CHECK(status, message)
 #endif
 } // namespace ppc
+
+#endif // PPC_H

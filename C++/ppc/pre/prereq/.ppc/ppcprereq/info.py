@@ -1,75 +1,8 @@
-import math
+from ppcgrader.info_utils import *
 
 code = "prereq"
 name = "Pre"
 descr = "prerequisite test"
-
-
-def readable(x):
-    if abs(x) >= 100:
-        return f'{x:.0f}'
-    if abs(x) >= 10:
-        return f'{x:.1f}'
-    i = 0
-    while x != 0 and float(f'{x:.{i}f}') == 0:
-        i += 1
-    i += 2
-    return f'{x:.{i}f}'
-
-
-def isnum(v):
-    return v is not None and (isinstance(v, int) or
-                              (isinstance(v, float) and math.isfinite(v)))
-
-
-def safeget3(m, i, j, k):
-    try:
-        return m[i][j][k]
-    except IndexError:
-        return None
-    except TypeError:
-        return None
-
-
-def safenum(v, default=0):
-    if isnum(v):
-        return v
-    else:
-        return default
-
-
-def saferatio(x, y, f):
-    if isnum(x) and isnum(y):
-        return x < f * y
-    else:
-        return False
-
-
-def safeprint(v, fmt='{:+.8f}'):
-    if v is None:
-        return '–'
-    elif isnum(v):
-        return fmt.format(v)
-    else:
-        return str(v)
-
-
-def safeprintt(v, fmt='{:+.8f}', sfmt='{:>11s}'):
-    if v is None:
-        return '–'
-    elif isnum(v):
-        return fmt.format(v)
-    else:
-        return sfmt.format(v)
-
-
-def safereadable(v):
-    if v is None:
-        return '–'
-    elif isnum(v):
-        return readable(v)
-    else:
-        return str(v)
 
 
 def html():
@@ -106,11 +39,8 @@ Result calculate(int ny, int nx, const float *data,
 """)
 
 
-def explain_web(test):
-    from jinja2 import Template
-    from markupsafe import Markup
-
-    templ_basic = Template("""
+def explain_web(raw: dict):
+    templ_basic = """
 {% if input.ny and input.nx %}
     <p>In this test I called your function with the following parameters:</p>
     <ul class="compact">
@@ -133,9 +63,9 @@ def explain_web(test):
                     <td class="rowindex">{{ i }}</td>
                     {% for j in range(input.nx) %}
                         <td class="element">
-                            {{ safeprint(safeget3(input.data,i,j,0)) }}<br>
-                            {{ safeprint(safeget3(input.data,i,j,1)) }}<br>
-                            {{ safeprint(safeget3(input.data,i,j,2)) }}
+                            {{ safeprint(safeget(input.data,i,j,0)) }}<br>
+                            {{ safeprint(safeget(input.data,i,j,1)) }}<br>
+                            {{ safeprint(safeget(input.data,i,j,2)) }}
                         </td>
                     {% endfor %}
                 </tr>
@@ -161,18 +91,8 @@ def explain_web(test):
         <p>As the errors were relatively small, could they be maybe rounding errors? Perhaps you could double-check that you have done all arithmetic in double precision?</p>
     {% endif %}
 {% endif %}
-""")
-    return Markup(
-        templ_basic.render(
-            input=test.raw.get("input", {}),
-            output=test.raw.get("output", {}),
-            oe=test.raw.get("output_errors", {}),
-            safeget3=safeget3,
-            safenum=safenum,
-            saferatio=saferatio,
-            safeprint=safeprint,
-            safereadable=safereadable,
-        ))
+"""
+    return render_explain_web(templ_basic, raw)
 
 
 def explain_terminal(r, color=False):

@@ -1,1 +1,2 @@
+timeout 5.0
 gradient 1000 1000 500 500

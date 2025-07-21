@@ -102,3 +102,14 @@ add_executable(simple_host_register src/simple_host_register.cu)
 add_executable(cuda_fp8_cvt src/cuda_fp8_cvt.cu)
 
 add_executable(cuda_printf src/cuda_printf.cu)
+
+add_executable(dekker src/dekker.c)
+target_link_libraries(dekker pthread)
+
+add_executable(cuda_mma_tensor_core src/cuda_mma_tensor_core.cu)
+# target_link_libraries(cuda_mma_tensor_core pthread)
+target_compile_options(cuda_mma_tensor_core INTERFACE
+    "--gpu-architecture=compute_86"
+)
+set_target_properties(cuda_mma_tensor_core PROPERTIES CUDA_SEPARABLE_COMPILATION
+                                                    ON)

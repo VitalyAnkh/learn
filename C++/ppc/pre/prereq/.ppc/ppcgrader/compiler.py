@@ -1,5 +1,6 @@
+import math
 import subprocess
-from typing import List
+from typing import List, Optional, Dict, Union
 import re
 import copy
 from ppcgrader.logging import log_command
@@ -26,10 +27,37 @@ class CompilerOutput:
         return self.returncode == 0
 
 
+def _check_vla_error(text: str) -> bool:
+    # [-Werror=vla] is for gcc, the other for clang
+    return "[-Werror=vla]" in text or "[-Werror,-Wvla-extension]" in text
+
+
+def _check_omp_pragma_error(text: str) -> bool:
+    return "[-Wunknown-pragmas]" in text and "omp" in text
+
+
+def analyze_compile_errors(stderr: str) -> List[Dict[str, Union[str, int]]]:
+    errors = []
+    lines = stderr.splitlines()
+    for i in range(len(lines)):
+        if _check_vla_error(lines[i]):
+            errors.append({
+                'type': 'Wvla',
+                'line': i,
+            })
+        if _check_omp_pragma_error(lines[i]):
+            errors.append({
+                'type': 'omp',
+                'line': i,
+            })
+    return errors
+
+
 class Compiler:
     def __init__(self, program: str, common_flags: List[str]):
         self.sources = []
         self.flags = []
+        self.libs = []
         self.program = program
         self.common_flags = common_flags
 
@@ -38,41 +66,73 @@ class Compiler:
         me.sources.append(file)
         return me
 
+    def add_library(self, lib: str) -> 'Compiler':
+        me = copy.deepcopy(self)
+        if not lib.startswith("-l"):
+            lib = f"-l{lib}"
+        me.libs.append(lib)
+        return me
+
     def add_flag(self, *flags: str) -> 'Compiler':
         me = copy.deepcopy(self)
         me.flags.extend(flags)
         return me
 
     def add_omp_flags(self) -> 'Compiler':
-        self = self.add_flag('-fopenmp')
-        return self
+        return self.add_flag('-fopenmp')
 
-    def compile(self, out_file: str = 'a.out') -> CompilerOutput:
+    def add_definition(self, name: str, value: Optional = None) -> 'Compiler':
+        """
+        Adds a preprocessor definition to the compiler arguments.
+        :param name: Name of the macro to define
+        :param value: Value to assign to the macro. Can be None, in which case the macro is defined without a value.
+        """
+        if value is None:
+            return self.add_flag(f'-D{name}')
+        else:
+            return self.add_flag(f'-D{name}={value}')
+
+    def compile_command(self, out_file: str = 'a.out') -> List[str]:
+        return [self.program
+                ] + self.common_flags + self.flags + self.sources + [
+                    '-o', out_file
+                ] + self.libs
+
+    def compile(self,
+                out_file: str = 'a.out',
+                timeout: float = 10) -> CompilerOutput:
+        args = self.compile_command(out_file)
+        logged = log_command(args)
+        # subprocess.run cannot handle infinite timeouts, needs explicit None
+        if timeout is None or not math.isfinite(timeout):
+            timeout = None
+
         try:
-            args = [self.program
-                    ] + self.common_flags + self.flags + self.sources + [
-                        '-o', out_file
-                    ]
-            log_command(args)
             result = subprocess.run(args,
-                                    timeout=10,
+                                    timeout=timeout,
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE,
                                     encoding='utf-8',
                                     errors='utf-8')
+            output = CompilerOutput(result.stdout[:MAX_COMPILER_OUTPUT],
+                                    result.stderr[:MAX_COMPILER_OUTPUT],
+                                    result.returncode)
         except subprocess.TimeoutExpired:
-            return CompilerOutput(
+            output = CompilerOutput(
                 '',
-                'Compilation process took too much time, killed the process',
+                f'Compilation process took longer than {timeout}s, killed the process',
                 -1)
 
-        return CompilerOutput(result.stdout[:MAX_COMPILER_OUTPUT],
-                              result.stderr[:MAX_COMPILER_OUTPUT],
-                              result.returncode)
+        if not logged and not output.is_success():
+            log_command(args, 0)
 
-    def is_valid(self) -> bool:
+        return output
+
+    def is_valid(self, args: Optional[List[str]] = None) -> bool:
         try:
-            args = [self.program, '-dM', '-fopenmp', '-E', '-']
+            args = args if args else [
+                self.program, '-dM', '-fopenmp', '-E', '-'
+            ]
             log_command(args, 2)
             return subprocess.run(args,
                                   input='',
@@ -83,6 +143,22 @@ class Compiler:
                                   errors='utf-8').returncode == 0
         except AssertionError:
             return False
+        except FileNotFoundError:
+            sys.exit(f'''Program {self.program} not found.
+Check that the compiler is installed and in your PATH:
+
+    which {self.program}
+
+or
+
+    {self.program} --version
+''')
+        except PermissionError:
+            sys.exit(f'''Unable to execute {self.program}.
+Check that the compiler is working by, for example, running:
+
+    {self.program} --version
+ ''')
         except subprocess.TimeoutExpired:
             sys.exit(
                 'Testing compiler took too much time, killed the process.')
@@ -93,11 +169,14 @@ class Compiler:
 
 class GccCompiler(Compiler):
     def __init__(self, program: str = 'g++'):
+        self.version = GccCompiler.__get_version(program)
+
         super().__init__(program=program,
                          common_flags=[
                              '-std=c++2a',
                              '-Wall',
                              '-Wextra',
+                             '-Wvla',
                              '-Werror',
                              '-Wno-error=unknown-pragmas',
                              '-Wno-error=unused-but-set-variable',
@@ -113,6 +192,60 @@ class GccCompiler(Compiler):
                              '-fdiagnostics-color=never',
                          ])
 
+    @staticmethod
+    def __get_version(program: str):
+        try:
+            # currently the arm version of gcc from homebrew doesn't come with libasan and libubsan in which case we don't want to choose gcc
+            if platform.system() == 'Darwin' and platform.machine() == 'arm64':
+                args = [
+                    program, '-xc++', '-fsanitize=address',
+                    '-fsanitize=undefined', '-', '-o', '/dev/null'
+                ]
+                log_command(args, 2)
+                assert (subprocess.run(args,
+                                       timeout=10,
+                                       input="int main() { } ",
+                                       text=True,
+                                       stdout=subprocess.PIPE,
+                                       stderr=subprocess.PIPE).returncode == 0)
+
+            args = [program, '-dM', '-fopenmp', '-E', '-']
+            log_command(args, 2)
+            output = subprocess.run(args,
+                                    input='',
+                                    timeout=10,
+                                    stdout=subprocess.PIPE,
+                                    stderr=subprocess.PIPE,
+                                    encoding='utf-8',
+                                    errors='utf-8')
+            if output.returncode == 0:
+                lines = output.stdout.split('\n')
+                matches = [
+                    re.match('^#define (\\w+) (.*)$', line) for line in lines
+                ]
+                macros = {
+                    match.group(1): match.group(2)
+                    for match in matches if match is not None
+                }
+
+                if '__clang__' not in macros and '_OPENMP' in macros:
+                    # We don't want to choose clang in any case
+                    try:
+                        return (int(macros['__GNUC__']),
+                                int(macros['__GNUC_MINOR__']),
+                                int(macros['__GNUC_PATCHLEVEL__']))
+                    except TypeError:
+                        pass
+
+        except FileNotFoundError:
+            pass
+        except AssertionError:
+            pass
+        except PermissionError:
+            pass
+
+        return None
+
     def __repr__(self):
         return f'GCC compiler ({self.program})'
 
@@ -125,16 +258,18 @@ class ClangCompiler(Compiler):
             '-std=c++2a',
             '-Wall',
             '-Wextra',
+            '-Wvla',
             '-Werror',
+            '-Wno-unknown-warning-option',
             '-Wno-error=unknown-pragmas',
-            # '-Wno-error=unused-but-set-variable',
+            '-Wno-error=unused-but-set-variable',
             '-Wno-error=unused-local-typedefs',
             '-Wno-error=unused-function',
             '-Wno-error=unused-label',
             '-Wno-error=unused-value',
             '-Wno-error=unused-variable',
             '-Wno-error=unused-parameter',
-            # '-Wno-error=unused-but-set-parameter',
+            '-Wno-error=unused-but-set-parameter',
             '-march=native',
         ]
         if platform.system() == 'Darwin' and platform.machine() == 'arm64':
@@ -183,6 +318,8 @@ class ClangCompiler(Compiler):
                         pass
 
         except FileNotFoundError:
+            pass
+        except PermissionError:
             pass
 
         return [None, None]
@@ -254,45 +391,46 @@ Or alternatively you can try to install GCC and use it instead of Clang:
 I should be able to find the right packages and compilers then!'''
                 sys.exit(message)
 
+            # Nowadays OpenMP installation on brew has some quirks
+            # > $ brew info libomp
+            # > libomp is keg-only, which means it was not symlinked into /opt/homebrew,
+            # > because it can override GCC headers and result in broken builds.
+            # >
+            # > For compilers to find libomp you may need to set:
+            # >   export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+            # >   export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+            #
+            # Let's try to guess these paths based, and still keep the old paths
+
             self = self.add_flag('-Xpreprocessor', '-fopenmp')
             self = self.add_flag('-I', f'{brew_dir}/include')
+            self = self.add_flag('-I', f'{brew_dir}/opt/libomp/include')
             if sys.argv[1] != 'assembly':
                 self = self.add_flag('-lomp')
                 self = self.add_flag('-L', f'{brew_dir}/lib')
+                self = self.add_flag('-L', f'{brew_dir}/opt/libomp/lib')
 
         else:
             self = self.add_flag('-fopenmp')
         return self
 
     def is_valid(self) -> bool:
-        try:
-            args = [self.program, '-dM', '-fopenmp', '-E', '-']
-            if platform.system() == 'Darwin':
-                args = [
-                    self.program, '-dM', '-Xpreprocessor', '-fopenmp', '-E',
-                    '-'
-                ]
-            log_command(args, 2)
-            return subprocess.run(args,
-                                  input='',
-                                  timeout=10,
-                                  stdout=subprocess.PIPE,
-                                  stderr=subprocess.PIPE,
-                                  encoding='utf-8',
-                                  errors='utf-8').returncode == 0
-        except AssertionError:
-            return False
-        except subprocess.TimeoutExpired:
-            sys.exit(
-                'Testing compiler took too much time, killed the process.')
+        if platform.system() == 'Darwin':
+            return super().is_valid(
+                [self.program, '-dM', '-Xpreprocessor', '-fopenmp', '-E', '-'])
+        else:
+            return super().is_valid()
 
 
 class NvccCompiler(Compiler):
     def __init__(self, program: str = 'nvcc'):
         super().__init__(program=program,
                          common_flags=[
-                             '-Xcompiler',
-                             '-std=c++14',
+                             '-std=c++17',
+                             '--Werror',
+                             'cross-execution-space-call',
+                             '-Xptxas',
+                             '--warn-on-spills',
                              '-Xcompiler',
                              '"-Wall"',
                              '-Xcompiler',
@@ -322,106 +460,24 @@ class NvccCompiler(Compiler):
     def __repr__(self):
         return f'NVCC compiler ({self.program})'
 
-    def compile(self, out_file: str = 'a.out') -> CompilerOutput:
-        try:
-            args = [self.program
-                    ] + self.common_flags + self.flags + self.sources + [
-                        '-o', out_file
-                    ]
-            log_command(args)
-            result = subprocess.run(args,
-                                    timeout=10,
-                                    stdout=subprocess.PIPE,
-                                    stderr=subprocess.PIPE,
-                                    encoding='utf-8',
-                                    errors='utf-8')
-        except subprocess.TimeoutExpired:
-            return CompilerOutput(
-                '',
-                'Compilation process took too much time, killed the process',
-                -1)
-
-        return CompilerOutput(result.stdout[:MAX_COMPILER_OUTPUT],
-                              result.stderr[:MAX_COMPILER_OUTPUT],
-                              result.returncode)
-
     def add_omp_flags(self) -> 'Compiler':
-        self.common_flags += ['-Xcompiler' '-fopenmp']
+        self.common_flags += ['-Xcompiler', '-fopenmp']
         return self
 
     def is_valid(self) -> bool:
-        try:
-            args = [self.program, '-Xcompiler', '-dM', '-x', 'cu', '-E', '-']
-            log_command(args, 2)
-            return subprocess.run(args,
-                                  input='',
-                                  timeout=10,
-                                  stdout=subprocess.PIPE,
-                                  stderr=subprocess.PIPE,
-                                  encoding='utf-8',
-                                  errors='utf-8').returncode == 0
-        except AssertionError:
-            return False
-        except subprocess.TimeoutExpired:
-            sys.exit(
-                'Testing compiler took too much time, killed the process.')
+        return super().is_valid(
+            [self.program, '-Xcompiler', '-dM', '-x', 'cu', '-E', '-'])
 
 
 def find_gcc_compiler():
     best = None
     for program in GCC_BINARIES:
-        try:
-            # currently the arm version of gcc from homebrew doesn't come with libasan and libubsan in which case we don't want to choose gcc
-            if platform.system() == 'Darwin' and platform.machine() == 'arm64':
-                args = [
-                    program, '-xc++', '-fsanitize=address',
-                    '-fsanitize=undefined', '-', '-o', '/dev/null'
-                ]
-                log_command(args, 2)
-                assert (subprocess.run(args,
-                                       timeout=10,
-                                       input="int main() { } ",
-                                       text=True,
-                                       stdout=subprocess.PIPE,
-                                       stderr=subprocess.PIPE).returncode == 0)
-
-            args = [program, '-dM', '-fopenmp', '-E', '-']
-            log_command(args, 2)
-            output = subprocess.run(args,
-                                    input='',
-                                    timeout=10,
-                                    stdout=subprocess.PIPE,
-                                    stderr=subprocess.PIPE,
-                                    encoding='utf-8',
-                                    errors='utf-8')
-            if output.returncode == 0:
-                lines = output.stdout.split('\n')
-                matches = [
-                    re.match('^#define (\\w+) (.*)$', line) for line in lines
-                ]
-                macros = {
-                    match.group(1): match.group(2)
-                    for match in matches if match is not None
-                }
-
-                if '__clang__' not in macros and '_OPENMP' in macros:
-                    # We don't want to choose clang in any case
-                    try:
-                        version = (int(macros['__GNUC__']),
-                                   int(macros['__GNUC_MINOR__']),
-                                   int(macros['__GNUC_PATCHLEVEL__']))
-                        if version[0] >= MIN_GCC and (best is None
-                                                      or best[1] < version):
-                            best = (program, version)
-                    except TypeError:
-                        pass
-
-        except FileNotFoundError:
-            pass
-        except AssertionError:
-            pass
+        compiler = GccCompiler(program)
+        if compiler.version and compiler.version[0] >= MIN_GCC and (
+                best is None or best.version < compiler.version):
+            best = compiler
     if best is not None:
-        return GccCompiler(best[0])
+        return best
 
 
 def find_clang_compiler():

@@ -255,21 +255,6 @@ static TestCase generate_color_rects(int ny, int nx, int sy, int sx) {
     };
 }
 
-#define CHECK_READ(x) \
-    do {              \
-        if (!(x)) {   \
-            exit(4);  \
-        }             \
-    } while (false)
-
-#define CHECK_END(x)      \
-    do {                  \
-        std::string _tmp; \
-        if (x >> _tmp) {  \
-            exit(4);      \
-        }                 \
-    } while (false)
-
 int main(int argc, const char **argv) {
     const char *ppc_output = std::getenv("PPC_OUTPUT");
     int ppc_output_fd = 0;

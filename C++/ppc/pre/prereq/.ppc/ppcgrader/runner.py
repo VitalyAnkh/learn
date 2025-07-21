@@ -4,6 +4,7 @@ import io
 import os
 import re
 import subprocess
+import sys
 import tempfile
 from ppcgrader.logging import log_command
 
@@ -43,33 +44,23 @@ class RunnerOutput:
 
 
 class AsanRunnerOutput(RunnerOutput):
-    def __init__(
-        self,
-        run_successful: bool,
-        timed_out: bool,
-        stdout: str,
-        stderr: str,
-        timeout: Optional[float],
-        asanoutput: str,
-        time: Optional[float] = None,
-        errors: Optional[bool] = None,
-        input_data=None,
-        output_data=None,
-        output_errors=None,
-        statistics=None,
-    ):
-        self.run_successful = run_successful
-        self.timed_out = timed_out
-        self.stdout = stdout
-        self.stderr = stderr
-        self.timeout = timeout
-        self.time = time
-        self.errors = errors
+    def __init__(self,
+                 run_successful: bool,
+                 timed_out: bool,
+                 stdout: str,
+                 stderr: str,
+                 timeout: Optional[float],
+                 asanoutput: Optional[str],
+                 time: Optional[float] = None,
+                 errors: Optional[bool] = None,
+                 input_data=None,
+                 output_data=None,
+                 output_errors=None,
+                 statistics=None):
+        super().__init__(run_successful, timed_out, stdout, stderr, timeout,
+                         time, errors, input_data, output_data, output_errors,
+                         statistics)
         self.asanoutput = asanoutput
-        self.input_data = input_data
-        self.output_data = output_data
-        self.output_errors = output_errors
-        self.statistics = statistics
 
 
 class MemcheckRunnerOutput(RunnerOutput):
@@ -88,18 +79,10 @@ class MemcheckRunnerOutput(RunnerOutput):
         output_errors=None,
         statistics=None,
     ):
-        self.run_successful = run_successful
-        self.timed_out = timed_out
-        self.stdout = stdout
-        self.stderr = stderr
-        self.timeout = timeout
-        self.time = time
-        self.errors = errors
+        super().__init__(run_successful, timed_out, stdout, stderr, timeout,
+                         time, errors, input_data, output_data, output_errors,
+                         statistics)
         self.memcheckoutput = memcheckoutput
-        self.input_data = input_data
-        self.output_data = output_data
-        self.output_errors = output_errors
-        self.statistics = statistics
 
 
 class NvprofRunnerOutput(RunnerOutput):
@@ -110,16 +93,18 @@ class NvprofRunnerOutput(RunnerOutput):
 
 
 class Runner:
-    def run(self, config, args: List[str],
-            timeout: Optional[float]) -> RunnerOutput:
+    def run(self,
+            config,
+            args: List[str],
+            timeout: Optional[float],
+            measure: str = '') -> RunnerOutput:
         env = os.environ.copy()
 
         ppc_output_read, ppc_output_write = os.pipe()
         env['PPC_OUTPUT'] = str(ppc_output_write)
+        env['PPC_PERF'] = measure
 
-        env['PPC_PERF'] = 'default'
-
-        log_command(args)
+        logged = log_command(args)
         process = subprocess.Popen(args,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE,
@@ -149,6 +134,8 @@ class Runner:
             output = os.fdopen(ppc_output_read, 'r').read()
             results = config.parse_output(output)
         else:
+            if not logged:
+                log_command(args, 0)
             os.close(ppc_output_read)
             results = []
 
@@ -157,14 +144,29 @@ class Runner:
 
 
 class NvprofRunner(Runner):
-    def run(self, config, args: List[str],
-            timeout: Optional[float]) -> RunnerOutput:
+    def run(self,
+            config,
+            args: List[str],
+            timeout: Optional[float],
+            measure: str = 'default') -> RunnerOutput:
         env = os.environ.copy()
 
         ppc_output_read, ppc_output_write = os.pipe()
         env['PPC_OUTPUT'] = str(ppc_output_write)
 
-        env['PPC_PERF'] = 'default'
+        env['PPC_PERF'] = measure
+        # Hide the following in stderr:
+        # > hwloc/linux: failed to find sysfs cpu topology directory, aborting linux discovery.
+        #
+        # This is caused by nvprof trying to access /sys, which is not mounted
+        # inside the sandbox. Apparently nvprof wants to know the CPU topology.
+        # We don't really care about that as we only record the GPU trace.
+        #
+        # Ref:
+        # - https://github.com/open-mpi/hwloc/blob/c88afaf23b2caa41b6b4fdaa73dadc5f8b01bf88/hwloc/topology-linux.c#L6113
+        # - https://github.com/open-mpi/hwloc/blob/c88afaf23b2caa41b6b4fdaa73dadc5f8b01bf88/include/hwloc/plugins.h#L378
+        # - https://github.com/open-mpi/hwloc/blob/c88afaf23b2caa41b6b4fdaa73dadc5f8b01bf88/doc/hwloc.doxy#L1063
+        env['HWLOC_HIDE_ERRORS'] = '2'
 
         # Run with nvprof
         nvprof_output_file = tempfile.NamedTemporaryFile('r')
@@ -179,7 +181,7 @@ class NvprofRunner(Runner):
             '--',
         ] + args
 
-        log_command(args)
+        logged = log_command(args)
         process = subprocess.Popen(args,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE,
@@ -254,6 +256,8 @@ class NvprofRunner(Runner):
             # Let's parse the PID part and use ==PID== as a comment marker in the future
             first_line = nvprofoutput_raw.split('\n', 1)[0]
             m = re.match(r'^==(\d+)== (.*)', first_line)
+            if m is None:
+                raise ValueError
             pid = m.group(1)
             section = m.group(2)
             r = re.compile(fr'^=={re.escape(pid)}== (.*?)$', re.MULTILINE)
@@ -297,6 +301,8 @@ class NvprofRunner(Runner):
             output = os.fdopen(ppc_output_read, 'r').read()
             results = config.parse_output(output)
         else:
+            if not logged:
+                log_command(args, 0)
             os.close(ppc_output_read)
             results = []
 
@@ -325,7 +331,7 @@ class AsanRunner(Runner):
         ppc_output_read, ppc_output_write = os.pipe()
         env['PPC_OUTPUT'] = str(ppc_output_write)
 
-        log_command(args)
+        logged = log_command(args)
         process = subprocess.Popen(args,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE,
@@ -364,6 +370,8 @@ class AsanRunner(Runner):
             output = os.fdopen(ppc_output_read, 'r').read()
             results = config.parse_output(output)
         else:
+            if not logged:
+                log_command(args, 0)
             os.close(ppc_output_read)
             results = []
 
@@ -376,7 +384,7 @@ class MemcheckRunner(Runner):
         self.env = {}
         self.tool = tool
 
-    def run(self, config, args: List[str],
+    def run(self, config, base_args: List[str],
             timeout: float) -> MemcheckRunnerOutput:
         env = os.environ.copy()
         env.update(self.env)
@@ -386,31 +394,40 @@ class MemcheckRunner(Runner):
 
         # Run with memcheck
         memcheck_output_file = tempfile.NamedTemporaryFile('r')
-        args = [
-            'cuda-memcheck',
-            '--tool',
-            self.tool,
-            '--log-file',
-            memcheck_output_file.name,
-            '--error-exitcode',
-            '1',
-            '--prefix',
-            ' ',
-            '--print-limit',
-            '1000',
-            *(['--leak-check', 'full'] if self.tool == 'memcheck' else []),
-            '--',
-        ] + args
+        for sanitizer in ['compute-sanitizer', 'cuda-memcheck']:
+            args = [
+                sanitizer,
+                '--tool',
+                self.tool,
+                '--log-file',
+                memcheck_output_file.name,
+                '--error-exitcode',
+                '1',
+                '--prefix',
+                ' ',
+                '--print-limit',
+                '1000',
+                *(['--leak-check', 'full'] if self.tool == 'memcheck' else []),
+            ] + base_args
 
-        log_command(args)
-        process = subprocess.Popen(args,
-                                   stdout=subprocess.PIPE,
-                                   stderr=subprocess.PIPE,
-                                   stdin=subprocess.DEVNULL,
-                                   env=env,
-                                   encoding='utf-8',
-                                   errors='utf-8',
-                                   pass_fds=(ppc_output_write, ))
+            logged = log_command(args)
+            try:
+                process = subprocess.Popen(args,
+                                           stdout=subprocess.PIPE,
+                                           stderr=subprocess.PIPE,
+                                           stdin=subprocess.DEVNULL,
+                                           env=env,
+                                           encoding='utf-8',
+                                           errors='utf-8',
+                                           pass_fds=(ppc_output_write, ))
+                break  # Sanitizer found and run. Stop the search
+            except FileNotFoundError:
+                pass  # This sanitizer was not found, but that's not critical, yet
+        else:
+            # Sanitizer was not found after multiple attempts
+            sys.exit(
+                f"I'm sorry, but I could not find compute-sanitizer or cuda-memcheck. Please install either of them to run this command"
+            )
         os.close(ppc_output_write)
 
         try:
@@ -434,6 +451,9 @@ class MemcheckRunner(Runner):
             '  CUDA-MEMCHECK\n  LEAK SUMMARY: 0 bytes leaked in 0 allocations\n  ERROR SUMMARY: 0 errors\n',
             '  CUDA-MEMCHECK\n  RACECHECK SUMMARY: 0 hazards displayed (0 errors, 0 warnings) \n',
             '  CUDA-MEMCHECK\n  ERROR SUMMARY: 0 errors\n',
+            '  COMPUTE-SANITIZER\n  LEAK SUMMARY: 0 bytes leaked in 0 allocations\n  ERROR SUMMARY: 0 errors\n',
+            '  COMPUTE-SANITIZER\n  RACECHECK SUMMARY: 0 hazards displayed (0 errors, 0 warnings)\n',
+            '  COMPUTE-SANITIZER\n  ERROR SUMMARY: 0 errors\n',
         ]
         if memcheckoutput in no_outputs:
             memcheckoutput = None
@@ -442,6 +462,8 @@ class MemcheckRunner(Runner):
             output = os.fdopen(ppc_output_read, 'r').read()
             results = config.parse_output(output)
         else:
+            if not logged:
+                log_command(args, 0)
             os.close(ppc_output_read)
             results = []
 
