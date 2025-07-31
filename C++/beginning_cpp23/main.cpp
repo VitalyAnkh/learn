@@ -1,5 +1,4 @@
-import <iostream>;
-import <limits>;
+import std;
 
 int main() {
   int min{std::numeric_limits<int>::max()};

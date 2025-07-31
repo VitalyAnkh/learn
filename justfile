@@ -174,9 +174,7 @@ config_apue:
 cuda_play:
   #!/usr/bin/env bash
   echo "==== config CUDA play ===="
-  pwd
   cd $HOME/projects/dev/learn/C++/cuda_play
-  pwd
   trash-put build
   mkdir -p build
   cmake -B build -G "Ninja" \
@@ -187,3 +185,17 @@ cuda_play:
   cd build
   time ninja all -j$(nproc)
   echo "==== config CUDA play done ===="
+
+cpp23:
+  #!/usr/bin/env bash
+  echo "==== config beginning cpp23 ===="
+  cd $HOME/projects/dev/learn/C++/beginning_cpp23
+  rm -rf build
+  mkdir -p build
+  cmake -B build -G "Ninja" \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_CXX_STANDARD=23 \
+    -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$LD_LIBRARY_PATH"
+  cd build && time ninja all -j$(nproc)
+  echo "==== config beginning cpp23 done ===="
