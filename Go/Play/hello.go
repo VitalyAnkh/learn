@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	fmt.Println("Hello, goland")
 	fmt.Println("Hello, vscode")
 }

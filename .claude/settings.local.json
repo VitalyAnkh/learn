@@ -26,8 +26,13 @@
       "WebFetch(domain:discourse.nixos.org)",
       "Bash(bash:*)",
       "Bash(timeout:*)",
-      "Bash(true)"
+      "Bash(true)",
+      "Bash(sccache:*)",
+      "Bash(top:*)"
     ],
-    "deny": []
+    "deny": [],
+    "additionalDirectories": [
+      "/home/vitalyr/projects/dev/cpp/llvm-project"
+    ]
   }
 }

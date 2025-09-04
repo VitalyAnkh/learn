@@ -23,7 +23,6 @@
         "x86_64-darwin" # 64-bit Intel macOS
         "aarch64-darwin" # 64-bit ARM macOS
       ];
-
       # Helper to provide system-specific attributes
       forAllSystems =
         f:
@@ -49,6 +48,7 @@
           default = pkgs.mkShell {
             # Use minimal stdenv to avoid interference
             stdenv = pkgs.stdenv;
+            python = pkgs.python3;
             # The Nix packages provided in the environment
             packages = with pkgs; [
               boost # The Boost libraries
@@ -104,6 +104,20 @@
               python313Packages.pip
               python313Packages.wheel
               python313Packages.setuptools
+              # python313Packages.torch-bin
+              python313Packages.torch
+              python313Packages.torchvision
+              python313Packages.torchaudio
+              # python313Packages.torchaudio-bin
+              python313Packages.torch-audiomentations
+              python313Packages.jax
+              python313Packages.jax-cuda12-plugin
+              python313Packages.librosa
+              python313Packages.jiwer
+              python313Packages.datasets
+              python313Packages.transformers
+              python313Packages.evaluate
+              python313Packages.accelerate
               trash-cli # For justfile 'trash-put' command
               git # For LLVM source management
               cmake # Ensure latest CMake for LLVM
@@ -113,15 +127,19 @@
 
             shellHook = ''
               # export GCC_PREFIX="${pkgs.stdenv.cc.cc}"
+              # export UV_PYTHON_PREFERENCE="only-system";
+              # export UV_PYTHON=${pkgs.python3}
               export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib.outPath}/lib:${pkgs.linuxPackages.nvidia_x11_vulkan_beta_open}/lib:${pkgs.zlib}/lib:${pkgs.cudatoolkit}/lib64:${pkgs.cudaPackages.cuda_cudart}/lib:${pkgs.cudaPackages.cuda_cudart.static}/lib:$LD_LIBRARY_PATH"
               export CUDA_PATH=${pkgs.cudatoolkit}
               export CUDA_ROOT=${pkgs.cudatoolkit}
               export EXTRA_LDFLAGS="-L${pkgs.linuxPackages.nvidia_x11_vulkan_beta_open}/lib -L${pkgs.cudatoolkit}/lib64 -L${pkgs.cudaPackages.cuda_cudart}/lib -L${pkgs.cudaPackages.cuda_cudart.static}/lib"
-              export EXTRA_CCFLAGS="-I/usr/include -isystem ${pkgs.glibc_multi.dev}/include"
-              export CMAKE_PREFIX_PATH="${pkgs.glfw}:${pkgs.fmt.dev}:${pkgs.cudatoolkit}:$CMAKE_PREFIX_PATH"
+              export EXTRA_CCFLAGS="-isystem ${pkgs.glibc_multi.dev}/include"
+              export CMAKE_PREFIX_PATH="${pkgs.glfw}:${pkgs.fmt.dev}:${pkgs.cudatoolkit}:${pkgs.cudaPackages.cuda_cudart}:$CMAKE_PREFIX_PATH"
               export PKG_CONFIG_PATH="${pkgs.glfw}/lib/pkgconfig:${pkgs.fmt.dev}/lib/pkgconfig:$PKG_CONFIG_PATH"
               # Fix for CMake CUDA compiler detection - use raw GCC to avoid wrapper issues
               export CMAKE_CUDA_COMPILER=${pkgs.cudatoolkit}/bin/nvcc
+              export CUDACXX=${pkgs.cudatoolkit}/bin/nvcc
+              export CMAKE_CUDA_COMPILER_FORCED=1
               export CMAKE_C_COMPILER=${pkgs.gcc.cc}/bin/gcc
               export CMAKE_CXX_COMPILER=${pkgs.gcc.cc}/bin/g++
               # Use raw GCC binaries instead of Nix wrappers to fix #include_next issues
@@ -140,8 +158,10 @@
               # CUDA compiler settings - use raw GCC for NVCC host compiler
               export NVCC_CCBIN="${pkgs.gcc.cc}/bin/g++"
               export CUDAHOSTCXX="${pkgs.gcc.cc}/bin/g++"
+              export CUDAHOSTCOMPILER="${pkgs.gcc.cc}/bin/g++"
               # Tell CMake to use raw GCC for CUDA host compilation
               export CMAKE_CUDA_HOST_COMPILER="${pkgs.gcc.cc}/bin/g++"
+              export CMAKE_CUDA_FLAGS="-ccbin=${pkgs.gcc.cc}/bin/g++ --allow-unsupported-compiler"
               # Configure clang's default system header search paths
               export CMAKE_C_FLAGS="-isystem ${pkgs.glibc_multi.dev}/include -isystem ${pkgs.linuxHeaders}/include"
               export CMAKE_CXX_FLAGS="-isystem ${pkgs.glibc_multi.dev}/include -isystem ${pkgs.linuxHeaders}/include"
@@ -179,18 +199,55 @@
 
               # Configure CMake flags for LLVM runtime builds with mold linker
               # Ensure mold is in PATH and configure linker flags properly
-              export CMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold -Wl,-rpath,${pkgs.glibc}/lib -Wl,-rpath,${pkgs.gcc.cc.lib}/lib"
-              export CMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold -Wl,-rpath,${pkgs.glibc}/lib -Wl,-rpath,${pkgs.gcc.cc.lib}/lib"
-              export CMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold -Wl,-rpath,${pkgs.glibc}/lib -Wl,-rpath,${pkgs.gcc.cc.lib}/lib"
+              # Use absolute path to mold to ensure it's found
+              export CMAKE_EXE_LINKER_FLAGS="-fuse-ld=${pkgs.mold}/bin/mold -Wl,-rpath,${pkgs.glibc}/lib -Wl,-rpath,${pkgs.gcc.cc.lib}/lib"
+              export CMAKE_SHARED_LINKER_FLAGS="-fuse-ld=${pkgs.mold}/bin/mold -Wl,-rpath,${pkgs.glibc}/lib -Wl,-rpath,${pkgs.gcc.cc.lib}/lib"
+              export CMAKE_MODULE_LINKER_FLAGS="-fuse-ld=${pkgs.mold}/bin/mold -Wl,-rpath,${pkgs.glibc}/lib -Wl,-rpath,${pkgs.gcc.cc.lib}/lib"
 
               # Configure the built clang to find mold and system libraries
               export CLANG_DEFAULT_LINKER="mold"
               export CLANG_DEFAULT_RTLIB="libgcc"
               export CLANG_DEFAULT_UNWINDLIB="libgcc"
               export CLANG_DEFAULT_CXX_STDLIB="libstdc++"
+              export ENABLE_LINKER_BUILD_ID="ON"
+              export CLANG_DEFAULT_PIE_ON_LINUX="ON"
 
               # Ensure mold can find all necessary libraries
-              export LDFLAGS="-L${pkgs.glibc}/lib -L${pkgs.gcc.cc.lib}/lib $LDFLAGS"
+              export LDFLAGS="-L${pkgs.glibc}/lib -L${pkgs.gcc.cc.lib}/lib -fuse-ld=${pkgs.mold}/bin/mold $LDFLAGS"
+
+              # For compiler-rt and runtime builds, ensure proper linker configuration
+              export LLVM_ENABLE_LLD="OFF"
+              export LLVM_USE_LINKER="${pkgs.mold}/bin/mold"
+
+              # Additional LLVM configuration for runtimes build
+              export LLVM_BUILTIN_TARGETS="x86_64-unknown-linux-gnu"
+              export LLVM_RUNTIME_TARGETS="x86_64-unknown-linux-gnu"
+
+              # Configure compiler-rt and libcxx build options
+              export COMPILER_RT_DEFAULT_TARGET_TRIPLE="x86_64-unknown-linux-gnu"
+              export LIBCXX_USE_COMPILER_RT="OFF"
+              export LIBCXXABI_USE_COMPILER_RT="OFF"
+              export LIBUNWIND_USE_COMPILER_RT="OFF"
+
+              # Set proper sysroot for runtime builds
+              export DEFAULT_SYSROOT="${pkgs.glibc}"
+              export GCC_INSTALL_PREFIX="${pkgs.gcc.cc}"
+
+              # Ensure mold is available in PATH with higher priority
+              export PATH="${pkgs.mold}/bin:$PATH"
+
+              # Create a wrapper script for mold that works with -fuse-ld=mold
+              mkdir -p $HOME/.local/bin
+              ln -sf ${pkgs.mold}/bin/mold $HOME/.local/bin/ld.mold 2>/dev/null || true
+              ln -sf ${pkgs.mold}/bin/mold $HOME/.local/bin/mold 2>/dev/null || true
+              export PATH="$HOME/.local/bin:$PATH"
+
+              # Additional CUDA configuration for MLIR
+              export CUDA_TOOLKIT_ROOT_DIR=${pkgs.cudatoolkit}
+              export CUDA_SDK_ROOT_DIR=${pkgs.cudatoolkit}
+              export CUDA_BIN_PATH=${pkgs.cudatoolkit}/bin
+              export CUDA_LIB_PATH=${pkgs.cudatoolkit}/lib64
+              export CUDA_INCLUDE_PATH=${pkgs.cudatoolkit}/include
 
               # NVIDIA/CUDA specific environment variables for vLLM
               export NVIDIA_VISIBLE_DEVICES=all
