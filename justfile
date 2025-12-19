@@ -180,7 +180,7 @@ cuda_play:
   cmake -B build -G "Ninja" \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
     -DCMAKE_BUILD_TYPE=Debug \
-    -DCMAKE_CXX_STANDARD=23 \
+    -DCMAKE_CXX_STANDARD=26 \
     -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$LD_LIBRARY_PATH"
   cd build
   time ninja all -j$(nproc)
@@ -195,7 +195,7 @@ cpp23:
   cmake -B build -G "Ninja" \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
     -DCMAKE_BUILD_TYPE=Debug \
-    -DCMAKE_CXX_STANDARD=23 \
+    -DCMAKE_CXX_STANDARD=26 \
     -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$LD_LIBRARY_PATH"
   cd build && time ninja all -j$(nproc)
   echo "==== config beginning cpp23 done ===="

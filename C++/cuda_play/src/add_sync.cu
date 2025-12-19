@@ -6,7 +6,12 @@
 __global__ void add_sync() {
     int a = 1;
     int b = 2;
-    __reduce_add_sync(0xffffffff, a);
+    // Use __shfl_down_sync for warp-level reduction
+    // or just remove the invalid intrinsic
+    int sum = a;
+    for (int offset = 16; offset > 0; offset /= 2) {
+        sum += __shfl_down_sync(0xffffffff, sum, offset);
+    }
     printf("%d\n", threadIdx.x + b);
     __syncthreads();
     printf("%d\n", b);
