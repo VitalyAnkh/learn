@@ -10,6 +10,9 @@ endif()
 if(DEFINED ENV{CMAKE_CUDA_COMPILER})
     set(CMAKE_CUDA_COMPILER $ENV{CMAKE_CUDA_COMPILER})
 endif()
+if(DEFINED ENV{CMAKE_CUDA_HOST_COMPILER})
+    set(CMAKE_CUDA_HOST_COMPILER $ENV{CMAKE_CUDA_HOST_COMPILER})
+endif()
 
 project(cuda_play LANGUAGES C CXX CUDA)
 
@@ -113,3 +116,12 @@ target_compile_options(cuda_mma_tensor_core INTERFACE
 )
 set_target_properties(cuda_mma_tensor_core PROPERTIES CUDA_SEPARABLE_COMPILATION
                                                     ON)
+
+add_executable(sgemm src/gemm/sgemm.cu)
+target_link_libraries(sgemm pthread)
+
+# RTX 4080 (Ada / sm_89) Tensor Core FP16 GEMM (M=N=K=4096)
+add_executable(gemm_tc_fp16_4096 src/gemm_tc_fp16_4096.cu)
+set_target_properties(gemm_tc_fp16_4096 PROPERTIES CUDA_SEPARABLE_COMPILATION
+                                                   ON)
+set_property(TARGET gemm_tc_fp16_4096 PROPERTY CUDA_ARCHITECTURES 89)
