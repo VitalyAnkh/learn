@@ -111,17 +111,18 @@ target_link_libraries(dekker pthread)
 
 add_executable(cuda_mma_tensor_core src/cuda_mma_tensor_core.cu)
 # target_link_libraries(cuda_mma_tensor_core pthread)
-target_compile_options(cuda_mma_tensor_core INTERFACE
-    "--gpu-architecture=compute_86"
-)
 set_target_properties(cuda_mma_tensor_core PROPERTIES CUDA_SEPARABLE_COMPILATION
                                                     ON)
+set_property(TARGET cuda_mma_tensor_core PROPERTY CUDA_ARCHITECTURES 89)
 
 add_executable(sgemm src/gemm/sgemm.cu)
 target_link_libraries(sgemm pthread)
 
 # RTX 4080 (Ada / sm_89) Tensor Core FP16 GEMM (M=N=K=4096)
 add_executable(gemm_tc_fp16_4096 src/gemm_tc_fp16_4096.cu)
+# NOTE: This target is a single translation unit; device linking (`-rdc=true`)
+# is unnecessary and can slightly hurt peak kernel performance vs whole-program
+# compilation. Keep separable compilation OFF here.
 set_target_properties(gemm_tc_fp16_4096 PROPERTIES CUDA_SEPARABLE_COMPILATION
-                                                   ON)
+                                                   OFF)
 set_property(TARGET gemm_tc_fp16_4096 PROPERTY CUDA_ARCHITECTURES 89)
