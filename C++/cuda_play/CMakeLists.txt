@@ -126,3 +126,30 @@ add_executable(gemm_tc_fp16_4096 src/gemm_tc_fp16_4096.cu)
 set_target_properties(gemm_tc_fp16_4096 PROPERTIES CUDA_SEPARABLE_COMPILATION
                                                    OFF)
 set_property(TARGET gemm_tc_fp16_4096 PROPERTY CUDA_ARCHITECTURES 89)
+
+# -----------------------------------------------------------------------------
+# Optional: CUTLASS/CUTE-based FP16 Tensor Core GEMM (fixed 4096^3)
+#
+# This target depends on CUTLASS headers and is only enabled when the user sets
+# `CUTLASS_HOME` (environment variable or CMake cache variable).
+# We keep it optional so that `ninja all` still works in environments where
+# CUTLASS isn't available.
+# -----------------------------------------------------------------------------
+set(CUTLASS_HOME "$ENV{CUTLASS_HOME}" CACHE PATH "Path to CUTLASS repository")
+if(CUTLASS_HOME AND EXISTS "${CUTLASS_HOME}/include/cutlass/cutlass.h")
+  message(STATUS "CUTLASS_HOME=${CUTLASS_HOME} (enabling gemm_cute_fp16_4096)")
+
+  add_executable(gemm_cute_fp16_4096 src/gemm_cute_fp16_4096.cu)
+  set_target_properties(gemm_cute_fp16_4096 PROPERTIES CUDA_SEPARABLE_COMPILATION
+                                                     OFF)
+  set_property(TARGET gemm_cute_fp16_4096 PROPERTY CUDA_ARCHITECTURES 89)
+  set_property(TARGET gemm_cute_fp16_4096 PROPERTY CUDA_STANDARD 17)
+  set_property(TARGET gemm_cute_fp16_4096 PROPERTY CUDA_STANDARD_REQUIRED ON)
+
+  target_include_directories(gemm_cute_fp16_4096 PRIVATE
+                             "${CUTLASS_HOME}/include")
+  target_compile_options(gemm_cute_fp16_4096 PRIVATE
+                         $<$<COMPILE_LANGUAGE:CUDA>:--expt-relaxed-constexpr --expt-extended-lambda>)
+else()
+  message(STATUS "CUTLASS_HOME not set or invalid; skipping gemm_cute_fp16_4096")
+endif()

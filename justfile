@@ -254,6 +254,70 @@ cuda_4080_gemm_kernel:
   echo "Tip: apples-to-apples random-input benchmark (power/clock limited):"
   echo "  ./build/gemm_tc_fp16_4096 --kernel=best --bench_init=random --skip_check"
 
+cuda_4080_gemm_cute:
+  #!/usr/bin/env bash
+  set -euo pipefail
+
+  echo "==== cuda_4080_gemm_cute (RTX 4080 / sm_89) ===="
+  echo "Build + benchmark: CUTLASS/CUTE FP16 Tensor Core GEMM (M=N=K=4096)."
+  echo ""
+
+  if [[ -z "${CUTLASS_HOME:-}" ]]; then
+    echo "ERROR: CUTLASS_HOME is not set."
+    echo "Please export CUTLASS_HOME=/home/vitalyr/projects/dev/ai/cutlass"
+    echo "(path can be different on your machine; this is just a known local default)"
+    exit 1
+  fi
+
+  echo "== Commands this recipe runs =="
+  echo "export CUTLASS_HOME=$CUTLASS_HOME"
+  echo "cd $HOME/projects/dev/learn/C++/cuda_play"
+  echo "(clean) build/"
+  echo "cmake -B build -G Ninja \\"
+  echo "  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \\"
+  echo "  -DCMAKE_BUILD_TYPE=Release \\"
+  echo "  -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc \\"
+  echo "  -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-13 \\"
+  echo "  -DCMAKE_CXX_COMPILER=/usr/bin/g++-13 \\"
+  echo "  -DCMAKE_C_COMPILER=/usr/bin/gcc-13"
+  echo "ninja -C build gemm_cute_fp16_4096"
+  echo "./build/gemm_cute_fp16_4096 --help"
+  echo "./build/gemm_cute_fp16_4096 --skip_check"
+  echo ""
+
+  cd $HOME/projects/dev/learn/C++/cuda_play
+
+  echo "==== clean build/ (to ensure CUTLASS_HOME and toolchain settings apply) ===="
+  if command -v trash-put &>/dev/null; then
+    trash-put build 2>/dev/null || true
+  else
+    rm -rf build
+  fi
+  mkdir -p build
+
+  echo "==== configure (Release, CUDA 12.6 nvcc, g++-13 host, sm_89) ===="
+  set -x
+  cmake -B build -G Ninja \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc \
+    -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-13 \
+    -DCMAKE_CXX_COMPILER=/usr/bin/g++-13 \
+    -DCMAKE_C_COMPILER=/usr/bin/gcc-13
+  ninja -C build gemm_cute_fp16_4096
+  set +x
+
+  echo ""
+  echo "==== CLI usage ===="
+  ./build/gemm_cute_fp16_4096 --help
+
+  echo ""
+  echo "==== Benchmark (kernel-only timing; peak by default) ===="
+  echo "NOTE: default is check_init=random, bench_init=ones."
+  set -x
+  ./build/gemm_cute_fp16_4096 --skip_check
+  set +x
+
 cpp23:
   #!/usr/bin/env bash
   echo "==== config beginning cpp23 ===="
